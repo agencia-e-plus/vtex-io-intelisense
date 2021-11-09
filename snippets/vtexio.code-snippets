@@ -1,0 +1,247 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"Flex layout row class": {
+		"scope": "css, scss",
+		"prefix": "flr",
+		"body": [".flexRow--${1}"],
+		"description": "Flex layout row class"
+	},
+	"Flex layout row content class": {
+		"scope": "css, scss",
+		"prefix": "flrc",
+		"body": [".flexRowContent--${1}"],
+		"description": "Flex layout row content class"
+	},
+	"Flex layout column class": {
+		"scope": "css, scss",
+		"prefix": "flc",
+		"body": [".flexCol--${1}"],
+		"description": "Flex layout column class"
+	},
+	"Flex layout column child class": {
+		"scope": "css, scss",
+		"prefix": "flcc",
+		"body": [".flexColChild--${1}"],
+		"description": "Flex layout column child class"
+	},
+	"Create vtex flex layout column with props": {
+		"scope": "json, jsonc",
+		"prefix": "flc",
+		"body": [
+			"\"flex-layout.col#${1}\": {",
+			"  \"children\": [\"${2}\"],",
+			"  ${3:\"props\": {",
+			"    ${4}",
+			"  }}",
+			"},"
+		],
+		"description": "Create vtex flex layout column with props"
+	},
+	"Create vtex flex layout row with props": {
+		"scope": "json, jsonc",
+		"prefix": "flr",
+		"body": [
+			"\"flex-layout.row#${1}\": {",
+			"  \"children\": [\"${2}\"],",
+			"  ${3:\"props\": {",
+			"    ${4}",
+			"  }}",
+			"},"
+		],
+		"description": "Create vtex flex layout column with props"
+	},
+	"Create vtex rich text block": {
+		"scope": "json, jsonc",
+		"prefix": "rt",
+		"body": [
+			"\"rich-text#${1}\": {",
+			"  \"props\": {",
+			"    \"text\": \"${2}\",",
+			"    ${3}",
+			"  }",
+			"},"
+		],
+		"description": "Create vtex rich text block"
+	},
+	"vtex global style": {
+		"scope": "css, scss",
+		"prefix": ":gl",
+		"body": [":global(.${1:component-class})"],
+		"description": "vtex global style"
+	},
+	"Create vtex image block": {
+		"scope": "json, jsonc",
+		"prefix": "image",
+		"body": [
+			"\"image#${1}\": {",
+			"  \"props\": {",
+			"    \"src\": \"${2}\",",
+			"    ${3}",
+			"  }",
+			"},"
+		],
+		"description": "Create vtex image block"
+	},
+	"create a stack layout": {
+		"scope": "json, jsonc",
+		"prefix": "stl",
+		"body": [
+			"\"stack-layout#${1}\": {",
+			"    \"children\": [${2}],",
+			"    ${3:\"props\": {${4:}}}",
+			"},"
+		],
+		"description": "create a stack layout"
+	},
+	"Disclosure layout": {
+		"prefix": "dl",
+		"body": [
+			" \"disclosure-layout#${1:id}\": {",
+			"    \"children\": [\"disclosure-trigger#${1:id}\", \"disclosure-content#${1:id}\"]",
+			"  },",
+			"  \"disclosure-trigger#${1:id}\": {",
+			"    \"children\": []",
+			"  },",
+			"  \"disclosure-content#${1:id}\": {",
+			"    \"children\": []",
+			"  }"
+		],
+		"description": "Disclosure layout"
+	},
+	"Responsive layout desktop": {
+		"prefix": "rld",
+		"body": [
+			" \"responsive-layout.desktop#${1:id}\": {",
+			"    \"children\": [\"${2}\"]",
+			"  }",
+			"  ",
+			""
+		],
+		"description": "Responsive layout desktop"
+	},
+	"Responsive layout mobile": {
+		"prefix": "rlm",
+		"body": [
+			" \"responsive-layout.mobile#${1:id}\": {",
+			"    \"children\": [\"${2}\"]",
+			"  }",
+			"  ",
+			""
+		],
+		"description": "Responsive layout mobile "
+	},
+	"Responsive layout tablet": {
+		"prefix": "rlt",
+		"body": [
+			" \"responsive-layout.tablet#${1:id}\": {",
+			"    \"children\": [\"${2}\"]",
+			"  }",
+			"  ",
+			""
+		],
+		"description": "Responsive layout tablet"
+	},
+	"Responsive layout phone": {
+		"prefix": "rlp",
+		"body": [
+			" \"responsive-layout.phone#${1:id}\": {",
+			"    \"children\": [\"${2}\"]",
+			"  }",
+			"  ",
+			""
+		],
+		"description": "Responsive layout phone"
+	},
+	"Condition layout Product": {
+		"prefix": "clp",
+		"body": [
+			" \"condition-layout.product#${1:id}\": {",
+			"   \"props\": {",
+			"     \"conditions\": [",
+			"       {",
+			"         \"subject\": ${2},",
+			"         \"arguments\": {",
+			"           ${3}",
+			"         }",
+			"       }",
+			"     ]",
+			"     \"Then\": ${4}",
+			"   }",
+			" }"
+		],
+		"description": "Condition layout Product"
+	},
+	"Create a link block": {
+		"prefix": "link",
+		"body": [
+			"\"link#${1:id}\": {",
+			"  \"props\": {",
+			"    \"label\": \"${2}\",",
+			"    \"href\": \"${3}\"",
+			"   }",
+			"}"
+		],
+		"description": "Create a link block"
+	},
+	"Create a shelf roll": {
+		"prefix": "shelf",
+		"body": [
+			"\"flex-layout.row#${1:id}\": {",
+			"  \"children\": [\"flex-layout.col#${1:id}\"],",
+			"  \"props\": {",
+			"    \"blockClass\": \"shelf-offers\"",
+			"  }",
+			"},",
+			"\"flex-layout.col#${1:id}\": {",
+			"  \"children\": [",
+			"    \"rich-text#${1:id}-title\",",
+			"    \"list-context.product-list#${1:id}\"",
+			"  ],",
+			"  \"props\": {}",
+			"},",
+			"\"rich-text#${1:id}-title\": {",
+			"  \"props\": {",
+			"   \"text\": \"##\"",
+			"   \"textAlignment\": \"CENTER\",",
+			"   \"textPosition\": \"CENTER\"",
+			"  }",
+			"},",
+			" \"list-context.product-list#${1:id}\": {",
+			"   \"blocks\": [\"product-summary.shelf\"],",
+			"   \"children\": [\"slider-layout#shelf\"],",
+			"   \"props\": {}",
+			"},"
+		],
+		"description": "Create a shelf roll"
+	},
+	"Create a overlay latouy": {
+		"prefix": "ovl",
+		"body": [
+			" \"overlay-trigger#${1:id}\": {",
+			"   \"children\": [\"overlay-layout#${1:id}\"]",
+			" },",
+			" \"overlay-layout#${1:id}\": {",
+			"  \"props\": {",
+			"    ",
+			"   },",
+			"   \"children\": []",
+			" },"
+		],
+		"description": "create a overlay latouy"
+	}
+}

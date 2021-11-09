@@ -1,0 +1,67 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Last posts",
+	"description": "Shows teasers for the most recent 3-5 posts (default is 3).",
+	"type": "object",
+	"properties": {
+		"props": {
+			"type": "object",
+			"description": "Block's properties",
+			"properties": {
+				"title": {
+					"type": "string",
+					"description": "Title to be displayed above the block.",
+					"default": "null"
+				},
+				"numberOfPosts": {
+					"type": "number",
+					"description": "The number of posts to be displayed.",
+					"default": 3
+				},
+				"tags": {
+					"type": "array",
+					"description": "Array of tag IDs allowed. When this property is included, only posts that contain all the listed tags will be displayed.",
+					"default": "undefined"
+				},
+				"excludeTags": {
+					"type": "array",
+					"description": "Array of tag IDs to be excluded. Posts containing any of the excluded tags will not be displayed.",
+					"default": "undefined"
+				},
+				"excludeCategories": {
+					"type": "array",
+					"description": "Array of category IDs to be excluded. Posts containing any of the excluded categories will not be displayed.",
+					"default": "undefined"
+				},
+				"useTextOverlays": {
+					"type": "boolean",
+					"description": "Whether each blog post data (title, category, etc) should be overlaid on the post's featured image (true) or not (false). If false, date of publication and category are shown above the image, title and excerpts are shown below it.",
+					"default": false
+				},
+				"showCategories": {
+					"type": "boolean",
+					"description": "Whether the post category should be shown (true) or not (false).",
+					"default": true
+				},
+				"showDates": {
+					"type": "boolean",
+					"description": "Whether the date of publication should be shown (true) or not (false).",
+					"default": true
+				},
+				"showAuthors": {
+					"type": "boolean",
+					"description": "Whether the post author should be shown (true) or not (false).",
+					"default": false
+				},
+				"showExcerpts": {
+					"type": "boolean",
+					"description": "Whether the post excerpts should be shown (true) or not (false).",
+					"default": false
+				},
+				"mediaSize": {
+					"$ref": "./mediaSizeEnum.schema.json"
+				}
+			}
+		}
+	}
+}

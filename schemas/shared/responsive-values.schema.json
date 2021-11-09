@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Responsive values",
+  "description": "Responsive values",
+  "type": "object",
+  "properties": {
+    "desktop": {
+      "type": ["number", "boolean", "string"]
+    },
+    "mobile": {
+      "type": ["number", "boolean", "string"]
+    },
+    "tablet": {
+      "type": ["number", "boolean", "string"]
+    },
+    "phone": {
+      "type": ["number", "boolean", "string"]
+    }
+  }
+}

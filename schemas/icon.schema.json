@@ -1,0 +1,55 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "block title",
+	"description": "block description",
+	"type": "object",
+	"properties": {
+		"props": {
+			"type": "object",
+			"description": "Block's properties",
+			"properties": {
+				"id": {
+					"type": "string",
+					"description": "The ID for the desired icon",
+					"default": "undefined"
+				},
+				"size": {
+					"type": "number",
+					"description": "Desired size",
+					"default": 16
+				},
+				"isActive": {
+					"type": "boolean",
+					"description": "desc",
+					"default": true
+				},
+				"activeClassName": {
+					"type": "string",
+					"description": "The className it should have if active",
+					"default": "undefined"
+				},
+				"mutedClassName": {
+					"type": "string",
+					"description": "The className it should have if not active",
+					"default": "undefined"
+				},
+				"type": {
+					"type": "string",
+					"enum": ["filled", "line", "outline"]
+				},
+				"orientation": {
+					"type": "string",
+					"enum": ["up", "down", "left", "right"]
+				},
+				"state": {
+					"type": "string",
+					"enum": ["on", "off"]
+				},
+				"shape": {
+					"type": "string",
+					"enum": ["square", "rounded", "circle"]
+				}
+			}
+		}
+	}
+}

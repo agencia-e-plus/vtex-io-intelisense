@@ -1,0 +1,29 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "block title",
+	"description": "block responsible for performing the GraphQL query that fetches the list of products",
+	"type": "object",
+	"properties": {
+		"props": {
+			"type": "object",
+			"description": "Block's properties",
+			"properties": {
+				"collapseContent": {
+					"type": "boolean",
+					"description": "If true, whenever the product description is too big, it will collapse and show a  'Show More' button. When false, it will never collapse and will always show the whole description.",
+					"default": true
+				},
+				"title": {
+					"type": "string",
+					"description": "Defines a custom title for the description section.",
+					"default": "undefined"
+				},
+				"showTitle": {
+					"type": "boolean",
+					"description": "Define whether or not to show the title.",
+					"default": true
+				}
+			}
+		}
+	}
+}

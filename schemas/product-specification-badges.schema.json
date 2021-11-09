@@ -1,0 +1,87 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "block title",
+	"description": "",
+	"type": "object",
+	"properties": {
+		"props": {
+			"type": "object",
+			"description": "Block's properties",
+			"properties": {
+				"blockClass": {
+					"type": "string",
+					"description": "Allows to pass a custom name to be added to component css classes",
+					"default": "null"
+				},
+				"displayValue": {
+					"anyOf": [
+						{ "type": "string" },
+						{
+							"type": "string",
+							"enum": ["SPECIFICATION_NAME", "SPECIFICATION_VALUE"]
+						}
+					],
+					"description": "Choose the value that will appear if the specification condition is met and the badge will be showed. Pass SPECIFICATION_NAME if you want to display the specification name. Pass SPECIFICATION_VALUE if you want to display its value. Pass any other custom string to display it.",
+					"default": "null"
+				},
+				"multipleValuesSeparator": {
+					"type": "string",
+					"description": "Define the separator string to be rendered when a specification value has multiple values.",
+					"default": "/"
+				},
+				"orientation": {
+					"type": "string",
+					"enum": ["vertical", "horizontal"],
+					"description": "Determines if the group of specifications are showed horizontally or vertically",
+					"default": "vertical"
+				},
+				"specificationGroupName": {
+					"type": "string",
+					"description": "The name of the specification group in which the desired specifications are",
+					"default": ""
+				},
+				"specificationName": {
+					"type": "string",
+					"description": "Pass the name of the specification you want to target. If left empy, will target all of the group",
+					"default": ""
+				},
+				"specificationsOptions": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"displayValue": {
+								"anyOf": [
+									{ "type": "string" },
+									{
+										"type": "string",
+										"enum": ["SPECIFICATION_NAME", "SPECIFICATION_VALUE"]
+									}
+								],
+								"description": "Choose the value that will appear if the specification condition is met and the badge will be showed. Pass SPECIFICATION_NAME if you want to display the specification name. Pass SPECIFICATION_VALUE if you want to display its value. Pass any other custom string to display it.",
+								"default": "null"
+							},
+							"specificationName": {
+								"type": "string",
+								"description": "Pass the name of the specification you want to target. If left empy, will target all of the group",
+								"default": ""
+							},
+							"visibleWhen": {
+								"type": "string",
+								"description": "Pass this if you want the specification to be displayed only if it has this exact value. If left empty, the badge will be showed regardless of the specification value.",
+								"default": ""
+							}
+						}
+					},
+					"description": "Pass this if you want to control the conditions to show certain specifications. Each value of the array should be a valid object of the Option format.",
+					"default": "null"
+				},
+				"visibleWhen": {
+					"type": "string",
+					"description": "Pass this if you want the specification to be displayed only if it has this exact value. If left empty, the badge will be showed regardless of the specification value.",
+					"default": ""
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,38 @@
+{
+	"$schema": "http://json-schema.org/schema",
+	"type": "object",
+	"title": "VTEX IO Store Image",
+	"description": "VTEX IO Store Image",
+	"properties": {
+		"props": {
+			"type": "object",
+			"description": "Block's properties",
+			"properties": {
+				"src": {
+					"type": "string",
+					"description": "Specifies the URL of an image"
+				},
+				"alt": {
+					"type": "string",
+					"description": "Specifies an alternate text for an image"
+				},
+				"maxWidth": {
+					"type": ["string", "number"],
+					"description": "Specifies the max width of an image"
+				},
+				"maxHeight": {
+					"type": ["string", "number"],
+					"description": "Specifies the max height of an image"
+				},
+				"title": {
+					"type": "string",
+					"description": "Title to be shown on hover"
+				},
+				"link": {
+					"$ref": "./shared/link.schema.json"
+				},
+				"blockClass": { "$ref": "./shared/blockClass.schema.json" }
+			}
+		}
+	}
+}

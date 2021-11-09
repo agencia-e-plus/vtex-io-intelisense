@@ -1,0 +1,8 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Media Size Enum",
+	"description": "WordPress media image size that should be used in the blog's preview blocks.",
+	"default": "full",
+	"type": "string",
+	"enum": ["Thumbnail", "Medium", "Medium Large", "Large", "Full"]
+}

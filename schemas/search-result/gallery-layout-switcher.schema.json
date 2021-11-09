@@ -1,0 +1,14 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Gallery layout switcher",
+	"description": "Logical block that allows users to switch between the available `gallery`'s layouts.\nIt receives no props and expects as child the `gallery-layout-option` block described below. It's important to define the options in the same order as the layouts, so the accessibility features can work properly.",
+	"type": "object",
+	"properties": {
+		"children": {
+			"type": "array",
+			"description": "list of the `gallery-layout-option`. It's important to define the options in the same order as the layouts, so the accessibility features can work properly.",
+			"items": { "$ref": "../shared/block.schema.json" }
+		}
+	},
+	"required": ["children"]
+}

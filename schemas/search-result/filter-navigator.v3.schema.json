@@ -1,0 +1,132 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Search filter",
+	"description": "Search filter",
+	"type": "object",
+	"properties": {
+		"props": {
+			"type": "object",
+			"description": "Block's properties",
+			"properties": {
+				"categoryFiltersMode": {
+					"type": "string",
+					"enum": ["href", "default"],
+					"description": "Whether the category filters should use the href attribute with the category pages' URLs (href) or not (default). By default, the filters use HTML divs with role='link'. You may change this behavior by setting this prop's value to href, thereby creating a link building to improve the SEO ranking of your category pages.",
+					"default": "default"
+				},
+				"layout": {
+					"type": "string",
+					"enum": ["responsive", "desktop", "phone"],
+					"description": "Whether the Filter Navigator layout should be responsive (responsive) or not (desktop, phone). You may usephone when mobile layout is needed on the desktop resolution and desktop when the Filter Navigator was configured to be displayed in a ",
+					"default": "responsive"
+				},
+				"maxItemsDepartment": {
+					"type": "number",
+					"description": "Maximum number of departments to be displayed before the See More button is triggered.",
+					"default": 8
+				},
+				"maxItemsCategory": {
+					"type": "number",
+					"description": "Maximum number of category items to be displayed before the See More button is triggered.",
+					"default": 8
+				},
+				"initiallyCollapsed": {
+					"type": "boolean",
+					"description": "Makes the search filters start out collapsed (true) or open (false).",
+					"default": false
+				},
+				"openFiltersMode": {
+					"type": "string",
+					"enum": ["many", "one"],
+					"description": "Defines how many filters can be opened at the same time on the Filter Navigator component. Possible values are: many (more than one filter can be opened at the same time) and one (only one filter can be opened). Notice that if one is declared all filters will be collapsed before user interaction, regardless of what is passed to the initiallyCollapsed prop.",
+					"default": "many"
+				},
+				"filtersTitleHtmlTag": {
+					"type": "string",
+					"description": "HTML tag for the filter's title.",
+					"default": "h5"
+				},
+				"scrollToTop": {
+					"type": "string",
+					"enum": ["auto", "smooth", "none"],
+					"description": "Scrolls the page to the top (auto or smooth) or not (none) when selecting a facet.",
+					"default": "none"
+				},
+				"truncateFilters": {
+					"type": "boolean",
+					"description": "Whether a filter selector with more than 10 filter options should shorten the list and display a See more button (true) or not (false).",
+					"default": false
+				},
+				"closeOnOutsideClick": {
+					"type": "boolean",
+					"description": "Whether the Filter Navigator component should be closed when users click outside of it (true) or not (false). Caution: This prop only works when the openFiltersMode prop is set as one.",
+					"default": false
+				},
+				"appliedFiltersOverview": {
+					"type": "string",
+					"enum": ["show", "hide"],
+					"description": "Whether an overview of the applied filters should be displayed ('show') or not ('hide').",
+					"default": "hide"
+				},
+				"totalProductsOnMobile": {
+					"type": "string",
+					"enum": ["show", "hide"],
+					"description": "Whether the Filter Navigator should display the total number of products on mobile devices  (show) or not (hide).",
+					"default": "hide"
+				},
+				"fullWidthOnMobile": {
+					"type": "boolean",
+					"description": "Whether the filter-navigator.v3 will be rendered on mobile using the screen full width (true) or not (false).",
+					"default": false
+				},
+				"navigationTypeOnMobile": {
+					"type": "string",
+					"enum": ["page", "collapsible"],
+					"description": "Defines how mobile users should navigate on the filter selector component. Possible values are: page (only one list of options can be seen at a time) or collapsible (all lists of options can be seen at the same time).",
+					"default": "page"
+				},
+				"updateOnFilterSelectionOnMobile": {
+					"type": "boolean",
+					"description": "Whether the search results on mobile should be updated according to filter selection (true) or not (false). Notice: this prop only works if the preventRouteChange prop is declared as true.",
+					"default": false
+				},
+				"showClearByFilter": {
+					"type": "boolean",
+					"description": "Whether a clear button (responsible for erasing all filter options selected by the user) should be displayed alongside the filter name (true) or not (false).",
+					"default": false
+				},
+				"priceRangeLayout": {
+					"type": "string",
+					"enum": ["slider", "inputAndSlider"],
+					"description": "Whether a text field to enter the desired price range should be displayed  (inputAndSlider) or not (slider).",
+					"default": "slider"
+				},
+				"facetOrdering": {
+					"type": "array",
+					"description": "Array of objects (see below) that applies custom sorting rules for filters. The default behavior sorts descending the items by quantity.",
+					"properties": {
+						"key": {
+							"type": "string",
+							"enum": ["category-1", "category-2", "category-3"],
+							"description": "Facets key that will be sorted. Possible values are category-1, category-2, category-3 (for department, category and subcategory), brand or a product specification name.",
+							"default": "undefined"
+						},
+						"orderBy": {
+							"type": "string",
+							"enum": ["name", "quantity"],
+							"description": "Field from facets that should be used when sorting the entries. Possible values are name and quantity.",
+							"default": "undefined"
+						},
+						"order": {
+							"type": "string",
+							"enum": ["ASC", "DESC"],
+							"description": "Whether the filter should be sorted by ascending (ASC) or descending (DESC) order.",
+							"default": "ASC"
+						}
+					},
+					"default": "undefined"
+				}
+			}
+		}
+	}
+}

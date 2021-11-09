@@ -1,0 +1,98 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "block title",
+	"description": "block responsible for performing the GraphQL query that fetches the list of products",
+	"type": "object",
+	"properties": {
+		"blocks": {
+			"type": "array",
+			"items": { "$ref": "./shared/block.schema.json" },
+			"description": "product summary block"
+		},
+		"props": {
+			"type": "object",
+			"description": "Block's properties",
+			"properties": {
+				"recommendation": {
+					"type": "string",
+					"enum": [
+						"similars",
+						"suggestions",
+						"accessories",
+						"view",
+						"buy",
+						"viewandBought"
+					],
+					"description": "Type of recommendations that will be displayed in the Shelf. Possible values: similars, suggestions, accessories (these first three depend on the product's data given in the admin's catalog) and view, buy, viewandBought (These 3 are automatically generated according to the store’s activity)",
+					"default": "similars"
+				},
+				"productList": {
+					"type": "object",
+					"description": "Product list schema. See ProductListSchema",
+					"properties": {
+						"maxItems": {
+							"type": "number",
+							"description": "Maximum number of items in the Shelf.",
+							"default": 10
+						},
+						"scroll": {
+							"type": "string",
+							"enum": ["BY_PAGE", "ONE_BY_ONE"],
+							"description": "Slide transition scroll type. Possible values: BY_PAGE, ONE_BY_ONE",
+							"default": "BY_PAGE"
+						},
+						"arrows": {
+							"type": "boolean",
+							"description": "If the arrows are displayable or not.",
+							"default": true
+						},
+						"showTitle": {
+							"type": "boolean",
+							"description": "If a title should be displayed in the Shelf or not.",
+							"default": true
+						},
+						"titleText": {
+							"type": "string",
+							"description": "Shelf title",
+							"default": "null"
+						},
+						"summary": {
+							"type": "object",
+							"description": "Product Summary schema properties.",
+							"default": "-"
+						},
+						"gap": {
+							"type": "string",
+							"enum": ["ph0", "ph3", "ph5", "ph7"],
+							"description": "Gap between items. Possible values: ph0, ph3,ph5, ph7.",
+							"default": "ph3"
+						},
+						"minItemsPerPage": {
+							"type": "number",
+							"description": "Minimum amount of Shelf slides. This prop can be used to control how many itens will be displayed on the Shelf even in the smallest screen size. Its value can be a ",
+							"default": 1
+						},
+						"itemsPerPage": {
+							"anyOf": [
+								{ "type": "number" },
+								{
+									"$ref": "./shared/responsive-values.schema.json"
+								}
+							],
+							"description": "Maximum amount of Shelf slides. This prop can be used to control how many itens will be displayed on the Shelf even in the biggest screen size. Its value can be a float, which means that you can choose a multiple of 0.5 to indicate that you want to show a 'peek' of the next slide on the Shelf.",
+							"default": 5
+						}
+					},
+					"if": {
+						"properties": { "showTitle": { "const": true } }
+					},
+					"then": {
+						"required": ["titleText"]
+					},
+					"default": "-"
+				}
+			}
+		}
+	},
+	"required": ["blocks"]
+}

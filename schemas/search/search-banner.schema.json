@@ -1,0 +1,31 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "search banner",
+	"description": "block to show banner in search/departments/category pages",
+	"type": "object",
+	"properties": {
+		"props": {
+			"type": "object",
+			"description": "Block's properties",
+			"properties": {
+				"area": {
+					"type": "string",
+					"enum": ["one", "two", "three", "four"],
+					"description": "Indicates the area. It needs to match the area configured in the banner.",
+					"default": "-"
+				},
+				"blockClass": {
+					"type": "string",
+					"description": "Defines a custom class for the banner div.",
+					"default": "-"
+				},
+				"horizontalAlignment": {
+					"type": "string",
+					"enum": ["left", "center", "right"],
+					"description": "Defines the horizontal alignment for the banner.",
+					"default": "center"
+				}
+			}
+		}
+	}
+}
