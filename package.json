@@ -1,6 +1,6 @@
 {
-	"name": "vtexio-autocomplete",
-	"displayName": "vtexio autocomplete",
+	"name": "vtexio-intellisense",
+	"displayName": "vtexio intellisense",
 	"description": "snippets and autocomplete for vtex io blocks",
 	"version": "0.0.1",
 	"engines": {
