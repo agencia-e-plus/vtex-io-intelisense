@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Image Object",
+  "description": "Image object",
+  "type": "object",
+  "properties": {
+    "image": {
+      "type": "string",
+      "description": "Image URL"
+    },
+    "mobileImage": {
+      "type": "string",
+      "description": "Mobile image URL"
+    },
+    "description": {
+      "type": "string",
+      "description": "Image description"
+    },
+    "link": {
+      "$ref": "./link.schema.json"
+    },
+    "width": {
+      "anyOf": [{ "type": "string" }, { "type": "number" }],
+      "description": "Image width (in '%' or 'px').",
+      "default": "100%"
+    }
+  }
+}

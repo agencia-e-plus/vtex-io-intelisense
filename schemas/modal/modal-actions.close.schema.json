@@ -1,0 +1,19 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "block title",
+	"description": "",
+	"type": "object",
+	"properties": {
+		"props": {
+			"type": "object",
+			"description": "Block's properties",
+			"properties": {
+				"label": {
+					"type": "string",
+					"description": "Defines the text to be rendered in the close button. This prop default value depends on the store's default language which is set according to the website's ",
+					"default": "Cancel, Cancelar, or Cancelar for stores whose default language is, respectively, English, Spanish or Portuguese."
+				}
+			}
+		}
+	}
+}

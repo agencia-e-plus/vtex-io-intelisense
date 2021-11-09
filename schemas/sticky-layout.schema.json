@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Sticky Layout",
+  "description": "Sticky Layout",
+  "type": "object",
+  "properties": {
+    "props": {
+      "type": "object",
+      "description": "Block's properties",
+      "properties": {
+        "position": {
+          "type": "string",
+          "enum": ["TOP", "BOTTOM"],
+          "description": "Indicates where the component should stick"
+        },
+        "verticalSpacing": {
+          "type": "number",
+          "default": 0,
+          "description": "Indicates the distance in pixels from the position chosen in the position prop"
+        },
+        "blockClass": { "$ref": "./shared/blockClass.schema.json" }
+
+      }
+    },
+    "children": {
+      "type": "array",
+      "items": { "$ref": "./shared/block.schema.json" }
+    }
+  }
+}

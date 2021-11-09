@@ -1,0 +1,204 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Product Summary Image",
+	"description": "is a block exported by the Product Summary app that renders the product's image.",
+	"type": "object",
+	"properties": {
+		"props": {
+			"type": "object",
+			"description": "Block's properties",
+			"properties": {
+				"showBadge": {
+					"type": "boolean",
+					"description": "Whether a discount badge (if there is any) will be displayed on the product's image (true) or not (false)",
+					"default": true
+				},
+				"badgeText": {
+					"type": "string",
+					"description": "Text displayed on the discount badge (in case the badge is configured to be displayed on the image).",
+					"default": "undefined"
+				},
+				"showCollections": {
+					"type": "boolean",
+					"description": "Whether collection badges (if there are any) will be displayed (true) or not (false).",
+					"default": false
+				},
+				"displayMode": {
+					"type": "string",
+					"enum": ["normal", "inline"],
+					"description": "Defines the Product Summary Image display mode. Possible values are: normal and inline.",
+					"default": "normal"
+				},
+				"placeholder": {
+					"type": "string",
+					"description": "Defines the Product Summary Image placeholder image.",
+					"default": "undefined"
+				},
+				"mainImageLabel": {
+					"anyOf": [
+						{ "type": "string" },
+						{
+							"type": "object",
+							"properties": {
+								"label": {
+									"type": "string",
+									"description": "Text value that matches the value defined in the imageLabel field from the admin's Catalog. Once matched, it defines which product image will be the main image displayed in the Product Summary component.  If you set a label and no match is found, the main image of the product will be shown instead.",
+									"default": "undefined"
+								},
+								"labelMatchCriteria": {
+									"type": "string",
+									"description": "Criteria to define if the image's label searched value should be exactly as provided or if it just needs to contain the substring anywhere in the image's label. Possible values are: exact (finds the image that matches exactly the string filled in label field) and contains (finds the first image that contains the substring filled in label field).",
+									"default": "exact"
+								}
+							}
+						}
+					],
+					"description": "Matches the value defined in the imageLabel field from the admin's Catalog. Once matched, it defines which product image will be the main image displayed in the Product Summary component.",
+					"default": "undefined"
+				},
+				"hoverImage": {
+					"type": "object",
+					"properties": {
+						"criteria": {
+							"type": "string",
+							"enum": ["label", "index"],
+							"description": "Criteria that should be used to define the hover image according to the product images in the admin's Catalog. Possible values are: label (the hover image will be the one that matches the label value) and index (the hover image should be the one with the same index value).",
+							"default": "label"
+						}
+					},
+					"if": {
+						"properties": { "criteria": { "const": "label" } }
+					},
+					"then": {
+						"properties": {
+							"label": {
+								"type": "string",
+								"description": "Text string to match the desired image's label value. If no match is found, no image will be displayed during the hover. ",
+								"default": "undefined"
+							},
+							"labelMatchCriteria": {
+								"type": "string",
+								"enum": ["exact", "contains"],
+								"description": "Criteria to define if the image's label searched value should be exactly as provided or if it just needs to contain the substring anywhere in the image's label. Possible values are: exact (finds the image that matches exactly the string filled in label field) and contains (finds the first image that contains the substring filled in label field). ",
+								"default": "exact"
+							}
+						},
+						"required": ["label"]
+					},
+					"else": {
+						"properties": {
+							"index": {
+								"type": "number",
+								"description": "Index number to match with the desired image's. If no match is found, no image will be displayed during the hover. ",
+								"default": "undefined"
+							}
+						},
+						"required": ["index"]
+					},
+					"description": "Defines which criteria should be used to define the hover image according to the product images in the admin's Catalog.",
+					"default": "undefined"
+				},
+				"width": {
+					"anyOf": [
+						{ "type": ["string", "number"] },
+						{
+							"type": "object",
+							"properties": {
+								"desktop": {
+									"type": ["string", "number"]
+								},
+								"mobile": {
+									"type": ["string", "number"]
+								},
+								"tablet": {
+									"type": ["string", "number"]
+								},
+								"phone": {
+									"type": ["string", "number"]
+								}
+							}
+						}
+					],
+					"description": "Defines the Product Summary Image width.",
+					"default": "undefined"
+				},
+				"height": {
+					"anyOf": [
+						{ "type": ["string", "number"] },
+						{
+							"type": "object",
+							"properties": {
+								"desktop": {
+									"type": ["string", "number"]
+								},
+								"mobile": {
+									"type": ["string", "number"]
+								},
+								"tablet": {
+									"type": ["string", "number"]
+								},
+								"phone": {
+									"type": ["string", "number"]
+								}
+							}
+						}
+					],
+					"description": "Defines the Product Summary Image height.",
+					"default": "undefined"
+				},
+				"aspectRatio": {
+					"anyOf": [
+						{ "type": "string", "pattern": "[0-9]+:[0-9]+" },
+						{
+							"type": "object",
+							"properties": {
+								"desktop": {
+									"type": "string",
+									"pattern": "[0-9]+:[0-9]+"
+								},
+								"mobile": {
+									"type": "string",
+									"pattern": "[0-9]+:[0-9]+"
+								},
+								"tablet": {
+									"type": "string",
+									"pattern": "[0-9]+:[0-9]+"
+								},
+								"phone": {
+									"type": "string",
+									"pattern": "[0-9]+:[0-9]+"
+								}
+							}
+						}
+					],
+					"description": "Aspect ratio of the Product Summary Image. It defines whether the image should be displayed in a square, portrait, landscape or in another format. The prop value should follow the, which gives two numbers separated by a colon. For example: 1:1 for a square format or 3:4 for an upright portrait. Note that this prop won't work if you've already configured the width or height props.",
+					"default": "undefined"
+				},
+				"maxHeight": {
+					"anyOf": [
+						{ "type": ["string", "number"] },
+						{
+							"type": "object",
+							"properties": {
+								"desktop": {
+									"type": ["string", "number"]
+								},
+								"mobile": {
+									"type": ["string", "number"]
+								},
+								"tablet": {
+									"type": ["string", "number"]
+								},
+								"phone": {
+									"type": ["string", "number"]
+								}
+							}
+						}
+					],
+					"description": "Defines the Product Summary Image max height. Note that this prop won't work if you've already configured the width or height props.",
+					"default": "undefined"
+				}
+			}
+		}
+	}
+}

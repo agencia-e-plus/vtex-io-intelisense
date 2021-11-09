@@ -1,0 +1,69 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "block title",
+	"description": "block responsible for performing the GraphQL query that fetches the list of products",
+	"type": "object",
+	"properties": {
+		"props": {
+			"type": "object",
+			"description": "Block's properties",
+			"properties": {
+				"category": {
+					"type": "string",
+					"description": "Category ID of the Shelf listed items. For sub-categories, use / before the ID to indicate which category it belongs to. For example: '1/2', considering 2 as a sub-category ID)",
+					"default": "undefined"
+				},
+				"specificationFilters": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"description": "Block's properties",
+						"properties": {
+							"Id": {
+								"type": "string",
+								"description": "Specification Filters ID",
+								"default": "undefined"
+							},
+							"value": {
+								"type": "string",
+								"description": "Specification Filters values",
+								"default": "undefined"
+							}
+						}
+					},
+					"description": "Specification Filters of the Shelf listed items.",
+					"default": "undefined"
+				},
+				"collection": {
+					"type": "string",
+					"description": "Collection ID of the Shelf listed items.",
+					"default": "undefined"
+				},
+				"orderBy": {
+					"type": "string",
+					"enum": [
+						"OrderByTopSaleDESC",
+						"OrderByReleaseDateDESC",
+						"OrderByBestDiscountDESC",
+						"OrderByPriceDESC",
+						"OrderByPriceASC",
+						"OrderByNameASC",
+						"OrderByNameDESC"
+					],
+					"description": "Ordination criterion for the Shelf listed items. Possible values: OrderByTopSaleDESC, OrderByReleaseDateDESC, OrderByBestDiscountDESC, OrderByPriceDESC, OrderByPriceASC, OrderByNameASC, OrderByNameDESC",
+					"default": "OrderByTopSaleDESC"
+				},
+				"hideUnavailableItems": {
+					"type": "boolean",
+					"description": "Whether unavailable items should be hidden (true) or not (false)",
+					"default": false
+				},
+				"maxItems": {
+					"type": "number",
+					"description": "Maximum items fetched in the context to be displayed on the Shelf.",
+					"default": 10
+				}
+			}
+		}
+	}
+}

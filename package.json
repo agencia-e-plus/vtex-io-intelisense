@@ -1,0 +1,52 @@
+{
+	"name": "vtexio-autocomplete",
+	"displayName": "vtexio autocomplete",
+	"description": "snippets and autocomplete for vtex io blocks",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.62.0"
+	},
+	"categories": [
+		"Snippets",
+		"Linters",
+		"Other"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "json",
+				"path": "./snippets/vtexio.code-snippets"
+			},
+			{
+				"language": "jsonc",
+				"path": "./snippets/vtexio.code-snippets"
+			}
+		],
+		"jsonValidation": [
+			{
+				"fileMatch": [
+					"**/store/**/*.jsonc",
+					"**/store/**/*.json"
+				],
+				"url": "./vtexio.schema.json"
+			}
+		],
+		"configuration": {
+			"title": "vtexioautocomplete",
+			"properties": {
+				"vtexioautocomplete.filesPath": {
+					"type": [
+						"string",
+						"array"
+					],
+					"description": "path to files where autocomplete should be applied",
+					"default": [
+						"**/store/**/*.jsonc",
+						"**/store/**/*.json"
+					]
+				}
+			}
+		},
+		"configurationDefaults": {}
+	}
+}

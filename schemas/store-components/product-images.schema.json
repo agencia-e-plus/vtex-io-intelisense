@@ -1,0 +1,114 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Product Images",
+	"description": "VTEX block responsible for **rendering a product image or video**.",
+	"type": "object",
+	"properties": {
+		"props": {
+			"type": "object",
+			"description": "Block's properties",
+			"properties": {
+				"aspectRatio": {
+					"anyOf": [
+						{ "type": "string", "pattern": "[0-9]+:[0-9]+" },
+						{ "$ref": "../shared/responsive-values.schema.json" }
+					],
+					"description": "Sets the aspect ratio of the image, that is, whether the image should be square, portrait, landscape, etc. The value should follow the common aspect ratio notation i.e. two numbers separated by a colon such as 1:1 for square, 3:4 for upright portrait, or 1920:1080 for even large values)",
+					"default": "auto"
+				},
+				"contentOrder": {
+					"type": "string",
+					"enum": ["videos-first", "images-first"],
+					"description": "Controls the order in which the images and videos are displayed.",
+					"default": "'images-first'"
+				},
+				"displayThumbnailsArrows": {
+					"type": "boolean",
+					"description": "Displays navigation arrows on the thumbnails media (if there are enough thumbnails for them to scroll)",
+					"default": false
+				},
+				"placeholder": {
+					"type": "string",
+					"description": "Sets the URL for a placeholder image to be used in case there is no available image or video of the product.",
+					"default": "undefined"
+				},
+				"hiddenImages": {
+					"type": "string",
+					"description": "Hides images whose labels match the values listed in this prop. Intended to be used along with the product-summary-sku-selector block. You can have more information at the SKU Selector documentation",
+					"default": "skuvariation"
+				},
+				"maxHeight": {
+					"type": "number",
+					"description": "Maximum height for individual product images (in pixels).",
+					"default": 600
+				},
+				"position": {
+					"type": "string",
+					"enum": ["right", "left"],
+					"description": "Set the position of the thumbnails (left or right). Only used when thumbnailsOrientation is vertical",
+					"default": "left"
+				},
+				"showNavigationArrows": {
+					"type": "boolean",
+					"description": "Controls if the navigation arrows should appear",
+					"default": true
+				},
+				"showPaginationDots": {
+					"type": "boolean",
+					"description": "Controls if the pagination dots should appear",
+					"default": true
+				},
+				"thumbnailAspectRatio": {
+					"type": "string",
+					"pattern": "[0-9]+:[0-9]+",
+					"description": "Sets the aspect ratio of the thumbnail image; For more information about aspect ratio, check the aspectRatio prop",
+					"default": "auto"
+				},
+				"thumbnailMaxHeight": {
+					"type": "number",
+					"description": "Maximum height for the thumbnail image (in pixels).",
+					"default": 150
+				},
+				"thumbnailsOrientation": {
+					"type": "string",
+					"enum": ["vertical", "horizontal"],
+					"description": "Choose the orientation of the thumbnails. Can be set to vertical or horizontal",
+					"default": "vertical"
+				},
+				"zoomFactor": {
+					"type": "number",
+					"description": "Sets how much the zoom increases the image size (e.g. 2 will make the zoomed-in image twice as large)",
+					"default": 2
+				},
+				"zoomMode": {
+					"type": "string",
+					"enum": [
+						"disabled",
+						"in-place-click",
+						"in-place-hover",
+						"open-modal"
+					],
+					"description": "Defines the image zoom behavior. Possible values are: disabled (zoom is disabled), in-place-click(zoom will be triggered when the image is clicked on), in-place-hover(zoom will be triggered when the image is hovered on)  or open-modal (image is zoommed using a modal).",
+					"default": "in-place-click"
+				},
+				"ModalZoom": {
+					"$ref": "../shared/block.schema.json",
+					"description": "Opens a modal for product image zooming. This prop's value must match the name of the block responsible for triggering the modal containing the product image for zooming (e.g. modal-layout from Modal layout app). Notice that the ModalZoom prop will work only if the zoomMode prop is set as open-modal. To learn more, check out the ",
+					"default": "undefined"
+				},
+				"contentType": {
+					"type": "string",
+					"enum": ["images", "videos", "all"],
+					"description": "Controls the type of content that will be displayed in the block. Possible values are: images, videos, or all.",
+					"default": "all"
+				},
+				"displayMode": {
+					"type": "string",
+					"enum": ["carousel", "list"],
+					"description": "Defines how the product media should be displayed. Possible values are carousel (displays the product images and videos in a carousel) and list (displays only the product images inline, with no extra markup). ",
+					"default": "carousel"
+				}
+			}
+		}
+	}
+}

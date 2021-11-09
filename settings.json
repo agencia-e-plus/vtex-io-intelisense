@@ -1,0 +1,19 @@
+{
+	"json.schemas": [
+		{
+			"fileMatch": ["/src/store/**/*.jsonc", "/src/store/**/*.json"],
+			"url": "/.vscode/vtexio.schema.json"
+		}
+	],
+	"editor.snippetSuggestions": "bottom",
+	"files.exclude": {
+		"**/.git": true,
+		"**/.svn": true,
+		"**/.hg": true,
+		"**/CVS": true,
+		"**/.DS_Store": true,
+		"**/Thumbs.db": true,
+		"src/styles/css": true,
+		"**/node_modules": true
+	}
+}
