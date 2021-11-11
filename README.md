@@ -1,16 +1,47 @@
 # vtexio-intellisense README
 
-the Vtex io intellisense help you develop with vtex store-framework with snippets and autocomplete.
+The Vtex io intellisense help you develop with vtex store-framework with snippets and autocomplete.
 
-<!-- ## Features
+## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+### autocomplete 
 
-For example if there is an image subfolder under your extension project workspace:
+![nakednuts-1636664899325](https://user-images.githubusercontent.com/48053804/141369446-3df45670-6d9b-4f4b-8e96-435518b884d9.gif)
+`ATTENTION: The auto coplete works only on 'json' and 'jsonc' files above a 'store' folder `
 
-\!\[feature X\]\(images/feature-x.png\)
+### snippets 
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+for `.json` and `.jsonc`
+
+| trigger |  result  |
+| ------- | ----------- | 
+| flr     | create a flex layout row |
+| flc     | create a flex layout col |
+| shelf   | create a shelf basic layout |
+| rt  | create a rich-text block |
+| image | create a image block |
+| stl | create a stack layout |
+| dl | create a disclosure layout|
+| rld | create a responsive layout desktop |
+| rlm | create a responsive layout mobile |
+| rlt | create a responsive layout tablet |
+| rlp | create a responsive layout phone |
+| clp | create a condition layout product |
+| link | create a link |
+| ovl | create a overlay layout |
+
+
+for `.css` and  `.scss`
+
+| trigger |  result  |
+| ------- | ----------- | 
+| flr     | create a `.flexRow--` |
+| flrc     | create a `.flexRowContent--` |
+| flc     | create a `.flexCol--` |
+| flcc     | create a `.flexColChild--` |
+
+
+<!-- 
 
 ## Requirements
 
