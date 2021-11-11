@@ -2,6 +2,10 @@
 	"name": "vtexio-intellisense",
 	"displayName": "vtexio intellisense",
 	"description": "snippets and autocomplete for vtex io blocks",
+	"repository": {
+		"url": "https://github.com/pluslabeplus/vtex-io-intelisense"
+	},
+	"license": "MIT",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.62.0"
