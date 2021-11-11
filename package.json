@@ -10,6 +10,12 @@
 	"engines": {
 		"vscode": "^1.62.0"
 	},
+	"publisher": "eplus-pluslab",
+	"icon": "logo.png",
+	"keywords": [
+		"vtex",
+		"store-framework"
+	],
 	"categories": [
 		"Snippets",
 		"Linters",
