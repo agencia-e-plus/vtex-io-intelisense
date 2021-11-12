@@ -11,35 +11,33 @@ The Vtex io intellisense help you develop with vtex store-framework with snippet
 
 ### snippets 
 
-for `.json` and `.jsonc`
+for `.json` and `.jsonc`.
 
-| trigger |  result  |
-| ------- | ----------- | 
-| flr     | create a flex layout row |
-| flc     | create a flex layout col |
-| shelf   | create a shelf basic layout |
-| rt  | create a rich-text block |
-| image | create a image block |
-| stl | create a stack layout |
-| dl | create a disclosure layout|
-| rld | create a responsive layout desktop |
-| rlm | create a responsive layout mobile |
-| rlt | create a responsive layout tablet |
-| rlp | create a responsive layout phone |
-| clp | create a condition layout product |
-| link | create a link |
-| ovl | create a overlay layout |
-
+| trigger   | result                             |
+| --------: | ---------------------------------- |
+| `flr`     | create a flex layout row           |
+| `flc`     | create a flex layout col           |
+| `shelf`   | create a shelf basic layout        |
+| `rt`      | create a rich-text block           |
+| `image`   | create a image block               |
+| `stl`     | create a stack layout              |
+| `dl`      | create a disclosure layout         |
+| `rld`     | create a responsive layout desktop |
+| `rlm`     | create a responsive layout mobile  |
+| `rlt`     | create a responsive layout tablet  |
+| `rlp`     | create a responsive layout phone   |
+| `clp`     | create a condition layout product  |
+| `link`    | create a link                      |
+| `ovl`     | create a overlay layout            |
 
 for `.css` and  `.scss`
 
-| trigger |  result  |
-| ------- | ----------- | 
-| flr     | create a `.flexRow--` |
-| flrc     | create a `.flexRowContent--` |
-| flc     | create a `.flexCol--` |
-| flcc     | create a `.flexColChild--` |
-
+| trigger |  result                       |
+| ------- | ----------------------------- |
+| `flr`   | create a `.flexRow--`         |
+| `flrc`  | create a `.flexRowContent--`  |
+| `flc`   | create a `.flexCol--`         |
+| `flcc`  | create a `.flexColChild--`    |
 
 <!-- 
 
