@@ -10,7 +10,7 @@
 	"engines": {
 		"vscode": "^1.62.0"
 	},
-	"publisher": "eplus-pluslab",
+	"publisher": "AgenciaE-plus",
 	"icon": "logo.png",
 	"keywords": [
 		"vtex",
