@@ -1,4 +1,4 @@
-# vtexio-intellisense README
+# vtex io intellisense
 
 The Vtex io intellisense help you develop with vtex store-framework with snippets and autocomplete.
 
@@ -7,7 +7,7 @@ The Vtex io intellisense help you develop with vtex store-framework with snippet
 ### autocomplete 
 
 ![nakednuts-1636664899325](https://user-images.githubusercontent.com/48053804/141369446-3df45670-6d9b-4f4b-8e96-435518b884d9.gif)
-`ATTENTION: The auto coplete works only on 'json' and 'jsonc' files above a 'store' folder `
+`ATTENTION: The auto complete works only on 'json' and 'jsonc' files above a 'store' folder `
 
 ### snippets 
 
@@ -32,12 +32,15 @@ for `.json` and `.jsonc`.
 
 for `.css` and  `.scss`
 
-| trigger |  result                       |
-| ------- | ----------------------------- |
-| `flr`   | create a `.flexRow--`         |
-| `flrc`  | create a `.flexRowContent--`  |
-| `flc`   | create a `.flexCol--`         |
-| `flcc`  | create a `.flexColChild--`    |
+| trigger |  result                                     |
+| ------- | --------------------------------------------|
+| `flr`   | create a `.flexRow--`                       |
+| `flrc`  | create a `.flexRowContent--`                |
+| `flc`   | create a `.flexCol--`                       |
+| `flcc`  | create a `.flexColChild--`                  |
+| `vbtn`  | create a `:global(.vtex-button)`            |
+| `vbtnl` | create a `:global(.vtex-button__label)`     |
+| `:gl`   | create a `:global()`                        |
 
 <!-- 
 
