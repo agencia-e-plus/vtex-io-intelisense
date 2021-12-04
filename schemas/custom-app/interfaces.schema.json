@@ -1,0 +1,94 @@
+{
+	"title": "VTEX IO Custom Block Json Schema by EPlus 💚",
+	"type": "object",
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"patternProperties": {
+		".": {
+			"description": "block",
+			"type": "object",
+			"properties": {
+				"allowed": {
+					"type": "array",
+					"itens": {
+						"type": "string"
+					}
+				},
+				"composition": {
+					"type": "string",
+					"enum": ["children", "blocks"],
+					"default": "blocks"
+				},
+				"context": {
+					"type": "string",
+					"markdownDescription": "Component that should provide a React Context to the Block. Mostly used by templates to get specific data for the route (e.g. product or category data)."
+				},
+				"required": {
+					"description": "Array of interface names that specifies which interfaces are required to be included inside the blocks field of any implementing block.",
+					"type": "string"
+				},
+				"render": {
+					"type": "string",
+					"enum": [
+						{
+							"server": {
+								"description": "component will be rendered on server-side."
+							}
+						},
+						{
+							"client": {
+								"description": "component will be rendered on client-side but the component assets can be included in HTML template to increase rendering speed. Cannot be overridden by `server` value in any extending interface"
+							}
+						},
+						{
+							"lazy": {
+								"description": "component will be rendered on client-side and the component assets must not be included in HTML template - runtime will fetch those assets when necessary. Cannot be overridden in any extending interface."
+							}
+						}
+					],
+					"markdownDescription": "Enum that specifies the render strategy for the block. Allowed values are:\n- `server`: component will be rendered on server-side.\n- `client`: component will be rendered on client-side but the component assets can be included in HTML template to increase rendering speed. Cannot be overridden by `server` value in any extending interface.\n- `lazy`: component will be rendered on client-side and the component assets must not be included in HTML template - runtime will fetch those assets when necessary. Cannot be overridden in any extending interface."
+				},
+				"extensible": {
+					"type": "string",
+					"enum": [
+						{
+							"vtex": {
+								"description": "accounts can always extend all interfaces"
+							},
+							"gocommerce": {
+								"description": "accounts can always extend all interfaces"
+							},
+							"enterprise": {
+								"description": "accounts can extend all interfaces but the ones with extensible set to `vtex` or `gocommerce`."
+							},
+							"public": {
+								"description": "All other accounts can only extend interfaces"
+							}
+						}
+					],
+					"default": "enterprise",
+					"markdownDescription": "Enum that specifies who can extend the interface. The allowed values are `vtex`, `gocommerce`, `enterprise` or `public`."
+				},
+				"preview": {
+					"type": "object",
+
+					"properties": {
+						"type": {
+							"type": "string",
+							"enum": ["block", "circle", "text"]
+						},
+						"width": { "type": "number" },
+						"height": { "type": "number" }
+					}
+				},
+				"path": {
+					"type": "string",
+					"markdownDescription": "String with the relative path to access the template. A route will be accessed if its path matches the current URL.\nTo get values from the URL, one may insert parameters on the path. Parameters can have different behaviors depending on their prefix:\n`:identifier` will capture the string between two /.\n`*identifier` will capture the biggest string possible that produces a valid match between the URL and the path."
+				},
+				"canonical": {
+					"type": "string",
+					"description": "Friendlier path to access same resources."
+				}
+			}
+		}
+	}
+}

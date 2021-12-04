@@ -47,6 +47,12 @@
 					"**/store/**/*.json"
 				],
 				"url": "./vtexio.schema.json"
+			},
+			{
+				"fileMatch": [
+					"**/**/store/interfaces.json"
+				],
+				"url": "./schemas/custom-app/interfaces.schema.json"
 			}
 		],
 		"configuration": {
