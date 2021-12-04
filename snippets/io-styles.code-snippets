@@ -1,0 +1,44 @@
+{
+	"Flex layout row class": {
+		"scope": "css, scss",
+		"prefix": "flr",
+		"body": [".flexRow--${1}"],
+		"description": "Flex layout row class"
+	},
+	"Flex layout row content class": {
+		"scope": "css, scss",
+		"prefix": "flrc",
+		"body": [".flexRowContent--${1}"],
+		"description": "Flex layout row content class"
+	},
+	"Flex layout column class": {
+		"scope": "css, scss",
+		"prefix": "flc",
+		"body": [".flexCol--${1}"],
+		"description": "Flex layout column class"
+	},
+	"Flex layout column child class": {
+		"scope": "css, scss",
+		"prefix": "flcc",
+		"body": [".flexColChild--${1}"],
+		"description": "Flex layout column child class"
+	},
+	"vtex global style": {
+		"scope": "css, scss",
+		"prefix": ":gl",
+		"body": [":global(.${1:component-class})"],
+		"description": "vtex global style"
+	},
+	"vtex button": {
+		"scope": "css, scss",
+		"prefix": "vbtn",
+		"body": [":global(.vtex-button)"],
+		"description": "vtex button selector"
+	},
+	"vtex button label": {
+		"scope": "css, scss",
+		"prefix": "vbtnl",
+		"body": [":global(.vtex-button__label)"],
+		"description": "vtex button label selector"
+	}
+}

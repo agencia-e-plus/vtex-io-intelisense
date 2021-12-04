@@ -15,30 +15,6 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
-	"Flex layout row class": {
-		"scope": "css, scss",
-		"prefix": "flr",
-		"body": [".flexRow--${1}"],
-		"description": "Flex layout row class"
-	},
-	"Flex layout row content class": {
-		"scope": "css, scss",
-		"prefix": "flrc",
-		"body": [".flexRowContent--${1}"],
-		"description": "Flex layout row content class"
-	},
-	"Flex layout column class": {
-		"scope": "css, scss",
-		"prefix": "flc",
-		"body": [".flexCol--${1}"],
-		"description": "Flex layout column class"
-	},
-	"Flex layout column child class": {
-		"scope": "css, scss",
-		"prefix": "flcc",
-		"body": [".flexColChild--${1}"],
-		"description": "Flex layout column child class"
-	},
 	"Create vtex flex layout column with props": {
 		"scope": "json, jsonc",
 		"prefix": "flc",
@@ -78,12 +54,6 @@
 		],
 		"description": "Create vtex rich text block"
 	},
-	"vtex global style": {
-		"scope": "css, scss",
-		"prefix": ":gl",
-		"body": [":global(.${1:component-class})"],
-		"description": "vtex global style"
-	},
 	"Create vtex image block": {
 		"scope": "json, jsonc",
 		"prefix": "image",
@@ -109,6 +79,7 @@
 		"description": "create a stack layout"
 	},
 	"Disclosure layout": {
+		"scope": "json, jsonc",
 		"prefix": "dl",
 		"body": [
 			" \"disclosure-layout#${1:id}\": {",
@@ -124,6 +95,7 @@
 		"description": "Disclosure layout"
 	},
 	"Responsive layout desktop": {
+		"scope": "json, jsonc",
 		"prefix": "rld",
 		"body": [
 			" \"responsive-layout.desktop#${1:id}\": {",
@@ -135,6 +107,7 @@
 		"description": "Responsive layout desktop"
 	},
 	"Responsive layout mobile": {
+		"scope": "json, jsonc",
 		"prefix": "rlm",
 		"body": [
 			" \"responsive-layout.mobile#${1:id}\": {",
@@ -146,6 +119,7 @@
 		"description": "Responsive layout mobile "
 	},
 	"Responsive layout tablet": {
+		"scope": "json, jsonc",
 		"prefix": "rlt",
 		"body": [
 			" \"responsive-layout.tablet#${1:id}\": {",
@@ -157,6 +131,7 @@
 		"description": "Responsive layout tablet"
 	},
 	"Responsive layout phone": {
+		"scope": "json, jsonc",
 		"prefix": "rlp",
 		"body": [
 			" \"responsive-layout.phone#${1:id}\": {",
@@ -168,6 +143,7 @@
 		"description": "Responsive layout phone"
 	},
 	"Condition layout Product": {
+		"scope": "json, jsonc",
 		"prefix": "clp",
 		"body": [
 			" \"condition-layout.product#${1:id}\": {",
@@ -187,6 +163,7 @@
 		"description": "Condition layout Product"
 	},
 	"Create a link block": {
+		"scope": "json, jsonc",
 		"prefix": "link",
 		"body": [
 			"\"link#${1:id}\": {",
@@ -199,6 +176,7 @@
 		"description": "Create a link block"
 	},
 	"Create a shelf roll": {
+		"scope": "json, jsonc",
 		"prefix": "shelf",
 		"body": [
 			"\"flex-layout.row#${1:id}\": {",
@@ -230,6 +208,7 @@
 		"description": "Create a shelf roll"
 	},
 	"Create a overlay latouy": {
+		"scope": "json, jsonc",
 		"prefix": "ovl",
 		"body": [
 			" \"overlay-trigger#${1:id}\": {",

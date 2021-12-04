@@ -25,11 +25,19 @@
 		"snippets": [
 			{
 				"language": "json",
-				"path": "./snippets/vtexio.code-snippets"
+				"path": "./snippets/io-blocks.code-snippets"
 			},
 			{
 				"language": "jsonc",
-				"path": "./snippets/vtexio.code-snippets"
+				"path": "./snippets/io-blocks.code-snippets"
+			},
+			{
+				"language": "scss",
+				"path": "./snippets/io-styles.code-snippets"
+			},
+			{
+				"language": "css",
+				"path": "./snippets/io-styles.code-snippets"
 			}
 		],
 		"jsonValidation": [
