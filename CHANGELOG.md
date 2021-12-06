@@ -4,6 +4,12 @@ All notable changes to the "vtexio-intellisense" extension will be documented in
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.1.1] - 2021-12-06
+
+## Added 
+
+- configuration `vtexiointellisense.allowsUnusedBlocks` to disable\enable warnings
+
 ## [0.1.0] - 2021-12-04
 
 ## Added

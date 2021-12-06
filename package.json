@@ -6,7 +6,7 @@
 		"url": "https://github.com/pluslabeplus/vtex-io-intelisense"
 	},
 	"license": "MIT",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"engines": {
 		"vscode": "^1.62.0"
 	},
@@ -62,18 +62,12 @@
 			}
 		],
 		"configuration": {
-			"title": "vtexioautocomplete",
+			"title": "vtexiointellisense",
 			"properties": {
-				"vtexioautocomplete.filesPath": {
-					"type": [
-						"string",
-						"array"
-					],
-					"description": "path to files where autocomplete should be applied",
-					"default": [
-						"**/store/**/*.jsonc",
-						"**/store/**/*.json"
-					]
+				"vtexiointellisense.allowsUnusedBlocks": {
+					"type": "boolean",
+					"default": false,
+					"description": "Allows unused blocks in json files"
 				}
 			}
 		},

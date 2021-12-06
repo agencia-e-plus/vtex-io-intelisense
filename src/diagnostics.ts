@@ -7,30 +7,32 @@ import fs = require("fs");
 export const UNUSED_BLOCK = 'unused_block';
 export const STORE_ID = "store";
 
-type BlockFormat = { 
-	props?: { 
+type BlockFormat = {
+	props?: {
 		Then: string
 		Else: string
 		[key: string]: string
-	}, 
-	blocks?: string[] 
+	},
+	blocks?: string[]
 	children?: string[]
 };
 
-type GenericObject = { 
-	[key: string]: BlockFormat 
+type GenericObject = {
+	[key: string]: BlockFormat
 };
 
 
 /** String to detect in the text document. */
 
 /**
- * Analyzes the text document for problems. 
+ * Analyzes the text document for problems.
  * @param doc text document to analyze
  * @param blocksDiagnostics diagnostic collection
  */
 export function refreshDiagnostics(doc: vscode.TextDocument, blocksDiagnostics: vscode.DiagnosticCollection): void {
 	const diagnostics: vscode.Diagnostic[] = [];
+
+	const currentFilePath = doc.fileName.replace(/\\/g, "/");
 
 	const [folder] = vscode?.workspace?.workspaceFolders || [] as vscode.WorkspaceFolder[];
 
@@ -46,6 +48,8 @@ export function refreshDiagnostics(doc: vscode.TextDocument, blocksDiagnostics: 
 		}
 		return { ...content, ...JSON.parse(x) };
 	}, {});
+
+	if(!files.includes(currentFilePath)) {return;};
 
 	const currentDocumentText = doc.getText();
 
@@ -80,7 +84,10 @@ function createDiagnostic(doc: vscode.TextDocument, lineOfText: vscode.TextLine,
 }
 
 export function subscribeToDocumentChanges(context: vscode.ExtensionContext, blocksDiagnostics: vscode.DiagnosticCollection): void {
-	
+	const configs = vscode.workspace.getConfiguration('vtexiointellisense');
+
+	if(configs.allowsUnusedBlocks) {return;}
+
 	if (vscode.window.activeTextEditor) {
 		refreshDiagnostics(vscode.window.activeTextEditor.document, blocksDiagnostics);
 	}
@@ -139,7 +146,7 @@ const checkUse = (id: string, json: GenericObject) => {
 };
 
 const checkKey = (currentDocument: any, json: any) => {
-	
+
   const blockids = Object.entries(currentDocument).map(([key, _value]) =>
     checkUse(key, json)
   );
