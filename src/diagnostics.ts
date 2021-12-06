@@ -31,12 +31,12 @@ type GenericObject = {
  */
 export function refreshDiagnostics(doc: vscode.TextDocument, blocksDiagnostics: vscode.DiagnosticCollection): void {
 	const diagnostics: vscode.Diagnostic[] = [];
-
+,
 	const currentFilePath = doc.fileName.replace(/\\/g, "/");
 
 	const [folder] = vscode?.workspace?.workspaceFolders || [] as vscode.WorkspaceFolder[];
 
-	const files = glob.sync(folder?.uri?.fsPath + "/**/store/**/*.{json,jsonc}");
+	const files = glob.sync(folder?.uri?.fsPath + "/**/store/blocks/**/*.{json,jsonc}");
 
 	const allJsons = files.reduce((content: any, file: any, i: any) => {
 		const x = fs.readFileSync(
