@@ -52,13 +52,16 @@ If you have any requirements or dependencies, add a section describing those and
 
 This extension contributes the following settings:
 
-* `vtexiointellisense.allowsUnusedBlocks`: if set to `false` all unused block will be show a warning of `unused block`. Default value is `false`
 
-<!--
+![beta](https://img.shields.io/badge/-beta-red)
+* `vtexiointellisense.allowsUnusedBlocks`: if set to `false` all unused block will be show a warning of `unused block`. Default value is `true`
+
+
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+Activate experimental unused blocks may cause a long wait for show the snippets
 
+<!--
 ## Release Notes
 
 Users appreciate release notes as you update your extension.

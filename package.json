@@ -22,7 +22,6 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:try.helloWorld",
 		"onLanguage:json",
 		"onLanguage:jsonc"
 	],
@@ -66,7 +65,7 @@
 			"properties": {
 				"vtexiointellisense.allowsUnusedBlocks": {
 					"type": "boolean",
-					"default": false,
+					"default": true,
 					"description": "Allows unused blocks in json files"
 				}
 			}
