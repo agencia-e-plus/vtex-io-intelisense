@@ -6,7 +6,7 @@
 		"url": "https://github.com/pluslabeplus/vtex-io-intelisense"
 	},
 	"license": "MIT",
-	"version": "0.1.2",
+	"version": "0.1.3",
 	"engines": {
 		"vscode": "^1.62.0"
 	},
