@@ -5,7 +5,7 @@ import fs = require("fs");
 
 /** Code that is used to associate diagnostic entries with code actions. */
 export const UNUSED_BLOCK = 'unused_block';
-export const STORE_ID = "store";
+export const NO_EXPLICIT_USE_BLOCKS = ["store.", "header", "header.", "footer"];
 
 type BlockFormat = {
 	props?: {
@@ -31,7 +31,7 @@ type GenericObject = {
  */
 export function refreshDiagnostics(doc: vscode.TextDocument, blocksDiagnostics: vscode.DiagnosticCollection): void {
 	const diagnostics: vscode.Diagnostic[] = [];
-,
+	
 	const currentFilePath = doc.fileName.replace(/\\/g, "/");
 
 	const [folder] = vscode?.workspace?.workspaceFolders || [] as vscode.WorkspaceFolder[];
@@ -57,7 +57,9 @@ export function refreshDiagnostics(doc: vscode.TextDocument, blocksDiagnostics: 
 
 	const ids = checkKey(currentDocumentObject, allJsons);
 
-	const filteredIds = ids.filter((id: string | undefined) => id !== undefined && !id.startsWith(STORE_ID));
+	const filteredIds = ids.filter((id: string | undefined) =>{ 
+	 return id !== undefined && !NO_EXPLICIT_USE_BLOCKS.some((blockId) => id.startsWith(blockId) ); 
+	});
 
 	filteredIds.forEach((id) => {
 		for (let lineIndex = 0; lineIndex < doc.lineCount; lineIndex++) {

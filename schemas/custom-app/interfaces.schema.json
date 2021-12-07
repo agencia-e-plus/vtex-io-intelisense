@@ -28,41 +28,40 @@
 				},
 				"render": {
 					"type": "string",
-					"enum": [
+					"oneOf": [
 						{
-							"server": {
-								"description": "component will be rendered on server-side."
-							}
+							"const": "server",
+							"description": "component will be rendered on server-side."
 						},
 						{
-							"client": {
-								"description": "component will be rendered on client-side but the component assets can be included in HTML template to increase rendering speed. Cannot be overridden by `server` value in any extending interface"
-							}
+							"const": "client",
+							"description": "component will be rendered on client-side but the component assets can be included in HTML template to increase rendering speed. Cannot be overridden by `server` value in any extending interface"
 						},
 						{
-							"lazy": {
-								"description": "component will be rendered on client-side and the component assets must not be included in HTML template - runtime will fetch those assets when necessary. Cannot be overridden in any extending interface."
-							}
+							"const": "lazy",
+							"description": "component will be rendered on client-side and the component assets must not be included in HTML template - runtime will fetch those assets when necessary. Cannot be overridden in any extending interface."
 						}
 					],
 					"markdownDescription": "Enum that specifies the render strategy for the block. Allowed values are:\n- `server`: component will be rendered on server-side.\n- `client`: component will be rendered on client-side but the component assets can be included in HTML template to increase rendering speed. Cannot be overridden by `server` value in any extending interface.\n- `lazy`: component will be rendered on client-side and the component assets must not be included in HTML template - runtime will fetch those assets when necessary. Cannot be overridden in any extending interface."
 				},
 				"extensible": {
 					"type": "string",
-					"enum": [
+					"oneOf": [
 						{
-							"vtex": {
-								"description": "accounts can always extend all interfaces"
-							},
-							"gocommerce": {
-								"description": "accounts can always extend all interfaces"
-							},
-							"enterprise": {
-								"description": "accounts can extend all interfaces but the ones with extensible set to `vtex` or `gocommerce`."
-							},
-							"public": {
-								"description": "All other accounts can only extend interfaces"
-							}
+							"const": "vtex",
+							"description": "accounts can always extend all interfaces"
+						},
+						{
+							"const": "gocommerce",
+							"description": "accounts can always extend all interfaces"
+						},
+						{
+							"const": "enterprise",
+							"description": "accounts can extend all interfaces but the ones with extensible set to `vtex` or `gocommerce`."
+						},
+						{
+							"const": "public",
+							"description": "All other accounts can only extend interfaces"
 						}
 					],
 					"default": "enterprise",
@@ -70,7 +69,6 @@
 				},
 				"preview": {
 					"type": "object",
-
 					"properties": {
 						"type": {
 							"type": "string",

@@ -4,8 +4,16 @@ All notable changes to the "vtexio-intellisense" extension will be documented in
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [0.1.1] - 2021-12-06
+## [0.1.2] - 2021-12-07
 
+## Fixed 
+
+- validation path
+- no explict use blocks
+- shelf snippt
+- interfaces autocomplete
+
+## [0.1.1] - 2021-12-06
 ## Added 
 
 - configuration `vtexiointellisense.allowsUnusedBlocks` to disable\enable warnings
