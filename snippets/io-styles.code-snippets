@@ -40,5 +40,23 @@
 		"prefix": "vbtnl",
 		"body": [":global(.vtex-button__label)"],
 		"description": "vtex button label selector"
+	},
+	"vtex input label": {
+		"scope": "css, scss",
+		"prefix": "vil",
+		"body": [":global(.vtex-input__label)"],
+		"description": "vtex input label selector"
+	},
+	"vtex input": {
+		"scope": "css, scss",
+		"prefix": "vi",
+		"body": [":global(.vtex-input)"],
+		"description": "vtex input label selector"
+	},
+	"vtex input prefix group": {
+		"scope": "css, scss",
+		"prefix": "vipg",
+		"body": [":global(.vtex-input-prefix__group)"],
+		"description": "vtex input prefix group selector"
 	}
 }

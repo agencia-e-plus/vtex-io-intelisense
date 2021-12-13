@@ -221,5 +221,37 @@
 			" },"
 		],
 		"description": "create a overlay latouy"
+	},
+	"Action Card": {
+		"prefix": "actioncard",
+		"body": [
+			"\"flex-layout.row#actions-card\": {",
+			"\"children\": [\"flex-layout.col#action-left\", \"image#action-banner\"],",
+			"\"props\": {",
+			"}",
+			"},",
+			"\"flex-layout.col#action-left\": {",
+			"\"children\": [\"rich-text#action-banner-text\", \"link#action-button\"],",
+			"\"props\": {}",
+			"},",
+			"\"rich-text#action-banner-text\": {",
+			"\"props\": {",
+			"\"text\": \"\"",
+			"}",
+			"},",
+			"\"link#action-button\": {",
+			"\"props\": {",
+			"\"label\": \"Conheça mais\",",
+			"\"href\": \"\",",
+			"\"displayMode\": \"button\"",
+			"}",
+			"},",
+			"\"image#action-banner\": {",
+			"\"props\": {",
+			"\"src\": \"assets/images/home/banner-2.png\"",
+			"}",
+			"},"
+		],
+		"description": "Action Card"
 	}
 }
