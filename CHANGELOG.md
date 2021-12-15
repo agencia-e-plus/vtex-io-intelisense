@@ -4,6 +4,11 @@ All notable changes to the "vtexio-intellisense" extension will be documented in
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [Unreleased] - Release
+
+- add autocomplete `apps.json` from edition apps
+- add new prop to `slider-layout`
+
 ## [0.1.4] - 2021-12-13
 
 ### Added

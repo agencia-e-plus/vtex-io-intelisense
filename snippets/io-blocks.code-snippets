@@ -253,5 +253,79 @@
 			"},"
 		],
 		"description": "Action Card"
+	},
+	"Newsletter": {
+		"prefix": "nl",
+		"body": [
+			"\"newsletter-form\": {",
+			"    \"children\": [],",
+			"    \"props\": {}",
+			"},",
+			"\"newsletter-input-email\": {",
+			"    \"props\": {",
+			"        \"inputLabel\": \"\",",
+			"        \"placeholderText\": \"\"",
+			"    }",
+			"},",
+			"\"newsletter-input-name\": {",
+			"    \"props\": {",
+			"        \"inputLabel\": \"\",",
+			"        \"placeholderText\": \"\"",
+			"    }",
+			"},",
+			"\"newsletter-submit\": {",
+			"    \"props\": {",
+			"         \"submitButtonLabel\": \"\"",
+			"    }",
+			"}"
+		],
+		"description": "Newsletter"
+	},
+	"Newsletter Submit Button": {
+		"prefix": "nls",
+		"body": [
+			"\"newsletter-submit\": {",
+			"    \"props\": {",
+			"         \"submitButtonLabel\": \"\"",
+			"    }",
+			"}"
+		],
+		"description": "Newsletter Submit Button"
+	},
+	"Newsletter Name Input": {
+		"prefix": ["nln", "nlin"],
+		"body": [
+			"\"newsletter-input-name\": {",
+			"    \"props\": {",
+			"        \"inputLabel\": \"\",",
+			"        \"placeholderText\": \"\"",
+			"    }",
+			"},"
+		],
+		"description": "Newsletter Name Input"
+	},
+	"Newsletter Email Input": {
+		"prefix": ["nle", "nlie"],
+		"body": [
+			"\"newsletter-input-email\": {",
+			"    \"props\": {",
+			"        \"inputLabel\": \"\",",
+			"        \"placeholderText\": \"\"",
+			"    }",
+			"},"
+		],
+		"description": "Newsletter Email Input"
+	},
+	"Newsletter Phone Input": {
+		"prefix": ["nlip", "nlp"],
+		"body": [
+			"\"newsletter-input-phone\": {",
+			"    \"props\": {",
+			"        \"inputLabel\": \"\",",
+			"        \"placeholderText\": \"\"",
+			"    }",
+			"},"
+		],
+		"description": "Newsletter Phone Input"
 	}
 }

@@ -58,6 +58,12 @@
 					"**/**/store/interfaces.json"
 				],
 				"url": "./schemas/custom-app/interfaces.schema.json"
+			},
+			{
+				"fileMatch": [
+					"**/edition/apps.json"
+				],
+				"url": "./schemas/edition-app/edition.schema.json"
 			}
 		],
 		"configuration": {
