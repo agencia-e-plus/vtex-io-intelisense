@@ -6,8 +6,11 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased] - Release
 
+## [0.1.5] - 2021-12-15
+
 - add autocomplete `apps.json` from edition apps
 - add new prop to `slider-layout`
+- fix block's conflict props recommendations
 
 ## [0.1.4] - 2021-12-13
 
