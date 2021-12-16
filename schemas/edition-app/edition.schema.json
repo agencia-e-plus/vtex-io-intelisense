@@ -1,0 +1,39 @@
+{
+	"title": "VTEX IO Edition App Json Schema by EPlus 💚",
+	"type": "object",
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"patternProperties": {
+		"apps": {
+			"description": "block",
+			"type": "object",
+			"patternProperties": {
+				".": {
+					"description": "block",
+					"type": "object",
+					"properties": {
+						"defaultMajor": {
+							"type": "number",
+							"markdownDescription": "`defaultMajor` or `major` fields determines the major of the app that will be installed by default, when the edition is set in some account."
+						},
+						"allowedMajors": {
+							"type": "array",
+							"items": {
+								"type": "number"
+							},
+							"markdownDescription": "allows specifying alternative majors that can be used by any account using the edition. Those majors can be used by manually installing the alternate version of the app using VTEX IO CLI (`vtex install`). If this field is omitted or empty, it means that only the default major is allowed and it cannot be changed."
+						},
+						"allowsUninstall": {
+							"type": "boolean",
+							"markdownDescription": "serves to allow users to uninstall the app from the edition as well, to be done manually using VTEX IO CLI (`vtex uninstall`). If omitted will default to false, i.e. that the app cannot be uninstalled by the account.",
+							"default": false
+						},
+						"settings": {
+							"type": "object",
+							"markdownDescription": "specifies the initial app settings to be set when the app is installed in the account via the edition. If omited, which is the recommended for most of the cases, no setting changes are made when installing the app."
+						}
+					}
+				}
+			}
+		}
+	}
+}

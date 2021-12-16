@@ -104,10 +104,30 @@
 				"centerMode": {
 					"anyOf": [
 						{ "$ref": "./shared/responsive-values.schema.json" },
-						{ "type": "string", "enum": ["to-the-left", "center", "disabled"] }
+						{
+							"type": "string",
+							"oneOf": [
+								{
+									"const": "to-the-left",
+									"description": "elements are centered, allowing users to see a peek of the previous and next slides"
+								},
+								{
+									"const": "center",
+									"description": "align elements to the left side, allowing users to see a peek of the next slide, but not the previous one"
+								},
+								{
+									"const": "disabled",
+									"description": "disables the feature, rendering elements on the whole screen without taking a peek in the previous and next slides"
+								}
+							]
+						}
 					],
-					"description": "Defines the slider elements positioning on the screen. Possible values are: center (elements are centered, allowing users to see a peek of the previous and next slides), to-the-left (align elements to the left side, allowing users to see a peek of the next slide, but not the previous one), and disabled (disables the feature, rendering elements on the whole screen without taking a peek in the previous and next slides). Notice: This is a responsive prop, which means you can pass to it an object with different values for each breakpoint (desktop, mobile, tablet, and phone).",
+					"markdownDescription": "Defines the slider elements positioning on the screen. Possible values are: `center` (elements are centered, allowing users to see a peek of the previous and next slides), `to-the-left` (align elements to the left side, allowing users to see a peek of the next slide, but not the previous one), and `disabled` (disables the feature, rendering elements on the whole screen without taking a peek in the previous and next slides). Notice: This is a responsive prop, which means you can pass to it an object with different values for each breakpoint (desktop, mobile, tablet, and phone).",
 					"default": "disabled"
+				},
+				"centerModeSlidesGap": {
+					"type": "number",
+					"markdownDescription": "Number of pixels between slides when `centerMode` is set to `center` or `to-the-left`."
 				},
 				"blockClass": {
 					"anyOf": [

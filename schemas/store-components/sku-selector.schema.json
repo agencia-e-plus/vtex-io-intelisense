@@ -10,7 +10,16 @@
 			"properties": {
 				"visibility": {
 					"type": "string",
-					"enum": ["always", "more-than-one"],
+					"oneOf": [
+						{
+							"const": "always",
+							"markdownDescription": "it will always be displayed even if the product has only one SKU option"
+						},
+						{
+							"const": "more-than-one",
+							"markdownDescription": "the SKU Selector is only displayed when the product has more than one SKU option"
+						}
+					],
 					"description": "Defines the scenarios in which the SKU selector should be displayed. Possible values are: always (it will always be displayed even if the product has only one SKU option) or more-than-one (the SKU Selector is only displayed when the product has more than one SKU option).",
 					"default": "always"
 				},
@@ -46,7 +55,20 @@
 				},
 				"showValueForVariation": {
 					"type": "string",
-					"enum": ["none", "image", "all"],
+					"oneOf": [
+						{
+							"const": "none",
+							"description": "no values are displayed when the variation is selected"
+						},
+						{
+							"const": "image",
+							"description": "displays only the image value for the selected variation, if any"
+						},
+						{
+							"const": "all",
+							"description": "all variation values are displayed"
+						}
+					],
 					"description": "Displays a value for the selected variation. This prop replaces the former showValueNameForImageVariation (deprecated). Possible values are: none (no values are displayed when the variation is selected), image (displays only the image value for the selected variation, if any) or all (all variation values are displayed).",
 					"default": "none"
 				},
@@ -64,13 +86,43 @@
 				},
 				"showVariationsLabels": {
 					"type": "string",
-					"enum": ["none", "variation", "itemValue", "variationAndItemValue"],
+					"oneOf": [
+						{
+							"const": "none",
+							"description": "doesn't display the variation names. Replaces the previous false behavior"
+						},
+						{
+							"const": "variation",
+							"description": "shows the variation name as a header of the items. Replaces the previous true behavior"
+						},
+						{
+							"const": "itemValue",
+							"description": "displays the variation name before with each item's value"
+						},
+						{
+							"const": "variationAndItemValue",
+							"description": "behaves as variation and itemValue at the same time"
+						}
+					],
 					"description": "Where variation names should be displayed. Possible values are: none (doesn't display the variation names. Replaces the previous false behavior), variation (shows the variation name as a header of the items. Replaces the previous true behavior), itemValue (displays the variation name before with each item's value) and variationAndItemValue (behaves as variation and itemValue at the same time).",
 					"default": "variation"
 				},
 				"displayMode": {
 					"type": "string",
-					"enum": ["default", "slider"],
+					"oneOf": [
+						{
+							"const": "default",
+							"description": "displays all variation names"
+						},
+						{
+							"const": "select",
+							"description": "only displays the selected variation name"
+						},
+						{
+							"const": "slider",
+							"description": "displays all variation names in a slider when the number of available options in greater than the value defined in the sliderDisplayThreshold prop"
+						}
+					],
 					"description": "Defines how the product variation names will be displayed (it doesn't apply to product variation images). Possible values are: default (displays all variation names), select (only displays the selected variation name) or slider (displays all variation names in a slider when the number of available options in greater than the value defined in the sliderDisplayThreshold prop). Notice that this prop is ",
 					"default": "default"
 				},
@@ -123,7 +175,20 @@
 				},
 				"initialSelection": {
 					"type": "string",
-					"enum": ["complete", "image", "empty"],
+					"oneOf": [
+						{
+							"const": "complete",
+							"description": "selects the first available SKU's variation values"
+						},
+						{
+							"const": "image",
+							"description": "selects the first available image variation"
+						},
+						{
+							"const": "empty",
+							"description": "o variations will be selected when the page is loaded"
+						}
+					],
 					"description": "Controls the user initial selection for available variations when product page is fully loaded. Possible values are: complete (selects the first available SKU's variation values), image (selects the first available image variation) or empty (no variations will be selected when the page is loaded).",
 					"default": "complete"
 				}
