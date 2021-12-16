@@ -164,163 +164,166 @@
 		}
 	},
 	"patternProperties": {
-		"^(blog-latest-posts-preview.wordpress-latest-posts-preview)": {
+		"^(add-to-cart-button#)|^(add-to-cart-button)$": {
+			"$ref": "./schemas/add-to-cart-button.schema.json"
+		},
+		"^(blog-latest-posts-preview.wordpress-latest-posts-preview#)|^(blog-latest-posts-preview.wordpress-latest-posts-preview)$": {
 			"$ref": "./schemas/wordpress-integration/blog-latest-posts-preview.wordpress-latest-posts-preview.schema.json"
 		},
-		"^(condition-layout.product)": {
+		"^(condition-layout.product#)|^(condition-layout.product)$": {
 			"$ref": "./schemas/condition-layout.product.schema.json"
 		},
-		"^(disclosure-content)": {
+		"^(disclosure-content#)|^(disclosure-content)$": {
 			"$ref": "./schemas/disclosure-layout/disclosure-content.schema.json"
 		},
-		"^(disclosure-layout-group)": {
+		"^(disclosure-layout-group#)|^(disclosure-layout-group)$": {
 			"$ref": "./schemas/disclosure-layout/disclosure-layout-group.schema.json"
 		},
-		"^(disclosure-layout)": {
+		"^(disclosure-layout#)|^(disclosure-layout)$": {
 			"$ref": "./schemas/disclosure-layout/disclosure-layout.schema.json"
 		},
-		"^(disclosure-state-indicator)": {
+		"^(disclosure-state-indicator#)|^(disclosure-state-indicator)$": {
 			"$ref": "./schemas/disclosure-layout/disclosure-state-indicator.schema.json"
 		},
-		"^(disclosure-trigger-group)": {
+		"^(disclosure-trigger-group#)|^(disclosure-trigger-group)$": {
 			"$ref": "./schemas/disclosure-layout/disclosure-trigger-group.schema.json"
 		},
-		"^(disclosure-trigger)": {
+		"^(disclosure-trigger#)|^(disclosure-trigger)$": {
 			"$ref": "./schemas/disclosure-layout/disclosure-trigger.schema.json"
 		},
-		"^(filter-navigator.v3)": {
+		"^(filter-navigator.v3#)|^(filter-navigator.v3)$": {
 			"$ref": "./schemas/search-result/filter-navigator.v3.schema.json"
 		},
-		"^(flex-layout.col)": {
+		"^(flex-layout.col#)|^(flex-layout.col)$": {
 			"$ref": "./schemas/flex-layout/flex-layout.col.schema.json"
 		},
-		"^(flex-layout.row)": {
+		"^(flex-layout.row#)|^(flex-layout.row)$": {
 			"$ref": "./schemas/flex-layout/flex-layout.row.schema.json"
 		},
-		"^(gallery-layout-option)": {
+		"^(gallery-layout-option#)|^(gallery-layout-option)$": {
 			"$ref": "./schemas/search-result/gallery-layout-option.schema.json"
 		},
-		"^(gallery-layout-switcher)": {
+		"^(gallery-layout-switcher#)|^(gallery-layout-switcher)$": {
 			"$ref": "./schemas/search-result/gallery-layout-switcher.schema.json"
 		},
-		"^(gallery)": {
+		"^(gallery#)|^(gallery)$": {
 			"$ref": "./schemas/search-result/gallery.schema.json"
 		},
-		"^(icon)": {
+		"^(icon#)|^(icon)$": {
 			"$ref": "./schemas/icon.schema.json"
 		},
-		"^(image)": {
+		"^(image##)|^(image#)$": {
 			"$ref": "./schemas/image.schema.json"
 		},
-		"^(link)": {
+		"^(link#)|^(link)$": {
 			"$ref": "./schemas/link.schema.json"
 		},
-		"^(list-context.image-list)": {
+		"^(list-context.image-list#)|^(list-context.image-list)$": {
 			"$ref": "./schemas/list-context.image-list.schema.json"
 		},
-		"^(list-context.product-list)": {
+		"^(list-context.product-list#)|^(list-context.product-list)$": {
 			"$ref": "./schemas/list-context.product-list.schema.json"
 		},
-		"^(paged-controls)": {
+		"^(paged-controls#)|^(paged-controls)$": {
 			"$ref": "./schemas/search-result/paged-controls.schema.json"
 		},
-		"^(product-description)": {
+		"^(product-description#)|^(product-description)$": {
 			"$ref": "./schemas/store-components/product-description.schema.json"
 		},
-		"^(product-images)": {
+		"^(product-images#)|^(product-images)$": {
 			"$ref": "./schemas/store-components/product-images.schema.json"
 		},
-		"^(product-specification-badges)": {
+		"^(product-specification-badges#)|^(product-specification-badges)$": {
 			"$ref": "./schemas/product-specification-badges.schema.json"
 		},
-		"^(product-specification-group)": {
+		"^(product-specification-group#)|^(product-specification-group)$": {
 			"$ref": "./schemas/product-specifications/product-specification-group.schema.json"
 		},
-		"^(product-specification-text)": {
+		"^(product-specification-text#)|^(product-specification-text)$": {
 			"$ref": "./schemas/product-specifications/product-specification-text.schema.json"
 		},
-		"^(product-specification-value)": {
+		"^(product-specification-value#)|^(product-specification-value)$": {
 			"$ref": "./schemas/product-specifications/product-specification-value.schema.json"
 		},
-		"^(product-specification)": {
+		"^(product-specification#)|^(product-specification)$": {
 			"$ref": "./schemas/product-specifications/product-specification.schema.json"
 		},
-		"^(product-summary-image)": {
+		"^(product-summary-image#)|^(product-summary-image)$": {
 			"$ref": "./schemas/product-summary-image.schema.json"
 		},
-		"^(rich-text)": {
+		"^(rich-text#)|^(rich-text)$": {
 			"$ref": "./schemas/rich-text.schema.json"
 		},
-		"^(search-banner)": {
+		"^(search-banner#)|^(search-banner)$": {
 			"$ref": "./schemas/search/search-banner.schema.json"
 		},
-		"^(search-not-found-layout)": {
+		"^(search-not-found-layout#)|^(search-not-found-layout)$": {
 			"$ref": "./schemas/search-result/search-result-layout.schema.json"
 		},
-		"^(search-result-layout)": {
+		"^(search-result-layout#)|^(search-result-layout)$": {
 			"$ref": "./schemas/search-result/search-result-layout.schema.json"
 		},
-		"^(shelf.relatedProducts)": {
+		"^(shelf.relatedProducts#)|^(shelf.relatedProducts)$": {
 			"$ref": "./schemas/shelf.relatedProducts.schema.json"
 		},
-		"^(slider-layout)": {
+		"^(slider-layout#)|^(slider-layout)$": {
 			"$ref": "./schemas/slider-layout.schema.json"
 		},
-		"^(stack-layout)": {
+		"^(stack-layout#)|^(stack-layout)$": {
 			"$ref": "./schemas/stack-layout.schema.json"
 		},
-		"^(sticky-layout)": {
+		"^(sticky-layout#)|^(sticky-layout)$": {
 			"$ref": "./schemas/sticky-layout.schema.json"
 		},
-		"^(store.search)": {
+		"^(store.search#)|^(store.search)$": {
 			"$ref": "./schemas/search-result/store.search.schema.json"
 		},
-		"^(sku-selector)": {
+		"^(sku-selector#)|^(sku-selector)$": {
 			"$ref": "./schemas/store-components/sku-selector.schema.json"
 		},
-		"^(overlay-layout)": {
+		"^(overlay-layout#)|^(overlay-layout)$": {
 			"$ref": "./schemas/overlay-layout/overlay-layout.schema.json"
 		},
-		"^(overlay-trigger)": {
+		"^(overlay-trigger#)|^(overlay-trigger)$": {
 			"$ref": "./schemas/overlay-layout/overlay-trigger.schema.json"
 		},
-		"^(product-installments-list)": {
+		"^(product-installments-list#)|^(product-installments-list)$": {
 			"$ref": "./schemas/product-price/product-installments-list.schema.json"
 		},
-		"^(iframe)": {
+		"^(iframe#)|^(iframe)$": {
 			"$ref": "./schemas/iframe.schema.json"
 		},
-		"^(store.)": {
+		"^(store.#)|^(store.)$": {
 			"$ref": "./schemas/store.schema.json"
 		},
-		"^(newsletter-form)": {
+		"^(newsletter-form#)|^(newsletter-form)$": {
 			"$ref": "./schemas/newsletter/newsletter-form.schema.json"
 		},
-		"^(newsletter-input-name)": {
+		"^(newsletter-input-name#)|^(newsletter-input-name)$": {
 			"$ref": "./schemas/newsletter/newsletter-input-name.schema.json"
 		},
-		"^(newsletter-input-phone)": {
+		"^(newsletter-input-phone#)|^(newsletter-input-phone)$": {
 			"$ref": "./schemas/newsletter/newsletter-input-phone.schema.json"
 		},
-		"^(newsletter-input-email)": {
+		"^(newsletter-input-email#)|^(newsletter-input-email)$": {
 			"$ref": "./schemas/newsletter/newsletter-input-email.schema.json"
 		},
-		"^(newsletter-submit)": {
+		"^(newsletter-submit#)|^(newsletter-submit)$": {
 			"$ref": "./schemas/newsletter/newsletter-submit.schema.json"
 		},
-		"^(modal-actions.close)": {
+		"^(modal-actions.close#)|^(modal-actions.close)$": {
 			"$ref": "./schemas/modal/modal-actions.close.schema.json"
 		},
-		"^(modal-header)": {
+		"^(modal-header#)|^(modal-header)$": {
 			"$ref": "./schemas/modal/modal-header.schema.json"
 		},
-		"^(modal-layout)": {
+		"^(modal-layout#)|^(modal-layout)$": {
 			"$ref": "./schemas/modal/modal-layout.schema.json"
 		},
-		"^(modal-trigger)": {
+		"^(modal-trigger#)|^(modal-trigger)$": {
 			"$ref": "./schemas/modal/modal-trigger.schema.json"
 		},
-		"^(scroll-animate)": {
+		"^(scroll-animate#)|^(scroll-animate)$": {
 			"$ref": "./schemas/scroll-animate.schema.json"
 		}
 	}

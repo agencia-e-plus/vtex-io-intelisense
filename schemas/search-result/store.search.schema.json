@@ -54,25 +54,65 @@
 						},
 						"facetsBehavior": {
 							"type": "string",
-							"enum": ["static", "dynamic"],
+							"oneOf": [
+								{
+									"const": "static",
+									"markdownDescription": "restricts the results according to the filters that user have already selected"
+								},
+								{
+									"const": "dynamic",
+									"markdownDescription": "all filters will continue to be displayed to the user"
+								}
+							],
 							"description": "Defines the behavior filters will have. When set to dynamic, it restricts the results according to the filters that user have already selected. If set to Static, all filters will continue to be displayed to the user, even is no results exist.",
 							"default": "static"
 						},
 						"skusFilter": {
 							"type": "string",
-							"enum": ["FIRST_AVAILABLE", "ALL_AVAILABLE", "ALL"],
+							"oneOf": [
+								{
+									"const": "FIRST_AVAILABLE",
+									"markdownDescription": "returns only the first available SKU"
+								},
+								{
+									"const": "ALL_AVAILABLE",
+									"markdownDescription": "only returns available SKUs"
+								},
+								{
+									"const": "ALL",
+									"markdownDescription": "returns all product's SKUs"
+								}
+							],
 							"description": "Controls SKUs returned for each product in the query. The less SKUs needed to be returned, the more performant your shelf query will be. Available value options: FIRST_AVAILABLE (returns only the first available SKU), ALL_AVAILABLE (only returns available SKUs) and ALL (returns all product's SKUs).",
 							"default": "ALL_AVAILABLE"
 						},
 						"simulationBehavior": {
 							"type": "string",
-							"enum": ["default", "skip"],
+							"oneOf": [
+								{
+									"const": "default",
+									"markdownDescription": "search data will be up-to-date"
+								},
+								{
+									"const": "skip",
+									"markdownDescription": "fetched using the Cache"
+								}
+							],
 							"description": "Defines whether the search data will be up-to-date (default) or fetched using the Cache (skip). The last option should be used only if you prefer faster queries over no having the most up-to-date prices or inventory.",
 							"default": "default"
 						},
 						"installmentCriteria": {
 							"type": "string",
-							"enum": ["MAX_WITHOUT_INTEREST", "MAX_WITH_INTEREST"],
+							"oneOf": [
+								{
+									"const": "MAX_WITHOUT_INTEREST",
+									"markdownDescription": "displays the maximum installment option with no interest attached to it"
+								},
+								{
+									"const": "MAX_WITH_INTEREST",
+									"markdownDescription": "displays the maximum installment option whether it has interest attached to it or not"
+								}
+							],
 							"description": "Controls which price should be shown when there are different installments options for it. Possible values are: MAX_WITHOUT_INTEREST (displays the maximum installment option with no interest attached to it) or MAX_WITH_INTEREST (displays the maximum installment option whether it has interest attached to it or not).",
 							"default": "MAX_WITHOUT_INTEREST"
 						},

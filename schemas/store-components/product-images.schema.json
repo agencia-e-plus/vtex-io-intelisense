@@ -82,13 +82,22 @@
 				},
 				"zoomMode": {
 					"type": "string",
-					"enum": [
-						"disabled",
-						"in-place-click",
-						"in-place-hover",
-						"open-modal"
+					"oneOf": [
+						{ "const": "disabled", "markdownDescription": "zoom is disabled" },
+						{
+							"const": "in-place-click",
+							"markdownDescription": "zoom will be triggered when the image is clicked on"
+						},
+						{
+							"const": "in-place-hover",
+							"markdownDescription": "zoom will be triggered when the image is hovered on"
+						},
+						{
+							"const": "open-modal",
+							"markdownDescription": "image is zoommed using a modal"
+						}
 					],
-					"description": "Defines the image zoom behavior. Possible values are: disabled (zoom is disabled), in-place-click(zoom will be triggered when the image is clicked on), in-place-hover(zoom will be triggered when the image is hovered on)  or open-modal (image is zoommed using a modal).",
+					"description": "Defines the image zoom behavior. Possible values are: disabled (zoom is disabled), in-place-click(zoom will be triggered when the image is clicked on), in-place-hover (zoom will be triggered when the image is hovered on)  or open-modal (image is zoommed using a modal).",
 					"default": "in-place-click"
 				},
 				"ModalZoom": {
@@ -104,7 +113,16 @@
 				},
 				"displayMode": {
 					"type": "string",
-					"enum": ["carousel", "list"],
+					"oneOf": [
+						{
+							"const": "carousel",
+							"markdownDescription": "displays the product images and videos in a carousel"
+						},
+						{
+							"const": "list",
+							"markdownDescription": "displays only the product images inline, with no extra markup"
+						}
+					],
 					"description": "Defines how the product media should be displayed. Possible values are carousel (displays the product images and videos in a carousel) and list (displays only the product images inline, with no extra markup). ",
 					"default": "carousel"
 				}

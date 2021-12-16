@@ -24,7 +24,16 @@
 						},
 						"type": {
 							"type": "string",
-							"enum": ["show", "hide"],
+							"oneOf": [
+								{
+									"const": "show",
+									"markdownDescription": "hides specification groups declared in the `specificationGroups` prop"
+								},
+								{
+									"const": "hide",
+									"markdownDescription": "only shows the specification groups declared in the `specificationGroups` prop"
+								}
+							],
 							"description": "Whether the specification group names passed to the specificationGroups prop should be displayed or hidden on the UI. Possible values are: hide (hides specification groups declared in the specificationGroups prop) or show (only shows the specification groups declared in the specificationGroups prop).",
 							"default": "undefined"
 						}

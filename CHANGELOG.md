@@ -6,13 +6,31 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased] - Release
 
-## Added
-
+- add description for prop values
 - schema `properties` (alongside `patternProperties`)
+
+## [0.1.5] - 2021-12-15
+
+- add autocomplete `apps.json` from edition apps
+- add new prop to `slider-layout`
+- fix block's conflict props recommendations
+
+## [0.1.4] - 2021-12-13
+
+### Added
+
+- `vipg` snippet for `vtex input prefix group` in css and scss
+- `vi` snippet for `vtex input` in css and scss
+- `vil` snippet for `vtex input label` in css and scss
+- `actioncard` snippet for Action card structure in json and jsonc
+
+### Fixed
+
+- component prop in `interfaces.json` schemas
 
 ## [0.1.2] - 2021-12-07
 
-## Fixed
+### Fixed
 
 - validation path
 - no explict use blocks
@@ -21,13 +39,13 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [0.1.1] - 2021-12-06
 
-## Added
+### Added
 
 - configuration `vtexiointellisense.allowsUnusedBlocks` to disable\enable warnings
 
 ## [0.1.0] - 2021-12-04
 
-## Added
+### Added
 
 - Unused Block warning
 
