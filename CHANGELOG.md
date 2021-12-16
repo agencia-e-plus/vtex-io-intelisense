@@ -4,7 +4,7 @@ All notable changes to the "vtexio-intellisense" extension will be documented in
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [Unreleased] - Release
+## [0.2.1] - 2021-12-16
 
 - add description for prop values
 - schema `properties` (alongside `patternProperties`)
