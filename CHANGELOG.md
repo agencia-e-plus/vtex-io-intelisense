@@ -7,6 +7,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [Unreleased] - Release
 
 - add description for prop values
+- schema `properties` (alongside `patternProperties`)
 
 ## [0.1.5] - 2021-12-15
 
