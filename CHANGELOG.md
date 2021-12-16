@@ -4,9 +4,15 @@ All notable changes to the "vtexio-intellisense" extension will be documented in
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [Unreleased] - Release
+
+## Added
+
+- schema `properties` (alongside `patternProperties`)
+
 ## [0.1.2] - 2021-12-07
 
-## Fixed 
+## Fixed
 
 - validation path
 - no explict use blocks
@@ -14,7 +20,8 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - interfaces autocomplete
 
 ## [0.1.1] - 2021-12-06
-## Added 
+
+## Added
 
 - configuration `vtexiointellisense.allowsUnusedBlocks` to disable\enable warnings
 
@@ -33,7 +40,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ### fixed
 
-- snippets scope 
+- snippets scope
 
 ## [0.0.2]
 
