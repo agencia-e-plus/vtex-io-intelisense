@@ -47,6 +47,16 @@
 								},
 								"labelMatchCriteria": {
 									"type": "string",
+									"oneOf": [
+										{
+											"const": "exact",
+											"description": "finds the image that matches exactly the string filled in label field"
+										},
+										{
+											"const": "contains",
+											"description": "finds the first image that contains the substring filled in label field"
+										}
+									],
 									"description": "Criteria to define if the image's label searched value should be exactly as provided or if it just needs to contain the substring anywhere in the image's label. Possible values are: exact (finds the image that matches exactly the string filled in label field) and contains (finds the first image that contains the substring filled in label field).",
 									"default": "exact"
 								}
@@ -61,7 +71,16 @@
 					"properties": {
 						"criteria": {
 							"type": "string",
-							"enum": ["label", "index"],
+							"oneOf": [
+								{
+									"const": "label",
+									"description": "the hover image will be the one that matches the label value"
+								},
+								{
+									"const": "index",
+									"description": "the hover image should be the one with the same index value"
+								}
+							],
 							"description": "Criteria that should be used to define the hover image according to the product images in the admin's Catalog. Possible values are: label (the hover image will be the one that matches the label value) and index (the hover image should be the one with the same index value).",
 							"default": "label"
 						}
@@ -78,8 +97,17 @@
 							},
 							"labelMatchCriteria": {
 								"type": "string",
-								"enum": ["exact", "contains"],
-								"description": "Criteria to define if the image's label searched value should be exactly as provided or if it just needs to contain the substring anywhere in the image's label. Possible values are: exact (finds the image that matches exactly the string filled in label field) and contains (finds the first image that contains the substring filled in label field). ",
+								"oneOf": [
+									{
+										"const": "exact",
+										"description": "finds the image that matches exactly the string filled in label field"
+									},
+									{
+										"const": "contains",
+										"description": "finds the first image that contains the substring filled in label field"
+									}
+								],
+								"description": "Criteria to define if the image's label searched value should be exactly as provided or if it just needs to contain the substring anywhere in the image's label. Possible values are: exact (finds the image that matches exactly the string filled in label field) and contains (finds the first image that contains the substring filled in label field).",
 								"default": "exact"
 							}
 						},

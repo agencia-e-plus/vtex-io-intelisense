@@ -16,7 +16,20 @@
 				},
 				"scrollBehavior": {
 					"type": "string",
-					"enum": ["lock-page-scroll", "close-on-scroll", "default"],
+					"oneOf": [
+						{
+							"const": "lock-page-scroll",
+							"description": "in which users can't scroll"
+						},
+						{
+							"const": "close-on-scroll",
+							"description": "the block is closed when users start scrolling"
+						},
+						{
+							"const": "default",
+							"description": "Scroll does not affect the Overlay Layout content"
+						}
+					],
 					"description": "Defines the Overlay Layout content behavior when users try to scroll the page. Possible values are: lock-page-scroll (in which users can't scroll), close-on-scroll (the block is closed when users start scrolling) or default (Scroll does not affect the Overlay Layout content).",
 					"default": "default"
 				},

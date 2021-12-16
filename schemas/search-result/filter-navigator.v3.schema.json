@@ -37,7 +37,16 @@
 				},
 				"openFiltersMode": {
 					"type": "string",
-					"enum": ["many", "one"],
+					"oneOf": [
+						{
+							"const": "many",
+							"markdownDescription": "more than one filter can be opened at the same time"
+						},
+						{
+							"const": "one",
+							"markdownDescription": "only one filter can be opened"
+						}
+					],
 					"description": "Defines how many filters can be opened at the same time on the Filter Navigator component. Possible values are: many (more than one filter can be opened at the same time) and one (only one filter can be opened). Notice that if one is declared all filters will be collapsed before user interaction, regardless of what is passed to the initiallyCollapsed prop.",
 					"default": "many"
 				},
@@ -81,7 +90,16 @@
 				},
 				"navigationTypeOnMobile": {
 					"type": "string",
-					"enum": ["page", "collapsible"],
+					"oneOf": [
+						{
+							"const": "page",
+							"markdownDescription": "only one list of options can be seen at a time"
+						},
+						{
+							"const": "collapsible",
+							"markdownDescription": "all lists of options can be seen at the same time"
+						}
+					],
 					"description": "Defines how mobile users should navigate on the filter selector component. Possible values are: page (only one list of options can be seen at a time) or collapsible (all lists of options can be seen at the same time).",
 					"default": "page"
 				},
@@ -107,7 +125,12 @@
 					"properties": {
 						"key": {
 							"type": "string",
-							"enum": ["category-1", "category-2", "category-3"],
+							"oneOf": [
+								{ "const": "category-1", "markdownDescription": "department" },
+								{ "const": "category-2", "markdownDescription": "category" },
+								{ "const": "category-3", "markdownDescription": "subcategory" },
+								{ "const": "brand" }
+							],
 							"description": "Facets key that will be sorted. Possible values are category-1, category-2, category-3 (for department, category and subcategory), brand or a product specification name.",
 							"default": "undefined"
 						},

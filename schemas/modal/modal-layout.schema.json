@@ -10,7 +10,16 @@
 			"properties": {
 				"scroll": {
 					"type": "string",
-					"enum": ["body", "content"],
+					"oneOf": [
+						{
+							"const": "body",
+							"description": "users can scroll the whole modal by normally scrolling the page"
+						},
+						{
+							"const": "content",
+							"description": "users can scroll the modal *content* when hovering it"
+						}
+					],
 					"description": "Defines how the modal should be scrolled by users. Possible values are: body (users can scroll the whole modal by normally scrolling the page) and content (users can scroll the modal *content* when hovering it).",
 					"default": "content"
 				},
