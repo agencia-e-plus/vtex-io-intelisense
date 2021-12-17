@@ -212,7 +212,7 @@
 		"^(icon#)|^(icon)$": {
 			"$ref": "./schemas/icon.schema.json"
 		},
-		"^(image##)|^(image#)$": {
+		"^(image#)|^(image)$": {
 			"$ref": "./schemas/image.schema.json"
 		},
 		"^(link#)|^(link)$": {
