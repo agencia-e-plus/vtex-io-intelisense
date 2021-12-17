@@ -4,6 +4,9 @@
 	"description": "Search filter",
 	"type": "object",
 	"properties": {
+		"title": {
+			"type": "string"
+		},
 		"props": {
 			"type": "object",
 			"description": "Block's properties",

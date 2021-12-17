@@ -1,16 +1,16 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Disclosure Layout State Indicator",
-  "description": "Disclosure Layout State Indicator",
-  "type": "object",
-  "properties": {
-    "props": {
-      "type": "object",
-      "description": "Block's properties",
-      "properties": {
-        "Show": { "$ref": "../shared/block.schema.json" },
-        "Hide": { "$ref": "../shared/block.schema.json" }
-      }
-    }
-  }
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Disclosure Layout State Indicator",
+	"description": "Disclosure Layout State Indicator",
+	"type": "object",
+	"properties": {
+		"props": {
+			"type": "object",
+			"description": "Block's properties",
+			"properties": {
+				"Show": { "$ref": "../shared/block.schema.json" },
+				"Hide": { "$ref": "../shared/block.schema.json" }
+			}
+		}
+	}
 }

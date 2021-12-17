@@ -1,29 +1,32 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Disclosure Layout",
-  "description": "Disclosure Layout",
-  "type": "object",
-  "properties": {
-    "children": {
-      "type": "array",
-      "items": { "$ref": "../shared/block.schema.json" }
-    },
-    "props": {
-      "type": "object",
-      "description": "Block's properties",
-      "properties": {
-        "initialVisibility": {
-          "type": "string",
-          "enum": ["visible", "hidden"],
-          "description": "Defines the initial visibility of the layout content. Possible values are: 'visible' (content initially open) or 'hidden' (content is only displayed with user interaction).",
-          "default": "hidden"
-        },
-        "animated": {
-          "type": "boolean",
-          "description": "Whether or not the layout content should have animations. When set as 'true', this prop will enable additional 'data-* 'attributes on the content which you can use as selectors in CSS. It will also ensure that the element will get hidden once the transition has ended",
-          "default": false
-        }
-      }
-    }
-  }
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Disclosure Layout",
+	"description": "Disclosure Layout",
+	"type": "object",
+	"properties": {
+		"title": {
+			"type": "string"
+		},
+		"children": {
+			"type": "array",
+			"items": { "$ref": "../shared/block.schema.json" }
+		},
+		"props": {
+			"type": "object",
+			"description": "Block's properties",
+			"properties": {
+				"initialVisibility": {
+					"type": "string",
+					"enum": ["visible", "hidden"],
+					"description": "Defines the initial visibility of the layout content. Possible values are: 'visible' (content initially open) or 'hidden' (content is only displayed with user interaction).",
+					"default": "hidden"
+				},
+				"animated": {
+					"type": "boolean",
+					"description": "Whether or not the layout content should have animations. When set as 'true', this prop will enable additional 'data-* 'attributes on the content which you can use as selectors in CSS. It will also ensure that the element will get hidden once the transition has ended",
+					"default": false
+				}
+			}
+		}
+	}
 }

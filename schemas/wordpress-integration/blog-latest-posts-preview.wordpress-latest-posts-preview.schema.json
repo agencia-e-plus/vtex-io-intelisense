@@ -4,6 +4,9 @@
 	"description": "Shows teasers for the most recent 3-5 posts (default is 3).",
 	"type": "object",
 	"properties": {
+		"title": {
+			"type": "string"
+		},
 		"props": {
 			"type": "object",
 			"description": "Block's properties",

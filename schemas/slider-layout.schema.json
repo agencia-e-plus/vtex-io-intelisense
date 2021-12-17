@@ -4,6 +4,9 @@
 	"description": "Slider Layout",
 	"type": "object",
 	"properties": {
+		"title": {
+			"type": "string"
+		},
 		"children": {
 			"type": "array",
 			"items": { "$ref": "./shared/block.schema.json" }

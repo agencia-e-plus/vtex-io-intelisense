@@ -4,6 +4,9 @@
 	"description": "Declares a renderable children block responsible for building the",
 	"type": "object",
 	"properties": {
+		"title": {
+			"type": "string"
+		},
 		"props": {
 			"type": "object",
 			"description": "Block's properties",

@@ -4,6 +4,9 @@
 	"description": "product details page block responsible for displaying every SKU available for a given product.",
 	"type": "object",
 	"properties": {
+		"title": {
+			"type": "string"
+		},
 		"props": {
 			"type": "object",
 			"description": "Block's properties",

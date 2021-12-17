@@ -4,6 +4,9 @@
 	"markdownDescription": "https://developers.vtex.com/vtex-developer-docs/docs/vtex-add-to-cart-button\n\nThe add-to-cart-button is a block responsible for adding products in the Minicart (minicart.v2).\n\n`\"vtex.add-to-cart-button@0.x\"`",
 	"type": "object",
 	"properties": {
+		"title": {
+			"type": "string"
+		},
 		"props": {
 			"type": "object",
 			"description": "Block's properties",

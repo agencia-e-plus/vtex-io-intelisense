@@ -4,6 +4,9 @@
 	"description": "Defines how each layout option should be rendered for users.",
 	"type": "object",
 	"properties": {
+		"title": {
+			"type": "string"
+		},
 		"props": {
 			"type": "object",
 			"description": "Block's properties",

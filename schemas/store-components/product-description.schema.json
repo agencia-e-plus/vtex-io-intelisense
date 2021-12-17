@@ -4,6 +4,9 @@
 	"description": "block responsible for performing the GraphQL query that fetches the list of products",
 	"type": "object",
 	"properties": {
+		"title": {
+			"type": "string"
+		},
 		"props": {
 			"type": "object",
 			"description": "Block's properties",

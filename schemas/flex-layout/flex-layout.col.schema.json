@@ -4,6 +4,9 @@
 	"description": "Flex Layout Column",
 	"type": "object",
 	"properties": {
+		"title": {
+			"type": "string"
+		},
 		"children": {
 			"title": "Block's children",
 			"type": "array",

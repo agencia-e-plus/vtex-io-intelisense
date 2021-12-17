@@ -4,6 +4,9 @@
 	"title": "VTEX IO Store Image",
 	"description": "VTEX IO Store Image",
 	"properties": {
+		"title": {
+			"type": "string"
+		},
 		"props": {
 			"type": "object",
 			"description": "Block's properties",

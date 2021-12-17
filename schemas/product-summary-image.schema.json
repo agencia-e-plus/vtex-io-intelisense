@@ -4,6 +4,9 @@
 	"description": "is a block exported by the Product Summary app that renders the product's image.",
 	"type": "object",
 	"properties": {
+		"title": {
+			"type": "string"
+		},
 		"props": {
 			"type": "object",
 			"description": "Block's properties",

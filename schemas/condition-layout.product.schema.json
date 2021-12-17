@@ -1,37 +1,40 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Condition Layout Product",
-  "description": "Condition Layout with product context",
-  "type": "object",
-  "properties": {
-    "props": {
-      "type": "object",
-      "description": "Block's properties",
-      "properties": {
-        "conditions": {
-          "type": "array",
-          "items": [
-            {
-              "type": "object",
-              "properties": {
-                "subject": {
-                  "type": "string"
-                },
-                "arguments": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        },
-        "Then": { "$ref": "./shared/block.schema.json" },
-        "Else": { "$ref": "./shared/block.schema.json" }
-      }
-    }
-  }
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Condition Layout Product",
+	"description": "Condition Layout with product context",
+	"type": "object",
+	"properties": {
+		"title": {
+			"type": "string"
+		},
+		"props": {
+			"type": "object",
+			"description": "Block's properties",
+			"properties": {
+				"conditions": {
+					"type": "array",
+					"items": [
+						{
+							"type": "object",
+							"properties": {
+								"subject": {
+									"type": "string"
+								},
+								"arguments": {
+									"type": "object",
+									"properties": {
+										"id": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						}
+					]
+				},
+				"Then": { "$ref": "./shared/block.schema.json" },
+				"Else": { "$ref": "./shared/block.schema.json" }
+			}
+		}
+	}
 }
