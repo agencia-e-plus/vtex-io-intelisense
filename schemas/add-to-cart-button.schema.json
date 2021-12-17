@@ -5,7 +5,8 @@
 	"type": "object",
 	"properties": {
 		"title": {
-			"type": "string"
+			"type": "string",
+			"description": " Custom title to be showed in site editor"
 		},
 		"props": {
 			"type": "object",

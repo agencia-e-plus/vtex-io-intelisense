@@ -5,7 +5,8 @@
 	"description": "VTEX IO Store Image",
 	"properties": {
 		"title": {
-			"type": "string"
+			"type": "string",
+			"description": "Title showed in site editor"
 		},
 		"props": {
 			"type": "object",
