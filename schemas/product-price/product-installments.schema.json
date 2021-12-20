@@ -1,0 +1,39 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "block title",
+	"description": "",
+	"type": "object",
+	"allOf": [{ "$ref": "./product-price-comum.schema.json" }],
+	"properties": {
+		"props": {
+			"type": "object",
+			"description": "Block's properties",
+			"properties": {
+				"installmentsCriteria": {
+					"type": "string",
+					"onOf": [
+						{
+							"cookie": "max-quantity",
+							"markdownDescription": "the block will render the installments plan with the biggest number of installments"
+						},
+						{
+							"cookie": "max-quantity-without-interest",
+							"markdownDescription": "the block will render the installments plan with the biggest number of installments and **zero interest**"
+						}
+					],
+					"markdownDescription": "When set to `max-quantity`, the block will render the installments plan with the biggest number of installments. When set to `max-quantity-without-interest`, the block will render the installments plan with the biggest number of installments and **zero interest**. Notice that, if this prop is set to `max-quantity-without-interest`, and no installments plan matches the 'without interest' criteria, the component will fallback the default behavior.",
+					"default": "max-quantity"
+				},
+				"installmentOptionsFilter": {
+					"type": "object",
+					"properties": {
+						"paymentsystemname": { "type": "string" },
+						"installmentsquantity": { "type": "number" }
+					},
+					"markdownDescription": "Allows you to define two filtering rules that will narrow down the possible installments plans the component might render.",
+					"default": "undefined"
+				}
+			}
+		}
+	}
+}

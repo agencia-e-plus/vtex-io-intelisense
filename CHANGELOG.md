@@ -4,7 +4,7 @@ All notable changes to the "vtexio-intellisense" extension will be documented in
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [Unreleased] - Release
+## [0.2.4] - 2021-12-20
 
 ### Fixed
 
@@ -13,6 +13,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ### Added
 
 - description for title
+- product installments schema
 
 ## [0.2.3] - 2021-12-16
 
