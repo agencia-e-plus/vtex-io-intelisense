@@ -32,15 +32,18 @@ for `.json` and `.jsonc`.
 
 for `.css` and `.scss`
 
-| trigger | result                                  |
-| ------- | --------------------------------------- |
-| `flr`   | create a `.flexRow--`                   |
-| `flrc`  | create a `.flexRowContent--`            |
-| `flc`   | create a `.flexCol--`                   |
-| `flcc`  | create a `.flexColChild--`              |
-| `vbtn`  | create a `:global(.vtex-button)`        |
-| `vbtnl` | create a `:global(.vtex-button__label)` |
-| `:gl`   | create a `:global()`                    |
+| trigger | result                                         |
+| ------- | ---------------------------------------------- |
+| `flr`   | create a `.flexRow--`                          |
+| `flrc`  | create a `.flexRowContent--`                   |
+| `flc`   | create a `.flexCol--`                          |
+| `flcc`  | create a `.flexColChild--`                     |
+| `vbtn`  | create a `:global(.vtex-button)`               |
+| `vbtnl` | create a `:global(.vtex-button__label)`        |
+| `vip`   | create a `:global(.vtex-styleguide-9-x-input)` |
+| `vipg`  | create a `:global(.vtex-input-prefix__group)`  |
+| `vil`   | create a `:global(.vtex-input__label)`         |
+| `:gl`   | create a `:global()`                           |
 
 <!--
 

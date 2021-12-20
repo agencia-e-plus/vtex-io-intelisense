@@ -6,6 +6,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased] - Release
 
+### Fixed
+
+- fix input snippets
+
 ### Added
 
 - description for title

@@ -50,7 +50,7 @@
 	"vtex input": {
 		"scope": "css, scss",
 		"prefix": "vi",
-		"body": [":global(.vtex-input)"],
+		"body": [":global(.vtex-styleguide-9-x-input)"],
 		"description": "vtex input label selector"
 	},
 	"vtex input prefix group": {
