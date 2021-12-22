@@ -4,6 +4,12 @@ All notable changes to the "vtexio-intellisense" extension will be documented in
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.2.5] - 2021-12-22
+
+### Fixed
+
+- grid's blocks prop
+
 ## [0.2.4] - 2021-12-20
 
 ### Fixed
