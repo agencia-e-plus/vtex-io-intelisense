@@ -6,6 +6,12 @@
 		"blog-latest-posts-preview.wordpress-latest-posts-preview": {
 			"$ref": "./schemas/wordpress-integration/blog-latest-posts-preview.wordpress-latest-posts-preview.schema.json"
 		},
+		"breadcrumb": {
+			"$ref": "./schemas/breadcrumb.schema.json"
+		},
+		"breadcrumb.search": {
+			"$ref": "./schemas/breadcrumb.search.schema.json"
+		},
 		"condition-layout.product": {
 			"$ref": "./schemas/condition-layout.product.schema.json"
 		},
@@ -169,6 +175,12 @@
 		},
 		"^(blog-latest-posts-preview.wordpress-latest-posts-preview#)|^(blog-latest-posts-preview.wordpress-latest-posts-preview)$": {
 			"$ref": "./schemas/wordpress-integration/blog-latest-posts-preview.wordpress-latest-posts-preview.schema.json"
+		},
+		"^(breadcrumb#)|^(breadcrumb)$": {
+			"$ref": "./schemas/breadcrumb.schema.json"
+		},
+		"^(breadcrumb.search#)|^(breadcrumb.search)$": {
+			"$ref": "./schemas/breadcrumb.search.schema.json"
 		},
 		"^(condition-layout.product#)|^(condition-layout.product)$": {
 			"$ref": "./schemas/condition-layout.product.schema.json"
