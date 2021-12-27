@@ -1,0 +1,35 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "object",
+	"additionalProperties": false,
+	"title": "Breadcrumb",
+	"markdownDescription": "https://developers.vtex.com/vtex-developer-docs/docs/vtex-breadcrumb\n\nThe VTEX BreadCrumb is a navigation scheme that shows a user's browsing history up to their current location in your store.\n\n`\"vtex.breadcrumb@1.x\"`",
+	"properties": {
+		"title": {
+			"type": "string",
+			"markdownDescription": "Define a custom name. It will be shown in site editor for faster identification."
+		},
+		"props": {
+			"type": "object",
+			"additionalProperties": false,
+			"markdownDescription": "All available properties for this block.",
+			"properties": {
+				"showOnMobile": {
+					"type": "boolean",
+					"markdownDescription": "`boolean`\n\nIt determines whether Breadcrumb should also be displayed on mobile",
+					"default": false
+				},
+				"homeIconSize": {
+					"type": "number",
+					"markdownDescription": "`number`\n\nControls the size property of IconHome",
+					"default": 26
+				},
+				"caretIconSize": {
+					"type": "number",
+					"markdownDescription": "`number`\n\nControls the size property of IconCaret",
+					"default": 8
+				}
+			}
+		}
+	}
+}
