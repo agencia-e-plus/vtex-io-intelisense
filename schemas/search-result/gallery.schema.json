@@ -5,7 +5,8 @@
 	"type": "object",
 	"properties": {
 		"blocks": {
-			"$ref": "../shared/block.schema.json"
+			"type": "array",
+			"items": { "$ref": "../shared/block.schema.json" }
 		},
 		"props": {
 			"type": "object",

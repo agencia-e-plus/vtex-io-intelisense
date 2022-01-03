@@ -4,6 +4,9 @@
 	"description": "Flex Layout Row",
 	"type": "object",
 	"properties": {
+		"title": {
+			"type": "string"
+		},
 		"children": {
 			"title": "Block's chindren",
 			"type": "array",

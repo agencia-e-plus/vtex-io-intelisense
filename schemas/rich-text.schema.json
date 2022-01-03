@@ -4,6 +4,9 @@
 	"description": "Rich Text",
 	"type": "object",
 	"properties": {
+		"title": {
+			"type": "string"
+		},
 		"children": {
 			"title": "Block's chindren",
 			"type": "array",

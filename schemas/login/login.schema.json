@@ -1,0 +1,175 @@
+{
+	"type": "object",
+	"additionalProperties": false,
+	"title": "Login",
+	"markdownDescription": "https://developers.vtex.com/vtex-developer-docs/docs/vtex-login\n\n![Mandatory](https://img.shields.io/badge/-Mandatory-red.png) Renders the Login component, as shown in the media above.\n\n`\"vtex.login@2.x\"`",
+	"properties": {
+		"props": {
+			"type": "object",
+			"additionalProperties": false,
+			"markdownDescription": "All available properties for this block.",
+			"properties": {
+				"optionsTitle": {
+					"type": "string",
+					"markdownDescription": "string\n\nText to entitle the login options.",
+					"default": ""
+				},
+				"emailAndPasswordTitle": {
+					"type": "string",
+					"markdownDescription": "string\n\nText to display the email-and-password option.",
+					"default": ""
+				},
+				"accessCodeTitle": {
+					"type": "string",
+					"markdownDescription": "string\n\nText to display the access-code option.",
+					"default": ""
+				},
+				"emailPlaceholder": {
+					"type": "string",
+					"markdownDescription": "string\n\nText to be displayed as placeholder to the email input.",
+					"default": ""
+				},
+				"passwordPlaceholder": {
+					"type": "string",
+					"markdownDescription": "string\n\nText to be displayed as placeholder to the password input.",
+					"default": ""
+				},
+				"accessCodePlaceholder": {
+					"type": "string",
+					"markdownDescription": "string\n\nText to be displayed as placeholder to the access code input.",
+					"default": ""
+				},
+				"showPasswordVerificationIntoTooltip": {
+					"type": "boolean",
+					"markdownDescription": "boolean\n\nWhether a tooltip responsible for checking the password format should be shown (true) or not (false).",
+					"default": true
+				},
+				"showIconProfile": {
+					"type": "boolean",
+					"markdownDescription": "boolean\n\nWhether the `hpa-profile` icon from [Store Icons](https://vtex.io/docs/components/all/vtex.store-icons/) should be displayed on the Login component (`true`) or not (`false`).",
+					"default": true
+				},
+				"iconLabel": {
+					"type": "string",
+					"markdownDescription": "string\n\nText string to entitle the Login icon.",
+					"default": ""
+				},
+				"hideIconLabel": {
+					"type": "boolean",
+					"markdownDescription": "boolean\n\nWhether the text string defined for the Login icon should be hidden (true) or not (false).",
+					"default": false
+				},
+				"labelClasses": {
+					"type": ["array", "string"],
+					"markdownDescription": "[string]\n\nLogin icon's classnames.",
+					"default": []
+				},
+				"providerPasswordButtonLabel": {
+					"type": "string",
+					"markdownDescription": "string\n\nText to be displayed as the password button label.",
+					"default": ""
+				},
+				"hasIdentifierExtension": {
+					"type": "boolean",
+					"markdownDescription": "boolean\n\nWhether the identifier extension configurations should be enabled (`true`) or not (`false`). For more info on this, check out the [Advanced Configurations](https://developers.vtex.com/vtex-developer-docs/docs/vtex-login#advanced-configuration)",
+					"default": true
+				},
+				"identifierPlaceholder": {
+					"type": "string",
+					"markdownDescription": "string\n\nText to be displayed as placeholder to the extension input.",
+					"default": ""
+				},
+				"invalidIdentifierError": {
+					"type": "string",
+					"markdownDescription": "string\n\nError message for invalid user identifier.",
+					"default": ""
+				},
+				"mirrorTooltipToRight": {
+					"type": "boolean",
+					"markdownDescription": "boolean\n\nWhether the Login tooltip should open towards the right side of the screen (true) or not (false).",
+					"default": false
+				},
+				"logInButtonBehavior": {
+					"type": "string",
+					"markdownDescription": "enum\n\nExpected behavior of the Login component when clicked on. Possible values are: popover (opens a popover tab) and link (redirects user to the /login page).",
+					"default": "popover",
+					"oneOf": [
+						{
+							"const": "popover",
+							"markdownDescription": "opens a popover tab"
+						},
+						{
+							"const": "link",
+							"markdownDescription": "redirects user to the /account page"
+						}
+					]
+				},
+				"accountOptionsButtonBehavior": {
+					"type": "string",
+					"markdownDescription": "enum\n\nExpected behavior of the My account button when clicked on. Possible values are: popover (opens a popover tab) and link (redirects user to the /account page).",
+					"default": "popover",
+					"oneOf": [
+						{
+							"const": "popover",
+							"markdownDescription": "opens a popover tab"
+						},
+						{
+							"const": "link",
+							"markdownDescription": "redirects user to the /account page"
+						}
+					]
+				},
+				"accountOptionLinks": {
+					"type": "array",
+					"markdownDescription": "[array]\n\nCreates a custom link to replace the default one set for the accountOptionsButtonBehavior's link value (/account). Check out below the available props for the object.",
+					"items": {
+						"type": "object",
+						"properties": {
+							"label": {
+								"type": "string",
+								"markdownDescription": "string\n\nText label for the custom link.",
+								"default": ""
+							},
+							"path": {
+								"type": "string",
+								"markdownDescription": "string\n\nCustom link's path.",
+								"default": ""
+							},
+							"cssClass": {
+								"type": ["array", "string"],
+								"markdownDescription": "[string]\n\nLogin icon's class names.",
+								"default": ""
+							}
+						}
+					}
+				},
+				"termsAndConditions": {
+					"type": "string",
+					"markdownDescription": "string\n\nText to be displayed below the login options regarding terms&conditions.",
+					"default": ""
+				},
+				"hasGoogleOneTap": {
+					"type": "boolean",
+					"markdownDescription": "boolean\n\n[BETA] Whether the [Google's One-tap sign-up and auto sign-in](https://developers.google.com/identity/one-tap/web/) solution should be enabled (true) or not (false).",
+					"default": false
+				},
+				"googleOneTapAlignment": {
+					"type": "string",
+					"markdownDescription": "enum\n\n[BETA] Defines pop-up alignment for the Google One-tap login. Possible values are Left and Right.",
+					"default": "Right",
+					"oneOf": [{ "const": "Left" }, { "const": "Right" }]
+				},
+				"googleOneTapMarginTop": {
+					"type": "string",
+					"markdownDescription": "string\n\n[BETA] Defines the pop-up top margin for the Google One-tap login. The values supported are the same supported by the CSS property top.",
+					"default": "3rem"
+				},
+				"disabledEmailInputs": {
+					"type": "boolean",
+					"markdownDescription": "boolean\n\nWhether user email editing should be allowed (true) or not (false).",
+					"default": false
+				}
+			}
+		}
+	}
+}

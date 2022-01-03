@@ -1,0 +1,50 @@
+{
+	"type": "object",
+	"additionalProperties": false,
+	"title": "Sticky Layout (Stack Container)",
+	"markdownDescription": "https://developers.vtex.com/vtex-developer-docs/docs/vtex-stack-layout\n\nThe Sticky Layout app provides layout structures to help building elements that should be fixed relative to the viewport in certain contexts.\n\nThe `sticky-layout.stack-container` block can be used to orchestrate multiple sticky-layouts to have a stack behavior instead of one being on top of the other.\n\n`\"vtex.sticky-layout@0.x\"`",
+	"properties": {
+		"title": { "$ref": "./shared/title.schema.json" },
+		"children": {
+			"type": "array",
+			"markdownDescription": "Declare the blocks that must be wrapped inside the current one.",
+			"items": {
+				"type": "string"
+			}
+		},
+		"props": {
+			"type": "object",
+			"additionalProperties": false,
+			"markdownDescription": "All available properties for this block.",
+			"properties": {
+				"blockClass": {
+					"type": ["array", "string"],
+					"markdownDescription": "`string | string[]`\n\nBlock container class. This prop’s set value functions as a block identifier for CSS customizations.",
+					"items": {
+						"type": "string"
+					},
+					"default": []
+				},
+				"position": {
+					"type": "string",
+					"markdownDescription": "`enum`\n\nIndicates where the component should stick.",
+					"oneOf": [
+						{
+							"const": "top",
+							"markdownDescription": "Component will stick to the top of screen"
+						},
+						{
+							"const": "bottom",
+							"markdownDescription": "Component will stick to the bottom of screen"
+						}
+					]
+				},
+				"verticalSpacing": {
+					"type": "number",
+					"markdownDescription": "`number`\n\nIndicates the distance in pixels from the position chosen in the `position` prop",
+					"default": 0
+				}
+			}
+		}
+	}
+}

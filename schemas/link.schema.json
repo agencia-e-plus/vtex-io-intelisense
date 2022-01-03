@@ -2,6 +2,9 @@
 	"type": "object",
 	"description": "The Store Link app provides blocks responsible for displaying links in other theme blocks, such as the Product Summary.",
 	"properties": {
+		"title": {
+			"type": "string"
+		},
 		"children": {
 			"type": "array",
 			"items": { "$ref": "./shared/block.schema.json" }

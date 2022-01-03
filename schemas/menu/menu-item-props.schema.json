@@ -1,0 +1,114 @@
+{
+	"type": "object",
+	"additionalProperties": false,
+	"markdownDescription": "All available properties for this block.",
+	"required": ["type"],
+	"properties": {
+		"type": {
+			"type": "string",
+			"markdownDescription": "string\n\nMenu item type, either category or custom",
+			"default": "category",
+			"oneOf": [{ "const": "category" }, { "const": "custom" }]
+		},
+		"id": {
+			"type": "string",
+			"markdownDescription": "string\n\nMenu item ID",
+			"default": ""
+		},
+		"highlight": {
+			"type": "boolean",
+			"markdownDescription": "boolean\n\nWhether the item has highlight"
+		},
+		"iconPosition": {
+			"type": "string",
+			"markdownDescription": "string\n\nIcon position relative to the menu item text. Either to the left or right",
+			"oneOf": [{ "const": "left" }, { "const": "right" }]
+		},
+		"blockClass": {
+			"type": ["array", "string"],
+			"markdownDescription": "`string | string[]`\n\nBlock container class. This prop’s set value functions as a block identifier for CSS customizations.",
+			"items": {
+				"type": "string"
+			},
+			"default": []
+		},
+		"experimentalOptimizeRendering": {
+			"type": "boolean"
+		},
+		"itemProps": {
+			"type": "object"
+		}
+	},
+	"defaultSnippets": [
+		{
+			"body": {
+				"type": "${1|custom,category|}",
+				"text": "$0"
+			}
+		}
+	],
+	"if": {
+		"properties": {
+			"type": {
+				"const": "category"
+			}
+		}
+	},
+	"then": {
+		"properties": {
+			"itemProps": {
+				"type": "object",
+				"additionalProperties": false,
+				"markdownDescription": "Item props",
+				"properties": {
+					"categoryId": {
+						"type": "number",
+						"markdownDescription": "number\n\nItem category ID"
+					},
+					"text": {
+						"type": "string",
+						"markdownDescription": "string\n\nMenu item text",
+						"default": ""
+					}
+				}
+			}
+		}
+	},
+	"else": {
+		"properties": {
+			"itemProps": {
+				"type": "object",
+				"additionalProperties": false,
+				"markdownDescription": "Item props",
+				"properties": {
+					"text": {
+						"type": "string",
+						"markdownDescription": "string\n\nMenu item text",
+						"default": ""
+					},
+					"type": {
+						"type": "string",
+						"markdownDescription": "string\n\nMenu item type, either internal or external",
+						"default": "internal",
+						"oneOf": [{ "const": "internal" }, { "const": "external" }]
+					},
+					"href": {
+						"type": "string",
+						"markdownDescription": "string\n\nIcon view box",
+						"default": "0 0 16 16"
+					},
+					"noFollow": {
+						"type": "string",
+						"markdownDescription": "string\n\nIcon classname when isActive is true",
+						"default": ""
+					},
+					"tagTitle": {
+						"type": "string",
+						"markdownDescription": "string\n\nIcon classname when isActive is false",
+						"default": ""
+					}
+				}
+			}
+		}
+	}
+}

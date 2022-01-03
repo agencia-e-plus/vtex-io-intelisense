@@ -4,6 +4,10 @@
 	"description": "VTEX block responsible for **rendering a product image or video**.",
 	"type": "object",
 	"properties": {
+		"title": {
+			"type": "string",
+			"description": "Title showed in site editor"
+		},
 		"props": {
 			"type": "object",
 			"description": "Block's properties",

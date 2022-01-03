@@ -4,6 +4,10 @@
 	"description": "block to show banner in search/departments/category pages",
 	"type": "object",
 	"properties": {
+		"title": {
+			"type": "string",
+			"description": "Title showed in site editor"
+		},
 		"props": {
 			"type": "object",
 			"description": "Block's properties",

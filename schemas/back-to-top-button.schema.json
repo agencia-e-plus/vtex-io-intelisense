@@ -1,0 +1,35 @@
+{
+	"type": "object",
+	"additionalProperties": false,
+	"title": "Back To Top Button",
+	"markdownDescription": "https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-backtotopbutton\n\n`back-to-top-button` is a store block exported by the Store Components app that redirects users to the top of the page when clicked on.\n\n`\"vtex.store-components@3.x\"`",
+	"properties": {
+		"props": {
+			"type": "object",
+			"additionalProperties": false,
+			"markdownDescription": "All available properties for this block.",
+			"properties": {
+				"displayThreshold": {
+					"type": "number",
+					"markdownDescription": "`number`\n\nDefines the window Y pixel in which the button will be displayed.",
+					"default": 600
+				},
+				"display": {
+					"type": "string",
+					"markdownDescription": "`enum`\n\nDefines the component rendering.",
+					"default": "button",
+					"oneOf": [
+						{
+							"const": "button",
+							"markdownDescription": "Displays a button with a `Back To Top` label text"
+						},
+						{
+							"const": "caret-icon",
+							"markdownDescription": "Displays just an icon."
+						}
+					]
+				}
+			}
+		}
+	}
+}

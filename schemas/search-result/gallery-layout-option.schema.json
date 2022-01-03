@@ -4,6 +4,10 @@
 	"description": "Defines how each layout option should be rendered for users.",
 	"type": "object",
 	"properties": {
+		"title": {
+			"type": "string",
+			"description": "Title showed in site editor"
+		},
 		"props": {
 			"type": "object",
 			"description": "Block's properties",
