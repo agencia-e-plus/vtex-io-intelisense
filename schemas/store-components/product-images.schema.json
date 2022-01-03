@@ -31,6 +31,12 @@
 					"description": "Displays navigation arrows on the thumbnails media (if there are enough thumbnails for them to scroll)",
 					"default": false
 				},
+				"thumbnailVisibility": {
+					"type": "string",
+					"oneOf": [{ "const": "visible" }, { "const": "hidden" }],
+					"description": "Controls if the thumbnails should appear in carousel displayMode",
+					"default": "visible"
+				},
 				"placeholder": {
 					"type": "string",
 					"description": "Sets the URL for a placeholder image to be used in case there is no available image or video of the product.",
@@ -125,9 +131,13 @@
 						{
 							"const": "list",
 							"markdownDescription": "displays only the product images inline, with no extra markup"
+						},
+						{
+							"const": "first-image",
+							"markdownDescription": "displays only the first image available"
 						}
 					],
-					"description": "Defines how the product media should be displayed. Possible values are carousel (displays the product images and videos in a carousel) and list (displays only the product images inline, with no extra markup). ",
+					"description": "Defines how the product media should be displayed. Possible values are carousel (displays the product images and videos in a carousel), list (displays only the product images inline, with no extra markup) and first-image (displays only the first image available). Caution: The list and first-image values do not display product videos and are only compatible with the maxHeight, hiddenImages, zoomFactor, aspectRatio,ModalZoomElement, and zoomMode props.",
 					"default": "carousel"
 				}
 			}

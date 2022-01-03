@@ -32,6 +32,14 @@
 					"type": "string",
 					"description": "Title to be shown on hover"
 				},
+				"sizes": {
+					"type": "string",
+					"markdownDescription": "Different image sizes for each page layout. [MDN reference](https://developer.mozilla.org/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#mudan%C3%A7a_de_resolu%C3%A7%C3%A3o_diferentes_tamanhos)"
+				},
+				"srcset": {
+					"type": "string",
+					"markdownDescription": "URL of the image to use in different situations. [MDN reference](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/img#attr-srcset)"
+				},
 				"link": {
 					"$ref": "./shared/link.schema.json"
 				},

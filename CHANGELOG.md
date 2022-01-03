@@ -4,6 +4,12 @@ All notable changes to the "vtexio-intellisense" extension will be documented in
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.2.10] - 2022-01-03
+
+### Added
+
+- update `image` and `product-images` props
+
 ## [0.2.9] - 2022-01-03
 
 ### Fixed
