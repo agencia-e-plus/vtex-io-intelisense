@@ -7,7 +7,83 @@ The Vtex io intellisense help you develop with vtex store-framework with snippet
 ### autocomplete
 
 ![Autocomplete demonstration](https://user-images.githubusercontent.com/48053804/141369446-3df45670-6d9b-4f4b-8e96-435518b884d9.gif)
-`ATTENTION: The auto complete works only on 'json' and 'jsonc' files above a 'store' folder `
+`ATTENTION: The auto complete works only on 'json' and 'jsonc' files above a 'store' folder`
+
+| blocks with auto complete                                  |
+| :--------------------------------------------------------- |
+| "back-to-top-button"                                       |
+| "blog-latest-posts-preview.wordpress-latest-posts-preview" |
+| "breadcrumb.search"                                        |
+| "breadcrumb"                                               |
+| "condition-layout.binding"                                 |
+| "condition-layout.product"                                 |
+| "disclosure-content"                                       |
+| "disclosure-layout-group"                                  |
+| "disclosure-layout"                                        |
+| "disclosure-state-indicator"                               |
+| "disclosure-trigger-group"                                 |
+| "disclosure-trigger"                                       |
+| "filter-navigator.v3"                                      |
+| "flex-layout.col"                                          |
+| "flex-layout.row"                                          |
+| "gallery-layout-option"                                    |
+| "gallery-layout-switcher"                                  |
+| "gallery"                                                  |
+| "icon"                                                     |
+| "iframe"                                                   |
+| "image"                                                    |
+| "link"                                                     |
+| "list-context.image-list"                                  |
+| "list-context.product-list"                                |
+| "login-content"                                            |
+| "login"                                                    |
+| "logo"                                                     |
+| "menu-item"                                                |
+| "minicart.v2"                                              |
+| "modal-actions.close"                                      |
+| "modal-header"                                             |
+| "modal-layout"                                             |
+| "modal-trigger"                                            |
+| "newsletter-form"                                          |
+| "newsletter-input-email"                                   |
+| "newsletter-input-name"                                    |
+| "newsletter-input-phone"                                   |
+| "newsletter-submit"                                        |
+| "overlay-layout"                                           |
+| "overlay-trigger"                                          |
+| "paged-controls"                                           |
+| "product-brand"                                            |
+| "product-description"                                      |
+| "product-images"                                           |
+| "product-installments-list"                                |
+| "product-name"                                             |
+| "product-specification-badges"                             |
+| "product-specification-group"                              |
+| "product-specification-text"                               |
+| "product-specification-value"                              |
+| "product-specification"                                    |
+| "product-summary-image"                                    |
+| "rich-text"                                                |
+| "scroll-animate"                                           |
+| "search-banner"                                            |
+| "search-bar"                                               |
+| "search-not-found-layout"                                  |
+| "search-result-layout"                                     |
+| "shelf.relatedProducts"                                    |
+| "sku-selector"                                             |
+| "slider-layout"                                            |
+| "stack-layout"                                             |
+| "sticky-layout.stack-container"                            |
+| "sticky-layout"                                            |
+| "store."                                                   |
+| "store.search"                                             |
+| "tab-content.item"                                         |
+| "tab-content"                                              |
+| "tab-layout"                                               |
+| "tab-list.item.children"                                   |
+| "tab-list.item"                                            |
+| "tab-list"                                                 |
+| "vtex.menu@2.x:menu"                                       |
 
 ### snippets
 
