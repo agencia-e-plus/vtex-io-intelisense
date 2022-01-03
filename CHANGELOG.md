@@ -4,6 +4,12 @@ All notable changes to the "vtexio-intellisense" extension will be documented in
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.2.12] - 2022-01-03
+
+### Added
+
+- missing props of logo
+
 ## [0.2.10] - 2022-01-03
 
 ### Added
