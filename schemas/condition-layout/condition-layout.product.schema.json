@@ -54,8 +54,8 @@
 						}
 					]
 				},
-				"Then": { "$ref": "./shared/block.schema.json" },
-				"Else": { "$ref": "./shared/block.schema.json" }
+				"Then": { "$ref": "../shared/block.schema.json" },
+				"Else": { "$ref": "../shared/block.schema.json" }
 			}
 		}
 	}
