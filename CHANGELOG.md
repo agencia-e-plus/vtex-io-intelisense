@@ -4,6 +4,27 @@ All notable changes to the "vtexio-intellisense" extension will be documented in
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.2.6] - 2022-01-03
+
+### Added
+
+- minicart.v2 block
+- sticky-layout block
+- back-to-top-button block
+- tab-layout block
+- logo block
+- product-brand block
+- product-name block
+- search-bar block
+- login block
+- vtex.menu@2.x:menu block
+- menu-item block
+- condition-layout.binding block
+
+### Fixed
+
+- condition-layout.product block
+
 ## [0.2.5] - 2021-12-22
 
 ### Fixed
