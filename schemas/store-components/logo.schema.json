@@ -1,0 +1,62 @@
+{
+	"type": "object",
+	"additionalProperties": false,
+	"title": "Logo",
+	"markdownDescription": "https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-logo\n\nLogo is a VTEX block responsible for displaying an image logo for the store header.\n\n`\"vtex.store-components@3.x\"`",
+	"properties": {
+		"title": {
+			"type": "string",
+			"markdownDescription": "Define a custom name. It will be shown in site editor for faster identification."
+		},
+		"props": {
+			"type": "object",
+			"additionalProperties": false,
+			"markdownDescription": "All available properties for this block.",
+			"properties": {
+				"blockClass": {
+					"type": ["array", "string"],
+					"markdownDescription": "`string | string[]`\n\nBlock container class. This prop’s set value functions as a block identifier for CSS customizations.",
+					"items": {
+						"type": "string"
+					},
+					"default": []
+				},
+				"title": {
+					"type": "string",
+					"markdownDescription": "string!\n\nThe image alt description",
+					"default": "VTEX logo"
+				},
+				"color": {
+					"type": "string",
+					"markdownDescription": "string\n\nThe image fill color",
+					"default": "#F71963"
+				},
+				"showLabel": {
+					"type": "boolean",
+					"markdownDescription": "boolean\n\nSet the label visibility",
+					"default": true
+				},
+				"width": {
+					"type": "number",
+					"markdownDescription": "number\n\nThe logo image width",
+					"default": 493
+				},
+				"height": {
+					"type": "number",
+					"markdownDescription": "number\n\nThe logo image height",
+					"default": 177
+				},
+				"url": {
+					"type": "string",
+					"markdownDescription": "string\n\nThe image url",
+					"default": ""
+				},
+				"href": {
+					"type": "string",
+					"markdownDescription": "string\n\nImage link",
+					"default": ""
+				}
+			}
+		}
+	}
+}

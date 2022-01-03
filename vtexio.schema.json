@@ -13,7 +13,7 @@
 			"$ref": "./schemas/breadcrumb.search.schema.json"
 		},
 		"condition-layout.product": {
-			"$ref": "./schemas/condition-layout.product.schema.json"
+			"$ref": "./schemas/condition-layout/condition-layout.product.schema.json"
 		},
 		"disclosure-content": {
 			"$ref": "./schemas/disclosure-layout/disclosure-content.schema.json"
@@ -167,6 +167,60 @@
 		},
 		"scroll-animate": {
 			"$ref": "./schemas/scroll-animate.schema.json"
+		},
+		"minicart.v2": {
+			"$ref": "./schemas/minicart.v2.schema.json"
+		},
+		"sticky-layout.stack-container": {
+			"$ref": "./schemas/sticky-layout.stack-container.schema.json"
+		},
+		"back-to-top-button": {
+			"$ref": "./schemas/back-to-top-button.schema.json"
+		},
+		"tab-layout": {
+			"$ref": "./schemas/tab-layout/tab-layout.schema.json"
+		},
+		"tab-content": {
+			"$ref": "./schemas/tab-layout/tab-content.schema.json"
+		},
+		"tab-content.item": {
+			"$ref": "./schemas/tab-layout/tab-content.item.schema.json"
+		},
+		"tab-list.item": {
+			"$ref": "./schemas/tab-layout/tab-list.item.schema.json"
+		},
+		"tab-list.item.children": {
+			"$ref": "./schemas/tab-layout/tab-list.item.children.schema.json"
+		},
+		"tab-list": {
+			"$ref": "./schemas/tab-layout/tab-list.schema.json"
+		},
+		"logo": {
+			"$ref": "./schemas/store-components/logo.schema.json"
+		},
+		"product-brand": {
+			"$ref": "./schemas/store-components/product-brand.schema.json"
+		},
+		"product-name": {
+			"$ref": "./schemas/store-components/product-name.schema.json"
+		},
+		"search-bar": {
+			"$ref": "./schemas/store-components/search-bar.schema.json"
+		},
+		"condition-layout.binding": {
+			"$ref": "./schemas/condition-layout/condition-layout.binding.schema.json"
+		},
+		"login": {
+			"$ref": "./schemas/login/login.schema.json"
+		},
+		"login-content": {
+			"$ref": "./schemas/login/login-content.schema.json"
+		},
+		"vtex.menu@2.x:menu": {
+			"$ref": "./schemas/menu/vtex.menu@2.x:menu.schema.json"
+		},
+		"menu-item": {
+			"$ref": "./schemas/menu/menu-item.schema.json"
 		}
 	},
 	"patternProperties": {
@@ -183,7 +237,7 @@
 			"$ref": "./schemas/breadcrumb.search.schema.json"
 		},
 		"^(condition-layout.product#)|^(condition-layout.product)$": {
-			"$ref": "./schemas/condition-layout.product.schema.json"
+			"$ref": "./schemas/condition-layout/condition-layout.product.schema.json"
 		},
 		"^(disclosure-content#)|^(disclosure-content)$": {
 			"$ref": "./schemas/disclosure-layout/disclosure-content.schema.json"
@@ -305,7 +359,7 @@
 		"^(iframe#)|^(iframe)$": {
 			"$ref": "./schemas/iframe.schema.json"
 		},
-		"^(store.#)|^(store.)$": {
+		"^(store.)": {
 			"$ref": "./schemas/store.schema.json"
 		},
 		"^(newsletter-form#)|^(newsletter-form)$": {
@@ -337,6 +391,60 @@
 		},
 		"^(scroll-animate#)|^(scroll-animate)$": {
 			"$ref": "./schemas/scroll-animate.schema.json"
+		},
+		"(minicart.v2#)|^(minicart.v2)$": {
+			"$ref": "./schemas/minicart.v2.schema.json"
+		},
+		"(sticky-layout.stack-container#)|^(sticky-layout.stack-container)$": {
+			"$ref": "./schemas/sticky-layout.stack-container.schema.json"
+		},
+		"(back-to-top-button#)|^(back-to-top-button)$": {
+			"$ref": "./schemas/back-to-top-button.schema.json"
+		},
+		"(tab-layout#)|^(tab-layout)$": {
+			"$ref": "./schemas/tab-layout/tab-layout.schema.json"
+		},
+		"(tab-content#)|^(tab-content)$": {
+			"$ref": "./schemas/tab-layout/tab-content.schema.json"
+		},
+		"(tab-content.item#)|^(tab-content.item)$": {
+			"$ref": "./schemas/tab-layout/tab-content.item.schema.json"
+		},
+		"(tab-list.item#)|^(tab-list.item)$": {
+			"$ref": "./schemas/tab-layout/tab-list.item.schema.json"
+		},
+		"(tab-list.item.children#)|^(tab-list.item.children)$": {
+			"$ref": "./schemas/tab-layout/tab-list.item.children.schema.json"
+		},
+		"(tab-list#)|^(tab-list)$": {
+			"$ref": "./schemas/tab-layout/tab-list.schema.json"
+		},
+		"(logo#)|^(logo)$": {
+			"$ref": "./schemas/store-components/logo.schema.json"
+		},
+		"(product-brand#)|^(product-brand)$": {
+			"$ref": "./schemas/store-components/product-brand.schema.json"
+		},
+		"(product-name#)|^(product-name)$": {
+			"$ref": "./schemas/store-components/product-name.schema.json"
+		},
+		"(search-bar#)|^(search-bar)$": {
+			"$ref": "./schemas/store-components/search-bar.schema.json"
+		},
+		"(condition-layout.binding#)|^(condition-layout.binding)$": {
+			"$ref": "./schemas/condition-layout/condition-layout.binding.schema.json"
+		},
+		"(login#)|^(login)$": {
+			"$ref": "./schemas/login/login.schema.json"
+		},
+		"(login-content#)|^(login-content)$": {
+			"$ref": "./schemas/login/login-content.schema.json"
+		},
+		"(vtex.menu@2.x:menu#)|^(vtex.menu@2.x:menu)$": {
+			"$ref": "./schemas/menu/vtex.menu@2.x:menu.schema.json"
+		},
+		"(menu-item#)|^(menu-item)$": {
+			"$ref": "./schemas/menu/menu-item.schema.json"
 		}
 	}
 }

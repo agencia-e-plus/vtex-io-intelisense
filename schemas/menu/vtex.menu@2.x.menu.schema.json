@@ -1,0 +1,66 @@
+{
+	"type": "object",
+	"additionalProperties": false,
+	"title": "Menu",
+	"markdownDescription": "https://developers.vtex.com/vtex-developer-docs/docs/vtex-menu\n\nVTEX Menu is a store component responsible for displaying a bar containing links and drop-down sub-menus.\n\nTo build the store's menu options, you need to configure the `menu-item` blocks. These can be declared in two different ways in `vtex.menu@2.x:menu`: as `children` or as `props`. The advantage of this latest menu-item configuration compared is that Site Editor can be used to edit the blocks.\n\n`\"vtex.menu@2.x\"`",
+	"properties": {
+		"title": {
+			"type": "string",
+			"markdownDescription": "Define a custom name. It will be shown in site editor for faster identification."
+		},
+		"children": {
+			"type": "array",
+			"markdownDescription": "Declare the blocks that must be wrapped inside the current one.",
+			"items": {
+				"type": "string"
+			}
+		},
+		"props": {
+			"type": "object",
+			"additionalProperties": false,
+			"markdownDescription": "All available properties for this block.",
+			"properties": {
+				"blockClass": {
+					"type": ["array", "string"],
+					"markdownDescription": "`string | string[]`\n\nBlock container class. This prop’s set value functions as a block identifier for CSS customizations.",
+					"items": {
+						"type": "string"
+					},
+					"default": []
+				},
+				"orientation": {
+					"type": "string",
+					"oneOf": [{ "const": "vertical" }, { "const": "horizontal" }]
+				},
+				"categoryId": {
+					"type": "number"
+				},
+				"textType": {
+					"type": "string",
+					"oneOf": [
+						{ "const": "heading1" },
+						{ "const": "heading2" },
+						{ "const": "heading3" },
+						{ "const": "heading4" },
+						{ "const": "heading5" },
+						{ "const": "body" },
+						{ "const": "small" },
+						{ "const": "mini" }
+					]
+				},
+				"additionalDef": {
+					"type": "string"
+				},
+				"experimentalOptimizeRendering": {
+					"type": "boolean"
+				},
+				"items": {
+					"type": "array",
+					"items": {
+						"$ref": "./menu-item-props.schema.json"
+					}
+				}
+			}
+		}
+	}
+}

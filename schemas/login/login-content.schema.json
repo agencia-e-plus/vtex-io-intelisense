@@ -1,0 +1,90 @@
+{
+	"type": "object",
+	"additionalProperties": false,
+	"title": "Login Content",
+	"markdownDescription": "https://developers.vtex.com/vtex-developer-docs/docs/vtex-login\n\nOnly renders the login form.\n\n`\"vtex.login@2.x\"`",
+	"properties": {
+		"props": {
+			"type": "object",
+			"additionalProperties": false,
+			"markdownDescription": "All available properties for this block.",
+			"properties": {
+				"isInitialScreenOptionOnly": {
+					"type": "boolean",
+					"markdownDescription": "boolean\n\nWhether only the login options will be displayed on the initial screen (true) or not (false).",
+					"default": true
+				},
+				"defaultOption": {
+					"type": "number",
+					"markdownDescription": "enum\n\nDefines the default login options to be shown. Possible values are: 0 (shows the access-code option for login) and 1 (shows the email/password option for login).",
+					"default": 0,
+					"oneOf": [
+						{
+							"const": 0,
+							"markdownDescription": "shows the access-code option for login"
+						},
+						{
+							"const": 1,
+							"markdownDescription": "shows the email/password option for login"
+						}
+					]
+				},
+				"optionsTitle": {
+					"type": "string",
+					"markdownDescription": "string\n\nDefines the default login options to be shown. Possible values are: 0 (shows the access-code option for login) and 1 (shows the email/password option for login).",
+					"default": ""
+				},
+				"emailPlaceholder": {
+					"type": "string",
+					"markdownDescription": "string\n\nText to be displayed as placeholder to the email input.",
+					"default": ""
+				},
+				"passwordPlaceholder": {
+					"type": "string",
+					"markdownDescription": "string\n\nText to be displayed as placeholder to the password input.",
+					"default": ""
+				},
+				"accessCodePlaceholder": {
+					"type": "string",
+					"markdownDescription": "string\n\nText to be displayed as placeholder to the access code input.",
+					"default": ""
+				},
+				"showPasswordVerificationIntoTooltip": {
+					"type": "boolean",
+					"markdownDescription": "boolean\n\nWhether a tooltip responsible for checking the password format should be shown (true) or not (false).",
+					"default": true
+				},
+				"providerPasswordButtonLabel": {
+					"type": "string",
+					"markdownDescription": "string\n\nText to be displayed as the password button label.",
+					"default": ""
+				},
+				"hasIdentifierExtension": {
+					"type": "boolean",
+					"markdownDescription": "boolean\n\nWhether the identifier extension configurations should be enabled (`true`) or not (`false`). For more info on this, check out the [Advanced Configurations](https://developers.vtex.com/vtex-developer-docs/docs/vtex-login#advanced-configuration)",
+					"default": true
+				},
+				"identifierPlaceholder": {
+					"type": "string",
+					"markdownDescription": "string\n\nText to be displayed as placeholder to the extension input.",
+					"default": ""
+				},
+				"invalidIdentifierError": {
+					"type": "string",
+					"markdownDescription": "string\n\nError message for invalid user identifier.",
+					"default": ""
+				},
+				"termsAndConditions": {
+					"type": "string",
+					"markdownDescription": "string\n\nText to be displayed below the login options regarding terms&conditions.",
+					"default": ""
+				},
+				"disabledEmailInputs": {
+					"type": "boolean",
+					"markdownDescription": "boolean\n\nWhether user email editing should be allowed (true) or not (false).",
+					"default": false
+				}
+			}
+		}
+	}
+}

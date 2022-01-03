@@ -1,0 +1,57 @@
+{
+	"type": "object",
+	"additionalProperties": false,
+	"title": "Product Name",
+	"markdownDescription": "https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-productname\n\nThe `ProductName` is a block responsible for **displaying the product name** along other information such as **SKU** or **brand**.\n\n`\"vtex.store-components@3.x\"`",
+	"properties": {
+		"title": {
+			"type": "string",
+			"markdownDescription": "Define a custom name. It will be shown in site editor for faster identification."
+		},
+		"props": {
+			"type": "object",
+			"additionalProperties": false,
+			"markdownDescription": "All available properties for this block.",
+			"properties": {
+				"blockClass": {
+					"type": ["array", "string"],
+					"markdownDescription": "`string | string[]`\n\nBlock container class. This prop’s set value functions as a block identifier for CSS customizations.",
+					"items": {
+						"type": "string"
+					},
+					"default": []
+				},
+				"showSku": {
+					"type": "boolean",
+					"markdownDescription": "`boolean`\n\nShow product SKU",
+					"default": false
+				},
+				"showProductReference": {
+					"type": "boolean",
+					"markdownDescription": "`boolean`\n\nShow product reference",
+					"default": false
+				},
+				"showBrandName": {
+					"type": "boolean",
+					"markdownDescription": "`boolean`\n\nShow brand name",
+					"default": false
+				},
+				"displayMode": {
+					"type": "boolean",
+					"markdownDescription": "`boolean`\n\nPossible values: `linkToProductPage` (show the product link associated with its name) or `plainText` (to show only the product name).",
+					"default": "plainText",
+					"oneOf": [
+						{
+							"const": "linkToProductPage",
+							"markdownDescription": "Show the product link associated with its name"
+						},
+						{
+							"const": "plainText",
+							"markdownDescription": "Show only the product name"
+						}
+					]
+				}
+			}
+		}
+	}
+}

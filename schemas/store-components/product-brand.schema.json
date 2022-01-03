@@ -1,0 +1,108 @@
+{
+	"type": "object",
+	"additionalProperties": false,
+	"title": "Product Brand",
+	"markdownDescription": "https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-productbrand\n\nThe `ProductBrand` is a VTEX block that displays either the name or the logo of a product's brand.\n\n`\"vtex.store-components@3.x\"`",
+	"properties": {
+		"props": {
+			"type": "object",
+			"additionalProperties": false,
+			"markdownDescription": "All available properties for this block.",
+			"properties": {
+				"blockClass": {
+					"type": ["array", "string"],
+					"markdownDescription": "`string | string[]`\n\nBlock container class. This prop’s set value functions as a block identifier for CSS customizations.",
+					"items": {
+						"type": "string"
+					},
+					"default": []
+				},
+				"displayMode": {
+					"type": "string",
+					"markdownDescription": "`string`\n\nYou should choose between `logo` or `text`. This will define if the product brand will be displayed by name or logo.",
+					"default": "logo",
+					"oneOf": [{ "const": "logo" }, { "const": "text" }]
+				},
+				"loadingPlaceholder": {
+					"type": "string",
+					"markdownDescription": "`string`\n\nYou should choose between `logo` or `text`. This will define if the loading placeholder should have the size of the logo or the text.",
+					"oneOf": [
+						{
+							"const": "logo"
+						},
+						{
+							"const": "text"
+						}
+					]
+				},
+				"excludeBrands": {
+					"type": "array",
+					"markdownDescription": "`array`\n\nThe brand names or brand IDs listed in the array will never be displayed by the Brand component. It is usually useful to hide default or test brand names/logos on the store front.",
+					"default": [],
+					"items": {
+						"type": "string"
+					}
+				},
+				"withLink": {
+					"type": "string",
+					"markdownDescription": "`enum`\n\nDefines the scenarios in which the product brand should have a link that leads to its website.",
+					"default": "none",
+					"oneOf": [
+						{
+							"const": "none",
+							"markdownDescription": "`array`\n\nNever includes the link"
+						},
+						{
+							"const": "logo",
+							"markdownDescription": "`array`\n\nIncludes the link whenever the brand logo is displayed"
+						},
+						{
+							"const": "text",
+							"markdownDescription": "`array`\n\nIncludes the link whenever the brand name is displayed"
+						},
+						{
+							"const": "logoAndText",
+							"markdownDescription": "`array`\n\nIncludes the link whenever the brand logo or the brand name is displayed"
+						}
+					]
+				},
+				"brandName": {
+					"type": "string",
+					"markdownDescription": "`string`\n\nThe brand name. If no value is declared, the product context should provide the data.",
+					"default": ""
+				},
+				"brandId": {
+					"type": "number",
+					"markdownDescription": "`number`\n\nThe brand ID. If no value is declared, the product context should provide the data.",
+					"default": ""
+				}
+			},
+			"if": {
+				"properties": { "displayMode": { "const": "logo" } },
+				"required": ["displayMode"]
+			},
+			"then": {
+				"properties": {
+					"fallbackToText": {
+						"type": "boolean",
+						"markdownDescription": "`boolean`\n\nThis prop should only be used when `displayMode` is set to `logo`. It defines what should be done when the Product Brand was set to display a brand logo but no image was registered in the VTEX admin's Catalog. This prop is set as `true` by default, allowing the logo to be replaced with the brand name in those scenarios. When set as `false`, the store will not show the brand name instead of the brand logo.",
+						"default": true
+					},
+					"height": {
+						"type": "number",
+						"markdownDescription": "`number`\n\nIt sets the logo height. It should only be used when `displayMode` is set to `logo`.",
+						"default": 100,
+						"oneOf": [
+							{
+								"const": "logo"
+							},
+							{
+								"const": "text"
+							}
+						]
+					}
+				}
+			}
+		}
+	}
+}

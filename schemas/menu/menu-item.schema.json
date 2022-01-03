@@ -1,0 +1,18 @@
+{
+	"type": "object",
+	"additionalProperties": false,
+	"title": "Menu Item",
+	"markdownDescription": "https://developers.vtex.com/vtex-developer-docs/docs/vtex-menu\n\nVTEX Menu items as blocks.\n\n`\"vtex.menu@2.x\"`",
+	"properties": {
+		"blocks": {
+			"type": "array",
+			"markdownDescription": "Declare the blocks that must be wrapped inside the current one.",
+			"items": {
+				"type": "string"
+			}
+		},
+		"props": {
+			"$ref": "./menu-item-props.schema.json"
+		}
+	}
+}
