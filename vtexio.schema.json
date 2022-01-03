@@ -55,7 +55,7 @@
 			"$ref": "./schemas/tab-layout/tab-list.item.children.schema.json"
 		},
 		"(vtex.menu@2.x:menu#)|^(vtex.menu@2.x:menu)$": {
-			"$ref": "./schemas/menu/vtex.menu@2.x:menu.schema.json"
+			"$ref": "./schemas/menu/vtex.menu@2.x.menu.schema.json"
 		},
 		"^(add-to-cart-button#)|^(add-to-cart-button)$": {
 			"$ref": "./schemas/add-to-cart-button.schema.json"
@@ -444,7 +444,7 @@
 			"$ref": "./schemas/tab-layout/tab-list.item.children.schema.json"
 		},
 		"vtex.menu@2.x:menu": {
-			"$ref": "./schemas/menu/vtex.menu@2.x:menu.schema.json"
+			"$ref": "./schemas/menu/vtex.menu@2.x.menu.schema.json"
 		}
 	}
 }

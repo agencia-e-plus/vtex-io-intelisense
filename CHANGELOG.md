@@ -4,6 +4,12 @@ All notable changes to the "vtexio-intellisense" extension will be documented in
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.2.8] - 2022-01-03
+
+### Fixed
+
+- menu.v2 schema reference
+
 ## [0.2.7] - 2022-01-03
 
 ### Fixed
