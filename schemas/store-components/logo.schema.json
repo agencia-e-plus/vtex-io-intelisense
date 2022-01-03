@@ -37,14 +37,22 @@
 					"default": true
 				},
 				"width": {
-					"type": "number",
-					"markdownDescription": "number\n\nThe logo image width",
+					"type": ["number", "string"],
+					"markdownDescription": "number | string\n\nThe logo image width",
 					"default": 493
 				},
 				"height": {
-					"type": "number",
-					"markdownDescription": "number\n\nThe logo image height",
+					"type": ["number", "string"],
+					"markdownDescription": "number | string\n\nThe logo image height",
 					"default": 177
+				},
+				"mobileWidth": {
+					"type": ["number", "string"],
+					"markdownDescription": "number | string\n\nThe mobile logo image width"
+				},
+				"mobileHeight": {
+					"type": ["number", "string"],
+					"markdownDescription": "number | string\n\nThe mobile logo image height"
 				},
 				"url": {
 					"type": "string",
