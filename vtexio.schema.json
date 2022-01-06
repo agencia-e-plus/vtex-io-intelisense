@@ -3,62 +3,11 @@
 	"title": "VTEX IO Jsonc Schema by EPlus 💚",
 	"type": "object",
 	"patternProperties": {
-		"(back-to-top-button#)|^(back-to-top-button)$": {
-			"$ref": "./schemas/back-to-top-button.schema.json"
-		},
-		"(condition-layout.binding#)|^(condition-layout.binding)$": {
-			"$ref": "./schemas/condition-layout/condition-layout.binding.schema.json"
-		},
-		"(login#)|^(login)$": {
-			"$ref": "./schemas/login/login.schema.json"
-		},
-		"(login-content#)|^(login-content)$": {
-			"$ref": "./schemas/login/login-content.schema.json"
-		},
-		"(logo#)|^(logo)$": {
-			"$ref": "./schemas/store-components/logo.schema.json"
-		},
-		"(menu-item#)|^(menu-item)$": {
-			"$ref": "./schemas/menu/menu-item.schema.json"
-		},
-		"(minicart.v2#)|^(minicart.v2)$": {
-			"$ref": "./schemas/minicart.v2.schema.json"
-		},
-		"(product-brand#)|^(product-brand)$": {
-			"$ref": "./schemas/store-components/product-brand.schema.json"
-		},
-		"(product-name#)|^(product-name)$": {
-			"$ref": "./schemas/store-components/product-name.schema.json"
-		},
-		"(search-bar#)|^(search-bar)$": {
-			"$ref": "./schemas/store-components/search-bar.schema.json"
-		},
-		"(sticky-layout.stack-container#)|^(sticky-layout.stack-container)$": {
-			"$ref": "./schemas/sticky-layout.stack-container.schema.json"
-		},
-		"(tab-content#)|^(tab-content)$": {
-			"$ref": "./schemas/tab-layout/tab-content.schema.json"
-		},
-		"(tab-content.item#)|^(tab-content.item)$": {
-			"$ref": "./schemas/tab-layout/tab-content.item.schema.json"
-		},
-		"(tab-layout#)|^(tab-layout)$": {
-			"$ref": "./schemas/tab-layout/tab-layout.schema.json"
-		},
-		"(tab-list#)|^(tab-list)$": {
-			"$ref": "./schemas/tab-layout/tab-list.schema.json"
-		},
-		"(tab-list.item#)|^(tab-list.item)$": {
-			"$ref": "./schemas/tab-layout/tab-list.item.schema.json"
-		},
-		"(tab-list.item.children#)|^(tab-list.item.children)$": {
-			"$ref": "./schemas/tab-layout/tab-list.item.children.schema.json"
-		},
-		"(vtex.menu@2.x:menu#)|^(vtex.menu@2.x:menu)$": {
-			"$ref": "./schemas/menu/vtex.menu@2.x.menu.schema.json"
-		},
 		"^(add-to-cart-button#)|^(add-to-cart-button)$": {
-			"$ref": "./schemas/add-to-cart-button.schema.json"
+			"$ref": "./schemas/add-to-cart-button.schema.jfson"
+		},
+		"^(back-to-top-button#)|^(back-to-top-button)$": {
+			"$ref": "./schemas/back-to-top-button.schema.json"
 		},
 		"^(blog-latest-posts-preview.wordpress-latest-posts-preview#)|^(blog-latest-posts-preview.wordpress-latest-posts-preview)$": {
 			"$ref": "./schemas/wordpress-integration/blog-latest-posts-preview.wordpress-latest-posts-preview.schema.json"
@@ -68,6 +17,9 @@
 		},
 		"^(breadcrumb.search#)|^(breadcrumb.search)$": {
 			"$ref": "./schemas/breadcrumb.search.schema.json"
+		},
+		"^(condition-layout.binding#)|^(condition-layout.binding)$": {
+			"$ref": "./schemas/condition-layout/condition-layout.binding.schema.json"
 		},
 		"^(condition-layout.product#)|^(condition-layout.product)$": {
 			"$ref": "./schemas/condition-layout/condition-layout.product.schema.json"
@@ -120,11 +72,29 @@
 		"^(link#)|^(link)$": {
 			"$ref": "./schemas/link.schema.json"
 		},
+		"^(link.product#)|^(link.product)$": {
+			"$ref": "./schemas/link.schema.json"
+		},
 		"^(list-context.image-list#)|^(list-context.image-list)$": {
 			"$ref": "./schemas/list-context.image-list.schema.json"
 		},
 		"^(list-context.product-list#)|^(list-context.product-list)$": {
 			"$ref": "./schemas/list-context.product-list.schema.json"
+		},
+		"^(login#)|^(login)$": {
+			"$ref": "./schemas/login/login.schema.json"
+		},
+		"^(login-content#)|^(login-content)$": {
+			"$ref": "./schemas/login/login-content.schema.json"
+		},
+		"^(logo#)|^(logo)$": {
+			"$ref": "./schemas/store-components/logo.schema.json"
+		},
+		"^(menu-item#)|^(menu-item)$": {
+			"$ref": "./schemas/menu/menu-item.schema.json"
+		},
+		"^(minicart.v2#)|^(minicart.v2)$": {
+			"$ref": "./schemas/minicart.v2.schema.json"
 		},
 		"^(modal-actions.close#)|^(modal-actions.close)$": {
 			"$ref": "./schemas/modal/modal-actions.close.schema.json"
@@ -162,6 +132,9 @@
 		"^(paged-controls#)|^(paged-controls)$": {
 			"$ref": "./schemas/search-result/paged-controls.schema.json"
 		},
+		"^(product-brand#)|^(product-brand)$": {
+			"$ref": "./schemas/store-components/product-brand.schema.json"
+		},
 		"^(product-description#)|^(product-description)$": {
 			"$ref": "./schemas/store-components/product-description.schema.json"
 		},
@@ -170,6 +143,9 @@
 		},
 		"^(product-installments-list#)|^(product-installments-list)$": {
 			"$ref": "./schemas/product-price/product-installments-list.schema.json"
+		},
+		"^(product-name#)|^(product-name)$": {
+			"$ref": "./schemas/store-components/product-name.schema.json"
 		},
 		"^(product-specification#)|^(product-specification)$": {
 			"$ref": "./schemas/product-specifications/product-specification.schema.json"
@@ -192,11 +168,25 @@
 		"^(rich-text#)|^(rich-text)$": {
 			"$ref": "./schemas/rich-text.schema.json"
 		},
+		"^(sandbox#)|^(sandbox)$": {
+			"$ref": "./schemas/sandbox.schema.json"
+		},
+		"^(sandbox.order#)|^(sandbox.order)$": {
+			"$ref": "./schemas/sandbox.schema.json",
+			"description": "Sandbox Component with orderForm context data"
+		},
+		"^(sandbox.product#)|^(sandbox.product)$": {
+			"$ref": "./schemas/sandbox.schema.json",
+			"description": "Sandbox Component with product context data"
+		},
 		"^(scroll-animate#)|^(scroll-animate)$": {
 			"$ref": "./schemas/scroll-animate.schema.json"
 		},
 		"^(search-banner#)|^(search-banner)$": {
 			"$ref": "./schemas/search/search-banner.schema.json"
+		},
+		"^(search-bar#)|^(search-bar)$": {
+			"$ref": "./schemas/store-components/search-bar.schema.json"
 		},
 		"^(search-not-found-layout#)|^(search-not-found-layout)$": {
 			"$ref": "./schemas/search-result/search-result-layout.schema.json"
@@ -219,11 +209,38 @@
 		"^(sticky-layout#)|^(sticky-layout)$": {
 			"$ref": "./schemas/sticky-layout.schema.json"
 		},
+		"^(sticky-layout.stack-container#)|^(sticky-layout.stack-container)$": {
+			"$ref": "./schemas/sticky-layout.stack-container.schema.json"
+		},
 		"^(store.)": {
 			"$ref": "./schemas/store.schema.json"
 		},
 		"^(store.search#)|^(store.search)$": {
 			"$ref": "./schemas/search-result/store.search.schema.json"
+		},
+		"^(tab-content#)|^(tab-content)$": {
+			"$ref": "./schemas/tab-layout/tab-content.schema.json"
+		},
+		"^(tab-content.item#)|^(tab-content.item)$": {
+			"$ref": "./schemas/tab-layout/tab-content.item.schema.json"
+		},
+		"^(tab-layout#)|^(tab-layout)$": {
+			"$ref": "./schemas/tab-layout/tab-layout.schema.json"
+		},
+		"^(tab-list#)|^(tab-list)$": {
+			"$ref": "./schemas/tab-layout/tab-list.schema.json"
+		},
+		"^(tab-list.item#)|^(tab-list.item)$": {
+			"$ref": "./schemas/tab-layout/tab-list.item.schema.json"
+		},
+		"^(tab-list.item.children#)|^(tab-list.item.children)$": {
+			"$ref": "./schemas/tab-layout/tab-list.item.children.schema.json"
+		},
+		"^(video#)|^(video)$": {
+			"$ref": "./schemas/video.schema.json"
+		},
+		"^(vtex.menu@2.x:menu#)|^(vtex.menu@2.x:menu)$": {
+			"$ref": "./schemas/menu/vtex.menu@2.x.menu.schema.json"
 		}
 	},
 	"properties": {
@@ -291,6 +308,9 @@
 			"$ref": "./schemas/image.schema.json"
 		},
 		"link": {
+			"$ref": "./schemas/link.schema.json"
+		},
+		"link.product": {
 			"$ref": "./schemas/link.schema.json"
 		},
 		"list-context.image-list": {
@@ -453,6 +473,9 @@
 		},
 		"tab-list.item.children": {
 			"$ref": "./schemas/tab-layout/tab-list.item.children.schema.json"
+		},
+		"video": {
+			"$ref": "./schemas/video.schema.json"
 		},
 		"vtex.menu@2.x:menu": {
 			"$ref": "./schemas/menu/vtex.menu@2.x.menu.schema.json"

@@ -16,7 +16,19 @@
 							"type": "object",
 							"properties": {
 								"subject": {
-									"type": "string"
+									"type": "string",
+									"oneOf": [
+										{ "const": "productId" },
+										{ "const": "categoryId" },
+										{ "const": "brandId" },
+										{ "const": "selectedItemId" },
+										{ "const": "productClusters" },
+										{ "const": "categoryTree" },
+										{ "const": "specificationProperties" },
+										{ "const": "areAllVariationsSelected" },
+										{ "const": "isProductAvailable" },
+										{ "const": "hasMoreSellersThan" }
+									]
 								},
 								"arguments": {
 									"type": "object",

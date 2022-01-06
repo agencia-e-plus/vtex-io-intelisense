@@ -155,7 +155,27 @@
 			"           ${3}",
 			"         }",
 			"       }",
-			"     ]",
+			"     ],",
+			"     \"Then\": ${4}",
+			"   }",
+			" }"
+		],
+		"description": "Condition layout Product"
+	},
+	"Condition layout Binding": {
+		"scope": "json, jsonc",
+		"prefix": "clb",
+		"body": [
+			" \"condition-layout.binding#${1:id}\": {",
+			"   \"props\": {",
+			"     \"conditions\": [",
+			"       {",
+			"         \"subject\": ${2},",
+			"         \"arguments\": {",
+			"           ${3}",
+			"         }",
+			"       }",
+			"     ],",
 			"     \"Then\": ${4}",
 			"   }",
 			" }"

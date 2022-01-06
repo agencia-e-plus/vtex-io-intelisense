@@ -1,0 +1,102 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Video",
+	"description": "[Docs](https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-video)\n\nThe Video app allows you to display video assets on your store pages.",
+	"type": "object",
+	"properties": {
+		"title": {
+			"type": "string"
+		},
+		"props": {
+			"type": "object",
+			"description": "Block's properties",
+			"properties": {
+				"name": {
+					"type": "string",
+					"markdownDescription": "Video name for SEO and accessibility."
+				},
+				"description": {
+					"type": "string",
+					"markdownDescription": "Video description for SEO and accessibility."
+				},
+				"src": {
+					"type": "string",
+					"markdownDescription": "Video URL. It can be a `youtube` URL, `vimeo` URL or a self-hosted video URL."
+				},
+				"type": {
+					"type": "string",
+					"markdownDescription": "Video type."
+				},
+				"poster": {
+					"type": "string",
+					"markdownDescription": "Cover image URL to be displayed before the video playback."
+				},
+				"controlsType": {
+					"type": "string",
+					"oneOf": [
+						{
+							"const": "custom-vtex",
+							"description": "only works if the video URL represents a HTML5 player"
+						},
+						{ "const": "native" },
+						{ "const": "none" }
+					],
+					"markdownDescription": "The type of controls. It can be `custom-vtex`( only works if the video URL represents a HTML5 player ), `native` or `none`."
+				},
+				"autoPlay": {
+					"type": "boolean",
+					"markdownDescription": "Whether the video will start automatically after loaded(`true`) or not(`false`). Note that if the value is `true`, the muted property will automatically be setted to `true`.",
+					"default": false
+				},
+				"muted": {
+					"type": "boolean",
+					"markdownDescription": "Whether the video will start with the audio on(`false`) or not(`true`).",
+					"default": false
+				},
+				"loop": {
+					"type": "boolean",
+					"markdownDescription": "Whether the video will run in a loop(`true`) or not(`false`).",
+					"default": false
+				},
+				"playsInline": {
+					"type": "boolean",
+					"markdownDescription": "Whether the video will play inline(`true`) or not(`false`).",
+					"default": false
+				},
+				"width": {
+					"type": ["number", "string"],
+					"markdownDescription": "The width of the video exhibition area. It could be as %(`string`) or pixels(`number`)."
+				},
+				"height": {
+					"type": ["number", "string"],
+					"markdownDescription": "The height of the video exhibition area. It could be as %(`string`) or pixels(`number`)."
+				},
+				"PlayIcon": {
+					"type": "string",
+					"markdownDescription": "Video play icon for `custom-vtex` controls.",
+					"default": "icon-play"
+				},
+				"PauseIcon": {
+					"type": "string",
+					"markdownDescription": "Video pause icon for `custom-vtex` controls.",
+					"default": "icon-pause"
+				},
+				"VolumeOnIcon": {
+					"type": "string",
+					"markdownDescription": "Video volume on icon for `custom-vtex` controls.",
+					"default": "icon-volume-on"
+				},
+				"VolumeOffIcon": {
+					"type": "string",
+					"markdownDescription": "Video volume off icon for `custom-vtex` controls.",
+					"default": "icon-volume-off"
+				},
+				"FullscreenIcon": {
+					"type": "string",
+					"markdownDescription": "Video fullscreen icon for `custom-vtex` controls.",
+					"default": "icon-extend"
+				}
+			}
+		}
+	}
+}
