@@ -33,6 +33,7 @@ The Vtex io intellisense help you develop with vtex store-framework with snippet
 | "iframe"                                                   |
 | "image"                                                    |
 | "link"                                                     |
+| "link.product"                                             |
 | "list-context.image-list"                                  |
 | "list-context.product-list"                                |
 | "login-content"                                            |
@@ -64,6 +65,9 @@ The Vtex io intellisense help you develop with vtex store-framework with snippet
 | "product-specification"                                    |
 | "product-summary-image"                                    |
 | "rich-text"                                                |
+| "sandbox"                                                  |
+| "sandbox.order"                                            |
+| "sandbox.product"                                          |
 | "scroll-animate"                                           |
 | "search-banner"                                            |
 | "search-bar"                                               |
@@ -84,6 +88,7 @@ The Vtex io intellisense help you develop with vtex store-framework with snippet
 | "tab-list.item"                                            |
 | "tab-list"                                                 |
 | "vtex.menu@2.x:menu"                                       |
+| "video"                                                    |
 
 ### snippets
 
@@ -103,6 +108,7 @@ for `.json` and `.jsonc`.
 |   `rlt` | create a responsive layout tablet  |
 |   `rlp` | create a responsive layout phone   |
 |   `clp` | create a condition layout product  |
+|   `clb` | create a condition layout binding  |
 |  `link` | create a link                      |
 |   `ovl` | create a overlay layout            |
 
