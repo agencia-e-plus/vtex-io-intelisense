@@ -386,6 +386,17 @@
 		"rich-text": {
 			"$ref": "./schemas/rich-text.schema.json"
 		},
+		"sandbox": {
+			"$ref": "./schemas/sandbox.schema.json"
+		},
+		"sandbox.order": {
+			"$ref": "./schemas/sandbox.schema.json",
+			"description": "Sandbox Component with orderForm context data"
+		},
+		"sandbox.product": {
+			"$ref": "./schemas/sandbox.schema.json",
+			"description": "Sandbox Component with product context data"
+		},
 		"scroll-animate": {
 			"$ref": "./schemas/scroll-animate.schema.json"
 		},
