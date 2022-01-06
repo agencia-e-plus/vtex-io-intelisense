@@ -4,7 +4,7 @@
 	"type": "object",
 	"patternProperties": {
 		"^(add-to-cart-button#)|^(add-to-cart-button)$": {
-			"$ref": "./schemas/add-to-cart-button.schema.jfson"
+			"$ref": "./schemas/add-to-cart-button.schema.json"
 		},
 		"^(back-to-top-button#)|^(back-to-top-button)$": {
 			"$ref": "./schemas/back-to-top-button.schema.json"
