@@ -4,6 +4,18 @@ All notable changes to the "vtexio-intellisense" extension will be documented in
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## Unreleased - release
+
+### Added
+
+- sandbox schema
+- sandbox.product schema
+- sandbox.order schema
+- `link.product` autocomplete
+- `clb` snippet for `condition-layout.binding`
+- `condition-layout.product` subject autocomplete
+- `video` schema
+
 ## [0.2.12] - 2022-01-03
 
 ### Added
