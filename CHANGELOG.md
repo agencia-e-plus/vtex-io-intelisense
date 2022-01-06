@@ -6,7 +6,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## Unreleased - release
 
-### Added
+## [0.2.13] - 2022-01-06
 
 - sandbox schema
 - sandbox.product schema
