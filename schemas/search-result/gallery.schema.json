@@ -20,37 +20,32 @@
 						"properties": {
 							"name": {
 								"type": "string",
-								"description": "Layout name. This value must be unique i.e. not equal to other layout names declared in the gallery block.",
-								"default": "undefined"
+								"description": "Layout name. This value must be unique i.e. not equal to other layout names declared in the gallery block."
 							},
 							"component": {
 								"type": "string",
 								"pattern": "^[A-Z]",
-								"description": "Names the undefined prop from the gallery block, which is responsible for declaring the block to be rendered in this layout. This prop's value can be any of your choosing as long as it is PascalCased i.e. has the first letter of each word in its name capitalized. ",
-								"default": "undefined"
+								"description": "Names the undefined prop from the gallery block, which is responsible for declaring the block to be rendered in this layout. This prop's value can be any of your choosing as long as it is PascalCased i.e. has the first letter of each word in its name capitalized. "
 							},
 							"itemsPerRow": {
 								"anyOf": [
 									{ "type": "number" },
 									{ "$ref": "../shared/responsive-values.schema.json" }
 								],
-								"description": "Number of items to be displayed in each row of this layout. This prop works with ",
-								"default": "undefined"
+								"description": "Number of items to be displayed in each row of this layout. This prop works with "
 							}
 						},
 						"required": ["name", "component", "itemsPerRow"]
 					},
-					"default": "undefined"
+					"default": []
 				},
 				"customSummaryInterval": {
 					"type": "number",
-					"description": "Defines the item interval at which the Gallery should render a custom product-summary block. For example:  declaring 5 would render a custom block at every 4 items rendered, as shown ",
-					"default": "undefined"
+					"description": "Defines the item interval at which the Gallery should render a custom product-summary block. For example:  declaring 5 would render a custom block at every 4 items rendered, as shown "
 				},
 				"CustomSummary": {
 					"$ref": "../shared/block.schema.json",
-					"description": "Defines a block to be rendered according to the interval defined by the customSummaryInterval prop.",
-					"default": "undefined"
+					"description": "Defines a block to be rendered according to the interval defined by the customSummaryInterval prop."
 				}
 			},
 			"patternProperties": {

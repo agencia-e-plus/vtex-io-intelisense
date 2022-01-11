@@ -16,7 +16,8 @@
 					"type": "string",
 					"description": "Text displayed on the submit button.",
 					"default": "Subscribe."
-				}
+				},
+				"blockClass": { "$ref": "../shared/blockClass.schema.json" }
 			}
 		}
 	}

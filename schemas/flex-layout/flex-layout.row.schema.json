@@ -30,8 +30,7 @@
 						{ "type": "string" },
 						{ "$ref": "../shared/responsive-values.schema.json" }
 					],
-					"description": "The color of the border.",
-					"default": "undefined"
+					"description": "The color of the border."
 				},
 				"borderWidth": {
 					"anyOf": [
@@ -40,8 +39,7 @@
 					],
 					"min": 0,
 					"max": 5,
-					"description": "A number or string magnitude for the bw Tachyons token to be applied to the row.",
-					"default": "undefined"
+					"description": "A number or string magnitude for the bw Tachyons token to be applied to the row."
 				},
 				"border": {
 					"anyOf": [
@@ -57,8 +55,7 @@
 							}
 						}
 					],
-					"description": "An array to define in which sides of the row a border should be applied to (top, right, bottom, left or all).",
-					"default": "undefined"
+					"description": "An array to define in which sides of the row a border should be applied to (top, right, bottom, left or all)."
 				},
 				"colGap": {
 					"anyOf": [
@@ -67,8 +64,7 @@
 					],
 					"min": 0,
 					"max": 10,
-					"description": "A number or string magnitude for the pr Tachyons token to be applied to columns inside of the flex-layout.row.",
-					"default": "undefined"
+					"description": "A number or string magnitude for the pr Tachyons token to be applied to columns inside of the flex-layout.row."
 				},
 				"colSizing": {
 					"anyOf": [
@@ -109,8 +105,7 @@
 					],
 					"min": 0,
 					"max": 10,
-					"description": "A number or string magnitude for the mb Tachyons token to be applied to the row.",
-					"default": "undefined"
+					"description": "A number or string magnitude for the mb Tachyons token to be applied to the row."
 				},
 				"marginTop": {
 					"anyOf": [
@@ -119,8 +114,7 @@
 					],
 					"min": 0,
 					"max": 10,
-					"description": "A number or string magnitude for the mt Tachyons token to be applied to the row.",
-					"default": "undefined"
+					"description": "A number or string magnitude for the mt Tachyons token to be applied to the row."
 				},
 				"paddingBottom": {
 					"anyOf": [
@@ -129,8 +123,7 @@
 					],
 					"min": 0,
 					"max": 10,
-					"description": "A number or string magnitude for the pb Tachyons token to be applied to the row.",
-					"default": "undefined"
+					"description": "A number or string magnitude for the pb Tachyons token to be applied to the row."
 				},
 				"paddingTop": {
 					"anyOf": [
@@ -139,8 +132,7 @@
 					],
 					"min": 0,
 					"max": 10,
-					"description": "A number or string magnitude for the pt Tachyons token to be applied to the row.",
-					"default": "undefined"
+					"description": "A number or string magnitude for the pt Tachyons token to be applied to the row."
 				},
 				"preserveLayoutOnMobile": {
 					"anyOf": [
@@ -173,8 +165,7 @@
 					],
 					"min": 0,
 					"max": 10,
-					"description": "A number or string magnitude for the pb Tachyons token to be applied to columns inside of the flex-layout.row.",
-					"default": "undefined"
+					"description": "A number or string magnitude for the pb Tachyons token to be applied to columns inside of the flex-layout.row."
 				},
 				"experimentalHideEmptyCols": {
 					"type": "boolean",

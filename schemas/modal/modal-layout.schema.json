@@ -46,13 +46,11 @@
 				},
 				"customPixelEventId": {
 					"type": "string",
-					"description": "Store event ID responsible for triggering the modal-layout block (hence triggering the closing of modal-layout blocks on the interface as well).",
-					"default": "undefined"
+					"description": "Store event ID responsible for triggering the modal-layout block (hence triggering the closing of modal-layout blocks on the interface as well)."
 				},
 				"customPixelEventName": {
 					"type": "string",
-					"description": "Store event name responsible for triggering the modal-layout block (hence triggering the closing of modal-layout blocks on the interface as well). Some examples are: 'addToCart' and 'removeFromCart' events. Notice that using this prop will make the associated modal-layout close in ",
-					"default": "undefined"
+					"description": "Store event name responsible for triggering the modal-layout block (hence triggering the closing of modal-layout blocks on the interface as well). Some examples are: 'addToCart' and 'removeFromCart' events. Notice that using this prop will make the associated modal-layout close in "
 				}
 			}
 		}

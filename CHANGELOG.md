@@ -6,6 +6,16 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## Unreleased - release
 
+## [0.2.14] - 2022-01-06
+
+### Fixed
+
+- remove "undefined" autocomplete
+
+### Added
+
+- routes schema
+
 ## [0.2.13] - 2022-01-06
 
 - sandbox schema

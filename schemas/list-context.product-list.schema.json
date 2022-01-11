@@ -8,14 +8,25 @@
 			"type": "string",
 			"description": "Title showed in site editor"
 		},
+		"children": {
+			"title": "Block's children",
+			"type": "array",
+			"items": { "$ref": "./shared/block.schema.json" },
+			"default": []
+		},
+		"blocks": {
+			"type": "array",
+			"items": { "$ref": "./shared/block.schema.json" },
+			"description": "product summary block",
+			"default": []
+		},
 		"props": {
 			"type": "object",
 			"description": "Block's properties",
 			"properties": {
 				"category": {
 					"type": "string",
-					"description": "Category ID of the Shelf listed items. For sub-categories, use / before the ID to indicate which category it belongs to. For example: '1/2', considering 2 as a sub-category ID)",
-					"default": "undefined"
+					"description": "Category ID of the Shelf listed items. For sub-categories, use / before the ID to indicate which category it belongs to. For example: '1/2', considering 2 as a sub-category ID)"
 				},
 				"specificationFilters": {
 					"type": "array",
@@ -25,23 +36,20 @@
 						"properties": {
 							"Id": {
 								"type": "string",
-								"description": "Specification Filters ID",
-								"default": "undefined"
+								"description": "Specification Filters ID"
 							},
 							"value": {
 								"type": "string",
-								"description": "Specification Filters values",
-								"default": "undefined"
+								"description": "Specification Filters values"
 							}
 						}
 					},
 					"description": "Specification Filters of the Shelf listed items.",
-					"default": "undefined"
+					"default": []
 				},
 				"collection": {
 					"type": "string",
-					"description": "Collection ID of the Shelf listed items.",
-					"default": "undefined"
+					"description": "Collection ID of the Shelf listed items."
 				},
 				"orderBy": {
 					"type": "string",
@@ -69,5 +77,6 @@
 				}
 			}
 		}
-	}
+	},
+	"required": ["blocks", "children"]
 }

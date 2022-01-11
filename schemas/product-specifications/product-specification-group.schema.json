@@ -20,7 +20,7 @@
 							"type": "array",
 							"items": { "type": "string" },
 							"description": "Array of specification group names to be hidden or shown (according to what is defined in the type property) by the product-specification-group block.",
-							"default": "undefined"
+							"default": []
 						},
 						"type": {
 							"type": "string",
@@ -34,11 +34,10 @@
 									"markdownDescription": "only shows the specification groups declared in the `specificationGroups` prop"
 								}
 							],
-							"description": "Whether the specification group names passed to the specificationGroups prop should be displayed or hidden on the UI. Possible values are: hide (hides specification groups declared in the specificationGroups prop) or show (only shows the specification groups declared in the specificationGroups prop).",
-							"default": "undefined"
+							"description": "Whether the specification group names passed to the specificationGroups prop should be displayed or hidden on the UI. Possible values are: hide (hides specification groups declared in the specificationGroups prop) or show (only shows the specification groups declared in the specificationGroups prop)."
 						}
 					},
-					"default": "undefined"
+					"default": {}
 				}
 			}
 		}

@@ -88,6 +88,10 @@
 				"canonical": {
 					"type": "string",
 					"description": "Friendlier path to access same resources."
+				},
+				"content": {
+					"type": "object",
+					"description": "Json Schema for your app"
 				}
 			}
 		}

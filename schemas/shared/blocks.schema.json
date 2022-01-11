@@ -1,0 +1,6 @@
+{
+	"type": "array",
+	"items": { "$ref": "./block.schema.json" },
+	"description": "product summary block",
+	"default": []
+}

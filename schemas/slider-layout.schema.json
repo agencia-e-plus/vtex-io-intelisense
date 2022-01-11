@@ -89,7 +89,7 @@
 						}
 					},
 					"description": "Controls the autoplay feature behavior. For more on this, check out the autoplay object section below.",
-					"default": "undefined"
+					"default": {}
 				},
 				"fullWidth": {
 					"type": "boolean",

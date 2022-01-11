@@ -18,13 +18,11 @@
 					"properties": {
 						"queryField": {
 							"type": "string",
-							"description": "Search URL's query string to define which results should be fetched in the custom query. For example: Blue. Caution: this prop only works if the mapField prop is declared as well.",
-							"default": "undefined"
+							"description": "Search URL's query string to define which results should be fetched in the custom query. For example: Blue. Caution: this prop only works if the mapField prop is declared as well."
 						},
 						"mapField": {
 							"type": "string",
-							"description": "Search URL's map parameter to define which results should be fetched in the custom query. For example: specificationFilter_100. Caution: this prop only works if the queryField prop is declared as well.",
-							"default": "undefined"
+							"description": "Search URL's map parameter to define which results should be fetched in the custom query. For example: specificationFilter_100. Caution: this prop only works if the queryField prop is declared as well."
 						},
 						"maxItemsPerPage": {
 							"type": "number",
@@ -120,13 +118,13 @@
 							"type": "array",
 							"items": { "type": "string" },
 							"description": "List of payment systems that should ",
-							"default": "undefined"
+							"default": []
 						},
 						"includedPaymentSystems": {
 							"type": "array",
 							"items": { "type": "string" },
 							"description": "List of payment systems that should be taken into account when displaying the installment options to users. Caution: this prop configuration only works in scenarios where the installmentCriteria prop was also declared. In case it was not, all available payment systems will be displayed regardless.",
-							"default": "undefined"
+							"default": []
 						}
 					}
 				}

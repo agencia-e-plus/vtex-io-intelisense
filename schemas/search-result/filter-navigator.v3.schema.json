@@ -135,14 +135,12 @@
 								{ "const": "category-3", "markdownDescription": "subcategory" },
 								{ "const": "brand" }
 							],
-							"description": "Facets key that will be sorted. Possible values are category-1, category-2, category-3 (for department, category and subcategory), brand or a product specification name.",
-							"default": "undefined"
+							"description": "Facets key that will be sorted. Possible values are category-1, category-2, category-3 (for department, category and subcategory), brand or a product specification name."
 						},
 						"orderBy": {
 							"type": "string",
 							"enum": ["name", "quantity"],
-							"description": "Field from facets that should be used when sorting the entries. Possible values are name and quantity.",
-							"default": "undefined"
+							"description": "Field from facets that should be used when sorting the entries. Possible values are name and quantity."
 						},
 						"order": {
 							"type": "string",
@@ -151,7 +149,7 @@
 							"default": "ASC"
 						}
 					},
-					"default": "undefined"
+					"default": []
 				}
 			}
 		}

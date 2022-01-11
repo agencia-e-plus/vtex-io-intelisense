@@ -14,8 +14,7 @@
 			"properties": {
 				"name": {
 					"type": "string",
-					"description": "Names the layout option. This prop's value must match the one passed to the name prop.",
-					"default": "undefined"
+					"description": "Names the layout option. This prop's value must match the one passed to the name prop."
 				}
 			}
 		}

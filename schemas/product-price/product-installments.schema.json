@@ -31,7 +31,7 @@
 						"installmentsquantity": { "type": "number" }
 					},
 					"markdownDescription": "Allows you to define two filtering rules that will narrow down the possible installments plans the component might render.",
-					"default": "undefined"
+					"default": {}
 				}
 			}
 		}

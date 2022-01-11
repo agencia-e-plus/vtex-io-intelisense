@@ -1,0 +1,6 @@
+{
+	"title": "Block's children",
+	"type": "array",
+	"items": { "$ref": "./block.schema.json" },
+	"default": []
+}

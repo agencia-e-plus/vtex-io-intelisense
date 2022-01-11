@@ -48,6 +48,12 @@
 		"jsonValidation": [
 			{
 				"fileMatch": [
+					"**/store/routes.json"
+				],
+				"url": "./schemas/routes/routes.schema.json"
+			},
+			{
+				"fileMatch": [
 					"**/store/**/*.jsonc",
 					"**/store/**/*.json"
 				],

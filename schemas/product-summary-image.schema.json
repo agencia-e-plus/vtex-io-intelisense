@@ -19,8 +19,7 @@
 				},
 				"badgeText": {
 					"type": "string",
-					"description": "Text displayed on the discount badge (in case the badge is configured to be displayed on the image).",
-					"default": "undefined"
+					"description": "Text displayed on the discount badge (in case the badge is configured to be displayed on the image)."
 				},
 				"showCollections": {
 					"type": "boolean",
@@ -35,8 +34,7 @@
 				},
 				"placeholder": {
 					"type": "string",
-					"description": "Defines the Product Summary Image placeholder image.",
-					"default": "undefined"
+					"description": "Defines the Product Summary Image placeholder image."
 				},
 				"mainImageLabel": {
 					"anyOf": [
@@ -46,8 +44,7 @@
 							"properties": {
 								"label": {
 									"type": "string",
-									"description": "Text value that matches the value defined in the imageLabel field from the admin's Catalog. Once matched, it defines which product image will be the main image displayed in the Product Summary component.  If you set a label and no match is found, the main image of the product will be shown instead.",
-									"default": "undefined"
+									"description": "Text value that matches the value defined in the imageLabel field from the admin's Catalog. Once matched, it defines which product image will be the main image displayed in the Product Summary component.  If you set a label and no match is found, the main image of the product will be shown instead."
 								},
 								"labelMatchCriteria": {
 									"type": "string",
@@ -67,8 +64,7 @@
 							}
 						}
 					],
-					"description": "Matches the value defined in the imageLabel field from the admin's Catalog. Once matched, it defines which product image will be the main image displayed in the Product Summary component.",
-					"default": "undefined"
+					"description": "Matches the value defined in the imageLabel field from the admin's Catalog. Once matched, it defines which product image will be the main image displayed in the Product Summary component."
 				},
 				"hoverImage": {
 					"type": "object",
@@ -96,8 +92,7 @@
 						"properties": {
 							"label": {
 								"type": "string",
-								"description": "Text string to match the desired image's label value. If no match is found, no image will be displayed during the hover. ",
-								"default": "undefined"
+								"description": "Text string to match the desired image's label value. If no match is found, no image will be displayed during the hover. "
 							},
 							"labelMatchCriteria": {
 								"type": "string",
@@ -121,14 +116,12 @@
 						"properties": {
 							"index": {
 								"type": "number",
-								"description": "Index number to match with the desired image's. If no match is found, no image will be displayed during the hover. ",
-								"default": "undefined"
+								"description": "Index number to match with the desired image's. If no match is found, no image will be displayed during the hover. "
 							}
 						},
 						"required": ["index"]
 					},
-					"description": "Defines which criteria should be used to define the hover image according to the product images in the admin's Catalog.",
-					"default": "undefined"
+					"description": "Defines which criteria should be used to define the hover image according to the product images in the admin's Catalog."
 				},
 				"width": {
 					"anyOf": [
@@ -151,8 +144,7 @@
 							}
 						}
 					],
-					"description": "Defines the Product Summary Image width.",
-					"default": "undefined"
+					"description": "Defines the Product Summary Image width."
 				},
 				"height": {
 					"anyOf": [
@@ -175,8 +167,7 @@
 							}
 						}
 					],
-					"description": "Defines the Product Summary Image height.",
-					"default": "undefined"
+					"description": "Defines the Product Summary Image height."
 				},
 				"aspectRatio": {
 					"anyOf": [
@@ -203,8 +194,7 @@
 							}
 						}
 					],
-					"description": "Aspect ratio of the Product Summary Image. It defines whether the image should be displayed in a square, portrait, landscape or in another format. The prop value should follow the, which gives two numbers separated by a colon. For example: 1:1 for a square format or 3:4 for an upright portrait. Note that this prop won't work if you've already configured the width or height props.",
-					"default": "undefined"
+					"description": "Aspect ratio of the Product Summary Image. It defines whether the image should be displayed in a square, portrait, landscape or in another format. The prop value should follow the, which gives two numbers separated by a colon. For example: 1:1 for a square format or 3:4 for an upright portrait. Note that this prop won't work if you've already configured the width or height props."
 				},
 				"maxHeight": {
 					"anyOf": [
@@ -227,8 +217,7 @@
 							}
 						}
 					],
-					"description": "Defines the Product Summary Image max height. Note that this prop won't work if you've already configured the width or height props.",
-					"default": "undefined"
+					"description": "Defines the Product Summary Image max height. Note that this prop won't work if you've already configured the width or height props."
 				}
 			}
 		}

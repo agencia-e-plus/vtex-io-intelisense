@@ -1,0 +1,27 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Custom Page",
+	"description": "Object description",
+	"type": "object",
+	"patternProperties": {
+		"^(store.custom)": {
+			"description": "route",
+			"type": "object",
+			"properties": {
+				"path": {
+					"type": "string",
+					"markdownDescription": "path for page\n\n ️**Tip:** A path can accept URL parameters and optional parameters as in: /path/:param(/:optional-param). But we recommend that you keep it simple since paths of custom pages are the ones used in the client-side and search engines."
+				},
+				"title": {
+					"type": "string",
+					"markdownDescription": "The name of the custom route used as an identifier in CMS > Pages and HTML Page title"
+				},
+				"isSitemapEntry": {
+					"type": "boolean",
+					"markdownDescription": "Makes the route available in the store sitemap when set as `TRUE`."
+				}
+			},
+			"required": ["path"]
+		}
+	}
+}

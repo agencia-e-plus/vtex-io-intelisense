@@ -15,8 +15,7 @@
 				"blockClass": { "$ref": "../shared/blockClass.schema.json" },
 				"message": {
 					"type": "string",
-					"description": "Defines the block's default text message to be rendered on the UI. You can also define which text message a block will render on the UI using the admin's Site Editor and the markers prop.",
-					"default": "undefined"
+					"description": "Defines the block's default text message to be rendered on the UI. You can also define which text message a block will render on the UI using the admin's Site Editor and the markers prop."
 				},
 				"markers": {
 					"type": "array",

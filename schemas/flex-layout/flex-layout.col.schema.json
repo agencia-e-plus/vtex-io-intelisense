@@ -19,8 +19,7 @@
 				"blockClass": { "$ref": "../shared/blockClass.schema.json" },
 				"borderColor": {
 					"type": "string",
-					"description": "The color of the border.",
-					"default": "undefined"
+					"description": "The color of the border."
 				},
 				"borderWidth": {
 					"anyOf": [
@@ -31,16 +30,14 @@
 						},
 						{ "$ref": "../shared/responsive-values.schema.json" }
 					],
-					"description": "A number or string magnitude for the bw Tachyons token to be applied to the column.",
-					"default": "undefined"
+					"description": "A number or string magnitude for the bw Tachyons token to be applied to the column."
 				},
 				"border": {
 					"anyOf": [
 						{ "type": "string" },
 						{ "type": "array", "items": { "type": "string" } }
 					],
-					"description": "An array to define in which sides of the row a border should be applied to (top, right, bottom, left or all).",
-					"default": "undefined"
+					"description": "An array to define in which sides of the row a border should be applied to (top, right, bottom, left or all)."
 				},
 				"horizontalAlign": {
 					"anyOf": [
@@ -62,8 +59,7 @@
 						},
 						{ "$ref": "../shared/responsive-values.schema.json" }
 					],
-					"description": "A number or string magnitude for the ml Tachyons token to be applied to the column.",
-					"default": "undefined"
+					"description": "A number or string magnitude for the ml Tachyons token to be applied to the column."
 				},
 				"marginRight": {
 					"anyOf": [
@@ -74,8 +70,7 @@
 						},
 						{ "$ref": "../shared/responsive-values.schema.json" }
 					],
-					"description": "A number or string magnitude for the mr Tachyons token to be applied to the column.",
-					"default": "undefined"
+					"description": "A number or string magnitude for the mr Tachyons token to be applied to the column."
 				},
 				"paddingLeft": {
 					"anyOf": [
@@ -86,8 +81,7 @@
 						},
 						{ "$ref": "../shared/responsive-values.schema.json" }
 					],
-					"description": "A number or string magnitude for the pl Tachyons token to be applied to the column.",
-					"default": "undefined"
+					"description": "A number or string magnitude for the pl Tachyons token to be applied to the column."
 				},
 				"paddingRight": {
 					"anyOf": [
@@ -98,8 +92,7 @@
 						},
 						{ "$ref": "../shared/responsive-values.schema.json" }
 					],
-					"description": "A number or string magnitude for the pr Tachyons token to be applied to the column.",
-					"default": "undefined"
+					"description": "A number or string magnitude for the pr Tachyons token to be applied to the column."
 				},
 				"preventVerticalStretch": {
 					"type": "boolean",
@@ -115,8 +108,7 @@
 						},
 						{ "$ref": "../shared/responsive-values.schema.json" }
 					],
-					"description": "A number or string magnitude for the pb Tachyons token to be applied to rows inside of the flex-layout.col.",
-					"default": "undefined"
+					"description": "A number or string magnitude for the pb Tachyons token to be applied to rows inside of the flex-layout.col."
 				},
 				"verticalAlign": {
 					"anyOf": [
@@ -135,8 +127,7 @@
 						{ "type": "string", "enum": ["grow"] },
 						{ "$ref": "../shared/responsive-values.schema.json" }
 					],
-					"description": "Sets the width of the column. Accepts either a percentage or 'grow'.",
-					"default": "undefined"
+					"description": "Sets the width of the column. Accepts either a percentage or 'grow'."
 				}
 			}
 		}

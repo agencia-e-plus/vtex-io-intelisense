@@ -53,19 +53,18 @@
 										"properties": {
 											"name": {
 												"type": "string",
-												"description": "Name of the specification filter that you want to hide.",
-												"default": "undefined"
+												"description": "Name of the specification filter that you want to hide."
 											}
 										}
 									},
 									"description": "Object array of specification filters that should be hidden.",
-									"default": "undefined"
+									"default": []
 								}
 							},
-							"default": "undefined"
+							"default": {}
 						}
 					},
-					"default": "undefined."
+					"default": {}
 				},
 				"showFacetQuantity": {
 					"type": "boolean",
@@ -74,8 +73,7 @@
 				},
 				"blockClass": {
 					"type": "string",
-					"description": "Unique block ID to be used in ",
-					"default": "undefined"
+					"description": "Unique block ID to be used in "
 				},
 				"trackingId": {
 					"type": "string",
@@ -99,17 +97,15 @@
 							"default": "small"
 						}
 					},
-					"default": "undefined"
+					"default": {}
 				},
 				"defaultGalleryLayout": {
 					"type": "string",
-					"description": "Name of the gallery layout to be used by default in the search results page. This prop is only required when several layouts are explicitly defined by the gallery block. Caution: this prop's value must match the layout name defined in the name prop from layouts object.",
-					"default": "undefined"
+					"description": "Name of the gallery layout to be used by default in the search results page. This prop is only required when several layouts are explicitly defined by the gallery block. Caution: this prop's value must match the layout name defined in the name prop from layouts object."
 				},
 				"thresholdForFacetSearch": {
 					"type": "number",
-					"description": "Minimum number of facets that must be displayed on the interface for a search bar to be displayed. If you declare 0, the search bar will always be displayed.",
-					"default": "undefined"
+					"description": "Minimum number of facets that must be displayed on the interface for a search bar to be displayed. If you declare 0, the search bar will always be displayed."
 				}
 			}
 		}

@@ -14,8 +14,7 @@
 			"properties": {
 				"id": {
 					"type": "string",
-					"description": "The ID for the desired icon",
-					"default": "undefined"
+					"description": "The ID for the desired icon"
 				},
 				"size": {
 					"type": "number",
@@ -29,13 +28,11 @@
 				},
 				"activeClassName": {
 					"type": "string",
-					"description": "The className it should have if active",
-					"default": "undefined"
+					"description": "The className it should have if active"
 				},
 				"mutedClassName": {
 					"type": "string",
-					"description": "The className it should have if not active",
-					"default": "undefined"
+					"description": "The className it should have if not active"
 				},
 				"type": {
 					"type": "string",

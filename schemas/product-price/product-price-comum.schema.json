@@ -16,13 +16,12 @@
 					"type": "array",
 					"items": { "type": "string" },
 					"description": "IDs of your choosing to identify the block's rendered message and customize it using the admin's Site Editor. Learn how to use them accessing the documentation on ",
-					"default": "[]"
+					"default": []
 				},
 				"blockClass": { "$ref": "../shared/blockClass.schema.json" },
 				"message": {
 					"type": "string",
-					"description": "Defines the block's default text i.e. the block message. You can also define which text message a block will render on the UI using the admin's Site Editor.",
-					"default": "undefined"
+					"description": "Defines the block's default text i.e. the block message. You can also define which text message a block will render on the UI using the admin's Site Editor."
 				}
 			}
 		}

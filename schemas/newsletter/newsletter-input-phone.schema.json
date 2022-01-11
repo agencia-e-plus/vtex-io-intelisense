@@ -26,7 +26,8 @@
 					"type": "string",
 					"description": "Error message to be shown if email is invalid.",
 					"default": "Invalid phone"
-				}
+				},
+				"blockClass": { "$ref": "../shared/blockClass.schema.json" }
 			}
 		}
 	}

@@ -39,13 +39,11 @@
 				},
 				"PreviousPageIcon": {
 					"$ref": "../shared/block.schema.json",
-					"description": "icon to be displayed in previous page button",
-					"default": "undefined"
+					"description": "icon to be displayed in previous page button"
 				},
 				"NextPageIcon": {
 					"$ref": "../shared/block.schema.json",
-					"description": "text to be displayed in next page button",
-					"default": "undefined"
+					"description": "text to be displayed in next page button"
 				}
 			}
 		}

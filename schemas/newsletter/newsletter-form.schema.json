@@ -14,19 +14,17 @@
 			"properties": {
 				"ErrorState": {
 					"$ref": "../shared/block.schema.json",
-					"description": "Block to be rendered if the submission of the form fails. If none is passed, a default error component will be rendered.",
-					"default": "undefined"
+					"description": "Block to be rendered if the submission of the form fails. If none is passed, a default error component will be rendered."
 				},
 				"SuccessState": {
 					"$ref": "../shared/block.schema.json",
-					"description": "Block to be rendered if form submission succeeds. If none is passed, a default success component will be rendered.",
-					"default": "undefined"
+					"description": "Block to be rendered if form submission succeeds. If none is passed, a default success component will be rendered."
 				},
 				"LoadingState": {
 					"$ref": "../shared/block.schema.json",
-					"description": "Block to be rendered while the form submission is loading. If none is passed, the default behavior is for the submit button to show a spinner during this loading period.",
-					"default": "undefined"
-				}
+					"description": "Block to be rendered while the form submission is loading. If none is passed, the default behavior is for the submit button to show a spinner during this loading period."
+				},
+				"blockClass": { "$ref": "../shared/blockClass.schema.json" }
 			}
 		}
 	}

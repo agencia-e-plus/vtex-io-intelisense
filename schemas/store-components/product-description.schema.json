@@ -19,8 +19,7 @@
 				},
 				"title": {
 					"type": "string",
-					"description": "Defines a custom title for the description section.",
-					"default": "undefined"
+					"description": "Defines a custom title for the description section."
 				},
 				"showTitle": {
 					"type": "boolean",

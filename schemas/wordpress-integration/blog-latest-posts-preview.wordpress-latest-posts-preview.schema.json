@@ -25,17 +25,17 @@
 				"tags": {
 					"type": "array",
 					"description": "Array of tag IDs allowed. When this property is included, only posts that contain all the listed tags will be displayed.",
-					"default": "undefined"
+					"default": []
 				},
 				"excludeTags": {
 					"type": "array",
 					"description": "Array of tag IDs to be excluded. Posts containing any of the excluded tags will not be displayed.",
-					"default": "undefined"
+					"default": []
 				},
 				"excludeCategories": {
 					"type": "array",
 					"description": "Array of category IDs to be excluded. Posts containing any of the excluded categories will not be displayed.",
-					"default": "undefined"
+					"default": []
 				},
 				"useTextOverlays": {
 					"type": "boolean",

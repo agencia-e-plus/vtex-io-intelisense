@@ -40,7 +40,7 @@
 						}
 					},
 					"description": "Specifies which product variations should be displayed in the product details page. Notice the following: if you declare a name that doesn't represent a real product variation or an empty array, no variations will be displayed. Check out more information regarding this prop structure below this table.",
-					"default": "undefined"
+					"default": []
 				},
 				"hideImpossibleCombinations": {
 					"type": "boolean",
@@ -164,8 +164,7 @@
 				},
 				"thumbnailImage": {
 					"type": "string",
-					"description": "First image to be displayed. This prop value must be the same text string defined in the desired product image's imageLabel field (from the Catalog module). If you use this prop and no image declaring the same text string in its imageLabel field is found, any product image will be randomly rendered instead.",
-					"default": "undefined"
+					"description": "First image to be displayed. This prop value must be the same text string defined in the desired product image's imageLabel field (from the Catalog module). If you use this prop and no image declaring the same text string in its imageLabel field is found, any product image will be randomly rendered instead."
 				},
 				"imageHeight": {
 					"type": "number",

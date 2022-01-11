@@ -39,8 +39,7 @@
 				},
 				"placeholder": {
 					"type": "string",
-					"description": "Sets the URL for a placeholder image to be used in case there is no available image or video of the product.",
-					"default": "undefined"
+					"description": "Sets the URL for a placeholder image to be used in case there is no available image or video of the product."
 				},
 				"hiddenImages": {
 					"type": "string",
@@ -112,8 +111,7 @@
 				},
 				"ModalZoom": {
 					"$ref": "../shared/block.schema.json",
-					"description": "Opens a modal for product image zooming. This prop's value must match the name of the block responsible for triggering the modal containing the product image for zooming (e.g. modal-layout from Modal layout app). Notice that the ModalZoom prop will work only if the zoomMode prop is set as open-modal. To learn more, check out the ",
-					"default": "undefined"
+					"description": "Opens a modal for product image zooming. This prop's value must match the name of the block responsible for triggering the modal containing the product image for zooming (e.g. modal-layout from Modal layout app). Notice that the ModalZoom prop will work only if the zoomMode prop is set as open-modal. To learn more, check out the "
 				},
 				"contentType": {
 					"type": "string",

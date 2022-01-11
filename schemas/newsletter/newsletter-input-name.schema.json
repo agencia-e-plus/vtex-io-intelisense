@@ -26,7 +26,8 @@
 					"type": "string",
 					"description": "Error message to be shown if name input is empty.",
 					"default": "Invalid name"
-				}
+				},
+				"blockClass": { "$ref": "../shared/blockClass.schema.json" }
 			}
 		}
 	}
