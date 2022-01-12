@@ -6,6 +6,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## Unreleased - release
 
+### Added
+
+- add `children` prop to `minicart.v2`
+
 ## [0.2.15] - 2022-01-06
 
 ### Fixed
