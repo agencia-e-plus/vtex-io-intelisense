@@ -10,6 +10,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - add `children` prop to `minicart.v2`
 
+### Fixed
+
+- `search-result-layout` schema ref
+
 ## [0.2.15] - 2022-01-06
 
 ### Fixed

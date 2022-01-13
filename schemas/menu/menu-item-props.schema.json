@@ -98,9 +98,8 @@
 						"default": "0 0 16 16"
 					},
 					"noFollow": {
-						"type": "string",
-						"markdownDescription": "string\n\nIcon classname when isActive is true",
-						"default": ""
+						"type": "boolean",
+						"markdownDescription": "string\n\nIcon classname when isActive is true"
 					},
 					"tagTitle": {
 						"type": "string",

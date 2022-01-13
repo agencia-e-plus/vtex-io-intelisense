@@ -191,7 +191,10 @@
 		"^(search-not-found-layout#)|^(search-not-found-layout)$": {
 			"$ref": "./schemas/search-result/search-result-layout.schema.json"
 		},
-		"^(search-result-layout#)|^(search-result-layout)$": {
+		"^(search-result-layout.desktop#)|^(search-result-layout.desktop)$": {
+			"$ref": "./schemas/search-result/search-result-layout.schema.json"
+		},
+		"^(search-result-layout.mobile#)|^(search-result-layout.mobile)$": {
 			"$ref": "./schemas/search-result/search-result-layout.schema.json"
 		},
 		"^(shelf.relatedProducts#)|^(shelf.relatedProducts)$": {
@@ -429,7 +432,10 @@
 		"search-not-found-layout": {
 			"$ref": "./schemas/search-result/search-result-layout.schema.json"
 		},
-		"search-result-layout": {
+		"search-result-layout.desktop": {
+			"$ref": "./schemas/search-result/search-result-layout.schema.json"
+		},
+		"search-result-layout.mobile": {
 			"$ref": "./schemas/search-result/search-result-layout.schema.json"
 		},
 		"shelf.relatedProducts": {
