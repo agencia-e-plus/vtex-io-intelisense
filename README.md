@@ -7,7 +7,7 @@ The Vtex io intellisense help you develop with vtex store-framework with snippet
 ### autocomplete
 
 ![Autocomplete demonstration](https://user-images.githubusercontent.com/48053804/141369446-3df45670-6d9b-4f4b-8e96-435518b884d9.gif)
-`ATTENTION: The auto complete works only on 'json' and 'jsonc' files above a 'store' folder`
+`ATTENTION: The auto complete only works in 'json' and 'jsonc' files inside the 'store' folder`
 
 | blocks with auto complete                                  |
 | :--------------------------------------------------------- |
@@ -135,15 +135,15 @@ If you have any requirements or dependencies, add a section describing those and
 
 ## Extension Settings
 
-This extension contributes the following settings:
+This extension also provides the following setting:
 
 ![beta](https://img.shields.io/badge/-beta-red)
 
-- `vtexiointellisense.allowsUnusedBlocks`: if set to `false` all unused block will be show a warning of `unused block`. Default value is `true`
+- `vtexiointellisense.allowsUnusedBlocks`: if set to `false` all unused blocks will show a warning of `unused block`. Default value is `true`
 
 ## Known Issues
 
-Activate experimental unused blocks may cause a long wait for show the snippets
+Activation of the experimental `vtexiointellisense.allowsUnusedBlocks` setting may cause long delays when loading snippets information
 
 <!--
 ## Release Notes
