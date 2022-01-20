@@ -123,6 +123,9 @@
 		"^(newsletter-submit#)|^(newsletter-submit)$": {
 			"$ref": "./schemas/newsletter/newsletter-submit.schema.json"
 		},
+		"^(order-by.v2)|^(order-by.v2)$": {
+			"$ref": "./schemas/search-result/order-by.v2.schema.json"
+		},
 		"^(overlay-layout#)|^(overlay-layout)$": {
 			"$ref": "./schemas/overlay-layout/overlay-layout.schema.json"
 		},
@@ -363,6 +366,9 @@
 		},
 		"newsletter-submit": {
 			"$ref": "./schemas/newsletter/newsletter-submit.schema.json"
+		},
+		"order-by.v2": {
+			"$ref": "./schemas/search-result/order-by.v2.schema.json"
 		},
 		"overlay-layout": {
 			"$ref": "./schemas/overlay-layout/overlay-layout.schema.json"
