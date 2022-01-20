@@ -1,0 +1,44 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Order By",
+	"description": "Object description",
+	"type": "object",
+	"properties": {
+		"showOrderTitle": {
+			"type": "boolean",
+			"markdownDescription": "Whether the selected order value (e.g. `Relevance`) will be displayed (`true`) or not (`false`).",
+			"default": true
+		},
+		"hiddenOptions": {
+			"type": "array",
+			"items": {
+				"type": "string",
+				"oneOf": [
+					{ "const": "", "description": "Relevance" },
+					{ "const": "OrderByNameASC", "description": "Name Ascending" },
+					{ "const": "OrderByNameDESC", "description": "Name Descending" },
+					{
+						"const": "OrderByTopSaleDESC",
+						"description": "Top Sales Descending"
+					},
+					{
+						"const": "OrderByReleaseDateDESC",
+						"description": "Release Date Descending"
+					},
+					{
+						"const": "OrderByBestDiscountDESC",
+						"description": "Best Discount Descending"
+					},
+					{ "const": "OrderByPriceDESC", "description": "Price Descending" },
+					{ "const": "OrderByPriceASC", "description": "Price Ascending" },
+					{ "const": "OrderByCollection", "description": "Collection" }
+				]
+			},
+			"markdownDescription": "Indicates which sorting options will be hidden. (e.g. `[\"OrderByNameASC\", \"OrderByNameDESC\"]`)"
+		},
+		"message": {
+			"type": "string",
+			"markdownDescription": "text to show in order.by button"
+		}
+	}
+}

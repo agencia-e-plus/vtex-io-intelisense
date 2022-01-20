@@ -4,15 +4,18 @@ All notable changes to the "vtexio-intellisense" extension will be documented in
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## Unreleased - release
+## [0.2.16] - 2022-01-20
 
 ### Added
 
 - add `children` prop to `minicart.v2`
+- `hideOutOfStockItems` prop for `shelf`
+- `order-by.v2` props
 
 ### Fixed
 
 - `search-result-layout` schema ref
+- `minicart` children prop
 
 ## [0.2.15] - 2022-01-06
 

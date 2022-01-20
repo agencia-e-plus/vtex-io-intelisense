@@ -29,6 +29,11 @@
 					"description": "Type of recommendations that will be displayed in the Shelf. Possible values: similars, suggestions, accessories (these first three depend on the product's data given in the admin's catalog) and view, buy, viewandBought (These 3 are automatically generated according to the store’s activity)",
 					"default": "similars"
 				},
+				"hideOutOfStockItems": {
+					"type": "boolean",
+					"markdownDescription": "Whether out of stock items should be hidden (true) or not (false)",
+					"default": false
+				},
 				"productList": {
 					"type": "object",
 					"description": "Product list schema. See ProductListSchema",
@@ -92,7 +97,7 @@
 					"then": {
 						"required": ["titleText"]
 					},
-					"default": "-"
+					"default": {}
 				}
 			}
 		}
