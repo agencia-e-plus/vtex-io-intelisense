@@ -46,6 +46,10 @@
 					"description": "Define the tachyon token to be used as font.",
 					"default": "t-body"
 				},
+				"htmlId": {
+					"type": "string",
+					"description": "Define a HTML id to be used to scroll page for this block"
+				},
 				"blockClass": { "$ref": "./shared/blockClass.schema.json" }
 			},
 			"required": ["text"]

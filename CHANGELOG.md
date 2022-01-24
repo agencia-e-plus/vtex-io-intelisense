@@ -4,6 +4,12 @@ All notable changes to the "vtexio-intellisense" extension will be documented in
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.2.18] - 2022-01-24
+
+### Added
+
+- `htmlId` prop to `rich-text`
+
 ## [0.2.17] - 2022-01-20
 
 - fix `order-by.v2` schema ref.
