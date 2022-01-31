@@ -3,11 +3,16 @@
 	"title": "Sandbox Component",
 	"description": "Allows mounting arbitrary HTML content in extension points from the comfort and safety of an iframe.",
 	"properties": {
-		"initialContent": { "type": "string" },
-		"width": { "type": "string" },
-		"height": { "type": "string" },
-		"allowCookies": { "type": "boolean", "default": false },
-		"allowStyles": { "type": "boolean", "default": true },
-		"hidden": { "type": "boolean", "default": false }
+		"props": {
+			"type": "object",
+			"properties": {
+				"initialContent": { "type": "string" },
+				"width": { "type": "string" },
+				"height": { "type": "string" },
+				"allowCookies": { "type": "boolean", "default": false },
+				"allowStyles": { "type": "boolean", "default": true },
+				"hidden": { "type": "boolean", "default": false }
+			}
+		}
 	}
 }
