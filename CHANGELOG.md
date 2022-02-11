@@ -4,6 +4,12 @@ All notable changes to the "vtexio-intellisense" extension will be documented in
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.2.20] - 2022-02-10
+
+### Fixed 
+
+- sku selector visiblevariations prop;
+
 ## [0.2.19] - 2022-01-31
 
 ### Fixed 
