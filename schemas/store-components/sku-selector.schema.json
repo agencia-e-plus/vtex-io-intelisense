@@ -30,14 +30,7 @@
 				"visibleVariations": {
 					"type": "array",
 					"items": {
-						"type": "object",
-						"properties": {
-							"name": {
-								"type": "string",
-								"description": "Product variation name.",
-								"default": ""
-							}
-						}
+						"type": "string"
 					},
 					"description": "Specifies which product variations should be displayed in the product details page. Notice the following: if you declare a name that doesn't represent a real product variation or an empty array, no variations will be displayed. Check out more information regarding this prop structure below this table.",
 					"default": []
