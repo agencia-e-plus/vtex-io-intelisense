@@ -4,6 +4,20 @@ All notable changes to the "vtexio-intellisense" extension will be documented in
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.2.21] - 2022-02-18 
+
+## Added 
+
+- `product-summary-name`  blocks
+- `product-summary-shelf` blocks
+- `product-quantity` blocks
+- `product-summary-quantity` blocks
+- `showClearAllFiltersOnDesktop` prop to `filter-navigator.v3`
+- `showClearAllFiltersOnDesktop` prop to `filter-navigator.v3`
+- `preferredSKU` prop to `gallery` block
+- `specificationOptions` prop to `order-by.v2`
+- `preventRouteChange` prop to `search-result-layout`
+
 ## [0.2.20] - 2022-02-10
 
 ### Fixed 

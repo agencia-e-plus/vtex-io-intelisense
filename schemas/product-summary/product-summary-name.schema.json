@@ -1,0 +1,49 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Product Summary Name",
+	"description": "Product Summary Name renders the product name.",
+	"type": "object",
+	"properties": {
+		"title": {
+			"type": "string"
+		},
+		"props": {
+			"type": "object",
+			"description": "Block's properties",
+			"properties": {
+				"tag": {
+					"type": "string",
+					"oneOf": [
+						{ "const": "div" },
+						{ "const": "h1" },
+						{ "const": "h2" },
+						{ "const": "h3" }
+					],
+					"markdownDescription": "HTML tag used. It can be: `div`, `h1`, `h2`, `h3`.",
+					"default": "h1"
+				},
+				"showFieldsProps": {
+					"type": "object",
+					"markdownDescription": "Defines the visibility on certain properties.",
+					"properties": {
+						"showSku": {
+							"type": "boolean",
+							"description": "Show product SKU",
+							"default": false
+						},
+						"showProductReference": {
+							"type": "boolean",
+							"description": "Show product reference",
+							"default": false
+						},
+						"showBrandName": {
+							"type": "boolean",
+							"description": "Show brand name",
+							"default": false
+						}
+					}
+				}
+			}
+		}
+	}
+}

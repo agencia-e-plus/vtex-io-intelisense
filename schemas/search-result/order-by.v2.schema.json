@@ -4,6 +4,23 @@
 	"description": "Object description",
 	"type": "object",
 	"properties": {
+		"specificationOptions": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"value": {
+						"type": "string",
+						"markdownDescription": "Value that will be sent for ordering in the API. It must be in the format `{specification key}:{asc|desc}`. For example: `\"size:desc\"` or `\"priceByUnit:asc\"`."
+					},
+					"label": {
+						"type": "string",
+						"markdownDescription": "Label that will be displayed in the sorting options. E.g.: `\"Price by unit, ascending\"`"
+					}
+				}
+			},
+			"description": "Indicates which sorting options by specification will be displayed. This only works for stores using `vtex.search-resolver@1.x`"
+		},
 		"showOrderTitle": {
 			"type": "boolean",
 			"markdownDescription": "Whether the selected order value (e.g. `Relevance`) will be displayed (`true`) or not (`false`).",

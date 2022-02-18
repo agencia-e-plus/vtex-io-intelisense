@@ -117,6 +117,11 @@
 					"description": "Whether a clear button (responsible for erasing all filter options selected by the user) should be displayed alongside the filter name (true) or not (false).",
 					"default": false
 				},
+				"showClearAllFiltersOnDesktop": {
+					"type": "boolean",
+					"markdownDescription": "Whether a clear button should be displayed (`true`) or not (`false`). This button will reset all selected filters.",
+					"default": "false"
+				},
 				"priceRangeLayout": {
 					"type": "string",
 					"enum": ["slider", "inputAndSlider"],

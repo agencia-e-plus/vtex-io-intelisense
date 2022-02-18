@@ -1,0 +1,70 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "object",
+	"title": "product-quantity props",
+	"properties": {
+		"title": {
+			"type": "string"
+		},
+		"props": {
+			"type": "object",
+			"properties": {
+				"warningQuantityThreshold": {
+					"type": "number",
+					"markdownDescription": "Displays the quantity of remaining items in stock if the available quantity is less than or equal to the value given to this property.",
+					"default": 0
+				},
+				"showUnit": {
+					"type": "boolean",
+					"markdownDescription": "Whether the unit of measurement should be displayed (true) or not (false).",
+					"default": true
+				},
+				"size": {
+					"type": "string",
+					"oneOf": [
+						{ "const": "small" },
+						{ "const": "regular" },
+						{ "const": "large" }
+					],
+					"markdownDescription": "Preset size values for font-size and padding. You can check these value measures by accessing the VTEX Styleguide. Possible values are: small, regular, and large.",
+					"default": "small"
+				},
+				"showLabel": {
+					"type": "boolean",
+					"markdownDescription": "Whether a label should be displayed (true) or not (false).",
+					"default": true
+				},
+				"selectorType": {
+					"type": "string",
+					"oneOf": [
+						{
+							"const": "stepper",
+							"description": "displays an input field where the quantity can be directly defined, in addition to side buttons to increase or decrease the value"
+						},
+						{
+							"const": "dropdown",
+							"description": "shows a list of predefined-quantity options. In case the last quantity option is selected by users, the component is replaced with an input"
+						}
+					],
+					"markdownDescription": "Defines how the quantity selector should initially behave. Possible values are: stepper (displays an input field where the quantity can be directly defined, in addition to side buttons to increase or decrease the value) and dropdown (shows a list of predefined-quantity options. In case the last quantity option is selected by users, the component is replaced with an input).",
+					"default": "stepper"
+				},
+				"quantitySelectorStep": {
+					"type": "string",
+					"oneOf": [
+						{
+							"const": "singleUnit",
+							"description": "the quantity will be not affected with the unitMultiplier"
+						},
+						{
+							"const": "unitMultiplier",
+							"description": "the quantity will be affected with the unitMultiplier"
+						}
+					],
+					"markdownDescription": "Defines how the number of products that have unitMultiplier will works. Possible values are: singleUnit (the quantity will be not affected with the unitMultiplier) and unitMultiplier (the quantity will be affected with the unitMultiplier).",
+					"default": "unitMultiplier"
+				}
+			}
+		}
+	}
+}

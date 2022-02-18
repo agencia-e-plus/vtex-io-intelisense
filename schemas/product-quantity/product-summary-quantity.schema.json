@@ -1,0 +1,7 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Product Summary Quantity",
+	"markdownDescription": "Displays a quantity selector on [Product Summary's](https://vtex.io/docs/components/all/vtex.product-summary/) blocks. This block must be declared as a children of the product-summary.shelf block.",
+	"type": "object",
+	"allOf": [{ "$ref": "./product-quantity-props.schema.json" }]
+}

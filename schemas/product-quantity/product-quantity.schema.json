@@ -1,0 +1,7 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Product Quantity",
+	"description": "isplays a quantity selector on the product details page. This block must be declared in the theme's store.product page template.",
+	"type": "object",
+	"allOf": [{ "$ref": "./product-quantity-props.schema.json" }]
+}

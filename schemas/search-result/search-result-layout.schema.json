@@ -106,6 +106,11 @@
 				"thresholdForFacetSearch": {
 					"type": "number",
 					"description": "Minimum number of facets that must be displayed on the interface for a search bar to be displayed. If you declare 0, the search bar will always be displayed."
+				},
+				"preventRouteChange": {
+					"type": "boolean",
+					"markdownDescription": "Keeps page customizations even when the user applies new filters on it. This prop will merely change the URL’s query string instead of the entire URL; therefore, it prevents a full page reload whenever filters are applied.",
+					"default": false
 				}
 			}
 		}

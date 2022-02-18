@@ -33,6 +33,32 @@
 									{ "$ref": "../shared/responsive-values.schema.json" }
 								],
 								"description": "Number of items to be displayed in each row of this layout. This prop works with "
+							},
+							"preferredSKU": {
+								"type": "string",
+								"oneOf": [
+									{
+										"title": "First Available",
+										"const": "FIRST_AVAILABLE",
+										"description": "First available SKU in stock found or first SKU without stock."
+									},
+									{
+										"title": "Last Available",
+										"const": "LAST_AVAILABLE",
+										"description": "Last available SKU in stock found or last SKU without stock."
+									},
+									{
+										"title": "Cheapest",
+										"const": "PRICE_ASC",
+										"description": "Cheapest SKU in stock found or first SKU without stock."
+									},
+									{
+										"title": "Most Expensive",
+										"const": "PRICE_DESC",
+										"description": "Most expensive SKU in stock found or first SKU without stock."
+									}
+								],
+								"markdownDescription": "Controls which SKU will be initially selected in the product summary\n\n⚠️ There's a way to select which SKU should take preference over this prop. You can create a Product (field) specification and per product assign the value of the desired SKU to be initially selected. Keep in mind that If the specification doesn't exist or if the value is empty, it will use the `preferredSKU` prop as fallback. You can read more about it, and how to implement it in [Recipes](https://vtex.io/docs/recipes/all)"
 							}
 						},
 						"required": ["name", "component", "itemsPerRow"]
