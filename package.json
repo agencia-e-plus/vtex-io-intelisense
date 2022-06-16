@@ -82,7 +82,13 @@
 				}
 			}
 		},
-		"configurationDefaults": {}
+		"configurationDefaults": {},
+		"commands": [
+			{
+				"command": "vtexiointellisense.findUnusedBlocks",
+				"title": "Find Unused Blocks"
+			}
+		]
 	},
 	"scripts": {
 		"vscode:prepublish": "yarn run package",
@@ -93,7 +99,8 @@
 		"watch-tests": "tsc -p . -w --outDir out",
 		"pretest": "yarn run compile-tests && yarn run compile && yarn run lint",
 		"lint": "eslint src --ext ts",
-		"test": "node ./out/test/runTest.js"
+		"test": "node ./out/test/runTest.js",
+		"dev": "eplus dev init"
 	},
 	"devDependencies": {
 		"@types/glob": "^7.2.0",
