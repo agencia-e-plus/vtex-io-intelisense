@@ -79,6 +79,16 @@
 					"type": "boolean",
 					"default": true,
 					"description": "Allows unused blocks in json files"
+				},
+				"vtexiointellisense.duplicatedBlocks": {
+					"type": "boolean",
+					"default": true,
+					"description": "Show a warning if finds a duplicated block"
+				},
+				"vtexiointellisense.unusedBlocks": {
+					"type": "boolean",
+					"default": true,
+					"description": "Show a warning if finds a unused block"
 				}
 			}
 		},

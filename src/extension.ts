@@ -1,10 +1,7 @@
 import * as vscode from 'vscode'
-import {
-	findDuplicatedBlocks,
-	// findDuplicatedBlocks,
-	refreshDiagnostics,
-	subscribeToDocumentChanges
-} from './diagnostics'
+import { subscribeToDocumentChanges } from './diagnostics'
+import { findDuplicatedBlocks } from './diagnostics/duplicated_blocks'
+import { refreshDiagnostics } from './diagnostics/unused_blocks'
 
 export function activate(context: vscode.ExtensionContext) {
 	const blocksDiagnostics = vscode.languages.createDiagnosticCollection('blocks')
