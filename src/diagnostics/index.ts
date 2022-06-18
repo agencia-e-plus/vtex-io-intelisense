@@ -16,15 +16,15 @@ export function subscribeToDocumentChanges(
 
 	const [folder] = vscode?.workspace?.workspaceFolders || ([] as vscode.WorkspaceFolder[])
 
-	const files = glob.sync(folder?.uri?.fsPath + '/**/store/blocks/**/*.{json,jsonc}')
-
-	const { allJSONs, jsonFiles } = getFiles()
+	const { jsonFiles } = getFiles()
 
 	if (vscode.window.activeTextEditor) {
 		const document = vscode.window.activeTextEditor.document
 		const allJSONsUpdated = updateFiles(document, jsonFiles)
 
-		refreshDocumentDiagnostics(document, allJSONsUpdated, blocksDiagnostics)
+		if (!document.uri.path.startsWith(folder.uri.path)) return
+		configs.get('unusedBlocks') &&
+			refreshDocumentDiagnostics(document, allJSONsUpdated, blocksDiagnostics)
 		configs.get('duplicatedBlocks') &&
 			findDocumentDuplicatedBlocks(document, jsonFiles, duplicatedBlocksDiagnostics)
 	}
@@ -33,26 +33,25 @@ export function subscribeToDocumentChanges(
 		vscode.window.onDidChangeActiveTextEditor((editor) => {
 			if (editor) {
 				const document = editor.document
+
+				if (!document.uri.path.startsWith(folder.uri.path)) return
+
 				const allJSONsUpdated = updateFiles(document, jsonFiles)
 
-				refreshDocumentDiagnostics(document, allJSONsUpdated, blocksDiagnostics)
+				configs.get('unusedBlocks') &&
+					refreshDocumentDiagnostics(document, allJSONsUpdated, blocksDiagnostics)
 				configs.get('duplicatedBlocks') &&
 					findDocumentDuplicatedBlocks(document, jsonFiles, duplicatedBlocksDiagnostics)
 			}
 		})
 	)
 
-	// context.subscriptions.push(
-	// 	vscode.workspace.onDidChangeTextDocument((e) =>
-	// 		refreshDocumentDiagnostics(e.document, allJSONs, blocksDiagnostics)
-	// 	)
-	// )
-
 	context.subscriptions.push(
 		vscode.workspace.onDidSaveTextDocument((doc) => {
 			const allJSONsUpdated = updateFiles(doc, jsonFiles)
 
-			refreshDocumentDiagnostics(doc, allJSONsUpdated, blocksDiagnostics)
+			configs.get('unusedBlocks') &&
+				refreshDocumentDiagnostics(doc, allJSONsUpdated, blocksDiagnostics)
 			configs.get('duplicatedBlocks') &&
 				findDocumentDuplicatedBlocks(doc, jsonFiles, duplicatedBlocksDiagnostics)
 		})

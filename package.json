@@ -78,17 +78,18 @@
 				"vtexiointellisense.allowsUnusedBlocks": {
 					"type": "boolean",
 					"default": true,
-					"description": "Allows unused blocks in json files"
+					"description": "Allows unused blocks in json files",
+					"deprecationMessage": "Deprecated: Please use vtexiointellisense.duplicatedBlocks instead."
 				},
 				"vtexiointellisense.duplicatedBlocks": {
 					"type": "boolean",
 					"default": true,
-					"description": "Show a warning if finds a duplicated block"
+					"description": "If true show a warning if finds a duplicated block in all workspace"
 				},
 				"vtexiointellisense.unusedBlocks": {
 					"type": "boolean",
 					"default": true,
-					"description": "Show a warning if finds a unused block"
+					"description": "If true show a warning if finds a unused block in all workspace"
 				}
 			}
 		},

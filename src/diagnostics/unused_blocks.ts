@@ -73,7 +73,6 @@ export function refreshDiagnostics(
 
 		const uri = vscode.Uri.file(filePath)
 		const doc = await vscode.workspace.openTextDocument(uri)
-		console.log(uri)
 
 		ids.forEach((id) => {
 			for (let lineIndex = 0; lineIndex < doc.lineCount; lineIndex++) {
