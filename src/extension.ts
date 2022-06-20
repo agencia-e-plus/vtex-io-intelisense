@@ -1,10 +1,22 @@
-import * as vscode from 'vscode';
-import { subscribeToDocumentChanges } from './diagnostics';
-
+import * as vscode from 'vscode'
+import { subscribeToDocumentChanges } from './diagnostics'
+import { findDuplicatedBlocks } from './diagnostics/duplicated_blocks'
+import { refreshDiagnostics } from './diagnostics/unused_blocks'
 
 export function activate(context: vscode.ExtensionContext) {
-	const blocksDiagnostics = vscode.languages.createDiagnosticCollection("blocks");
-	context.subscriptions.push(blocksDiagnostics);
+	const blocksDiagnostics = vscode.languages.createDiagnosticCollection('blocks')
+	const duplicatedBlocksDiagnostics =
+		vscode.languages.createDiagnosticCollection('duplicatedBlocks')
 
-	subscribeToDocumentChanges(context, blocksDiagnostics);
+	const command = vscode.commands.registerCommand('vtexiointellisense.storeLint', () => {
+		if (!vscode.window.activeTextEditor) {
+			return
+		}
+		refreshDiagnostics(blocksDiagnostics)
+		findDuplicatedBlocks(duplicatedBlocksDiagnostics)
+	})
+
+	context.subscriptions.push(blocksDiagnostics)
+
+	subscribeToDocumentChanges(context, blocksDiagnostics, duplicatedBlocksDiagnostics)
 }

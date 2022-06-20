@@ -78,11 +78,28 @@
 				"vtexiointellisense.allowsUnusedBlocks": {
 					"type": "boolean",
 					"default": true,
-					"description": "Allows unused blocks in json files"
+					"description": "Allows unused blocks in json files",
+					"deprecationMessage": "Deprecated: Please use vtexiointellisense.duplicatedBlocks instead."
+				},
+				"vtexiointellisense.duplicatedBlocks": {
+					"type": "boolean",
+					"default": true,
+					"description": "If true show a warning if finds a duplicated block in all workspace"
+				},
+				"vtexiointellisense.unusedBlocks": {
+					"type": "boolean",
+					"default": true,
+					"description": "If true show a warning if finds a unused block in all workspace"
 				}
 			}
 		},
-		"configurationDefaults": {}
+		"configurationDefaults": {},
+		"commands": [
+			{
+				"command": "vtexiointellisense.storeLint",
+				"title": "VTEX IO Intellisense: Lint Store"
+			}
+		]
 	},
 	"scripts": {
 		"vscode:prepublish": "yarn run package",
@@ -93,7 +110,8 @@
 		"watch-tests": "tsc -p . -w --outDir out",
 		"pretest": "yarn run compile-tests && yarn run compile && yarn run lint",
 		"lint": "eslint src --ext ts",
-		"test": "node ./out/test/runTest.js"
+		"test": "node ./out/test/runTest.js",
+		"dev": "eplus dev init"
 	},
 	"devDependencies": {
 		"@types/glob": "^7.2.0",
@@ -103,9 +121,14 @@
 		"@typescript-eslint/eslint-plugin": "^5.1.0",
 		"@typescript-eslint/parser": "^5.1.0",
 		"@vscode/test-electron": "^1.6.2",
-		"eslint": "^8.1.0",
+		"eslint": "^8.15.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-import-resolver-typescript": "^2.7.1",
+		"eslint-plugin-import": "*",
+		"eslint-plugin-prettier": "^4.0.0",
 		"glob": "^7.2.0",
 		"jsonc-parser": "^3.0.0",
+		"prettier": "^2.6.2",
 		"mocha": "^9.1.3",
 		"ts-loader": "^9.2.5",
 		"typescript": "^4.4.4",
