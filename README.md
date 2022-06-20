@@ -9,6 +9,18 @@ The Vtex io intellisense help you develop with vtex store-framework with snippet
 ![Autocomplete demonstration](https://user-images.githubusercontent.com/48053804/141369446-3df45670-6d9b-4f4b-8e96-435518b884d9.gif)
 `ATTENTION: The auto complete only works in 'json' and 'jsonc' files inside the 'store' folder`
 
+### diagnostics
+
+![Diagnostic demosntration](https://user-images.githubusercontent.com/48053804/174599923-0d37a960-68fb-4739-a9bd-1362363dc335.gif)
+
+
+### Commands
+
+`VTEX IO Intellisense: Store Lint` search in all project for duiplicated asn unused blocks
+
+![Command Demonstration](https://user-images.githubusercontent.com/48053804/174601570-6d20b394-9d8b-4c88-9d52-e1b519677b6c.gif)
+
+
 | blocks with auto complete                                  |
 | :--------------------------------------------------------- |
 | "back-to-top-button"                                       |
@@ -137,13 +149,17 @@ If you have any requirements or dependencies, add a section describing those and
 
 This extension also provides the following setting:
 
-![beta](https://img.shields.io/badge/-beta-red)
+- `vtexiointellisense.unusedBlocks`: if set to `true` will show a warning of `unused block` when a block its not used. Default value is `true`
+- `vtexiointellisense.duplicatedBlocks`: if set to `true` will show a warning of `duplicated blocks` when a block id its duplicated. Default value is `true`
 
+![deprecated](https://img.shields.io/badge/depracated-red)
 - `vtexiointellisense.allowsUnusedBlocks`: if set to `false` all unused blocks will show a warning of `unused block`. Default value is `true`
 
-## Known Issues
+## Release Notes
 
-Activation of the experimental `vtexiointellisense.allowsUnusedBlocks` setting may cause long delays when loading snippets information
+### 0.3.0
+
+Add Commands and lint check
 
 <!--
 ## Release Notes
