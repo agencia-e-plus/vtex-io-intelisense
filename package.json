@@ -96,12 +96,8 @@
 		"configurationDefaults": {},
 		"commands": [
 			{
-				"command": "vtexiointellisense.findUnusedBlocks",
-				"title": "Find Unused Blocks"
-			},
-			{
-				"command": "vtexiointellisense.findDuplicatedBlocks",
-				"title": "Find Duplicated Blocks"
+				"command": "vtexiointellisense.storeLint",
+				"title": "VTEX IO Intellisense: Lint Store"
 			}
 		]
 	},

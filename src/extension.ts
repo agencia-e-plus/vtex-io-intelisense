@@ -8,17 +8,11 @@ export function activate(context: vscode.ExtensionContext) {
 	const duplicatedBlocksDiagnostics =
 		vscode.languages.createDiagnosticCollection('duplicatedBlocks')
 
-	const command = vscode.commands.registerCommand('vtexiointellisense.findUnusedBlocks', () => {
+	const command = vscode.commands.registerCommand('vtexiointellisense.storeLint', () => {
 		if (!vscode.window.activeTextEditor) {
 			return
 		}
 		refreshDiagnostics(blocksDiagnostics)
-	})
-
-	vscode.commands.registerCommand('vtexiointellisense.findDuplicatedBlocks', () => {
-		if (!vscode.window.activeTextEditor) {
-			return
-		}
 		findDuplicatedBlocks(duplicatedBlocksDiagnostics)
 	})
 
