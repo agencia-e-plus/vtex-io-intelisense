@@ -16,13 +16,16 @@ export function subscribeToDocumentChanges(
 
 	const [folder] = vscode?.workspace?.workspaceFolders || ([] as vscode.WorkspaceFolder[])
 
+	const checkFolderPath = glob.sync(`${folder?.uri?.fsPath}/**/store/blocks`)[0]
+
 	const { jsonFiles } = getFiles()
 
 	if (vscode.window.activeTextEditor) {
 		const document = vscode.window.activeTextEditor.document
 		const allJSONsUpdated = updateFiles(document, jsonFiles)
+		const documentPath = document.uri.fsPath.replace(/\\/g, '/')
 
-		if (!document.uri.path.startsWith(folder.uri.path)) return
+		if (!documentPath.startsWith(checkFolderPath)) return
 		configs.get('unusedBlocks') &&
 			refreshDocumentDiagnostics(document, allJSONsUpdated, blocksDiagnostics)
 		configs.get('duplicatedBlocks') &&
@@ -33,8 +36,9 @@ export function subscribeToDocumentChanges(
 		vscode.window.onDidChangeActiveTextEditor((editor) => {
 			if (editor) {
 				const document = editor.document
+				const documentPath = document.uri.fsPath.replace(/\\/g, '/')
 
-				if (!document.uri.path.startsWith(folder.uri.path)) return
+				if (!documentPath.startsWith(checkFolderPath)) return
 
 				const allJSONsUpdated = updateFiles(document, jsonFiles)
 
@@ -49,6 +53,10 @@ export function subscribeToDocumentChanges(
 	context.subscriptions.push(
 		vscode.workspace.onDidSaveTextDocument((doc) => {
 			const allJSONsUpdated = updateFiles(doc, jsonFiles)
+
+			const documentPath = doc.uri.fsPath.replace(/\\/g, '/')
+
+			if (!documentPath.startsWith(checkFolderPath)) return
 
 			configs.get('unusedBlocks') &&
 				refreshDocumentDiagnostics(doc, allJSONsUpdated, blocksDiagnostics)
