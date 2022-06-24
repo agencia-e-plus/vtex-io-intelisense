@@ -23,14 +23,14 @@ export const getFiles = (): GetFilesResult => {
 	const files = glob.sync(folder?.uri?.fsPath + '/**/store/blocks/**/*.{json,jsonc}')
 
 	return files.reduce(
-		(content: any, file: any) => {
-			const x = fs.readFileSync(file, { encoding: 'utf-8' })
+		(content: any, file: fs.PathLike) => {
+			const textContent = fs.readFileSync(file, { encoding: 'utf-8' })
 
-			const contentObj = parse(x)
+			if (!textContent) return content
 
+			const contentObj = parse(textContent)
 			return {
 				allJSONs: { ...content.allJSONs, ...contentObj },
-
 				jsonFiles: [...content.jsonFiles, { filePath: file, content: contentObj }]
 			}
 		},

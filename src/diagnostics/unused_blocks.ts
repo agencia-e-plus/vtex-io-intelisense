@@ -94,6 +94,8 @@ export function refreshDocumentDiagnostics(
 ): void {
 	const currentDocument = doc.getText()
 
+	if (!currentDocument) return
+
 	const currentDocumentObj = parse(currentDocument)
 
 	const ids = checkKey(currentDocumentObj, allJSONs)
