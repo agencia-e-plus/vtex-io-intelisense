@@ -18,7 +18,7 @@ export function subscribeToDocumentChanges(
 
 	const checkFolderPath = glob.sync(`${folder?.uri?.fsPath}/**/store/blocks`)[0]
 
-	const { jsonFiles } = getFiles()
+	const { jsonFiles } =  getFiles()
 
 	if (vscode.window.activeTextEditor) {
 		const document = vscode.window.activeTextEditor.document
@@ -29,7 +29,7 @@ export function subscribeToDocumentChanges(
 		configs.get('unusedBlocks') &&
 			refreshDocumentDiagnostics(document, allJSONsUpdated, blocksDiagnostics)
 		configs.get('duplicatedBlocks') &&
-			findDocumentDuplicatedBlocks(document, jsonFiles, duplicatedBlocksDiagnostics)
+			findDocumentDuplicatedBlocks(document, duplicatedBlocksDiagnostics)
 	}
 
 	context.subscriptions.push(
@@ -45,7 +45,7 @@ export function subscribeToDocumentChanges(
 				configs.get('unusedBlocks') &&
 					refreshDocumentDiagnostics(document, allJSONsUpdated, blocksDiagnostics)
 				configs.get('duplicatedBlocks') &&
-					findDocumentDuplicatedBlocks(document, jsonFiles, duplicatedBlocksDiagnostics)
+					findDocumentDuplicatedBlocks(document, duplicatedBlocksDiagnostics)
 			}
 		})
 	)
@@ -61,7 +61,7 @@ export function subscribeToDocumentChanges(
 			configs.get('unusedBlocks') &&
 				refreshDocumentDiagnostics(doc, allJSONsUpdated, blocksDiagnostics)
 			configs.get('duplicatedBlocks') &&
-				findDocumentDuplicatedBlocks(doc, jsonFiles, duplicatedBlocksDiagnostics)
+				findDocumentDuplicatedBlocks(doc, duplicatedBlocksDiagnostics)
 		})
 	)
 

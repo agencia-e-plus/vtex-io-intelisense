@@ -1,14 +1,14 @@
 import * as vscode from 'vscode'
+import { Singleton } from '../fileRegister'
 import { createDiagnostic } from './utils/createDiagnostic'
-import { getFiles } from './utils/getFiles'
 
 export const DUPLICATE_BLOCK = 'duplicated_block'
 
 export const findDocumentDuplicatedBlocks = (
 	doc: vscode.TextDocument,
-	jsonFiles: any[],
 	blocksDiagnostics: vscode.DiagnosticCollection
 ) => {
+	const { jsonFiles } = Singleton.getInstance().getFiles()
 	// find duplicated objects key in all JSON files
 	const blocksOccurrences = jsonFiles.reduce((acc, file) => {
 		const { content } = file
@@ -22,7 +22,9 @@ export const findDocumentDuplicatedBlocks = (
 			}
 		})
 		return acc
-	}, {})
+	}, {} as Record<string, Array<any>>)
+
+	console.log(blocksOccurrences)
 
 	const duplicatedBlocks: { id: string; filesPaths: string[] }[] = Object.entries<string[]>(
 		blocksOccurrences
@@ -51,7 +53,7 @@ export const findDocumentDuplicatedBlocks = (
 }
 
 export const findDuplicatedBlocks = (blocksDiagnostics: vscode.DiagnosticCollection) => {
-	const { jsonFiles } = getFiles()
+	const { jsonFiles } = Singleton.getInstance()
 
 	// find duplicated objects key in all JSON files
 	const blocksOccurrences = jsonFiles.reduce((acc, file) => {
