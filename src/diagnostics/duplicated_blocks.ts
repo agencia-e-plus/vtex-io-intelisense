@@ -24,8 +24,6 @@ export const findDocumentDuplicatedBlocks = (
 		return acc
 	}, {} as Record<string, Array<any>>)
 
-	console.log(blocksOccurrences)
-
 	const duplicatedBlocks: { id: string; filesPaths: string[] }[] = Object.entries<string[]>(
 		blocksOccurrences
 	).reduce((acc, [key, value]) => {
@@ -36,7 +34,7 @@ export const findDocumentDuplicatedBlocks = (
 	}, [] as any[])
 
 	const currentFileDuplicated = duplicatedBlocks.filter(({ filesPaths }) =>
-		filesPaths.includes(doc.uri.path.replace('/', ''))
+		filesPaths.includes(doc.uri.fsPath)
 	)
 
 	const diagnostics: vscode.Diagnostic[] = []
@@ -53,7 +51,7 @@ export const findDocumentDuplicatedBlocks = (
 }
 
 export const findDuplicatedBlocks = (blocksDiagnostics: vscode.DiagnosticCollection) => {
-	const { jsonFiles } = Singleton.getInstance()
+	const { jsonFiles } = Singleton.getInstance().getFiles()
 
 	// find duplicated objects key in all JSON files
 	const blocksOccurrences = jsonFiles.reduce((acc, file) => {

@@ -1,7 +1,7 @@
 import * as vscode from 'vscode'
 import { parse } from 'jsonc-parser'
-import { getFiles } from './utils/getFiles'
 import { createDiagnostic } from './utils/createDiagnostic'
+import { Singleton } from '../fileRegister'
 
 export const UNUSED_BLOCK = 'unused_block'
 export const NO_EXPLICIT_USE_BLOCKS = ['store.', 'header', 'header.', 'footer']
@@ -54,7 +54,7 @@ export function refreshDiagnostics(
 	// doc: vscode.TextDocument,
 	blocksDiagnostics: vscode.DiagnosticCollection
 ): void {
-	const { allJSONs, jsonFiles } = getFiles()
+	const { allJSONs, jsonFiles } = Singleton.getInstance()
 
 	const checkedFiles = jsonFiles.map(({ filePath, content }) => ({
 		filePath,

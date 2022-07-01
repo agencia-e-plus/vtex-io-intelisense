@@ -1,9 +1,8 @@
 import * as vscode from 'vscode'
-import { glob } from 'glob'
 import { findDocumentDuplicatedBlocks } from './duplicated_blocks'
 import { refreshDocumentDiagnostics } from './unused_blocks'
-import { getFiles } from './utils/getFiles'
-import { updateFiles } from './utils/updateFiles'
+import { Singleton } from '../fileRegister'
+import glob = require('glob')
 
 /** Code that is used to associate diagnostic entries with code actions. */
 
@@ -18,14 +17,15 @@ export function subscribeToDocumentChanges(
 
 	const checkFolderPath = glob.sync(`${folder?.uri?.fsPath}/**/store/blocks`)[0]
 
-	const { jsonFiles } =  getFiles()
+	// const { jsonFiles } =  getFiles()
 
 	if (vscode.window.activeTextEditor) {
 		const document = vscode.window.activeTextEditor.document
-		const allJSONsUpdated = updateFiles(document, jsonFiles)
 		const documentPath = document.uri.fsPath.replace(/\\/g, '/')
 
 		if (!documentPath.startsWith(checkFolderPath)) return
+		const allJSONsUpdated = Singleton.getInstance().updateFiles(document)
+
 		configs.get('unusedBlocks') &&
 			refreshDocumentDiagnostics(document, allJSONsUpdated, blocksDiagnostics)
 		configs.get('duplicatedBlocks') &&
@@ -39,8 +39,7 @@ export function subscribeToDocumentChanges(
 				const documentPath = document.uri.fsPath.replace(/\\/g, '/')
 
 				if (!documentPath.startsWith(checkFolderPath)) return
-
-				const allJSONsUpdated = updateFiles(document, jsonFiles)
+				const allJSONsUpdated = Singleton.getInstance().updateFiles(document)
 
 				configs.get('unusedBlocks') &&
 					refreshDocumentDiagnostics(document, allJSONsUpdated, blocksDiagnostics)
@@ -52,11 +51,10 @@ export function subscribeToDocumentChanges(
 
 	context.subscriptions.push(
 		vscode.workspace.onDidSaveTextDocument((doc) => {
-			const allJSONsUpdated = updateFiles(doc, jsonFiles)
-
 			const documentPath = doc.uri.fsPath.replace(/\\/g, '/')
 
 			if (!documentPath.startsWith(checkFolderPath)) return
+			const allJSONsUpdated = Singleton.getInstance().updateFiles(doc)
 
 			configs.get('unusedBlocks') &&
 				refreshDocumentDiagnostics(doc, allJSONsUpdated, blocksDiagnostics)
