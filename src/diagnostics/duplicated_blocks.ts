@@ -39,14 +39,31 @@ export const findDocumentDuplicatedBlocks = (
 
 	const diagnostics: vscode.Diagnostic[] = []
 
-	currentFileDuplicated.map(({ id }) => {
+	currentFileDuplicated.map(async ({ id, filesPaths }) => {
+		// const docs = await Promise.all(
+		// 	filesPaths.map(async (filePath) => {
+		// 		const uri = vscode.Uri.file(filePath)
+		// 		const fileDoc = await vscode.workspace.openTextDocument(uri)
+		// 		return fileDoc
+		// 	})
+		// )
 		for (let lineIndex = 0; lineIndex < doc.lineCount; lineIndex++) {
 			const lineOfText = doc.lineAt(lineIndex)
 			if (lineOfText.text.includes(`"${id}":`)) {
-				diagnostics.push(createDiagnostic(lineOfText, lineIndex, `"${id}"`, DUPLICATE_BLOCK))
+				diagnostics.push(
+					createDiagnostic({
+						lineOfText,
+						lineIndex,
+						word: `"${id}"`,
+						diagnosticType: DUPLICATE_BLOCK,
+						message: `Duplicated block "${id}"`
+						// documents: docs
+					})
+				)
 			}
 		}
 	})
+
 	blocksDiagnostics.set(doc.uri, diagnostics)
 }
 
@@ -87,7 +104,15 @@ export const findDuplicatedBlocks = (blocksDiagnostics: vscode.DiagnosticCollect
 			for (let lineIndex = 0; lineIndex < doc.lineCount; lineIndex++) {
 				const lineOfText = doc.lineAt(lineIndex)
 				if (lineOfText.text.includes(`"${id}":`)) {
-					diagnostics.push(createDiagnostic(lineOfText, lineIndex, `"${id}"`, DUPLICATE_BLOCK))
+					diagnostics.push(
+						createDiagnostic({
+							lineOfText,
+							lineIndex,
+							word: `"${id}"`,
+							diagnosticType: DUPLICATE_BLOCK,
+							message: `Duplicated block "${id}"`
+						})
+					)
 				}
 			}
 

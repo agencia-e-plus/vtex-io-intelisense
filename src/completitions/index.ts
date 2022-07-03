@@ -5,12 +5,27 @@ export const provider = vscode.languages.registerCompletionItemProvider('jsonc',
 	provideCompletionItems(document: vscode.TextDocument, position: vscode.Position) {
 		// get all text until the `position` and check if it reads `console.`
 		// and if so then complete if `log`, `warn`, and `error`
-		const linePrefix = document.lineAt(position).text.substr(0, position.character)
+
+		const regex = /^(?!.*[^"#\w\-.:\s*,]).*/g
+
+		let linePrefix = document.lineAt(position).text.slice(0, position.character)
+		let findOpenLine = false
+		if (linePrefix.match(regex)) {
+			let index = position.line - 1
+			while (!findOpenLine && index > 0) {
+				const lineUp = position.with(index)
+				if (!document.lineAt(lineUp).text.match(regex)) {
+					console.log('lineUp', document.lineAt(lineUp).text)
+					linePrefix = document.lineAt(lineUp).text
+					findOpenLine = true
+				}
+				index--
+			}
+		}
+
 		if (!linePrefix.includes('"children": [') && !linePrefix.includes('"blocks": [')) {
-			console.log('aqui')
 			return undefined
 		}
-		console.log('fora')
 
 		const { allJSONs } = Singleton.getInstance()
 

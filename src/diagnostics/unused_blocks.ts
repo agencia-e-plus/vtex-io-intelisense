@@ -78,7 +78,15 @@ export function refreshDiagnostics(
 			for (let lineIndex = 0; lineIndex < doc.lineCount; lineIndex++) {
 				const lineOfText = doc.lineAt(lineIndex)
 				if (lineOfText.text.includes(`"${id}":`)) {
-					diagnostics.push(createDiagnostic(lineOfText, lineIndex, `"${id}"`, UNUSED_BLOCK))
+					diagnostics.push(
+						createDiagnostic({
+							lineOfText,
+							lineIndex,
+							word: `"${id}"`,
+							diagnosticType: UNUSED_BLOCK,
+							message: 'Unused Block'
+						})
+					)
 				}
 			}
 		})
@@ -110,7 +118,15 @@ export function refreshDocumentDiagnostics(
 		for (let lineIndex = 0; lineIndex < doc.lineCount; lineIndex++) {
 			const lineOfText = doc.lineAt(lineIndex)
 			if (lineOfText.text.includes(`"${id}":`)) {
-				diagnostics.push(createDiagnostic(lineOfText, lineIndex, `"${id}"`, UNUSED_BLOCK))
+				diagnostics.push(
+					createDiagnostic({
+						lineOfText,
+						lineIndex,
+						word: `"${id}"`,
+						diagnosticType: UNUSED_BLOCK,
+						message: 'Unused Block'
+					})
+				)
 			}
 		}
 	})
