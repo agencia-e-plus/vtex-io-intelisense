@@ -100,11 +100,11 @@ export function refreshDocumentDiagnostics(
 	allJSONs: any,
 	blocksDiagnostics: vscode.DiagnosticCollection
 ): void {
-	const currentDocument = doc.getText()
+	const currentDocumentText = doc.getText()
 
-	if (!currentDocument) return
+	if (!currentDocumentText) return
 
-	const currentDocumentObj = parse(currentDocument)
+	const currentDocumentObj = parse(currentDocumentText)
 
 	const ids = checkKey(currentDocumentObj, allJSONs)
 

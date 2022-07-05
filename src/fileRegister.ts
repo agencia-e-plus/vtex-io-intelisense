@@ -21,6 +21,8 @@ class FileRegister {
 			(content: any, file: any) => {
 				const x = fs.readFileSync(file, { encoding: 'utf-8' })
 
+				if (!x) return content
+
 				const contentObj = parse(x)
 
 				return {
@@ -41,16 +43,20 @@ class FileRegister {
 
 	updateFiles = (doc: vscode.TextDocument) => {
 		const docPath = doc.uri.fsPath
-		const content = parse(doc.getText())
+		const textContent = doc.getText()
 
-		if (!this.jsonFiles.find((file) => file.filePath === docPath)) {
-			this.jsonFiles.push({ filePath: docPath, content })
-		} else {
-			this.jsonFiles.forEach((file) => {
-				if (file.filePath === docPath) {
-					file.content = content
-				}
-			})
+		if (textContent && textContent != '') {
+			const content = parse(textContent)
+
+			if (!this.jsonFiles.find((file) => file.filePath === docPath)) {
+				this.jsonFiles.push({ filePath: docPath, content })
+			} else {
+				this.jsonFiles.forEach((file) => {
+					if (file.filePath === docPath) {
+						file.content = content
+					}
+				})
+			}
 		}
 
 		const allJSONsUpdated = this.jsonFiles.reduce(

@@ -15,7 +15,6 @@ export const provider = vscode.languages.registerCompletionItemProvider('jsonc',
 			while (!findOpenLine && index > 0) {
 				const lineUp = position.with(index)
 				if (!document.lineAt(lineUp).text.match(regex)) {
-					console.log('lineUp', document.lineAt(lineUp).text)
 					linePrefix = document.lineAt(lineUp).text
 					findOpenLine = true
 				}
