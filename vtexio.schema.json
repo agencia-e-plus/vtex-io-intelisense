@@ -144,6 +144,12 @@
 		"^(vtex.store-components:product-images#)|^(vtex.store-components:product-images)$|^(product-images#)|^(product-images)$": {
 			"$ref": "./schemas/store-components/product-images.schema.json"
 		},
+		"^(product-installments#)|^(product-installments)$": {
+			"$ref": "./schemas/product-price/product-installments.schema.json"
+		},
+		"^(product-installments-list-item#)|^(product-installments-list-item)$": {
+			"$ref": "./schemas/product-price/product-installments.schema.json"
+		},
 		"^(product-installments-list#)|^(product-installments-list)$": {
 			"$ref": "./schemas/product-price/product-installments-list.schema.json"
 		},
@@ -403,8 +409,14 @@
 		"product-images": {
 			"$ref": "./schemas/store-components/product-images.schema.json"
 		},
+		"product-installments": {
+			"$ref": "./schemas/product-price/product-installments.schema.json"
+		},
 		"product-installments-list": {
 			"$ref": "./schemas/product-price/product-installments-list.schema.json"
+		},
+		"product-installments-list-item": {
+			"$ref": "./schemas/product-price/product-installments.schema.json"
 		},
 		"product-name": {
 			"$ref": "./schemas/store-components/product-name.schema.json"

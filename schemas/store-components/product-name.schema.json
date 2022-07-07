@@ -13,6 +13,12 @@
 			"additionalProperties": false,
 			"markdownDescription": "All available properties for this block.",
 			"properties": {
+				"tag": {
+					"type": "string",
+					"oneOf": [{ "const": "div" }, { "const": "h1" }, { "const": "h2" }, { "const": "h3" }],
+					"markdownDescription": "HTML tag used. It can be: `div`, `h1`, `h2`, `h3`.",
+					"default": "h1"
+				},
 				"blockClass": {
 					"type": ["array", "string"],
 					"markdownDescription": "`string | string[]`\n\nBlock container class. This prop’s set value functions as a block identifier for CSS customizations.",
