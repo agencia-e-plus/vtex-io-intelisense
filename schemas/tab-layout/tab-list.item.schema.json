@@ -20,6 +20,11 @@
 					"type": "string",
 					"markdownDescription": "`string`\n\nTab ID of your choosing. It will be used to match the tab to its content (defined by the `tab-content.item` block).",
 					"default": "Defines the tab's text label."
+				},
+				"defaultActiveTab": {
+					"type": "boolean",
+					"markdownDescription": "`boolean`\n\nDefines the item as the default active tab.",
+					"default": false
 				}
 			}
 		}
