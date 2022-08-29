@@ -42,7 +42,7 @@
 								"OrderByNameDESC",
 								"OrderByScoreDESC"
 							],
-							"description": "Decides which order products must follow when displayed. The possible values are named after the order type: OrderByTopSaleDESC, OrderByReleaseDateDESC, OrderByBestDiscountDESC, OrderByPriceDESC, OrderByPriceASC, OrderByNameASC, OrderByNameDESC or OrderByScoreDESC (",
+							"description": "Decides which order products must follow when displayed. The possible values are named after the order type: OrderByTopSaleDESC, OrderByReleaseDateDESC, OrderByBestDiscountDESC, OrderByPriceDESC, OrderByPriceASC, OrderByNameASC, OrderByNameDESC or OrderByScoreDESC ([relevance Score](https://help.vtex.com/en/tutorial/how-does-the-score-field-work--1BUZC0mBYEEIUgeQYAKcae)). `ASC` and `DESC` stand for ascending order and descending order, respectively.",
 							"default": "OrderByScoreDESC"
 						},
 						"hideUnavailableItems": {

@@ -1,0 +1,12 @@
+
+  { 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "assembly-option-item-price",
+    "markdownDescription": "Renders the attachment price.",
+    "type": "object",
+    "properties": {
+      
+      
+    }
+  }
+  

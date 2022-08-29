@@ -6,7 +6,7 @@
 		"url": "https://github.com/pluslabeplus/vtex-io-intelisense"
 	},
 	"license": "MIT",
-	"version": "0.4.3",
+	"version": "0.4.4",
 	"engines": {
 		"vscode": "^1.62.0"
 	},
@@ -83,13 +83,18 @@
 				},
 				"vtexiointellisense.duplicatedBlocks": {
 					"type": "boolean",
-					"default": true,
+					"default": false,
 					"description": "If true show a warning if finds a duplicated block in all workspace"
 				},
 				"vtexiointellisense.unusedBlocks": {
 					"type": "boolean",
-					"default": true,
+					"default": false,
 					"description": "If true show a warning if finds a unused block in all workspace"
+				},
+				"vtexiointellisense.suggestions": {
+					"type": "boolean",
+					"default": false,
+					"description": "If true, suggest all blocks declared in children and blocks props"
 				}
 			}
 		},

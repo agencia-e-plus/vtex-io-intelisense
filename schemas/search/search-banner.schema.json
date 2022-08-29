@@ -1,7 +1,7 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"title": "search banner",
-	"description": "block to show banner in search/departments/category pages",
+	"description": "Renders a customized banner according to the search query performed. ",
 	"type": "object",
 	"properties": {
 		"title": {

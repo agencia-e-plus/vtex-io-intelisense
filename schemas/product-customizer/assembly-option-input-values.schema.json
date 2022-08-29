@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "assembly-option-input-values",
+  "markdownDescription": "![https://img.shields.io/badge/-Mandatory-red](https://img.shields.io/badge/-Mandatory-red) Displays a checkbox or a dropdown list field so users can choose the desired attachment for their products.",
+  "type": "object",
+  "properties": {
+    "props": {
+      "type": "object",
+      "description": "Block's properties",
+      "properties": {
+        "optionsDisplay": {
+          "type": "string",
+          "description": "Define whether the attachment's pre-defined options will be displayed to be selected in a Checkbox (`box`) or in a dropdown list (`select`) .",
+          "default": "select"
+        }
+      }
+    }
+  }
+}

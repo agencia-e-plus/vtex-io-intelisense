@@ -4,6 +4,12 @@
 	"title": "Search Bar",
 	"markdownDescription": "https://developers.vtex.com/vtex-developer-docs/docs/vtex-store-components-searchbar\n\nSearch Bar is a VTEX Component that shows a search bar with autocomplete options and displays the matching products as well. This component can be imported and used by any VTEX App.\n\n`\"vtex.store-components@3.x\"`",
 	"properties": {
+		"blocks": {
+			"type": "array",
+			"items": { "$ref": "../shared/block.schema.json" },
+			"description": "product summary block",
+			"default": []
+		},
 		"props": {
 			"type": "object",
 			"additionalProperties": false,

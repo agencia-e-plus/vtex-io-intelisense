@@ -11,7 +11,7 @@
 					"type": "string"
 				},
 				"allowed": {
-					"type": "array",
+					"type": ["array", "string"],
 					"itens": {
 						"type": "string"
 					}

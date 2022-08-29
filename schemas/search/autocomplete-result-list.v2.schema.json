@@ -1,0 +1,154 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "autocomplete-result-list.v2",
+	"markdownDescription": "Provides customized autocomplete features in the search bar component, such as top searches, search history, product suggestions or term suggestions. You can read more about the Intelligent Search [autocomplete feature](https://help.vtex.com/en/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/4gXFsEWjF7QF7UtI2GAvhL) on VTEX Help Center.",
+	"type": "object",
+	"properties": {
+		"children": { "type": "array", "items": { "type": "string" } },
+		"props": {
+			"type": "object",
+			"description": "Block's properties",
+			"properties": {
+				"maxTopSearches": {
+					"type": "number",
+					"markdownDescription": "Maximum number of items in the top searches list.",
+					"default": 10
+				},
+				"maxHistory": {
+					"type": "number",
+					"markdownDescription": "Maximum number of items in the search history list.",
+					"default": 5
+				},
+				"maxSuggestedProducts": {
+					"type": "number",
+					"markdownDescription": "Maximum number of items in the suggested products list.",
+					"default": 3
+				},
+				"maxSuggestedTerms": {
+					"type": "number",
+					"markdownDescription": "Maximum number of items in the suggested terms list.",
+					"default": 3
+				},
+				"autocompleteWidth": {
+					"type": "number",
+					"markdownDescription": "Autocomplete list width (in percent). The value must be between 0 and 100.",
+					"default": ""
+				},
+				"productLayout": {
+					"type": "string",
+					"oneOf": [{ "const": "HORIZONTAL" }, { "const": "VERTICAL" }],
+					"markdownDescription": "Defines the suggested products list layout when rendered. Possible values are HORIZONTAL and VERTICAL."
+				},
+				"hideTitles": {
+					"type": "boolean",
+					"markdownDescription": "Defines whether all component titles are hidden when rendered (true) or not (false).",
+					"default": false
+				},
+				"hideUnavailableItems": {
+					"type": "boolean",
+					"markdownDescription": "Defines whether the autocomplete should hide unavailable items (true) or not (false).",
+					"default": false
+				},
+				"historyFirst": {
+					"type": "boolean",
+					"markdownDescription": "Defines whether the search history list should be prioritized over the other lists (true) or not (false).",
+					"default": false
+				},
+				"customBreakpoints": {
+					"type": "object",
+					"markdownDescription": "Defines a maximum number of suggested products by breakpoints. Possible values are md, lg or xlg.",
+					"properties": {
+						"md": {
+							"type": "object",
+							"description": "Defines the maximum number of suggested products for the md breakpoint.",
+							"properties": {
+								"width": {
+									"type": "number",
+									"description": "Breakpoint minimum width."
+								},
+								"maxSuggestedProducts": {
+									"type": "number",
+									"description": "Maximum number of suggested products."
+								}
+							}
+						},
+						"lg": {
+							"type": "object",
+							"description": "Defines the the maximum number of suggested products for the lg breakpoint.",
+							"properties": {
+								"width": {
+									"type": "number",
+									"description": "Breakpoint minimum width."
+								},
+								"maxSuggestedProducts": {
+									"type": "number",
+									"description": "Maximum number of suggested products."
+								}
+							}
+						},
+						"xlg": {
+							"type": "object",
+							"description": "Defines the the maximum number of suggested products for the xlg breakpoint.",
+							"properties": {
+								"width": {
+									"type": "number",
+									"description": "Breakpoint minimum width."
+								},
+								"maxSuggestedProducts": {
+									"type": "number",
+									"description": "Maximum number of suggested products."
+								}
+							}
+						}
+					}
+				},
+				"simulationBehavior": {
+					"type": "string",
+					"oneOf": [{ "const": "skip" }, { "const": "default" }],
+					"markdownDescription": "If you want faster searches and do not care about most up to date prices and promotions, use `skip` value.",
+					"default": "default"
+				},
+				"HorizontalProductSummary": {
+					"type": "string",
+					"markdownDescription": "By default, the mobile autocomplete uses the CustomListItem component to render the suggested products with a horizontal layout. But if you send a product-summary block here, it will render your customized Product Summary component. Read our documentation of ",
+					"default": "undefined"
+				},
+				"__unstableProductOriginVtex": {
+					"type": "boolean",
+					"markdownDescription": "You can use this property as true if any of your product-summary props come with a null value. This is because some product information does not come by default in the Search.",
+					"default": false
+				},
+				"customPage": {
+					"type": "string",
+					"markdownDescription": "Defines a custom page to the autocomplete links. Example: store.search.custom",
+					"default": "store.search"
+				},
+				"orderBy": {
+					"type": "string",
+					"oneOf": [
+						{ "const": "", "description": "Relevance" },
+						{ "const": "OrderByNameASC", "description": "Name Ascending" },
+						{ "const": "OrderByNameDESC", "description": "Name Descending" },
+						{
+							"const": "OrderByTopSaleDESC",
+							"description": "Top Sales Descending"
+						},
+						{
+							"const": "OrderByReleaseDateDESC",
+							"description": "Release Date Descending"
+						},
+						{
+							"const": "OrderByBestDiscountDESC",
+							"description": "Best Discount Descending"
+						},
+						{ "const": "OrderByPriceDESC", "description": "Price Descending" },
+						{ "const": "OrderByPriceASC", "description": "Price Ascending" },
+						{ "const": "OrderByCollection", "description": "Collection" }
+					],
+					"markdownDescription": "Decides which order products must follow when displayed. The possible values are named after the order type: `OrderByTopSaleDESC`, `OrderByReleaseDateDESC`,`OrderByBestDiscountDESC`, `OrderByPriceDESC`,`OrderByPriceASC`, `OrderByNameASC`, `OrderByNameDESC` or `OrderByScoreDESC` ([relevance Score](https://help.vtex.com/en/tutorial/how-does-the-score-field-work--1BUZC0mBYEEIUgeQYAKcae)). `ASC` and `DESC` stand for ascending order and descending order, respectively.",
+					"default": "OrderByScoreDESC"
+				}
+			}
+		}
+	}
+}

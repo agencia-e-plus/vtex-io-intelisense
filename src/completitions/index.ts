@@ -6,6 +6,10 @@ export const provider = vscode.languages.registerCompletionItemProvider('jsonc',
 		// get all text until the `position` and check if it reads `console.`
 		// and if so then complete if `log`, `warn`, and `error`
 
+		const configs = vscode.workspace.getConfiguration('vtexiointellisense')
+
+		if (!configs.get('suggestions')) return
+
 		const regex = /^(?!.*[^"#\w\-.:\s*,]).*/g
 
 		let linePrefix = document.lineAt(position).text.slice(0, position.character)
