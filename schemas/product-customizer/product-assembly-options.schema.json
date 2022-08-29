@@ -1,0 +1,21 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "product-assembly-options",
+	"markdownDescription": "![https://img.shields.io/badge/-Mandatory-red](https://img.shields.io/badge/-Mandatory-red)  Top level block responsible for displaying the product customizer default component, showing product's attachments. Use this block's children list to define which attachment data you want to display for users.",
+	"type": "object",
+	"properties": {
+		"children": { "type": "array", "items": { "type": "string" } },
+		"props": {
+			"type": "object",
+			"description": "Block's properties",
+			"properties": {
+				"initiallyOpened": {
+					"type": "string",
+					"oneOf": [{ "const": "required" }, { "const": "always" }],
+					"description": "By default, the customization box is opened if the attachment is required and closed if it's not. You can override this behavior by setting this prop to `always`, making it be opened even if the attachment is not required. Leave it as `required` for the default behavior.",
+					"default": "required"
+				}
+			}
+		}
+	}
+}

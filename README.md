@@ -4,25 +4,41 @@ The Vtex io intellisense help you develop with vtex store-framework with snippet
 
 ## Features
 
-### autocomplete
+### Autocomplete
 
 ![Autocomplete demonstration](https://user-images.githubusercontent.com/48053804/141369446-3df45670-6d9b-4f4b-8e96-435518b884d9.gif)
 `ATTENTION: The auto complete only works in 'json' and 'jsonc' files inside the 'store' folder`
 
-### diagnostics
+## Experimental Features
 
-![Diagnostic demosntration](https://user-images.githubusercontent.com/48053804/174599923-0d37a960-68fb-4739-a9bd-1362363dc335.gif)
+To be able to use this features you should active configurations defined in `Extension Settings` section
 
+### Diagnostics
+
+![Diagnostic demonstration](https://user-images.githubusercontent.com/48053804/174599923-0d37a960-68fb-4739-a9bd-1362363dc335.gif)
 
 ### Commands
 
-`VTEX IO Intellisense: Store Lint` search in all project for duiplicated asn unused blocks
+`VTEX IO Intellisense: Store Lint` search in all project for duplicated and unused blocks
 
 ![Command Demonstration](https://user-images.githubusercontent.com/48053804/174601570-6d20b394-9d8b-4c88-9d52-e1b519677b6c.gif)
 
+### Suggestions
+
+![]()
+
+## Autocomplete blocks
 
 | blocks with auto complete                                  |
 | :--------------------------------------------------------- |
+| "add-to-cart-button"                                       |
+| "autocomplete-result-list.v2"                              |
+| "assembly-option-item-image"                               |
+| "assembly-option-item-quantity-selector"                   |
+| "assembly-option-item-name"                                |
+| "assembly-option-item-price"                               |
+| "assembly-option-item-customize"                           |
+| "assembly-option-item-children-description"                |
 | "back-to-top-button"                                       |
 | "blog-latest-posts-preview.wordpress-latest-posts-preview" |
 | "breadcrumb.search"                                        |
@@ -149,10 +165,12 @@ If you have any requirements or dependencies, add a section describing those and
 
 This extension also provides the following setting:
 
-- `vtexiointellisense.unusedBlocks`: if set to `true` will show a warning of `unused block` when a block its not used. Default value is `true`
-- `vtexiointellisense.duplicatedBlocks`: if set to `true` will show a warning of `duplicated blocks` when a block id its duplicated. Default value is `true`
+- `vtexiointellisense.unusedBlocks`: if set to `true` will show a warning of `unused block` when a block its not used. Default value is `false`
+- `vtexiointellisense.duplicatedBlocks`: if set to `true` will show a warning of `duplicated blocks` when a block id its duplicated. Default value is `false`
+- `vtexiointellisense.suggestions`: if set to `true` will suggest all blocks declared in `children` and `blocks` props. Default value is `false`
 
 ![deprecated](https://img.shields.io/badge/depracated-red)
+
 - `vtexiointellisense.allowsUnusedBlocks`: if set to `false` all unused blocks will show a warning of `unused block`. Default value is `true`
 
 ## Release Notes

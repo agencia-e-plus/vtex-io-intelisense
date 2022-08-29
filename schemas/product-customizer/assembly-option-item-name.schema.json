@@ -1,0 +1,12 @@
+
+  { 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "assembly-option-item-name",
+    "markdownDescription": "Renders the attachment name.",
+    "type": "object",
+    "properties": {
+      
+      
+    }
+  }
+  

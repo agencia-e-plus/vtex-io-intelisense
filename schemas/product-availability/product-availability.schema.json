@@ -1,0 +1,40 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "product-availability",
+	"markdownDescription": "The Product Availability app displays text messages regarding the in-stock quantity for products.",
+	"type": "object",
+	"properties": {
+		"props": {
+			"type": "object",
+			"description": "Block's properties",
+			"properties": {
+				"threshold": {
+					"type": "number",
+					"markdownDescription": "DefineMinimum quantity that makes low stock message appear (if message is set).",
+					"default": 0
+				},
+				"lowStockMessage": {
+					"type": "string",
+					"markdownDescription": "String to be shown to user when stock is lower than threshold. Should have `{quantity}` inside the given string, to be replaced for the threshold property. Example: Only `{quantity}` left!. Leave empty to not show.",
+					"default": ""
+				},
+				"highStockMessage": {
+					"type": "string",
+					"markdownDescription": "String to be shown when stock is higher or equal than threshold. If left empty, won't show.",
+					"default": ""
+				},
+				"showAvailability": {
+					"type": "string",
+					"oneOf": [{ "const": "disabled" }, { "const": "stock" }],
+					"markdownDescription": "Enables the possibility to show the available items instead of lowStockMessage or highStockMessage. Default `disabled`. To enable it, string should be `stock`",
+					"default": "disabled"
+				},
+				"showAvailabilityMessage": {
+					"type": "string",
+					"markdownDescription": "String to be shown when show available option is true. Should have `{quantity}` inside the given string, to be replaced for the available property. Example: There are `{quantity}` available!. Leave empty to not show.",
+					"default": ""
+				}
+			}
+		}
+	}
+}

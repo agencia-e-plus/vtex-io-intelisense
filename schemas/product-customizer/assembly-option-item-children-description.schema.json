@@ -1,0 +1,7 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "assembly-option-item-children-description",
+  "markdownDescription": "Renders a summary with all attachments selected.",
+  "type": "object",
+  "properties": {}
+}

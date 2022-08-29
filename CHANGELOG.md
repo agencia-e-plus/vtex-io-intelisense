@@ -4,11 +4,40 @@ All notable changes to the "vtexio-intellisense" extension will be documented in
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [0.2.21] - 2022-02-18 
+## [0.4.4] - 2022-02-18
 
-## Added 
+### Added
 
-- `product-summary-name`  blocks
+- `assembly-option-item-image` block
+- `assembly-option-item-quantity-selector` block
+- `assembly-option-item-name` block
+- `assembly-option-item-price` block
+- `assembly-option-item-customize` block
+- `assembly-option-item-children-description` block
+- `autocomplete-result-list.v2` block
+
+### Fixed
+
+- `search-bar` prop
+
+## [0.4.0] - 2022-02-18
+
+### Added
+
+- experimental blocks suggestions
+
+## [0.3.0] - 2022-02-18
+
+### Added
+
+- experimental duplicated blocks
+- experimental command `store lint`
+
+## [0.2.21] - 2022-02-18
+
+### Added
+
+- `product-summary-name` blocks
 - `product-summary-shelf` blocks
 - `product-quantity` blocks
 - `product-summary-quantity` blocks
@@ -20,13 +49,13 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [0.2.20] - 2022-02-10
 
-### Fixed 
+### Fixed
 
 - sku selector visiblevariations prop;
 
 ## [0.2.19] - 2022-01-31
 
-### Fixed 
+### Fixed
 
 - sandbox props;
 
