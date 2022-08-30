@@ -8,7 +8,6 @@ export function activate(context: vscode.ExtensionContext) {
 	const blocksDiagnostics = vscode.languages.createDiagnosticCollection('blocks')
 	const duplicatedBlocksDiagnostics =
 		vscode.languages.createDiagnosticCollection('duplicatedBlocks')
-	console.log('why')
 
 	vscode.commands.registerCommand('vtexiointellisense.storeLint', async () => {
 		if (!vscode.window.activeTextEditor) {

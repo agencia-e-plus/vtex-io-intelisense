@@ -18,17 +18,17 @@ class FileRegister {
 		const files = glob.sync(folder?.uri?.fsPath + '/**/store/blocks/**/*.{json,jsonc}')
 
 		const filesData = files.reduce(
-			(content: any, file: any) => {
-				const x = fs.readFileSync(file, { encoding: 'utf-8' })
+			(content: any, filePath: string) => {
+				const file = fs.readFileSync(filePath, { encoding: 'utf-8' })
 
-				if (!x) return content
+				if (!file) return content
 
-				const contentObj = parse(x)
+				const contentObj = parse(file)
 
 				return {
 					allJSONs: { ...content.allJSONs, ...contentObj },
 
-					jsonFiles: [...content.jsonFiles, { filePath: file, content: contentObj }]
+					jsonFiles: [...content.jsonFiles, { filePath, content: contentObj }]
 				}
 			},
 

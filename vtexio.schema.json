@@ -7,25 +7,25 @@
 			"$ref": "./schemas/add-to-cart-button.schema.json"
 		},
 		"^(autocomplete-result-list.v2#)|^(autocomplete-result-list.v2)$": {
-			"$ref": "./schemas/search/autocomplete-result-list.v2.json"
+			"$ref": "./schemas/search/autocomplete-result-list.v2.schema.json"
 		},
 		"^(assembly-option-item-image#)|^(assembly-option-item-image)$": {
-			"$ref": "./schemas/product-customizer/assembly-option-item-image.json"
+			"$ref": "./schemas/product-customizer/assembly-option-item-image.schema.json"
 		},
 		"^(assembly-option-item-quantity-selector#)|^(assembly-option-item-quantity-selector)$": {
-			"$ref": "./schemas/product-customizer/assembly-option-item-quantity-selector.json"
+			"$ref": "./schemas/product-customizer/assembly-option-item-quantity-selector.schema.json"
 		},
 		"^(assembly-option-item-name#)|^(assembly-option-item-name)$": {
-			"$ref": "./schemas/product-customizer/assembly-option-item-name.json"
+			"$ref": "./schemas/product-customizer/assembly-option-item-name.schema.json"
 		},
 		"^(assembly-option-item-price#)|^(assembly-option-item-price)$": {
-			"$ref": "./schemas/product-customizer/assembly-option-item-price.json"
+			"$ref": "./schemas/product-customizer/assembly-option-item-price.schema.json"
 		},
 		"^(assembly-option-item-customize#)|^(assembly-option-item-customize)$": {
-			"$ref": "./schemas/product-customizer/assembly-option-item-customize.json"
+			"$ref": "./schemas/product-customizer/assembly-option-item-customize.schema.json"
 		},
 		"^(assembly-option-item-children-description#)|^(assembly-option-item-children-description)$": {
-			"$ref": "./schemas/product-customizer/assembly-option-item-children-description.json"
+			"$ref": "./schemas/product-customizer/assembly-option-item-children-description.schema.json"
 		},
 		"^(back-to-top-button#)|^(back-to-top-button)$": {
 			"$ref": "./schemas/back-to-top-button.schema.json"
@@ -299,25 +299,25 @@
 			"$ref": "./schemas/add-to-cart-button.schema.json"
 		},
 		"autocomplete-result-list.v2": {
-			"$ref": "./schemas/search/autocomplete-result-list.v2.json"
+			"$ref": "./schemas/search/autocomplete-result-list.v2.schema.json"
 		},
 		"assembly-option-item-image": {
-			"$ref": "./schemas/product-customizer/assembly-option-item-image.json"
+			"$ref": "./schemas/product-customizer/assembly-option-item-image.schema.json"
 		},
 		"assembly-option-item-quantity-selector": {
-			"$ref": "./schemas/product-customizer/assembly-option-item-quantity-selector.json"
+			"$ref": "./schemas/product-customizer/assembly-option-item-quantity-selector.schema.json"
 		},
 		"assembly-option-item-name": {
-			"$ref": "./schemas/product-customizer/assembly-option-item-name.json"
+			"$ref": "./schemas/product-customizer/assembly-option-item-name.schema.json"
 		},
 		"assembly-option-item-price": {
-			"$ref": "./schemas/product-customizer/assembly-option-item-price.json"
+			"$ref": "./schemas/product-customizer/assembly-option-item-price.schema.json"
 		},
 		"assembly-option-item-customize": {
-			"$ref": "./schemas/product-customizer/assembly-option-item-customize.json"
+			"$ref": "./schemas/product-customizer/assembly-option-item-customize.schema.json"
 		},
 		"assembly-option-item-children-description": {
-			"$ref": "./schemas/product-customizer/assembly-option-item-children-description.json"
+			"$ref": "./schemas/product-customizer/assembly-option-item-children-description.schema.json"
 		},
 		"back-to-top-button": {
 			"$ref": "./schemas/back-to-top-button.schema.json"

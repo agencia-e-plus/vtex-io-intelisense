@@ -17,8 +17,6 @@ export function subscribeToDocumentChanges(
 
 	const checkFolderPath = glob.sync(`${folder?.uri?.fsPath}/**/store/blocks`)[0]
 
-	// const { jsonFiles } =  getFiles()
-
 	if (vscode.window.activeTextEditor) {
 		const document = vscode.window.activeTextEditor.document
 		const documentPath = document.uri.fsPath.replace(/\\/g, '/')
