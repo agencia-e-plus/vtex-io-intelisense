@@ -25,8 +25,6 @@ To be able to use this features you should active configurations defined in `Ext
 
 ### Suggestions
 
-![]()
-
 ## Autocomplete blocks
 
 | blocks with auto complete                                  |
