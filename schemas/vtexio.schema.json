@@ -1,0 +1,589 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "VTEX IO Jsonc Schema by EPlus 💚",
+  "type": "object",
+  "patternProperties": {
+    "^(add-to-cart-button#)|^(add-to-cart-button)$": {
+      "$ref": "./apps/add-to-cart-button.schema.json"
+    },
+    "^(autocomplete-result-list.v2#)|^(autocomplete-result-list.v2)$": {
+      "$ref": "./apps/search/autocomplete-result-list.v2.schema.json"
+    },
+    "^(assembly-option-item-image#)|^(assembly-option-item-image)$": {
+      "$ref": "./apps/product-customizer/assembly-option-item-image.schema.json"
+    },
+    "^(assembly-option-item-quantity-selector#)|^(assembly-option-item-quantity-selector)$": {
+      "$ref": "./apps/product-customizer/assembly-option-item-quantity-selector.schema.json"
+    },
+    "^(assembly-option-item-name#)|^(assembly-option-item-name)$": {
+      "$ref": "./apps/product-customizer/assembly-option-item-name.schema.json"
+    },
+    "^(assembly-option-item-price#)|^(assembly-option-item-price)$": {
+      "$ref": "./apps/product-customizer/assembly-option-item-price.schema.json"
+    },
+    "^(assembly-option-item-customize#)|^(assembly-option-item-customize)$": {
+      "$ref": "./apps/product-customizer/assembly-option-item-customize.schema.json"
+    },
+    "^(assembly-option-item-children-description#)|^(assembly-option-item-children-description)$": {
+      "$ref": "./apps/product-customizer/assembly-option-item-children-description.schema.json"
+    },
+    "^(back-to-top-button#)|^(back-to-top-button)$": {
+      "$ref": "./apps/back-to-top-button.schema.json"
+    },
+    "^(blog-latest-posts-preview.wordpress-latest-posts-preview#)|^(blog-latest-posts-preview.wordpress-latest-posts-preview)$": {
+      "$ref": "./apps/wordpress-integration/blog-latest-posts-preview.wordpress-latest-posts-preview.schema.json"
+    },
+    "^(breadcrumb#)|^(breadcrumb)$": {
+      "$ref": "./apps/breadcrumb.schema.json"
+    },
+    "^(breadcrumb.search#)|^(breadcrumb.search)$": {
+      "$ref": "./apps/breadcrumb.search.schema.json"
+    },
+    "^(condition-layout.binding#)|^(condition-layout.binding)$": {
+      "$ref": "./apps/condition-layout/condition-layout.binding.schema.json"
+    },
+    "^(condition-layout.product#)|^(condition-layout.product)$": {
+      "$ref": "./apps/condition-layout/condition-layout.product.schema.json"
+    },
+    "^(disclosure-content#)|^(disclosure-content)$": {
+      "$ref": "./apps/disclosure-layout/disclosure-content.schema.json"
+    },
+    "^(disclosure-layout#)|^(disclosure-layout)$": {
+      "$ref": "./apps/disclosure-layout/disclosure-layout.schema.json"
+    },
+    "^(disclosure-layout-group#)|^(disclosure-layout-group)$": {
+      "$ref": "./apps/disclosure-layout/disclosure-layout-group.schema.json"
+    },
+    "^(disclosure-state-indicator#)|^(disclosure-state-indicator)$": {
+      "$ref": "./apps/disclosure-layout/disclosure-state-indicator.schema.json"
+    },
+    "^(disclosure-trigger#)|^(disclosure-trigger)$": {
+      "$ref": "./apps/disclosure-layout/disclosure-trigger.schema.json"
+    },
+    "^(disclosure-trigger-group#)|^(disclosure-trigger-group)$": {
+      "$ref": "./apps/disclosure-layout/disclosure-trigger-group.schema.json"
+    },
+    "^(vtex.search-result:filter-navigator.v3#)|^(vtex.search-result:filter-navigator.v3)$|^(filter-navigator.v3#)|^(filter-navigator.v3)$": {
+      "$ref": "./apps/search-result/filter-navigator.v3.schema.json"
+    },
+    "^(flex-layout.col#)|^(flex-layout.col)$": {
+      "$ref": "./apps/flex-layout/flex-layout.col.schema.json"
+    },
+    "^(flex-layout.row#)|^(flex-layout.row)$": {
+      "$ref": "./apps/flex-layout/flex-layout.row.schema.json"
+    },
+    "^(vtex.search-result:gallery#)|^(vtex.search-result:gallery)$|^(gallery#)|^(gallery)$": {
+      "$ref": "./apps/search-result/gallery.schema.json"
+    },
+    "^(vtex.search-result:gallery-layout-option#)|^(vtex.search-result:gallery-layout-option)$|^(gallery-layout-option#)|^(gallery-layout-option)$": {
+      "$ref": "./apps/search-result/gallery-layout-option.schema.json"
+    },
+    "^(vtex.search-result:gallery-layout-switcher#)|^(vtex.search-result:gallery-layout-switcher)$|^(gallery-layout-switcher#)|^(gallery-layout-switcher)$": {
+      "$ref": "./apps/search-result/gallery-layout-switcher.schema.json"
+    },
+    "^(icon#)|^(icon)$": {
+      "$ref": "./apps/icon.schema.json"
+    },
+    "^(iframe#)|^(iframe)$": {
+      "$ref": "./apps/iframe.schema.json"
+    },
+    "^(image#)|^(image)$": {
+      "$ref": "./apps/image.schema.json"
+    },
+    "^(link#)|^(link)$": {
+      "$ref": "./apps/link.schema.json"
+    },
+    "^(link.product#)|^(link.product)$": {
+      "$ref": "./apps/link.schema.json"
+    },
+    "^(list-context.image-list#)|^(list-context.image-list)$": {
+      "$ref": "./apps/list-context.image-list.schema.json"
+    },
+    "^(list-context.product-list#)|^(list-context.product-list)$": {
+      "$ref": "./apps/list-context.product-list.schema.json"
+    },
+    "^(login#)|^(login)$": {
+      "$ref": "./apps/login/login.schema.json"
+    },
+    "^(login-content#)|^(login-content)$": {
+      "$ref": "./apps/login/login-content.schema.json"
+    },
+    "^(vtex.store-components:logo#)|^(vtex.store-components:logo)$|^(logo#)|^(logo)$": {
+      "$ref": "./apps/store-components/logo.schema.json"
+    },
+    "^(menu-item#)|^(menu-item)$": {
+      "$ref": "./apps/menu/menu-item.schema.json"
+    },
+    "^(minicart.v2#)|^(minicart.v2)$": {
+      "$ref": "./apps/minicart.v2.schema.json"
+    },
+    "^(modal-actions.close#)|^(modal-actions.close)$": {
+      "$ref": "./apps/modal/modal-actions.close.schema.json"
+    },
+    "^(modal-header#)|^(modal-header)$": {
+      "$ref": "./apps/modal/modal-header.schema.json"
+    },
+    "^(modal-layout#)|^(modal-layout)$": {
+      "$ref": "./apps/modal/modal-layout.schema.json"
+    },
+    "^(modal-trigger#)|^(modal-trigger)$": {
+      "$ref": "./apps/modal/modal-trigger.schema.json"
+    },
+    "^(newsletter-form#)|^(newsletter-form)$": {
+      "$ref": "./apps/newsletter/newsletter-form.schema.json"
+    },
+    "^(newsletter-input-email#)|^(newsletter-input-email)$": {
+      "$ref": "./apps/newsletter/newsletter-input-email.schema.json"
+    },
+    "^(newsletter-input-name#)|^(newsletter-input-name)$": {
+      "$ref": "./apps/newsletter/newsletter-input-name.schema.json"
+    },
+    "^(newsletter-input-phone#)|^(newsletter-input-phone)$": {
+      "$ref": "./apps/newsletter/newsletter-input-phone.schema.json"
+    },
+    "^(newsletter-submit#)|^(newsletter-submit)$": {
+      "$ref": "./apps/newsletter/newsletter-submit.schema.json"
+    },
+    "^(vtex.search-result:order-by.v2#)|^(vtex.search-result:order-by.v2)$|^(order-by.v2#)|^(order-by.v2)$": {
+      "$ref": "./apps/search-result/order-by.v2.schema.json"
+    },
+    "^(overlay-layout#)|^(overlay-layout)$": {
+      "$ref": "./apps/overlay-layout/overlay-layout.schema.json"
+    },
+    "^(overlay-trigger#)|^(overlay-trigger)$": {
+      "$ref": "./apps/overlay-layout/overlay-trigger.schema.json"
+    },
+    "^(vtex.search-result:paged-controls#)|^(vtex.search-result:paged-controls)$|^(paged-controls#)|^(paged-controls)$": {
+      "$ref": "./apps/search-result/paged-controls.schema.json"
+    },
+    "^(vtex.store-components:product-brand#)|^(vtex.store-components:product-brand)$|^(product-brand#)|^(product-brand)$": {
+      "$ref": "./apps/store-components/product-brand.schema.json"
+    },
+    "^(vtex.store-components:product-description#)|^(vtex.store-components:product-description)$|^(product-description#)|^(product-description)$": {
+      "$ref": "./apps/store-components/product-description.schema.json"
+    },
+    "^(vtex.store-components:product-images#)|^(vtex.store-components:product-images)$|^(product-images#)|^(product-images)$": {
+      "$ref": "./apps/store-components/product-images.schema.json"
+    },
+    "^(product-availability#)|^(product-availability)$": {
+      "$ref": "./apps/product-availability/product-availability.schema.json"
+    },
+    "^(product-installments#)|^(product-installments)$": {
+      "$ref": "./apps/product-price/product-installments.schema.json"
+    },
+    "^(product-installments-list-item#)|^(product-installments-list-item)$": {
+      "$ref": "./apps/product-price/product-installments.schema.json"
+    },
+    "^(product-installments-list#)|^(product-installments-list)$": {
+      "$ref": "./apps/product-price/product-installments-list.schema.json"
+    },
+    "^(vtex.store-components:product-name#)|^(vtex.store-components:product-name)$|^(product-name#)|^(product-name)$": {
+      "$ref": "./apps/store-components/product-name.schema.json"
+    },
+    "^(product-specification#)|^(product-specification)$": {
+      "$ref": "./apps/product-specifications/product-specification.schema.json"
+    },
+    "^(product-specification-badges#)|^(product-specification-badges)$": {
+      "$ref": "./apps/product-specification-badges.schema.json"
+    },
+    "^(product-specification-group#)|^(product-specification-group)$": {
+      "$ref": "./apps/product-specifications/product-specification-group.schema.json"
+    },
+    "^(product-specification-text#)|^(product-specification-text)$": {
+      "$ref": "./apps/product-specifications/product-specification-text.schema.json"
+    },
+    "^(product-specification-value#)|^(product-specification-value)$": {
+      "$ref": "./apps/product-specifications/product-specification-value.schema.json"
+    },
+    "^(product-summary-image#)|^(product-summary-image)$": {
+      "$ref": "./apps/product-summary-image.schema.json"
+    },
+    "^(product-summary.shelf#)": {
+      "$ref": "./apps/product-summary/product-summary.shelf.schema.json"
+    },
+    "^(product-summary-name#)": {
+      "$ref": "./apps/product-summary/product-summary-name.schema.json"
+    },
+    "^(product-quantity#)": {
+      "$ref": "./apps/product-quantity/product-quantity.schema.json"
+    },
+    "^(product-summary-quantity#)": {
+      "$ref": "./apps/product-quantity/product-summary-quantity.schema.json"
+    },
+    "^(rich-text#)|^(rich-text)$": {
+      "$ref": "./apps/rich-text.schema.json"
+    },
+    "^(sandbox#)|^(sandbox)$": {
+      "$ref": "./apps/sandbox.schema.json"
+    },
+    "^(sandbox.order#)|^(sandbox.order)$": {
+      "$ref": "./apps/sandbox.schema.json",
+      "description": "Sandbox Component with orderForm context data"
+    },
+    "^(sandbox.product#)|^(sandbox.product)$": {
+      "$ref": "./apps/sandbox.schema.json",
+      "description": "Sandbox Component with product context data"
+    },
+    "^(scroll-animate#)|^(scroll-animate)$": {
+      "$ref": "./apps/scroll-animate.schema.json"
+    },
+    "^(search-banner#)|^(search-banner)$": {
+      "$ref": "./apps/search/search-banner.schema.json"
+    },
+    "^(vtex.store-components:search-bar#)|^(vtex.store-components:search-bar)$|^(search-bar#)|^(search-bar)$": {
+      "$ref": "./apps/store-components/search-bar.schema.json"
+    },
+    "^(vtex.search-result:search-not-found-layout#)|^(vtex.search-result:search-not-found-layout)$|^(search-not-found-layout#)|^(search-not-found-layout)$": {
+      "$ref": "./apps/search-result/search-result-layout.schema.json"
+    },
+    "^(vtex.search-result:search-result-layout.desktop#)|^(vtex.search-result:search-result-layout.desktop)$|^(search-result-layout.desktop#)|^(search-result-layout.desktop)$": {
+      "$ref": "./apps/search-result/search-result-layout.schema.json"
+    },
+    "^(vtex.search-result:search-result-layout.mobile#)|^(vtex.search-result:search-result-layout.mobile)$|^(search-result-layout.mobile#)|^(search-result-layout.mobile)$": {
+      "$ref": "./apps/search-result/search-result-layout.schema.json"
+    },
+    "^(shelf.relatedProducts#)|^(shelf.relatedProducts)$": {
+      "$ref": "./apps/shelf.relatedProducts.schema.json"
+    },
+    "^(vtex.store-components:sku-selector#)|^(vtex.store-components:sku-selector)$|^(sku-selector#)|^(sku-selector)$": {
+      "$ref": "./apps/store-components/sku-selector.schema.json"
+    },
+    "^(vtex.product-summary:product-summary-sku-selector#)|^(vtex.product-summary:product-summary-sku-selector)$|^(product-summary-sku-selector#)|^(product-summary-sku-selector)$": {
+      "$ref": "./apps/store-components/sku-selector.schema.json"
+    },
+    "^(slider-layout#)|^(slider-layout)$": {
+      "$ref": "./apps/slider-layout.schema.json"
+    },
+    "^(stack-layout#)|^(stack-layout)$": {
+      "$ref": "./apps/stack-layout.schema.json"
+    },
+    "^(sticky-layout#)|^(sticky-layout)$": {
+      "$ref": "./apps/sticky-layout.schema.json"
+    },
+    "^(sticky-layout.stack-container#)|^(sticky-layout.stack-container)$": {
+      "$ref": "./apps/sticky-layout.stack-container.schema.json"
+    },
+    "^(store.)": {
+      "$ref": "./apps/store.schema.json"
+    },
+    "^(store.search#)|^(store.search)$": {
+      "$ref": "./apps/search-result/store.search.schema.json"
+    },
+    "^(tab-content#)|^(tab-content)$": {
+      "$ref": "./apps/tab-layout/tab-content.schema.json"
+    },
+    "^(tab-content.item#)|^(tab-content.item)$": {
+      "$ref": "./apps/tab-layout/tab-content.item.schema.json"
+    },
+    "^(tab-layout#)|^(tab-layout)$": {
+      "$ref": "./apps/tab-layout/tab-layout.schema.json"
+    },
+    "^(tab-list#)|^(tab-list)$": {
+      "$ref": "./apps/tab-layout/tab-list.schema.json"
+    },
+    "^(tab-list.item#)|^(tab-list.item)$": {
+      "$ref": "./apps/tab-layout/tab-list.item.schema.json"
+    },
+    "^(tab-list.item.children#)|^(tab-list.item.children)$": {
+      "$ref": "./apps/tab-layout/tab-list.item.children.schema.json"
+    },
+    "^(video#)|^(video)$": {
+      "$ref": "./apps/video.schema.json"
+    },
+    "^(vtex.menu@2.x:menu#)|^(vtex.menu@2.x:menu)$": {
+      "$ref": "./apps/menu/vtex.menu@2.x.menu.schema.json"
+    }
+  },
+  "properties": {
+    "add-to-cart-button": {
+      "$ref": "./apps/add-to-cart-button.schema.json"
+    },
+    "autocomplete-result-list.v2": {
+      "$ref": "./apps/search/autocomplete-result-list.v2.schema.json"
+    },
+    "assembly-option-item-image": {
+      "$ref": "./apps/product-customizer/assembly-option-item-image.schema.json"
+    },
+    "assembly-option-item-quantity-selector": {
+      "$ref": "./apps/product-customizer/assembly-option-item-quantity-selector.schema.json"
+    },
+    "assembly-option-item-name": {
+      "$ref": "./apps/product-customizer/assembly-option-item-name.schema.json"
+    },
+    "assembly-option-item-price": {
+      "$ref": "./apps/product-customizer/assembly-option-item-price.schema.json"
+    },
+    "assembly-option-item-customize": {
+      "$ref": "./apps/product-customizer/assembly-option-item-customize.schema.json"
+    },
+    "assembly-option-item-children-description": {
+      "$ref": "./apps/product-customizer/assembly-option-item-children-description.schema.json"
+    },
+    "back-to-top-button": {
+      "$ref": "./apps/back-to-top-button.schema.json"
+    },
+    "blog-latest-posts-preview.wordpress-latest-posts-preview": {
+      "$ref": "./apps/wordpress-integration/blog-latest-posts-preview.wordpress-latest-posts-preview.schema.json"
+    },
+    "breadcrumb": {
+      "$ref": "./apps/breadcrumb.schema.json"
+    },
+    "breadcrumb.search": {
+      "$ref": "./apps/breadcrumb.search.schema.json"
+    },
+    "condition-layout.binding": {
+      "$ref": "./apps/condition-layout/condition-layout.binding.schema.json"
+    },
+    "condition-layout.product": {
+      "$ref": "./apps/condition-layout/condition-layout.product.schema.json"
+    },
+    "disclosure-content": {
+      "$ref": "./apps/disclosure-layout/disclosure-content.schema.json"
+    },
+    "disclosure-layout": {
+      "$ref": "./apps/disclosure-layout/disclosure-layout.schema.json"
+    },
+    "disclosure-layout-group": {
+      "$ref": "./apps/disclosure-layout/disclosure-layout-group.schema.json"
+    },
+    "disclosure-state-indicator": {
+      "$ref": "./apps/disclosure-layout/disclosure-state-indicator.schema.json"
+    },
+    "disclosure-trigger": {
+      "$ref": "./apps/disclosure-layout/disclosure-trigger.schema.json"
+    },
+    "disclosure-trigger-group": {
+      "$ref": "./apps/disclosure-layout/disclosure-trigger-group.schema.json"
+    },
+    "filter-navigator.v3": {
+      "$ref": "./apps/search-result/filter-navigator.v3.schema.json"
+    },
+    "flex-layout.col": {
+      "$ref": "./apps/flex-layout/flex-layout.col.schema.json"
+    },
+    "flex-layout.row": {
+      "$ref": "./apps/flex-layout/flex-layout.row.schema.json"
+    },
+    "gallery": {
+      "$ref": "./apps/search-result/gallery.schema.json"
+    },
+    "gallery-layout-option": {
+      "$ref": "./apps/search-result/gallery-layout-option.schema.json"
+    },
+    "gallery-layout-switcher": {
+      "$ref": "./apps/search-result/gallery-layout-switcher.schema.json"
+    },
+    "icon": {
+      "$ref": "./apps/icon.schema.json"
+    },
+    "iframe": {
+      "$ref": "./apps/iframe.schema.json"
+    },
+    "image": {
+      "$ref": "./apps/image.schema.json"
+    },
+    "link": {
+      "$ref": "./apps/link.schema.json"
+    },
+    "link.product": {
+      "$ref": "./apps/link.schema.json"
+    },
+    "list-context.image-list": {
+      "$ref": "./apps/list-context.image-list.schema.json"
+    },
+    "list-context.product-list": {
+      "$ref": "./apps/list-context.product-list.schema.json"
+    },
+    "login": {
+      "$ref": "./apps/login/login.schema.json"
+    },
+    "login-content": {
+      "$ref": "./apps/login/login-content.schema.json"
+    },
+    "logo": {
+      "$ref": "./apps/store-components/logo.schema.json"
+    },
+    "menu-item": {
+      "$ref": "./apps/menu/menu-item.schema.json"
+    },
+    "minicart.v2": {
+      "$ref": "./apps/minicart.v2.schema.json"
+    },
+    "modal-actions.close": {
+      "$ref": "./apps/modal/modal-actions.close.schema.json"
+    },
+    "modal-header": {
+      "$ref": "./apps/modal/modal-header.schema.json"
+    },
+    "modal-layout": {
+      "$ref": "./apps/modal/modal-layout.schema.json"
+    },
+    "modal-trigger": {
+      "$ref": "./apps/modal/modal-trigger.schema.json"
+    },
+    "newsletter-form": {
+      "$ref": "./apps/newsletter/newsletter-form.schema.json"
+    },
+    "newsletter-input-email": {
+      "$ref": "./apps/newsletter/newsletter-input-email.schema.json"
+    },
+    "newsletter-input-name": {
+      "$ref": "./apps/newsletter/newsletter-input-name.schema.json"
+    },
+    "newsletter-input-phone": {
+      "$ref": "./apps/newsletter/newsletter-input-phone.schema.json"
+    },
+    "newsletter-submit": {
+      "$ref": "./apps/newsletter/newsletter-submit.schema.json"
+    },
+    "order-by.v2": {
+      "$ref": "./apps/search-result/order-by.v2.schema.json"
+    },
+    "overlay-layout": {
+      "$ref": "./apps/overlay-layout/overlay-layout.schema.json"
+    },
+    "overlay-trigger": {
+      "$ref": "./apps/overlay-layout/overlay-trigger.schema.json"
+    },
+    "paged-controls": {
+      "$ref": "./apps/search-result/paged-controls.schema.json"
+    },
+    "product-availability": {
+      "$ref": "./apps/product-availability/product-availability.schema.json"
+    },
+    "product-brand": {
+      "$ref": "./apps/store-components/product-brand.schema.json"
+    },
+    "product-description": {
+      "$ref": "./apps/store-components/product-description.schema.json"
+    },
+    "product-images": {
+      "$ref": "./apps/store-components/product-images.schema.json"
+    },
+    "product-installments": {
+      "$ref": "./apps/product-price/product-installments.schema.json"
+    },
+    "product-installments-list": {
+      "$ref": "./apps/product-price/product-installments-list.schema.json"
+    },
+    "product-installments-list-item": {
+      "$ref": "./apps/product-price/product-installments.schema.json"
+    },
+    "product-name": {
+      "$ref": "./apps/store-components/product-name.schema.json"
+    },
+    "product-specification": {
+      "$ref": "./apps/product-specifications/product-specification.schema.json"
+    },
+    "product-specification-badges": {
+      "$ref": "./apps/product-specification-badges.schema.json"
+    },
+    "product-specification-group": {
+      "$ref": "./apps/product-specifications/product-specification-group.schema.json"
+    },
+    "product-specification-text": {
+      "$ref": "./apps/product-specifications/product-specification-text.schema.json"
+    },
+    "product-specification-value": {
+      "$ref": "./apps/product-specifications/product-specification-value.schema.json"
+    },
+    "product-summary-image": {
+      "$ref": "./apps/product-summary/product-summary-image.schema.json"
+    },
+    "product-summary.shelf": {
+      "$ref": "./apps/product-summary/product-summary.shelf.schema.json"
+    },
+    "product-summary-name": {
+      "$ref": "./apps/product-summary/product-summary-name.schema.json"
+    },
+    "product-quantity": {
+      "$ref": "./apps/product-quantity/product-quantity.schema.json"
+    },
+    "product-summary-quantity": {
+      "$ref": "./apps/product-quantity/product-summary-quantity.schema.json"
+    },
+    "rich-text": {
+      "$ref": "./apps/rich-text.schema.json"
+    },
+    "sandbox": {
+      "$ref": "./apps/sandbox.schema.json"
+    },
+    "sandbox.order": {
+      "$ref": "./apps/sandbox.schema.json",
+      "description": "Sandbox Component with orderForm context data"
+    },
+    "sandbox.product": {
+      "$ref": "./apps/sandbox.schema.json",
+      "description": "Sandbox Component with product context data"
+    },
+    "scroll-animate": {
+      "$ref": "./apps/scroll-animate.schema.json"
+    },
+    "search-banner": {
+      "$ref": "./apps/search/search-banner.schema.json"
+    },
+    "search-bar": {
+      "$ref": "./apps/store-components/search-bar.schema.json"
+    },
+    "search-not-found-layout": {
+      "$ref": "./apps/search-result/search-result-layout.schema.json"
+    },
+    "search-result-layout.desktop": {
+      "$ref": "./apps/search-result/search-result-layout.schema.json"
+    },
+    "search-result-layout.mobile": {
+      "$ref": "./apps/search-result/search-result-layout.schema.json"
+    },
+    "shelf.relatedProducts": {
+      "$ref": "./apps/shelf.relatedProducts.schema.json"
+    },
+    "sku-selector": {
+      "$ref": "./apps/store-components/sku-selector.schema.json"
+    },
+    "product-summary-sku-selector": {
+      "$ref": "./apps/store-components/sku-selector.schema.json"
+    },
+    "slider-layout": {
+      "$ref": "./apps/slider-layout.schema.json"
+    },
+    "stack-layout": {
+      "$ref": "./apps/stack-layout.schema.json"
+    },
+    "sticky-layout": {
+      "$ref": "./apps/sticky-layout.schema.json"
+    },
+    "sticky-layout.stack-container": {
+      "$ref": "./apps/sticky-layout.stack-container.schema.json"
+    },
+    "store.": {
+      "$ref": "./apps/store.schema.json"
+    },
+    "store.search": {
+      "$ref": "./apps/search-result/store.search.schema.json"
+    },
+    "tab-content": {
+      "$ref": "./apps/tab-layout/tab-content.schema.json"
+    },
+    "tab-content.item": {
+      "$ref": "./apps/tab-layout/tab-content.item.schema.json"
+    },
+    "tab-layout": {
+      "$ref": "./apps/tab-layout/tab-layout.schema.json"
+    },
+    "tab-list": {
+      "$ref": "./apps/tab-layout/tab-list.schema.json"
+    },
+    "tab-list.item": {
+      "$ref": "./apps/tab-layout/tab-list.item.schema.json"
+    },
+    "tab-list.item.children": {
+      "$ref": "./apps/tab-layout/tab-list.item.children.schema.json"
+    },
+    "video": {
+      "$ref": "./apps/video.schema.json"
+    },
+    "vtex.menu@2.x:menu": {
+      "$ref": "./apps/menu/vtex.menu@2.x.menu.schema.json"
+    }
+  }
+}

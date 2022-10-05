@@ -1,0 +1,32 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Product Summary Shelf",
+	"description": "Product Summary Shelf is the main block exported by the Product Summary app. Through its child blocks, it provides the needed structure to render the Product Summary component in your store.",
+	"type": "object",
+	"properties": {
+		"title": {
+			"type": "string"
+		},
+		"children": {
+			"type": "array",
+			"items": { "$ref": "../../shared/block.schema.json" }
+		},
+		"props": {
+			"type": "object",
+			"description": "Block's properties",
+			"properties": {
+				"priceBehavior": {
+					"type": "string",
+					"oneOf": [{ "const": "async" }, { "const": "default" }],
+					"markdownDescription": "Whether the component should fetch the most up-to-date price (`async`) or not (`default`). Remember to also set the Search Result'ssimulationBehavior prop to skip and use the Product Price's product-price-suspense block to render a loading spinner while the price data is being fetched.",
+					"default": "default"
+				},
+				"trackListName": {
+					"type": "boolean",
+					"markdownDescription": "Whether the component should send the list name to the product page when the product summary is clicked. Disabling it will prevent the productDetail GTM event sent on the PDP to identify from which list the user navigated from.",
+					"default": true
+				}
+			}
+		}
+	}
+}

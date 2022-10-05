@@ -1,0 +1,134 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Search results page",
+	"description": "Search results page",
+	"type": "object",
+	"properties": {
+		"blocks": {
+			"description": "block composition",
+			"type": "array",
+			"items": { "$ref": "../../shared/block.schema.json" }
+		},
+		"props": {
+			"type": "object",
+			"description": "Block's properties",
+			"properties": {
+				"context": {
+					"type": "object",
+					"properties": {
+						"queryField": {
+							"type": "string",
+							"description": "Search URL's query string to define which results should be fetched in the custom query. For example: Blue. Caution: this prop only works if the mapField prop is declared as well."
+						},
+						"mapField": {
+							"type": "string",
+							"description": "Search URL's map parameter to define which results should be fetched in the custom query. For example: specificationFilter_100. Caution: this prop only works if the queryField prop is declared as well."
+						},
+						"maxItemsPerPage": {
+							"type": "number",
+							"description": "Maximum number of items per search page. The maximum value of this prop is 50, if a larger number is passed, the query will fail.",
+							"default": 10,
+							"max": 50
+						},
+						"orderByField": {
+							"type": "string",
+							"enum": [
+								"OrderByTopSaleDESC",
+								"OrderByReleaseDateDESC",
+								"OrderByBestDiscountDESC",
+								"OrderByPriceDESC",
+								"OrderByPriceASC",
+								"OrderByNameASC",
+								"OrderByNameDESC",
+								"OrderByScoreDESC"
+							],
+							"description": "Decides which order products must follow when displayed. The possible values are named after the order type: OrderByTopSaleDESC, OrderByReleaseDateDESC, OrderByBestDiscountDESC, OrderByPriceDESC, OrderByPriceASC, OrderByNameASC, OrderByNameDESC or OrderByScoreDESC ([relevance Score](https://help.vtex.com/en/tutorial/how-does-the-score-field-work--1BUZC0mBYEEIUgeQYAKcae)). `ASC` and `DESC` stand for ascending order and descending order, respectively.",
+							"default": "OrderByScoreDESC"
+						},
+						"hideUnavailableItems": {
+							"type": "boolean",
+							"description": "Whether the search result should hide unavailable items (true) or not (false).",
+							"default": false
+						},
+						"facetsBehavior": {
+							"type": "string",
+							"oneOf": [
+								{
+									"const": "static",
+									"markdownDescription": "restricts the results according to the filters that user have already selected"
+								},
+								{
+									"const": "dynamic",
+									"markdownDescription": "all filters will continue to be displayed to the user"
+								}
+							],
+							"description": "Defines the behavior filters will have. When set to dynamic, it restricts the results according to the filters that user have already selected. If set to Static, all filters will continue to be displayed to the user, even is no results exist.",
+							"default": "static"
+						},
+						"skusFilter": {
+							"type": "string",
+							"oneOf": [
+								{
+									"const": "FIRST_AVAILABLE",
+									"markdownDescription": "returns only the first available SKU"
+								},
+								{
+									"const": "ALL_AVAILABLE",
+									"markdownDescription": "only returns available SKUs"
+								},
+								{
+									"const": "ALL",
+									"markdownDescription": "returns all product's SKUs"
+								}
+							],
+							"description": "Controls SKUs returned for each product in the query. The less SKUs needed to be returned, the more performant your shelf query will be. Available value options: FIRST_AVAILABLE (returns only the first available SKU), ALL_AVAILABLE (only returns available SKUs) and ALL (returns all product's SKUs).",
+							"default": "ALL_AVAILABLE"
+						},
+						"simulationBehavior": {
+							"type": "string",
+							"oneOf": [
+								{
+									"const": "default",
+									"markdownDescription": "search data will be up-to-date"
+								},
+								{
+									"const": "skip",
+									"markdownDescription": "fetched using the Cache"
+								}
+							],
+							"description": "Defines whether the search data will be up-to-date (default) or fetched using the Cache (skip). The last option should be used only if you prefer faster queries over no having the most up-to-date prices or inventory.",
+							"default": "default"
+						},
+						"installmentCriteria": {
+							"type": "string",
+							"oneOf": [
+								{
+									"const": "MAX_WITHOUT_INTEREST",
+									"markdownDescription": "displays the maximum installment option with no interest attached to it"
+								},
+								{
+									"const": "MAX_WITH_INTEREST",
+									"markdownDescription": "displays the maximum installment option whether it has interest attached to it or not"
+								}
+							],
+							"description": "Controls which price should be shown when there are different installments options for it. Possible values are: MAX_WITHOUT_INTEREST (displays the maximum installment option with no interest attached to it) or MAX_WITH_INTEREST (displays the maximum installment option whether it has interest attached to it or not).",
+							"default": "MAX_WITHOUT_INTEREST"
+						},
+						"excludedPaymentSystems": {
+							"type": "array",
+							"items": { "type": "string" },
+							"description": "List of payment systems that should ",
+							"default": []
+						},
+						"includedPaymentSystems": {
+							"type": "array",
+							"items": { "type": "string" },
+							"description": "List of payment systems that should be taken into account when displaying the installment options to users. Caution: this prop configuration only works in scenarios where the installmentCriteria prop was also declared. In case it was not, all available payment systems will be displayed regardless.",
+							"default": []
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,45 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "block title",
+	"description": "Renders the product specification group.",
+	"type": "object",
+	"properties": {
+		"children": {
+			"type": "array",
+			"items": { "$ref": "../../shared/block.schema.json" }
+		},
+		"props": {
+			"type": "object",
+			"description": "Block's properties",
+			"properties": {
+				"filter": {
+					"type": "object",
+					"description": "Filters the specifications that should be displayed by the block.",
+					"properties": {
+						"specificationGroups": {
+							"type": "array",
+							"items": { "type": "string" },
+							"description": "Array of specification group names to be hidden or shown (according to what is defined in the type property) by the product-specification-group block.",
+							"default": []
+						},
+						"type": {
+							"type": "string",
+							"oneOf": [
+								{
+									"const": "show",
+									"markdownDescription": "hides specification groups declared in the `specificationGroups` prop"
+								},
+								{
+									"const": "hide",
+									"markdownDescription": "only shows the specification groups declared in the `specificationGroups` prop"
+								}
+							],
+							"description": "Whether the specification group names passed to the specificationGroups prop should be displayed or hidden on the UI. Possible values are: hide (hides specification groups declared in the specificationGroups prop) or show (only shows the specification groups declared in the specificationGroups prop)."
+						}
+					},
+					"default": {}
+				}
+			}
+		}
+	}
+}
