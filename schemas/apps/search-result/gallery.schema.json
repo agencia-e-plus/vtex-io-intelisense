@@ -1,0 +1,96 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Search gallery",
+	"description": "Search gallery",
+	"type": "object",
+	"properties": {
+		"blocks": {
+			"type": "array",
+			"items": { "$ref": "../../shared/block.schema.json" }
+		},
+		"props": {
+			"type": "object",
+			"description": "Block's properties",
+			"properties": {
+				"layouts": {
+					"type": "array",
+					"description": "List of layouts used to arrange and display the items on search results page. Caution: If no value is provided, the gallery block must receive instead a product-summary-shelf block as child.",
+					"items": {
+						"type": "object",
+						"properties": {
+							"name": {
+								"type": "string",
+								"description": "Layout name. This value must be unique i.e. not equal to other layout names declared in the gallery block."
+							},
+							"component": {
+								"type": "string",
+								"pattern": "^[A-Z]",
+								"description": "Names the undefined prop from the gallery block, which is responsible for declaring the block to be rendered in this layout. This prop's value can be any of your choosing as long as it is PascalCased i.e. has the first letter of each word in its name capitalized. "
+							},
+							"itemsPerRow": {
+								"anyOf": [
+									{ "type": "number" },
+									{ "$ref": "../../shared/responsive-values.schema.json" }
+								],
+								"description": "Number of items to be displayed in each row of this layout. This prop works with "
+							},
+							"preferredSKU": {
+								"type": "string",
+								"oneOf": [
+									{
+										"title": "First Available",
+										"const": "FIRST_AVAILABLE",
+										"description": "First available SKU in stock found or first SKU without stock."
+									},
+									{
+										"title": "Last Available",
+										"const": "LAST_AVAILABLE",
+										"description": "Last available SKU in stock found or last SKU without stock."
+									},
+									{
+										"title": "Cheapest",
+										"const": "PRICE_ASC",
+										"description": "Cheapest SKU in stock found or first SKU without stock."
+									},
+									{
+										"title": "Most Expensive",
+										"const": "PRICE_DESC",
+										"description": "Most expensive SKU in stock found or first SKU without stock."
+									}
+								],
+								"markdownDescription": "Controls which SKU will be initially selected in the product summary\n\n⚠️ There's a way to select which SKU should take preference over this prop. You can create a Product (field) specification and per product assign the value of the desired SKU to be initially selected. Keep in mind that If the specification doesn't exist or if the value is empty, it will use the `preferredSKU` prop as fallback. You can read more about it, and how to implement it in [Recipes](https://vtex.io/docs/recipes/all)"
+							}
+						},
+						"required": ["name", "component", "itemsPerRow"]
+					},
+					"default": []
+				},
+				"customSummaryInterval": {
+					"type": "number",
+					"description": "Defines the item interval at which the Gallery should render a custom product-summary block. For example:  declaring 5 would render a custom block at every 4 items rendered, as shown "
+				},
+				"CustomSummary": {
+					"$ref": "../../shared/block.schema.json",
+					"description": "Defines a block to be rendered according to the interval defined by the customSummaryInterval prop."
+				}
+			},
+			"patternProperties": {
+				"^[A-Z]": {
+					"$ref": "../../shared/block.schema.json",
+					"description": "Defines which blocks should be rendered per layout. **Caution**: this prop *name* is not `undefined`. Instead, its name must be the value passed to the `component` prop. This prop's value, in turn, must match the block name of your choosing to be rendered in that specific layout. Check out the example below in order to understand the underlying logic behind this prop."
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"oneOf": [
+		{
+			"required": ["blocks"],
+			"not": { "required": ["props"] }
+		},
+		{
+			"required": ["props"],
+			"not": { "required": ["blocks"] }
+		}
+	]
+}

@@ -1,0 +1,118 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Search results layout",
+	"description": "Search results layout",
+	"type": "object",
+	"properties": {
+		"blocks": {
+			"description": "block composition",
+			"type": "array",
+			"items": { "$ref": "../../shared/block.schema.json" }
+		},
+		"props": {
+			"type": "object",
+			"description": "Block's properties",
+			"properties": {
+				"hiddenFacets": {
+					"type": "object",
+					"description": "Indicates which filters should be hidden. Possible props and their respective values can be found below.",
+					"properties": {
+						"pagination": {
+							"type": "string",
+							"enum": ["infinity-scroll", "show-more"],
+							"default": "show-more"
+						},
+						"brands": {
+							"type": "boolean",
+							"description": "Whether Brand filters should be hidden (true) or not (false).",
+							"default": false
+						},
+						"categories": {
+							"type": "boolean",
+							"description": "Whether Category filters should be hidden (true) or not (false).",
+							"default": false
+						},
+						"priceRange": {
+							"type": "boolean",
+							"description": "Whether Price filters should be hidden (true) or not (false).",
+							"default": false
+						},
+						"specificationFilters": {
+							"type": "object",
+							"description": "Indicates which Specification filters should be hidden.",
+							"properties": {
+								"hideAll": {
+									"type": "boolean",
+									"description": "Whether specification filters should be hidden (true) or not (false).",
+									"default": false
+								},
+								"hiddenFilters": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"name": {
+												"type": "string",
+												"description": "Name of the specification filter that you want to hide."
+											}
+										}
+									},
+									"description": "Object array of specification filters that should be hidden.",
+									"default": []
+								}
+							},
+							"default": {}
+						}
+					},
+					"default": {}
+				},
+				"showFacetQuantity": {
+					"type": "boolean",
+					"description": "Whether the result amount in each filter should appear besides its name on the filter-navigator.v3 block as (true) or (false)",
+					"default": false
+				},
+				"blockClass": {
+					"type": "string",
+					"description": "Unique block ID to be used in "
+				},
+				"trackingId": {
+					"type": "string",
+					"description": "ID to be used in Google Analytics to track store metrics based on the Search Result block.",
+					"default": "Search result"
+				},
+				"mobileLayout": {
+					"type": "object",
+					"description": "Controls how the search results page will be displayed to users when using the mobile layout. Possible props and their respective values can be found below.",
+					"properties": {
+						"mode1": {
+							"type": "string",
+							"enum": ["normal", "small", "inline"],
+							"description": "Defines the default layout for the mobile search results page. Possible values are: normal, small or inline.",
+							"default": "normal"
+						},
+						"mode2": {
+							"type": "string",
+							"enum": ["normal", "small", "inline"],
+							"description": "Defines which layout will be set for the mobile search results page when users click on the layout selector button. Possible values also are: normal, small or inline.",
+							"default": "small"
+						}
+					},
+					"default": {}
+				},
+				"defaultGalleryLayout": {
+					"type": "string",
+					"description": "Name of the gallery layout to be used by default in the search results page. This prop is only required when several layouts are explicitly defined by the gallery block. Caution: this prop's value must match the layout name defined in the name prop from layouts object."
+				},
+				"thresholdForFacetSearch": {
+					"type": "number",
+					"description": "Minimum number of facets that must be displayed on the interface for a search bar to be displayed. If you declare 0, the search bar will always be displayed."
+				},
+				"preventRouteChange": {
+					"type": "boolean",
+					"markdownDescription": "Keeps page customizations even when the user applies new filters on it. This prop will merely change the URL’s query string instead of the entire URL; therefore, it prevents a full page reload whenever filters are applied.",
+					"default": false
+				}
+			}
+		}
+	}
+}

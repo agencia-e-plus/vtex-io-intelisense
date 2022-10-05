@@ -1,0 +1,84 @@
+{
+	"type": "object",
+	"description": "The Store Link app provides blocks responsible for displaying links in other theme blocks, such as the Product Summary.",
+	"properties": {
+		"title": {
+			"type": "string"
+		},
+		"children": {
+			"type": "array",
+			"items": { "$ref": "./../shared/block.schema.json" }
+		},
+		"props": {
+			"type": "object",
+			"description": "Block's properties",
+			"properties": {
+				"blockClass": { "$ref": "./../shared/blockClass.schema.json" },
+				"href": {
+					"type": "string",
+					"description": "Link URL"
+				},
+				"label": {
+					"type": "string",
+					"description": "Link text",
+					"default": "#"
+				},
+				"scrollTo": {
+					"type": "string",
+					"description": "Element anchor to scroll after navigation. (E.g. '#footer')"
+				},
+				"target": {
+					"type": "string",
+					"description": "Where to display the linked URL. This prop works the same way as the target from HTML '<a>' element. Since the anchor element's target default is '_self', this prop will be set to '_self' if it's undefined."
+				},
+				"displayMode": {
+					"type": "string",
+					"anyOf": [
+						{
+							"const": "anchor",
+							"description": "Displays a normal link with no styles"
+						},
+						{
+							"const": "button",
+							"description": "Displays a button that can be customized using the 'buttonProps' prop"
+						}
+					],
+					"description": "How the link should be displayed"
+				},
+				"escapeLinkRegex": {
+					"type": "string",
+					"description": "RegExp, with global match, used to remove special characters within product specifications. (E.g. if you want to use '/[%]/g' then 'escapeLinkRegex' = '[%]' )"
+				},
+				"rel": {
+					"type": "string",
+					"description": "This prop specifies the relationship between the current document and the linked document (for better SEO). This prop works the same way as the 'rel' attribute from '<a>', the HTML anchor element. Supported values can be found here"
+				}
+			},
+			"if": {
+				"properties": { "displayMode": { "const": "button" } },
+				"required": ["displayMode"]
+			},
+			"then": {
+				"properties": {
+					"buttonProps": {
+						"type": "object",
+						"description": "How the link button should be displayed. Use this prop only when the 'displayMode' prop is set as 'button'",
+						"properties": {
+							"variant": {
+								"type": "string",
+								"description": "Link button visual proeminence",
+								"enum": ["primary", "secondary"],
+								"default": "primary"
+							},
+							"size": {
+								"type": "string",
+								"enum": ["small", "regular", "large"],
+								"default": "regular"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

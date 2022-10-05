@@ -2,31 +2,61 @@
 	"name": "vtexio-intellisense",
 	"displayName": "VTEX IO Intellisense",
 	"description": "snippets and autocomplete for vtex io blocks",
-	"repository": {
-		"url": "https://github.com/pluslabeplus/vtex-io-intelisense"
-	},
+	"author": "e-Plus Agency",
 	"license": "MIT",
 	"version": "0.4.4",
-	"engines": {
-		"vscode": "^1.62.0"
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/agencia-e-plus/vtex-io-intelisense"
 	},
 	"publisher": "AgenciaE-plus",
 	"icon": "logo.png",
-	"keywords": [
-		"vtex",
-		"store-framework"
-	],
 	"categories": [
 		"Snippets",
 		"Linters",
 		"Other"
 	],
-	"activationEvents": [
-		"onLanguage:json",
-		"onLanguage:jsonc"
+	"keywords": [
+		"vtex",
+		"store-framework"
 	],
-	"main": "./dist/extension.js",
+	"engines": {
+		"vscode": "^1.63.0"
+	},
+	"activationEvents": [
+		"workspaceContains:**/manifest.json"
+	],
+	"main": "./client/out/extension",
 	"contributes": {
+		"configuration": {
+			"title": "vtexiointellisense",
+			"properties": {
+				"vtexiointellisense.allowsUnusedBlocks": {
+					"type": "boolean",
+					"default": true,
+					"description": "Allows unused blocks in json files",
+					"deprecationMessage": "Deprecated: Please use vtexiointellisense.duplicatedBlocks instead."
+				},
+				"vtexiointellisense.duplicatedBlocks": {
+					"type": "boolean",
+					"default": false,
+					"description": "If true show a warning if finds a duplicated block in all workspace",
+					"deprecationMessage": "Deprecated"
+				},
+				"vtexiointellisense.unusedBlocks": {
+					"type": "boolean",
+					"default": false,
+					"description": "If true show a warning if finds a unused block in all workspace",
+					"deprecationMessage": "Deprecated"
+				},
+				"vtexiointellisense.suggestions": {
+					"type": "boolean",
+					"default": false,
+					"description": "If true, suggest all blocks declared in children and blocks props",
+					"deprecationMessage": "Deprecated"
+				}
+			}
+		},
 		"snippets": [
 			{
 				"language": "json",
@@ -57,7 +87,7 @@
 					"**/store/**/*.jsonc",
 					"**/store/**/*.json"
 				],
-				"url": "./vtexio.schema.json"
+				"url": "./schemas/vtexio.schema.json"
 			},
 			{
 				"fileMatch": [
@@ -71,73 +101,67 @@
 				],
 				"url": "./schemas/edition-app/edition.schema.json"
 			}
-		],
-		"configuration": {
-			"title": "vtexiointellisense",
-			"properties": {
-				"vtexiointellisense.allowsUnusedBlocks": {
-					"type": "boolean",
-					"default": true,
-					"description": "Allows unused blocks in json files",
-					"deprecationMessage": "Deprecated: Please use vtexiointellisense.duplicatedBlocks instead."
-				},
-				"vtexiointellisense.duplicatedBlocks": {
-					"type": "boolean",
-					"default": false,
-					"description": "If true show a warning if finds a duplicated block in all workspace"
-				},
-				"vtexiointellisense.unusedBlocks": {
-					"type": "boolean",
-					"default": false,
-					"description": "If true show a warning if finds a unused block in all workspace"
-				},
-				"vtexiointellisense.suggestions": {
-					"type": "boolean",
-					"default": false,
-					"description": "If true, suggest all blocks declared in children and blocks props"
-				}
-			}
-		},
-		"configurationDefaults": {},
-		"commands": [
-			{
-				"command": "vtexiointellisense.storeLint",
-				"title": "VTEX IO Intellisense: Lint Store"
-			}
 		]
 	},
 	"scripts": {
-		"vscode:prepublish": "yarn run package",
-		"compile": "webpack",
-		"watch": "webpack --watch",
-		"package": "webpack --mode production --devtool hidden-source-map",
-		"compile-tests": "tsc -p . --outDir out",
-		"watch-tests": "tsc -p . -w --outDir out",
-		"pretest": "yarn run compile-tests && yarn run compile && yarn run lint",
-		"lint": "eslint src --ext ts",
-		"test": "node ./out/test/runTest.js",
-		"dev": "eplus dev init"
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -b",
+		"watch": "tsc -b -w",
+		"lint": "eslint ./client/src ./server/src --ext .ts,.tsx",
+		"postinstall": "cd client && npm install && cd ../server && npm install && cd ..",
+		"test": "sh ./scripts/e2e.sh"
+	},
+	"release": {
+		"repositoryName": "vtex-io-intelisense-v1",
+		"branches": [
+			"main"
+		],
+		"plugins": [
+			"@semantic-release/commit-analyzer",
+			"@semantic-release/release-notes-generator",
+			[
+				"semantic-release-vsce",
+				{
+					"packageVsix": true,
+					"publish": false
+				}
+			],
+			[
+				"@semantic-release/github",
+				{
+					"assets": [
+						{
+							"path": "*.vsix",
+							"label": "Extension File"
+						}
+					]
+				}
+			],
+			"@semantic-release/changelog",
+			"@semantic-release/git"
+		]
 	},
 	"devDependencies": {
+		"@semantic-release/changelog": "^6.0.1",
+		"@semantic-release/commit-analyzer": "^9.0.2",
+		"@semantic-release/git": "^10.0.1",
+		"@semantic-release/github": "^8.0.6",
+		"@semantic-release/release-notes-generator": "^10.0.3",
 		"@types/glob": "^7.2.0",
-		"@types/mocha": "^9.1.1",
-		"@types/node": "14.x",
-		"@types/vscode": "^1.62.0",
-		"@typescript-eslint/eslint-plugin": "^5.1.0",
-		"@typescript-eslint/parser": "^5.1.0",
-		"@vscode/test-electron": "^1.6.2",
-		"eslint": "^8.15.0",
-		"eslint-config-prettier": "^8.5.0",
-		"eslint-import-resolver-typescript": "^2.7.1",
-		"eslint-plugin-import": "*",
-		"eslint-plugin-prettier": "^4.0.0",
-		"glob": "^7.2.3",
-		"jsonc-parser": "^3.0.0",
-		"mocha": "^9.2.2",
-		"prettier": "^2.6.2",
-		"ts-loader": "^9.2.5",
-		"typescript": "^4.4.4",
-		"webpack": "^5.64.4",
-		"webpack-cli": "^4.8.0"
+		"@types/hashmap": "^2.3.1",
+		"@types/mocha": "^9.1.0",
+		"@types/node": "^16.11.7",
+		"@typescript-eslint/eslint-plugin": "^5.30.0",
+		"@typescript-eslint/parser": "^5.30.0",
+		"eslint": "^8.13.0",
+		"mocha": "^9.2.1",
+		"semantic-release": "^19.0.5",
+		"semantic-release-vsce": "^5.1.1",
+		"typescript": "^4.7.2"
+	},
+	"dependencies": {
+		"glob": "^8.0.3",
+		"jsonc-parser": "^3.1.0",
+		"vscode-uri": "^3.0.3"
 	}
 }

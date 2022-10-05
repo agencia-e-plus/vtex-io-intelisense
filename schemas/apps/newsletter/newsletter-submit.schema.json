@@ -1,0 +1,24 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "block title",
+	"description": "",
+	"type": "object",
+	"properties": {
+		"title": {
+			"type": "string",
+			"description": "Title showed in site editor"
+		},
+		"props": {
+			"type": "object",
+			"description": "Block's properties",
+			"properties": {
+				"submitButtonLabel": {
+					"type": "string",
+					"description": "Text displayed on the submit button.",
+					"default": "Subscribe."
+				},
+				"blockClass": { "$ref": "../../shared/blockClass.schema.json" }
+			}
+		}
+	}
+}

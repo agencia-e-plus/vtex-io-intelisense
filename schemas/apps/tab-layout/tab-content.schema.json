@@ -1,0 +1,25 @@
+{
+	"type": "object",
+	"additionalProperties": false,
+	"title": "Tab Layout (Content)",
+	"markdownDescription": "https://developers.vtex.com/vtex-developer-docs/docs/vtex-tab-layout\n\nThe Tab Layout app provides you the needed structure to create different layouts within the store's main one from the use of *tabs*.\n\n![Mandatory](https://img.shields.io/badge/-Mandatory-red.png) Defines the list of content to be rendered in each tab. It only accepts the `tab-content.item` block as child.\n\n`\"vtex.tab-layout@0.x\"`",
+	"properties": {
+		"title": { "$ref": "../../shared/title.schema.json" },
+		"children": {
+			"type": "array",
+			"markdownDescription": "Declare the blocks that must be wrapped inside the current one.",
+			"items": {
+				"type": "string",
+				"pattern": "^tab-content.item#"
+			}
+		},
+		"props": {
+			"type": "object",
+			"additionalProperties": false,
+			"markdownDescription": "All available properties for this block.",
+			"properties": {
+				"blockClass": { "$ref": "../../shared/blockClass.schema.json" }
+			}
+		}
+	}
+}

@@ -1,0 +1,51 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "block title",
+	"description": "block description",
+	"type": "object",
+	"properties": {
+		"title": {
+			"type": "string",
+			"description": "Title showed in site editor"
+		},
+		"props": {
+			"type": "object",
+			"description": "Block's properties",
+			"properties": {
+				"maxPageButtons": {
+					"type": "number",
+					"description": "number of page buttons to be showed",
+					"default": 5
+				},
+				"showFirstPage": {
+					"type": "boolean",
+					"description": "if first page button should be showed when this page is out of range of pages limited by maxPageButtons prop",
+					"default": true
+				},
+				"showLastPage": {
+					"type": "boolean",
+					"description": "if last page button should be showed when this page is out of range of pages limited by maxPageButtons prop",
+					"default": true
+				},
+				"previousPageText": {
+					"type": "string",
+					"description": "text to be displayed in previous page button",
+					"default": "Anterior"
+				},
+				"nextPageText": {
+					"type": "string",
+					"description": "text to be displayed in next page button",
+					"default": "Próximo"
+				},
+				"PreviousPageIcon": {
+					"$ref": "../../shared/block.schema.json",
+					"description": "icon to be displayed in previous page button"
+				},
+				"NextPageIcon": {
+					"$ref": "../../shared/block.schema.json",
+					"description": "text to be displayed in next page button"
+				}
+			}
+		}
+	}
+}

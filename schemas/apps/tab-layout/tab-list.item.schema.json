@@ -1,0 +1,32 @@
+{
+	"type": "object",
+	"additionalProperties": false,
+	"title": "Tab Layout (Item)",
+	"markdownDescription": "https://developers.vtex.com/vtex-developer-docs/docs/vtex-tab-layout\n\nThe Tab Layout app provides you the needed structure to create different layouts within the store's main one from the use of *tabs*.\n\n![Mandatory](https://img.shields.io/badge/-Mandatory-red.png) Defines the rendering for a given tab. Notice that it does not define the tab content, which is handled by the `tab-content.item` block.\n\n`\"vtex.tab-layout@0.x\"`",
+	"properties": {
+		"title": { "$ref": "../../shared/title.schema.json" },
+		"props": {
+			"type": "object",
+			"additionalProperties": false,
+			"markdownDescription": "All available properties for this block.",
+			"properties": {
+				"blockClass": { "$ref": "../../shared/blockClass.schema.json" },
+				"tabId": {
+					"type": "string",
+					"markdownDescription": "`string`\n\nTab ID of your choosing. It will be used to match the tab to its content (defined by the `tab-content.item` block).",
+					"default": ""
+				},
+				"label": {
+					"type": "string",
+					"markdownDescription": "`string`\n\nTab ID of your choosing. It will be used to match the tab to its content (defined by the `tab-content.item` block).",
+					"default": "Defines the tab's text label."
+				},
+				"defaultActiveTab": {
+					"type": "boolean",
+					"markdownDescription": "`boolean`\n\nDefines the item as the default active tab.",
+					"default": false
+				}
+			}
+		}
+	}
+}

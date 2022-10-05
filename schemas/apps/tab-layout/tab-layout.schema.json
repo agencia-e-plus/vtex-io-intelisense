@@ -1,0 +1,28 @@
+{
+	"type": "object",
+	"additionalProperties": false,
+	"title": "Tab Layout",
+	"markdownDescription": "https://developers.vtex.com/vtex-developer-docs/docs/vtex-tab-layout\n\nThe Tab Layout app provides you the needed structure to create different layouts within the store's main one from the use of *tabs*.\n\n![Mandatory](https://img.shields.io/badge/-Mandatory-red.png) Parent block that merely defines the logic (via its children blocks) for the layout structure, declaring the desired list of tabs and its content.\n\n`\"vtex.tab-layout@0.x\"`",
+	"properties": {
+		"title": { "$ref": "../../shared/title.schema.json" },
+		"children": {
+			"type": "array",
+			"markdownDescription": "Declare the blocks that must be wrapped inside the current one.",
+			"items": {
+				"type": "string"
+			}
+		},
+		"props": {
+			"type": "object",
+			"additionalProperties": false,
+			"markdownDescription": "All available properties for this block.",
+			"properties": {
+				"blockClass": { "$ref": "../../shared/blockClass.schema.json" },
+				"defaultActiveTabId": {
+					"type": "string",
+					"markdownDescription": "`string`\n\nID of the desired tab to be rendered as the default one. If no value is provided, the first tab declared in the theme will be used as default."
+				}
+			}
+		}
+	}
+}
