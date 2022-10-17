@@ -15,6 +15,7 @@ import { TextDocument } from 'vscode-languageserver-textdocument';
 import { handleDefinitionRequest } from './handleDefinitionRequest';
 import { BlocksHashMap } from './BlocksHashMap';
 import { URI } from 'vscode-uri';
+import { getFileDiagnostics } from './fileDiagnostics';
 
 // Create a connection for the server, using Node's IPC as a transport.
 // Also include all preview / proposed LSP features.
@@ -105,8 +106,16 @@ connection.onDidChangeConfiguration((change) => {
 	}
 
 	// Revalidate all open text documents
-	// documents.all().forEach(validateTextDocument);
+	documents.all().forEach(validateTextDocument);
 });
+
+async function validateTextDocument(textDocument: TextDocument): Promise<void> {
+	if (!blocksHashMap) return;
+
+	const diagnostics = getFileDiagnostics(textDocument, 40, blocksHashMap);
+
+	connection.sendDiagnostics({ uri: textDocument.uri, diagnostics });
+}
 
 // Handles a request to provide the definition of a symbol at a given text document position.
 connection.onDefinition((params) => {
@@ -132,7 +141,7 @@ documents.onDidChangeContent((change) => {
 	if (!path.includes('blocks')) return;
 
 	blocksHashMap.mapBlocksOnFile(path, change.document.getText());
-	// validateTextDocument(change.document);
+	validateTextDocument(change.document);
 });
 
 connection.onDidChangeWatchedFiles((_change) => {
