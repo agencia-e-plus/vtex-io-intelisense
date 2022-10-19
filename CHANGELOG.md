@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.0.0...v1.0.1) (2022-10-19)
+
+
+### Bug Fixes
+
+* missing dependence ([770c5db](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/770c5db8b1bdc9c7cd36a39eb099fe364f18ff0d))
+
 # 1.0.0 (2022-10-05)
 
 
