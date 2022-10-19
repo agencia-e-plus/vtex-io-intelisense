@@ -1,3 +1,19 @@
+## [1.0.2](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.0.1...v1.0.2) (2022-10-19)
+
+
+### Bug Fixes
+
+* adding vsix files to gitignore ([eef8162](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/eef81623904c32d8f91e16a3656ab2f4167d71f7))
+* publish true on package ([ed4cfc5](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/ed4cfc502e647b7fab0fc685e46d03862d065220))
+* vsce_pat enviroment variable ([f3a2e00](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/f3a2e00f6057a954a12426b93512ce7f9ed28442))
+
+## [1.0.1](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.0.0...v1.0.1) (2022-10-19)
+
+
+### Bug Fixes
+
+* missing dependence ([770c5db](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/770c5db8b1bdc9c7cd36a39eb099fe364f18ff0d))
+
 # 1.0.0 (2022-10-05)
 
 
