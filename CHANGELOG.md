@@ -1,56 +1,26 @@
 ## [1.0.2](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.0.1...v1.0.2) (2022-10-19)
 
-
 ### Bug Fixes
 
-* adding vsix files to gitignore ([eef8162](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/eef81623904c32d8f91e16a3656ab2f4167d71f7))
-* publish true on package ([ed4cfc5](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/ed4cfc502e647b7fab0fc685e46d03862d065220))
-* vsce_pat enviroment variable ([f3a2e00](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/f3a2e00f6057a954a12426b93512ce7f9ed28442))
+- adding vsix files to gitignore ([eef8162](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/eef81623904c32d8f91e16a3656ab2f4167d71f7))
+- publish true on package ([ed4cfc5](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/ed4cfc502e647b7fab0fc685e46d03862d065220))
+- vsce_pat environment variable ([f3a2e00](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/f3a2e00f6057a954a12426b93512ce7f9ed28442))
 
 ## [1.0.1](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.0.0...v1.0.1) (2022-10-19)
 
-
 ### Bug Fixes
 
-* missing dependence ([770c5db](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/770c5db8b1bdc9c7cd36a39eb099fe364f18ff0d))
+- missing dependence ([770c5db](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/770c5db8b1bdc9c7cd36a39eb099fe364f18ff0d))
 
 # 1.0.0 (2022-10-05)
 
-
-### Bug Fixes
-
-* add markdownDescription in props ([a43c23c](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/a43c23c35a3db8e4afed310fa99ca877f386a3c9))
-* blockClass ref and switch enum to oneOf ([2762789](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/27627899948bbb1f5f7d3e6c9bb4bcaf04779785))
-* blocks sugestion in multiline ([de68501](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/de68501c93e3226bc68eb808956462b897d13b27))
-* file path to verify ([3395192](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/3395192261a2d2a19ae7cc9b62d3e8d6c8c3291f))
-* no content files ([819af3e](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/819af3e6fb5f040ab64f20a3992f4f625ed4a33b))
-* readme rephrasing for better understanding ([0fdb866](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/0fdb866edd3d68e39ede205c5bc61e8c864eaf87))
-* unify commands ([273c10b](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/273c10b7fe1089e7ed0527213f9a1ac19ff2a307))
-
-
-* BREAKING CHANGE: go to definition ([ad7e079](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/ad7e079a483e165485a8cf4f9e912197dbcf20a7))
-
-
 ### Features
 
-* add add-to-cart-button block ([346b2e4](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/346b2e4ad2c7c2a5ce404b19cf60e4c5c84de2e9))
-* add breadcrumb ([bb6f749](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/bb6f7495c48d434a976c2da5daac1203fe553256))
-* add find unused blocks command ([48abffe](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/48abffe54646ef697b841b1553ece307de1fd593))
-* add schema properties (alongside patternProperties) ([0e2b245](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/0e2b245370188e3fb217b4558701b927cb5b75ab))
-* add tag prop to product name ([e78d6a3](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/e78d6a3b4c234e9e65072457c126d30565efad48))
-* ctrl click ([d92bd9e](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/d92bd9e8900d400fede5e0ce39413567f84a1c2e))
-* new blocks (collab with lv-ss@hotmail.com) ([b87845c](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/b87845ccb6cb01ae142dc7c40877062c7a1e11cc))
-
+- ctrl click ([d92bd9e](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/d92bd9e8900d400fede5e0ce39413567f84a1c2e))
 
 ### BREAKING CHANGES
 
-* go to definition
-
-# Change Log
-
-All notable changes to the "vtexio-intellisense" extension will be documented in this file.
-
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+- Change Project structure and working way
 
 ## [0.4.4] - 2022-02-18
 
