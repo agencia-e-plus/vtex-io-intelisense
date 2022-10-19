@@ -4,7 +4,7 @@
 	"description": "snippets and autocomplete for vtex io blocks",
 	"author": "e-Plus Agency",
 	"license": "MIT",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/agencia-e-plus/vtex-io-intelisense"
