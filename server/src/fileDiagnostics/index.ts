@@ -2,6 +2,7 @@ import { Diagnostic } from 'vscode-languageserver';
 import { TextDocument } from 'vscode-languageserver-textdocument';
 import { URI } from 'vscode-uri';
 import { BlocksHashMap } from '../BlocksHashMap';
+import { getUndeclaredBlocksDiagnostics } from './getUndeclaredBlocks';
 import { getUnusedBlocksDiagnostics } from './getUnusedBlocks';
 
 export const getFileDiagnostics = (
@@ -17,7 +18,9 @@ export const getFileDiagnostics = (
 
 	const unusedBlocksDiagnostics = getUnusedBlocksDiagnostics(text, filePath, blocksHashMap);
 
-	diagnostics.push(...unusedBlocksDiagnostics);
+	const undeclaredBlocksDiagnostics = getUndeclaredBlocksDiagnostics(text, filePath, blocksHashMap);
+
+	diagnostics.push(...unusedBlocksDiagnostics, ...undeclaredBlocksDiagnostics);
 
 	return diagnostics.slice(0, maxNumberOfProblems);
 };
