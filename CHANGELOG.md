@@ -1,3 +1,15 @@
+# [1.2.0](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.1.0...v1.2.0) (2022-10-21)
+
+
+### Bug Fixes
+
+* remove validate in no io json files ([4deacb0](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/4deacb054bafe475e6f3ce8a0564874fda19049f))
+
+
+### Features
+
+* Add undeclared blocks diagnostic ([2fe9bd6](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/2fe9bd62bd2349b8feb3cb5c70119d58227b8f0a))
+
 # [1.1.0](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.0.2...v1.1.0) (2022-10-21)
 
 
