@@ -106,7 +106,13 @@ connection.onDidChangeConfiguration((change) => {
 	}
 
 	// Revalidate all open text documents
-	documents.all().forEach(validateTextDocument);
+	documents.all().forEach((document) => {
+		const path = URI.parse(document.uri).fsPath;
+
+		if (!path.includes('blocks')) return;
+
+		validateTextDocument(document);
+	});
 });
 
 async function validateTextDocument(textDocument: TextDocument): Promise<void> {
