@@ -1,3 +1,16 @@
+# [1.1.0](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.0.2...v1.1.0) (2022-10-21)
+
+
+### Bug Fixes
+
+* changelog issues caused by semantic release ([21af05f](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/21af05f3da886a01b0e938907942d6a323515baa))
+* missing licence in update ([94fe1ca](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/94fe1ca994fef99dc4f871e165fca0c08938b712))
+
+
+### Features
+
+* add unused block diagnostic ([d39dfe5](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/d39dfe544e23c262ca35bef690999ce16a22950f))
+
 ## [1.0.2](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.0.1...v1.0.2) (2022-10-19)
 
 ### Bug Fixes
