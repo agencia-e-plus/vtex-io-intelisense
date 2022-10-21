@@ -44,7 +44,7 @@ export const getUnusedBlocksDiagnostics = (
 				}
 			},
 			message: `Block "${blockId}" is never used`,
-			source: 'block-usage-checker'
+			source: 'block-usage-checker (Vtex IO Intellisense)'
 		};
 
 		diagnostics.push(diagnostic);
