@@ -9,21 +9,13 @@ The Vtex io intellisense help you develop with vtex store-framework with snippet
 ![Autocomplete demonstration](https://user-images.githubusercontent.com/48053804/141369446-3df45670-6d9b-4f4b-8e96-435518b884d9.gif)
 `ATTENTION: The auto complete only works in 'json' and 'jsonc' files inside the 'store' folder`
 
+### Go to definition
+
+![Go to definition demonstration](https://user-images.githubusercontent.com/5679561/194151967-d1c1d116-d93c-44e1-a2d1-bcdb54f22709.gif)
+
 ## Experimental Features
 
-To be able to use this features you should active configurations defined in `Extension Settings` section
-
-### Diagnostics
-
-![Diagnostic demonstration](https://user-images.githubusercontent.com/48053804/174599923-0d37a960-68fb-4739-a9bd-1362363dc335.gif)
-
-### Commands
-
-`VTEX IO Intellisense: Store Lint` search in all project for duplicated and unused blocks
-
-![Command Demonstration](https://user-images.githubusercontent.com/48053804/174601570-6d20b394-9d8b-4c88-9d52-e1b519677b6c.gif)
-
-### Suggestions
+The experimental features were deprecated and will be fully implemented in the following updates!
 
 ## Autocomplete blocks
 
@@ -171,11 +163,6 @@ This extension also provides the following setting:
 
 - `vtexiointellisense.allowsUnusedBlocks`: if set to `false` all unused blocks will show a warning of `unused block`. Default value is `true`
 
-## Release Notes
-
-### 0.3.0
-
-Add Commands and lint check
 
 <!--
 ## Release Notes
