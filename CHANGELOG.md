@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.2.0...v1.2.1) (2022-10-22)
+
+
+### Bug Fixes
+
+* security update ([53c9ea3](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/53c9ea3e95d827362867410de448c19e8f0c4e79))
+
 # [1.2.0](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.1.0...v1.2.0) (2022-10-21)
 
 
