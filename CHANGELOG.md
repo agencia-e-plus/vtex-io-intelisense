@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.2.2...v1.2.3) (2022-10-24)
+
+
+### Bug Fixes
+
+* missing package in build ([c942e49](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/c942e49b9515d583e51d0c9f79402eafc332219e))
+
 ## [1.2.2](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.2.1...v1.2.2) (2022-10-22)
 
 
