@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.2.3...v1.3.0) (2022-10-26)
+
+
+### Features
+
+* add search-result-layout.customQuery props ([7b95e2a](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/7b95e2ac438f81157ca5e821edabd78441290370))
+
 ## [1.2.3](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.2.2...v1.2.3) (2022-10-24)
 
 
