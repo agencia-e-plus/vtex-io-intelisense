@@ -155,14 +155,12 @@ If you have any requirements or dependencies, add a section describing those and
 
 This extension also provides the following setting:
 
+![deprecated](https://img.shields.io/badge/depracated-red)
+
 - `vtexiointellisense.unusedBlocks`: if set to `true` will show a warning of `unused block` when a block its not used. Default value is `false`
 - `vtexiointellisense.duplicatedBlocks`: if set to `true` will show a warning of `duplicated blocks` when a block id its duplicated. Default value is `false`
 - `vtexiointellisense.suggestions`: if set to `true` will suggest all blocks declared in `children` and `blocks` props. Default value is `false`
-
-![deprecated](https://img.shields.io/badge/depracated-red)
-
 - `vtexiointellisense.allowsUnusedBlocks`: if set to `false` all unused blocks will show a warning of `unused block`. Default value is `true`
-
 
 <!--
 ## Release Notes
