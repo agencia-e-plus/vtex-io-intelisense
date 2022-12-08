@@ -26,17 +26,11 @@
 					"default": ""
 				},
 				"borderColor": {
-					"anyOf": [
-						{ "type": "string" },
-						{ "$ref": "../../shared/responsive-values.schema.json" }
-					],
+					"anyOf": [{ "type": "string" }, { "$ref": "../../shared/responsive-values.schema.json" }],
 					"description": "The color of the border."
 				},
 				"borderWidth": {
-					"anyOf": [
-						{ "type": "number" },
-						{ "$ref": "../../shared/responsive-values.schema.json" }
-					],
+					"anyOf": [{ "type": "number" }, { "$ref": "../../shared/responsive-values.schema.json" }],
 					"min": 0,
 					"max": 5,
 					"description": "A number or string magnitude for the bw Tachyons token to be applied to the row."
@@ -58,10 +52,7 @@
 					"description": "An array to define in which sides of the row a border should be applied to (top, right, bottom, left or all)."
 				},
 				"colGap": {
-					"anyOf": [
-						{ "type": "number" },
-						{ "$ref": "../../shared/responsive-values.schema.json" }
-					],
+					"anyOf": [{ "type": "number" }, { "$ref": "../../shared/responsive-values.schema.json" }],
 					"min": 0,
 					"max": 10,
 					"description": "A number or string magnitude for the pr Tachyons token to be applied to columns inside of the flex-layout.row."
@@ -76,7 +67,7 @@
 				},
 				"colJustify": {
 					"anyOf": [
-						{ "type": "string", "enum": ["between", "around"] },
+						{ "type": "string", "enum": ["left", "right", "center", "between", "around"] },
 						{ "$ref": "../../shared/responsive-values.schema.json" }
 					],
 					"description": "Controls the automatic space between columns and borders of the `flex-layout.row` (work when colSizing is 'auto')",
@@ -92,44 +83,32 @@
 				},
 				"horizontalAlign": {
 					"anyOf": [
-						{ "type": "string", "enum": ["left", "right", "center"] },
+						{ "type": "string", "enum": ["left", "right", "center", "between", "around"] },
 						{ "$ref": "../../shared/responsive-values.schema.json" }
 					],
 					"description": "Controls horizontal alignment for the items inside the flex-layout.row.",
 					"default": "left"
 				},
 				"marginBottom": {
-					"anyOf": [
-						{ "type": "number" },
-						{ "$ref": "../../shared/responsive-values.schema.json" }
-					],
+					"anyOf": [{ "type": "number" }, { "$ref": "../../shared/responsive-values.schema.json" }],
 					"min": 0,
 					"max": 10,
 					"description": "A number or string magnitude for the mb Tachyons token to be applied to the row."
 				},
 				"marginTop": {
-					"anyOf": [
-						{ "type": "number" },
-						{ "$ref": "../../shared/responsive-values.schema.json" }
-					],
+					"anyOf": [{ "type": "number" }, { "$ref": "../../shared/responsive-values.schema.json" }],
 					"min": 0,
 					"max": 10,
 					"description": "A number or string magnitude for the mt Tachyons token to be applied to the row."
 				},
 				"paddingBottom": {
-					"anyOf": [
-						{ "type": "number" },
-						{ "$ref": "../../shared/responsive-values.schema.json" }
-					],
+					"anyOf": [{ "type": "number" }, { "$ref": "../../shared/responsive-values.schema.json" }],
 					"min": 0,
 					"max": 10,
 					"description": "A number or string magnitude for the pb Tachyons token to be applied to the row."
 				},
 				"paddingTop": {
-					"anyOf": [
-						{ "type": "number" },
-						{ "$ref": "../../shared/responsive-values.schema.json" }
-					],
+					"anyOf": [{ "type": "number" }, { "$ref": "../../shared/responsive-values.schema.json" }],
 					"min": 0,
 					"max": 10,
 					"description": "A number or string magnitude for the pt Tachyons token to be applied to the row."
@@ -159,10 +138,7 @@
 					"default": false
 				},
 				"rowGap": {
-					"anyOf": [
-						{ "type": "number" },
-						{ "$ref": "../../shared/responsive-values.schema.json" }
-					],
+					"anyOf": [{ "type": "number" }, { "$ref": "../../shared/responsive-values.schema.json" }],
 					"min": 0,
 					"max": 10,
 					"description": "A number or string magnitude for the pb Tachyons token to be applied to columns inside of the flex-layout.row."
