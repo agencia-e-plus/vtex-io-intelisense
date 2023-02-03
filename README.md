@@ -143,6 +143,7 @@ for `.css` and `.scss`
 | `vip`   | create a `:global(.vtex-styleguide-9-x-input)` |
 | `vipg`  | create a `:global(.vtex-input-prefix__group)`  |
 | `vil`   | create a `:global(.vtex-input__label)`         |
+| `vis`   | create a `:global(.vtex__icon-spinner)`        |
 | `:gl`   | create a `:global()`                           |
 
 <!--
