@@ -58,5 +58,11 @@
 		"prefix": "vipg",
 		"body": [":global(.vtex-input-prefix__group)"],
 		"description": "vtex input prefix group selector"
+	},
+	"vtex icon spinner": {
+		"scope": "css, scss",
+		"prefix": "vis",
+		"body": [":global(.vtex__icon-spinner)"],
+		"description": "vtex icon spinner selector"
 	}
 }
