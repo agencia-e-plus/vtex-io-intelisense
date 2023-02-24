@@ -4,6 +4,10 @@
 	"description": "Search results layout",
 	"type": "object",
 	"properties": {
+		"title": {
+			"type": "string",
+			"description": "Title showed in site editor"
+		},
 		"children": {
 			"type": "array",
 			"items": { "$ref": "../../shared/block.schema.json" }

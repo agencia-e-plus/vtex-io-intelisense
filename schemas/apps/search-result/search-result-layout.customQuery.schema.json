@@ -4,6 +4,10 @@
 	"description": "Search results page",
 	"type": "object",
 	"properties": {
+		"title": {
+			"type": "string",
+			"description": "Title showed in site editor"
+		},
 		"blocks": {
 			"description": "block composition",
 			"type": "array",
