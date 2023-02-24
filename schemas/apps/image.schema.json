@@ -43,7 +43,44 @@
 				"link": {
 					"$ref": "./../shared/link.schema.json"
 				},
-				"blockClass": { "$ref": "./../shared/blockClass.schema.json" }
+				"blockClass": { "$ref": "./../shared/blockClass.schema.json" },
+				"analyticsProperties": {
+					"type": "string",
+					"enum": ["provide", "none"],
+					"default": "none"
+				}
+			},
+			"dependencies": {
+				"analyticsProperties": {
+					"oneOf": [
+						{
+							"properties": {
+								"analyticsProperties": {
+									"enum": ["provide"]
+								},
+								"promotionId": {
+									"type": "string",
+									"default": ""
+								},
+								"promotionName": {
+									"type": "string",
+									"default": ""
+								},
+								"promotionPosition": {
+									"type": "string",
+									"default": ""
+								}
+							}
+						},
+						{
+							"properties": {
+								"analyticsProperties": {
+									"enum": ["none"]
+								}
+							}
+						}
+					]
+				}
 			}
 		}
 	}
