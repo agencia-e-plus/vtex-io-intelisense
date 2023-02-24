@@ -4,8 +4,7 @@
 	"description": "Search results layout",
 	"type": "object",
 	"properties": {
-		"blocks": {
-			"description": "block composition",
+		"children": {
 			"type": "array",
 			"items": { "$ref": "../../shared/block.schema.json" }
 		},
