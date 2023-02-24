@@ -4,6 +4,7 @@
 ### Features
 
 * add analitics properties to image and list-context.image-list components ([7580aee](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/7580aee4297cbbebd805f177ae8bc6861141c30b))
+* add icon-spinner css snippet ([5e2ea27](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/5e2ea279e29b42711a09246a3bceb092679c61cf))
 
 ## [1.3.1](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.3.0...v1.3.1) (2022-12-08)
 
