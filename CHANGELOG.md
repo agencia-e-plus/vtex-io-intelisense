@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.3.1...v1.4.0) (2023-02-24)
+
+
+### Features
+
+* add analitics properties to image and list-context.image-list components ([7580aee](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/7580aee4297cbbebd805f177ae8bc6861141c30b))
+
 ## [1.3.1](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.3.0...v1.3.1) (2022-12-08)
 
 
