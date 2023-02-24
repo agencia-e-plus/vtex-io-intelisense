@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.3.0...v1.3.1) (2022-12-08)
+
+
+### Bug Fixes
+
+* `colJustify` and `horizontalAlign` of `flex-layout.row` missing values ([abe89f4](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/abe89f4626045988d1909c8e474ab3a584ba9d0b))
+
 # [1.3.0](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.2.3...v1.3.0) (2022-10-26)
 
 
