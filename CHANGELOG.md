@@ -1,3 +1,11 @@
+## [1.4.1](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.4.0...v1.4.1) (2023-02-24)
+
+
+### Bug Fixes
+
+* missing title prop in search-result-layout ([567f87b](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/567f87b9af00acd0afa00f5a744e8685ff2bc442))
+* search-result-layout.desktop and .mobile composition to children ([f39b5cb](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/f39b5cbeb92b58e04a58bdd47b2146b5eeab6098))
+
 # [1.4.0](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.3.1...v1.4.0) (2023-02-24)
 
 
