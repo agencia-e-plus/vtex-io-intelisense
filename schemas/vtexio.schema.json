@@ -230,6 +230,18 @@
 		"^(search-banner#)|^(search-banner)$": {
 			"$ref": "./apps/search/search-banner.schema.json"
 		},
+		"^(responsive-layout.desktop#)|^(responsive-layout.desktop)$": {
+			"$ref": "./apps/responsive-layout.schema.json"
+		},
+		"^(responsive-layout.mobile#)|^(responsive-layout.mobile)$": {
+			"$ref": "./apps/responsive-layout.schema.json"
+		},
+		"^(responsive-layout.tablet#)|^(responsive-layout.tablet)$": {
+			"$ref": "./apps/responsive-layout.schema.json"
+		},
+		"^(responsive-layout.phone#)|^(responsive-layout.phone)$": {
+			"$ref": "./apps/responsive-layout.schema.json"
+		},
 		"^(vtex.store-components:search-bar#)|^(vtex.store-components:search-bar)$|^(search-bar#)|^(search-bar)$": {
 			"$ref": "./apps/store-components/search-bar.schema.json"
 		},
@@ -504,6 +516,18 @@
 		},
 		"product-summary-quantity": {
 			"$ref": "./apps/product-quantity/product-summary-quantity.schema.json"
+		},
+		"responsive-layout.desktop": {
+			"$ref": "./apps/responsive-layout.schema.json"
+		},
+		"responsive-layout.mobile": {
+			"$ref": "./apps/responsive-layout.schema.json"
+		},
+		"responsive-layout.tablet": {
+			"$ref": "./apps/responsive-layout.schema.json"
+		},
+		"responsive-layout.phone": {
+			"$ref": "./apps/responsive-layout.schema.json"
 		},
 		"rich-text": {
 			"$ref": "./apps/rich-text.schema.json"
