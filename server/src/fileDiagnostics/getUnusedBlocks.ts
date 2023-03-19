@@ -1,35 +1,35 @@
-import { BlocksHashMap } from '../BlocksHashMap';
-import { Diagnostic, DiagnosticSeverity } from 'vscode-languageserver';
-import * as JSONC from 'jsonc-parser';
-import { getBlockPositionInText } from '../utils/getBlockPositionInText';
+import { BlocksHashMap } from '../BlocksHashMap'
+import { Diagnostic, DiagnosticSeverity } from 'vscode-languageserver'
+import * as JSONC from 'jsonc-parser'
+import { getBlockPositionInText } from '../utils/getBlockPositionInText'
 
-export const NO_EXPLICIT_USE_BLOCKS = ['store.', 'header', 'header.', 'footer'];
+export const NO_EXPLICIT_USE_BLOCKS = ['store.', 'header', 'header.', 'footer']
 
 export const getUnusedBlocksDiagnostics = (
 	fileText: string,
 	filePath: string,
 	blocksHashMap: BlocksHashMap
 ) => {
-	const blocks: Record<string, BlockFormat> | undefined = JSONC.parse(fileText);
+	const blocks: Record<string, Block> | undefined = JSONC.parse(fileText)
 
-	if (!blocks) return [];
+	if (!blocks) return []
 
 	const unusedBlocksOnFile = Object.keys(blocks)
 		.filter((blockName) => {
-			const isUsed = blocksHashMap.getBlockUsage(blockName);
+			const isUsed = blocksHashMap.getBlockUsage(blockName)
 
-			return !isUsed;
+			return !isUsed
 		})
 		.filter(
 			(blockName) => !NO_EXPLICIT_USE_BLOCKS.some((blockId) => blockName.startsWith(blockId))
-		);
+		)
 
-	const diagnostics: Diagnostic[] = [];
+	const diagnostics: Diagnostic[] = []
 
 	unusedBlocksOnFile.forEach((blockId) => {
-		const blockPosition = getBlockPositionInText(blockId, fileText);
+		const blockPosition = getBlockPositionInText(blockId, fileText)
 
-		if (!blockPosition) return;
+		if (!blockPosition) return
 
 		const diagnostic = {
 			severity: DiagnosticSeverity.Warning,
@@ -45,10 +45,10 @@ export const getUnusedBlocksDiagnostics = (
 			},
 			message: `Block "${blockId}" is never used`,
 			source: 'block-usage-checker (Vtex IO Intellisense)'
-		};
+		}
 
-		diagnostics.push(diagnostic);
-	});
+		diagnostics.push(diagnostic)
+	})
 
-	return diagnostics;
-};
+	return diagnostics
+}

@@ -1,45 +1,46 @@
 import {
-	createConnection,
-	TextDocuments,
-	ProposedFeatures,
-	InitializeParams,
-	DidChangeConfigurationNotification,
 	CompletionItem,
-	CompletionItemKind,
+	createConnection,
+	DidChangeConfigurationNotification,
+	InitializeParams,
+	InitializeResult,
+	ProposedFeatures,
 	TextDocumentPositionParams,
-	TextDocumentSyncKind,
-	InitializeResult
-} from 'vscode-languageserver/node';
+	TextDocuments,
+	TextDocumentSyncKind
+} from 'vscode-languageserver/node'
 
-import { TextDocument } from 'vscode-languageserver-textdocument';
-import { handleDefinitionRequest } from './handleDefinitionRequest';
-import { BlocksHashMap } from './BlocksHashMap';
-import { URI } from 'vscode-uri';
-import { getFileDiagnostics } from './fileDiagnostics';
+import { TextDocument } from 'vscode-languageserver-textdocument'
+import { URI } from 'vscode-uri'
+import { BlocksHashMap } from './BlocksHashMap'
+import { getFileDiagnostics } from './fileDiagnostics'
+import { handleDefinitionRequest } from './handleDefinitionRequest'
 
 // Create a connection for the server, using Node's IPC as a transport.
 // Also include all preview / proposed LSP features.
-const connection = createConnection(ProposedFeatures.all);
+const connection = createConnection(ProposedFeatures.all)
 
 // Create a simple text document manager.
-const documents: TextDocuments<TextDocument> = new TextDocuments(TextDocument);
+const documents: TextDocuments<TextDocument> = new TextDocuments(TextDocument)
 
-let hasConfigurationCapability = false;
-let hasWorkspaceFolderCapability = false;
+let hasConfigurationCapability = false
+let hasWorkspaceFolderCapability = false
 
 // Initialize blocks hashmap
-let blocksHashMap: BlocksHashMap | undefined = undefined;
+let blocksHashMap: BlocksHashMap | undefined = undefined
 
 connection.onInitialize((params: InitializeParams) => {
-	console.log('initialize');
-	const capabilities = params.capabilities;
+	console.log('initialize')
+	const capabilities = params.capabilities
 
 	// Does the client support the `workspace/configuration` request?
 	// If not, we fall back using global settings.
-	hasConfigurationCapability = !!(capabilities.workspace && !!capabilities.workspace.configuration);
+	hasConfigurationCapability = !!(
+		capabilities.workspace && !!capabilities.workspace.configuration
+	)
 	hasWorkspaceFolderCapability = !!(
 		capabilities.workspace && !!capabilities.workspace.workspaceFolders
-	);
+	)
 
 	const result: InitializeResult = {
 		capabilities: {
@@ -51,127 +52,130 @@ connection.onInitialize((params: InitializeParams) => {
 			// Tell the client that this server supports go to definition.
 			definitionProvider: true
 		}
-	};
+	}
 
 	if (hasWorkspaceFolderCapability) {
 		result.capabilities.workspace = {
 			workspaceFolders: {
 				supported: true
 			}
-		};
+		}
 
 		if (params.workspaceFolders) {
-			const workspacePath = URI.parse(params.workspaceFolders[0].uri).fsPath.replace(/\\/g, '/');
+			const workspacePath = URI.parse(params.workspaceFolders[0].uri).fsPath.replace(
+				/\\/g,
+				'/'
+			)
 
-			blocksHashMap = new BlocksHashMap(workspacePath);
+			blocksHashMap = new BlocksHashMap(workspacePath)
 		}
 	}
-	return result;
-});
+	return result
+})
 
 connection.onInitialized(() => {
-	console.log('VTEXIO intellisense server initialized!');
+	console.log('VTEXIO intellisense server initialized!')
 
 	if (hasConfigurationCapability) {
 		// Register for all configuration changes.
-		connection.client.register(DidChangeConfigurationNotification.type, undefined);
+		connection.client.register(DidChangeConfigurationNotification.type, undefined)
 	}
 	if (hasWorkspaceFolderCapability) {
 		connection.workspace.onDidChangeWorkspaceFolders((_event) => {
-			connection.console.log('Workspace folder change event received.');
-		});
+			connection.console.log('Workspace folder change event received.')
+		})
 	}
-});
+})
 
 // The example settings
 interface ExampleSettings {
-	maxNumberOfProblems: number;
+	maxNumberOfProblems: number
 }
 
 // The global settings, used when the `workspace/configuration` request is not supported by the client.
 // Please note that this is not the case when using this server with the client provided in this example
 // but could happen with other clients.
-const defaultSettings: ExampleSettings = { maxNumberOfProblems: 1000 };
-let globalSettings: ExampleSettings = defaultSettings;
+const defaultSettings: ExampleSettings = { maxNumberOfProblems: 1000 }
+let globalSettings: ExampleSettings = defaultSettings
 
 // Cache the settings of all open documents
-const documentSettings: Map<string, Thenable<ExampleSettings>> = new Map();
+const documentSettings: Map<string, Thenable<ExampleSettings>> = new Map()
 
 connection.onDidChangeConfiguration((change) => {
 	if (hasConfigurationCapability) {
 		// Reset all cached document settings
-		documentSettings.clear();
+		documentSettings.clear()
 	} else {
-		globalSettings = <ExampleSettings>(change.settings.languageServerExample || defaultSettings);
+		globalSettings = <ExampleSettings>(change.settings.languageServerExample || defaultSettings)
 	}
 
 	// Revalidate all open text documents
 	documents.all().forEach((document) => {
-		const path = URI.parse(document.uri).fsPath;
+		const path = URI.parse(document.uri).fsPath
 
-		if (!path.includes('blocks')) return;
+		if (!path.includes('blocks')) return
 
-		validateTextDocument(document);
-	});
-});
+		validateTextDocument(document)
+	})
+})
 
 async function validateTextDocument(textDocument: TextDocument): Promise<void> {
-	if (!blocksHashMap) return;
+	if (!blocksHashMap) return
 
-	const diagnostics = getFileDiagnostics(textDocument, 40, blocksHashMap);
+	const diagnostics = getFileDiagnostics(textDocument, 40, blocksHashMap)
 
-	connection.sendDiagnostics({ uri: textDocument.uri, diagnostics });
+	connection.sendDiagnostics({ uri: textDocument.uri, diagnostics })
 }
 
 // Handles a request to provide the definition of a symbol at a given text document position.
 connection.onDefinition((params) => {
-	const isOnBlocksFolder = params.textDocument.uri.includes('blocks');
+	const isOnBlocksFolder = params.textDocument.uri.includes('blocks')
 
-	if (!blocksHashMap || !isOnBlocksFolder) return undefined;
+	if (!blocksHashMap || !isOnBlocksFolder) return undefined
 
-	return handleDefinitionRequest(params, blocksHashMap);
-});
+	return handleDefinitionRequest(params, blocksHashMap)
+})
 
 // Only keep settings for open documents
 documents.onDidClose((e) => {
-	documentSettings.delete(e.document.uri);
-});
+	documentSettings.delete(e.document.uri)
+})
 
 // The content of a text document has changed. This event is emitted
 // when the text document first opened or when its content has changed.
 documents.onDidChangeContent((change) => {
-	if (!blocksHashMap) return;
+	if (!blocksHashMap) return
 
-	const path = URI.parse(change.document.uri).fsPath;
+	const path = URI.parse(change.document.uri).fsPath
 
-	if (!path.includes('blocks')) return;
+	if (!path.includes('blocks')) return
 
-	blocksHashMap.mapBlocksOnFile(path, change.document.getText());
-	validateTextDocument(change.document);
-});
+	blocksHashMap.mapBlocksOnFile(path, change.document.getText())
+	validateTextDocument(change.document)
+})
 
 connection.onDidChangeWatchedFiles((_change) => {
 	// Monitored files have change in VSCode
-	connection.console.log('We received an file change event');
-});
+	connection.console.log('We received an file change event')
+})
 
 // This handler provides the initial list of the completion items.
 connection.onCompletion((_textDocumentPosition: TextDocumentPositionParams): CompletionItem[] => {
 	// The pass parameter contains the position of the text document in
 	// which code complete got requested. For the example we ignore this
 	// info and always provide the same completion items.
-	return [];
-});
+	return []
+})
 
 // This handler resolves additional information for the item selected in
 // the completion list.
 connection.onCompletionResolve((item: CompletionItem): CompletionItem => {
-	return item;
-});
+	return item
+})
 
 // Make the text document manager listen on the connection
 // for open, change and close text document events
-documents.listen(connection);
+documents.listen(connection)
 
 // Listen on the connection
-connection.listen();
+connection.listen()

@@ -54,6 +54,48 @@
 					"default": false,
 					"description": "If true, suggest all blocks declared in children and blocks props",
 					"deprecationMessage": "Deprecated"
+				},
+				"vtexiointellisense.wraps": {
+					"type": "array",
+					"default": [
+						{
+							"title": "Wrap with responsive-layout.desktop",
+							"component": "responsive-layout.desktop",
+							"props": {
+								"children": [
+									"$blockName"
+								]
+							}
+						},
+						{
+							"title": "Wrap with responsive-layout.mobile",
+							"component": "responsive-layout.mobile",
+							"props": {
+								"children": [
+									"$blockName"
+								]
+							}
+						},
+						{
+							"title": "Wrap with responsive-layout.tablet",
+							"component": "responsive-layout.tablet",
+							"props": {
+								"children": [
+									"$blockName"
+								]
+							}
+						},
+						{
+							"title": "Wrap with responsive-layout.phone",
+							"component": "responsive-layout.phone",
+							"props": {
+								"children": [
+									"$blockName"
+								]
+							}
+						}
+					],
+					"description": "Wraps to be used in autocomplete"
 				}
 			}
 		},
@@ -101,14 +143,35 @@
 				],
 				"url": "./schemas/edition-app/edition.schema.json"
 			}
-		]
+		],
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "betterVtex",
+					"title": "BetterVtex",
+					"icon": "media/icon.svg"
+				}
+			]
+		},
+		"views": {
+			"betterVtex": [
+				{
+					"id": "components",
+					"name": "Components"
+				},
+				{
+					"id": "parents",
+					"name": "Parents"
+				}
+			]
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
 		"compile": "tsc -b",
 		"watch": "tsc -b -w",
 		"lint": "eslint ./client/src ./server/src --ext .ts,.tsx",
-		"postinstall": "cd client && npm install && cd ../server && npm install && cd ..",
+		"postinstall": "cd client && yarn && cd ../server && yarn && cd ..",
 		"test": "sh ./scripts/e2e.sh"
 	},
 	"release": {
@@ -163,6 +226,7 @@
 		"concat-map": "0.0.1",
 		"glob": "^8.0.3",
 		"jsonc-parser": "^3.1.0",
+		"replace-in-file": "^6.3.5",
 		"vscode-uri": "^3.0.3"
 	}
 }

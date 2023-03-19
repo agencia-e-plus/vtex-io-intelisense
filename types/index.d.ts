@@ -1,4 +1,5 @@
 type Block = {
+	title?: string
 	props?: {
 		[key: string]: string
 	}
