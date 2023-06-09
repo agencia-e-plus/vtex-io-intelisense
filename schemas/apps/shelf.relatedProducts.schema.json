@@ -9,9 +9,7 @@
 		},
 		"blocks": {
 			"type": "array",
-			"items": {
-				"$ref": "./../shared/block.schema.json"
-			},
+			"items": { "$ref": "./../shared/block.schema.json" },
 			"description": "product summary block"
 		},
 		"props": {
@@ -26,7 +24,7 @@
 						"accessories",
 						"view",
 						"buy",
-						"viewAndBought"
+						"viewandBought"
 					],
 					"description": "Type of recommendations that will be displayed in the Shelf. Possible values: similars, suggestions, accessories (these first three depend on the product's data given in the admin's catalog) and view, buy, viewandBought (These 3 are automatically generated according to the store’s activity)",
 					"default": "similars"
@@ -47,10 +45,7 @@
 						},
 						"scroll": {
 							"type": "string",
-							"enum": [
-								"BY_PAGE",
-								"ONE_BY_ONE"
-							],
+							"enum": ["BY_PAGE", "ONE_BY_ONE"],
 							"description": "Slide transition scroll type. Possible values: BY_PAGE, ONE_BY_ONE",
 							"default": "BY_PAGE"
 						},
@@ -76,12 +71,7 @@
 						},
 						"gap": {
 							"type": "string",
-							"enum": [
-								"ph0",
-								"ph3",
-								"ph5",
-								"ph7"
-							],
+							"enum": ["ph0", "ph3", "ph5", "ph7"],
 							"description": "Gap between items. Possible values: ph0, ph3,ph5, ph7.",
 							"default": "ph3"
 						},
@@ -92,9 +82,7 @@
 						},
 						"itemsPerPage": {
 							"anyOf": [
-								{
-									"type": "number"
-								},
+								{ "type": "number" },
 								{
 									"$ref": "./../shared/responsive-values.schema.json"
 								}
@@ -104,23 +92,15 @@
 						}
 					},
 					"if": {
-						"properties": {
-							"showTitle": {
-								"const": true
-							}
-						}
+						"properties": { "showTitle": { "const": true } }
 					},
 					"then": {
-						"required": [
-							"titleText"
-						]
+						"required": ["titleText"]
 					},
 					"default": {}
 				}
 			}
 		}
 	},
-	"required": [
-		"blocks"
-	]
+	"required": ["blocks"]
 }
