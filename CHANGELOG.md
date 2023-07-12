@@ -1,6 +1,5 @@
 # [1.5.0](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.4.1...v1.5.0) (2023-02-27)
 
-
 ### Features
 
 * add responsive-layout autocomplete ([#28](https://github.com/agencia-e-plus/vtex-io-intelisense/issues/28)) ([9adb7be](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/9adb7bebdbe69996148c84b7fff5daad21687a42))
