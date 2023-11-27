@@ -9,6 +9,7 @@
 			"additionalProperties": false,
 			"markdownDescription": "All available properties for this block.",
 			"properties": {
+				"blockClass": { "$ref": "./../shared/blockClass.schema.json" },
 				"optionsTitle": {
 					"type": "string",
 					"markdownDescription": "string\n\nText to entitle the login options.",
