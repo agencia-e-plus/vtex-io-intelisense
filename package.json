@@ -112,7 +112,7 @@
 		"test": "sh ./scripts/e2e.sh"
 	},
 	"release": {
-		"repositoryName": "vtex-io-intelisense-v1",
+		"repositoryName": "vtex-io-intelisense",
 		"branches": [
 			"main"
 		],
