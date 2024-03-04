@@ -1,3 +1,11 @@
+## [1.5.1](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.5.0...v1.5.1) (2024-03-04)
+
+
+### Bug Fixes
+
+* trigger build ([4e34e43](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/4e34e4397f3740d1083b88ddadf968915905ec3b))
+* trigger build test ([2651115](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/2651115e48a37d232d7d955775569516462e0fa1))
+
 # [1.5.0](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.4.1...v1.5.0) (2023-02-27)
 
 ### Features
