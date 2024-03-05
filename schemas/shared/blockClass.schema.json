@@ -1,9 +1,6 @@
 {
-	"$schema": "http://json-schema.org/schema",
+	"$schema": "http://json-schema.org/draft-07/schema#",
 	"title": "Block's id",
 	"description": "CSS modifier",
-	"anyOf": [
-		{ "type": "string" },
-		{ "type": "array", "items": { "type": "string" } }
-	]
+	"anyOf": [{ "type": "string" }, { "type": "array", "items": { "type": "string" } }]
 }

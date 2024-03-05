@@ -15,7 +15,7 @@
 			"additionalProperties": false,
 			"markdownDescription": "All available properties for this block.",
 			"properties": {
-				"blockClass": { "$ref": "./../shared/blockClass.schema.json" },
+				"blockClass": { "$ref": "../../shared/blockClass.schema.json" },
 				"attemptPageTypeSearch": {
 					"type": "boolean",
 					"markdownDescription": "`boolean`\n\nIf `true` when clicked on result link of brand, department or category will link to the corresponding brand, department or category page. When `false` will always go to a full text search page.",
