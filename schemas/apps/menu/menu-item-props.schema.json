@@ -12,8 +12,7 @@
 		},
 		"id": {
 			"type": "string",
-			"markdownDescription": "string\n\nMenu item ID",
-			"default": ""
+			"markdownDescription": "string\n\nMenu item ID"
 		},
 		"highlight": {
 			"type": "boolean",
@@ -32,18 +31,55 @@
 			},
 			"default": []
 		},
+		"onMountBehavior": {
+			"type": "string",
+			"description": "Whether the submenu should always be automatically displayed when its parent is hovered/clicked on (open) or (close).",
+			"oneOf": [{ "const": "open" }, { "const": "closed" }],
+			"default": "closed"
+		},
 		"experimentalOptimizeRendering": {
 			"type": "boolean"
 		},
 		"itemProps": {
 			"type": "object"
+		},
+		"iconProps": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "string",
+					"description": "Icon ID"
+				},
+				"isActive": {
+					"type": "boolean",
+					"description": "Whether or not the item is active",
+					"default": true
+				},
+				"size": {
+					"type": "number",
+					"description": "Icon size",
+					"default": 16
+				},
+				"viewBox": {
+					"type": "string",
+					"description": "Icon view box",
+					"default": "0 0 16 16"
+				},
+				"activeClassName": {
+					"type": "string",
+					"description": "Icon classname when isActive is true"
+				},
+				"mutedClassName": {
+					"type": "string",
+					"description": "Icon classname when isActive is false"
+				}
+			}
 		}
 	},
 	"defaultSnippets": [
 		{
 			"body": {
-				"type": "${1|custom,category|}",
-				"text": "$0"
+				"type": "${1|custom,category|}"
 			}
 		}
 	],
