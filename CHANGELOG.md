@@ -1,3 +1,10 @@
+## [1.5.3](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.5.2...v1.5.3) (2024-03-05)
+
+
+### Bug Fixes
+
+* icon props from vtex menu ([#37](https://github.com/agencia-e-plus/vtex-io-intelisense/issues/37)) ([4101113](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/41011139a6139e6094907fcc09d841dfd055636e))
+
 ## [1.5.2](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.5.1...v1.5.2) (2024-03-05)
 
 
