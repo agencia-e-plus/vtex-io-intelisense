@@ -78,7 +78,7 @@
 					"properties": {
 						"type": {
 							"type": "string",
-							"enum": ["block", "circle", "text", "grid"]
+							"enum": ["block", "box", "circle", "text", "grid"]
 						},
 						"width": { "type": "number" },
 						"height": { "type": "number" }
