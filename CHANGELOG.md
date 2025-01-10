@@ -1,3 +1,10 @@
+## [1.5.4](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.5.3...v1.5.4) (2025-01-10)
+
+
+### Bug Fixes
+
+* **interfaces:** add 'box' to the preview options ([3bd1651](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/3bd16513a5d03aba48ea82a027d2dd8aab39ebcd))
+
 ## [1.5.3](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.5.2...v1.5.3) (2024-03-05)
 
 
