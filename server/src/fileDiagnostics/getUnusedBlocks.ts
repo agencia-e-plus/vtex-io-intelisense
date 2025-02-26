@@ -3,7 +3,16 @@ import { Diagnostic, DiagnosticSeverity } from 'vscode-languageserver';
 import * as JSONC from 'jsonc-parser';
 import { getBlockPositionInText } from '../utils/getBlockPositionInText';
 
-export const NO_EXPLICIT_USE_BLOCKS = ['store.', 'header', 'header.', 'footer'];
+export const NO_EXPLICIT_USE_BLOCKS = [
+	'store.',
+	'header',
+	'header.',
+	'footer',
+	'storeWrapper',
+	'homeWrapper',
+	'searchWrapper',
+	'productWrapper'
+];
 
 export const getUnusedBlocksDiagnostics = (
 	fileText: string,

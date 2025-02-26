@@ -588,6 +588,18 @@
 		"store.": {
 			"$ref": "./apps/store.schema.json"
 		},
+		"storeWrapper": {
+			"$ref": "./apps/store/storeWrapper.schema.json"
+		},
+		"homeWrapper": {
+			"$ref": "./apps/store/homeWrapper.schema.json"
+		},
+		"productWrapper": {
+			"$ref": "./apps/store/productWrapper.schema.json"
+		},
+		"searchWrapper": {
+			"$ref": "./apps/store/searchWrapper.schema.json"
+		},
 		"store.search": {
 			"$ref": "./apps/search-result/store.search.schema.json"
 		},
