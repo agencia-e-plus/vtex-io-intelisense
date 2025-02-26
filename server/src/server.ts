@@ -146,8 +146,16 @@ documents.onDidChangeContent((change) => {
 
 	if (!path.includes('blocks')) return;
 
+	// Update the blocks hash map with the new content
 	blocksHashMap.mapBlocksOnFile(path, change.document.getText());
-	validateTextDocument(change.document);
+	
+	// Validate all open documents since changes in one file might affect others
+	documents.all().forEach(document => {
+		const docPath = URI.parse(document.uri).fsPath;
+		if (docPath.includes('blocks')) {
+			validateTextDocument(document);
+		}
+	});
 });
 
 connection.onDidChangeWatchedFiles((_change) => {
