@@ -1,3 +1,11 @@
+## [1.6.1](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.6.0...v1.6.1) (2025-02-26)
+
+
+### Bug Fixes
+
+* misstype in `productWrapper` & `searchWrapper` schemas filenames ([6859e03](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/6859e0317dfef8fb1a58b5e7cd376a8bd5c7a852))
+* properly revalidates all open documents on document change ([553161f](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/553161f22f21426bc07002686b2989aabd3135ac))
+
 # [1.6.0](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.5.4...v1.6.0) (2025-02-26)
 
 
