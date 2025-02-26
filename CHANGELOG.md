@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.5.4...v1.6.0) (2025-02-26)
+
+
+### Features
+
+* add `storeWrapper` blocks & related ([d63c3d4](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/d63c3d4f6495a55e3318c19daa270c9c652fa43c))
+
 ## [1.5.4](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.5.3...v1.5.4) (2025-01-10)
 
 
