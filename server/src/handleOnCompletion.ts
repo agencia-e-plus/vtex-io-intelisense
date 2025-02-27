@@ -138,22 +138,35 @@ export function handleOnCompletion(
 	
 	if (!isInValidContext) return [];
 
-	const blockSuggestions = Array.from(blocksHashMap.listBlocks()).map(([key, value]) => {
-		const label = key;
-		const insertText = needsQuotes ? `"${key}"` : key;
-		
-		return {
-			label,
-			kind: CompletionItemKind.Variable,
-			data: key,
-			detail: `${value.split('store/blocks/')[1]}`,
-			insertText,
-			documentation: {
-				kind: MarkupKind.Markdown,
-				value: `\`\`\`json\n${JSON.stringify(blocksHashMap.getBlockContent(key), null, 2)}\n\`\`\``
+	// Get the current block name from the document URI
+	const currentBlockName = getCurrentBlockName(text, cursorOffset);
+	connection.console.log(`Current block name: ${currentBlockName || 'unknown'} (cursor at offset ${cursorOffset})`);
+
+	const blockSuggestions = Array.from(blocksHashMap.listBlocks())
+		// Filter out the current block to avoid suggesting it
+		.filter(([key]) => {
+			const isCurrentBlock = key === currentBlockName;
+			if (isCurrentBlock) {
+				connection.console.log(`Filtering out current block: ${key}`);
 			}
-		} as CompletionItem;
-	});
+			return !isCurrentBlock;
+		})
+		.map(([key, value]) => {
+			const label = key;
+			const insertText = needsQuotes ? `"${key}"` : key;
+			
+			return {
+				label,
+				kind: CompletionItemKind.Variable,
+				data: key,
+				detail: `${value.split('store/blocks/')[1]}`,
+				insertText,
+				documentation: {
+					kind: MarkupKind.Markdown,
+					value: `\`\`\`json\n${JSON.stringify(blocksHashMap.getBlockContent(key), null, 2)}\n\`\`\``
+				}
+			} as CompletionItem;
+		});
 
 	return [...blockSuggestions];
 }
@@ -209,4 +222,84 @@ function isInSuggestableContext(path: JSONC.JSONPath, connection: Connection): b
 	
 	connection.console.log('No valid context found');
 	return false;
+}
+
+/**
+ * Extracts the current block name from the document text based on cursor position.
+ * This helps identify which block we're currently in to avoid suggesting it
+ */
+function getCurrentBlockName(text: string, cursorOffset = 0): string | undefined {
+	try {
+		// Parse the document to get the block definitions
+		const blocks = JSONC.parse(text);
+		if (!blocks || typeof blocks !== 'object') return undefined;
+		
+		// Get all block names from the document
+		const blockNames = Object.keys(blocks);
+		
+		// If there's only one block, return it
+		if (blockNames.length === 1) return blockNames[0];
+		
+		// If we have a cursor position, try to find which block it's in
+		if (cursorOffset > 0) {
+			// Use getLocation to get the path at the cursor position
+			const location = JSONC.getLocation(text, cursorOffset);
+			const path = location.path;
+			
+			// If the path starts with a block name, that's our current block
+			if (path.length > 0 && typeof path[0] === 'string' && blockNames.includes(path[0])) {
+				return path[0];
+			}
+			
+			// Fallback to scanning the document
+			const scanner = JSONC.createScanner(text, true);
+			let token = scanner.scan();
+			scanner.setPosition(cursorOffset);
+			let currentBlockName: string | undefined;
+			let blockStartOffset = 0;
+			let blockEndOffset = 0;
+			let inBlockDefinition = false;
+			let braceCount = 0;
+			
+			while (token !== JSONC.SyntaxKind.EOF) {
+				if (token === JSONC.SyntaxKind.OpenBraceToken) {
+					braceCount++;
+				} else if (token === JSONC.SyntaxKind.CloseBraceToken) {
+					braceCount--;
+					if (braceCount === 0 && inBlockDefinition) {
+						// End of a block
+						blockEndOffset = scanner.getTokenOffset() + scanner.getTokenLength();
+						
+						// Check if cursor was in this block
+						if (cursorOffset >= blockStartOffset && cursorOffset <= blockEndOffset) {
+							return currentBlockName;
+						}
+						
+						inBlockDefinition = false;
+					}
+				} else if (token === JSONC.SyntaxKind.StringLiteral) {
+					const tokenText = scanner.getTokenValue();
+					const tokenOffset = scanner.getTokenOffset();
+					
+					// Check if this string is a block name (property key)
+					const nextPosition = scanner.getPosition();
+					const nextToken = scanner.scan();
+					scanner.setPosition(nextPosition);
+					
+					if (nextToken === JSONC.SyntaxKind.ColonToken && blockNames.includes(tokenText)) {
+						// This is a block name
+						currentBlockName = tokenText;
+						blockStartOffset = tokenOffset;
+						inBlockDefinition = true;
+					}
+				}
+				
+				token = scanner.scan();
+			}
+		}
+		
+		return undefined;
+	} catch (error) {
+		return undefined;
+	}
 } 
