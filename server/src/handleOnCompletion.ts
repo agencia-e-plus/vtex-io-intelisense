@@ -28,13 +28,14 @@ export function handleOnCompletion(
 	
 	const text = document.getText();
 	const position = params.position;
-	const offset = document.offsetAt(position);
+	const cursorOffset = document.offsetAt(position);
 	
 	// Check if the cursor is inside a string
 	const scanner = JSONC.createScanner(text, true);
 	let isInsideString = false;
 	let needsQuotes = false; // Track if we need to add quotes
 	let token = scanner.scan();
+	scanner.setPosition(cursorOffset);
 	
 	while (token !== JSONC.SyntaxKind.EOF) {
 		if (token === JSONC.SyntaxKind.StringLiteral) {
@@ -43,7 +44,7 @@ export function handleOnCompletion(
 			const tokenEnd = tokenOffset + tokenLength;
 			
 			// Check if the cursor is inside this string token (including at the quotes)
-			if (offset >= tokenOffset && offset <= tokenEnd) {
+			if (cursorOffset >= tokenOffset && cursorOffset <= tokenEnd) {
 				// Get the actual string content without quotes
 				const tokenText = text.substring(tokenOffset, tokenEnd);
 				
@@ -66,7 +67,7 @@ export function handleOnCompletion(
 		} else if (token === JSONC.SyntaxKind.CommaToken || token === JSONC.SyntaxKind.OpenBracketToken) {
 			// Check if cursor is right after this token
 			const tokenEnd = scanner.getTokenOffset() + scanner.getTokenLength();
-			if (offset >= tokenEnd && offset <= tokenEnd + 1) {
+			if (cursorOffset >= tokenEnd && cursorOffset <= tokenEnd + 1) {
 				// Cursor is right after a comma or opening bracket - we'll need to add quotes
 				needsQuotes = true;
 				connection.console.log(`Cursor is after comma or opening bracket, will add quotes`);
@@ -79,7 +80,7 @@ export function handleOnCompletion(
 	// Unless we're right after a comma or opening bracket in an array
 	if (!isInsideString && !needsQuotes) {
 		// Check if we're in an array context but not inside a string
-		const location = JSONC.getLocation(text, offset);
+		const location = JSONC.getLocation(text, cursorOffset);
 		const path = location.path;
 		
 		// Check if we're in a children or blocks array
@@ -125,7 +126,7 @@ export function handleOnCompletion(
 	}
 	
 	// Use jsonc-parser to get the location in the JSON document
-	const location = JSONC.getLocation(text, offset);
+	const location = JSONC.getLocation(text, cursorOffset);
 	
 	// Log the path for debugging
 	connection.console.log(`Completion requested at path: ${JSON.stringify(location.path)}`);
