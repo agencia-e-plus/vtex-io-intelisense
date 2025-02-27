@@ -2,7 +2,7 @@ import { CompletionItem, CompletionItemKind, TextDocumentPositionParams } from '
 import { TextDocument } from 'vscode-languageserver-textdocument';
 import * as JSONC from 'jsonc-parser';
 import { BlocksHashMap } from './BlocksHashMap';
-import { Connection, TextDocuments } from 'vscode-languageserver';
+import { Connection, MarkupKind, TextDocuments } from 'vscode-languageserver';
 
 /**
  * Handles the onCompletion event for VTEX IO blocks
@@ -146,8 +146,12 @@ export function handleOnCompletion(
 			label,
 			kind: CompletionItemKind.Variable,
 			data: key,
-			documentation: value.split('store/blocks/')[1],
-			insertText
+			detail: `${value.split('store/blocks/')[1]}`,
+			insertText,
+			documentation: {
+				kind: MarkupKind.Markdown,
+				value: `\`\`\`json\n${JSON.stringify(blocksHashMap.getBlockContent(key), null, 2)}\n\`\`\``
+			}
 		} as CompletionItem;
 	});
 
