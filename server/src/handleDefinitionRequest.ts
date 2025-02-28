@@ -23,8 +23,6 @@ export const handleDefinitionRequest = (params: DefinitionParams, blocksHashMap:
 	if (!stringToken) return undefined;
 
 	const { value: blockId, range } = stringToken;
-	console.log('blockId', blockId);
-	console.log('range', range);
 
 	// Check if this is a block reference (not a property name)
 	if (isPropertyName(fileText, range.start)) return undefined;
