@@ -8,7 +8,6 @@ export function handleCompletionResolve(
 	item: CompletionItem,
 	blocksHashMap: BlocksHashMap
 ): CompletionItem {
-	console.log('Resolving completion item:', item);
 	// Check if this is a block suggestion that needs documentation
 	if (item.data && typeof item.data === 'string') {
 		const blockKey = item.data;
