@@ -5,7 +5,6 @@ import * as JSONC from 'jsonc-parser';
 export class BlocksHashMap {
 	private rootPath: string;
 	private blocksMap = new Map<string, string>();
-	private blocksContentMap = new Map<string, BlockFormat>();
 	private fileMap = new Map<string, string | Buffer>();
 	private fileUsagesMap = new Map<string, string[]>();
 
@@ -29,9 +28,8 @@ export class BlocksHashMap {
 		try {
 			const blocks: Record<string, BlockFormat> = JSONC.parse(fileContent.toString());
 
-			Object.entries(blocks).forEach(([blockName, blockContent]) => {
+			Object.keys(blocks).forEach((blockName) => {
 				this.blocksMap.set(blockName, filePath);
-				this.blocksContentMap.set(blockName, blockContent);
 			});
 
 			this.fileMap.set(filePath, fileContent);
@@ -79,7 +77,10 @@ export class BlocksHashMap {
 	}
 
 	getBlockContent(blockName: string) {
-		return this.blocksContentMap.get(blockName);
+		const filePath = this.getBlockFilePath(blockName);
+		const fileContent = this.getFileContent(filePath);
+		const blocks = JSONC.parse(fileContent.toString());
+		return blocks[blockName];
 	}
 
 	getFileUsage(filePath: string) {

@@ -161,10 +161,10 @@ export function handleOnCompletion(
 				data: key,
 				detail: `${value.split('store/blocks/')[1]}`,
 				insertText,
-				documentation: {
-					kind: MarkupKind.Markdown,
-					value: `\`\`\`json\n${JSON.stringify(blocksHashMap.getBlockContent(key), null, 2)}\n\`\`\``
-				}
+				// documentation: {
+				// 	kind: MarkupKind.Markdown,
+				// 	value: `\`\`\`json\n${JSON.stringify(blocksHashMap.getBlockContent(key), null, 2)}\n\`\`\``
+				// }
 			} as CompletionItem;
 		});
 

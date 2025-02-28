@@ -17,6 +17,7 @@ import { BlocksHashMap } from './BlocksHashMap';
 import { URI } from 'vscode-uri';
 import { getFileDiagnostics } from './fileDiagnostics';
 import { handleOnCompletion } from './handleOnCompletion';
+import { handleCompletionResolve } from './handleCompletionResolve';
 
 // Create a connection for the server, using Node's IPC as a transport.
 // Also include all preview / proposed LSP features.
@@ -166,6 +167,7 @@ connection.onDidChangeWatchedFiles((_change) => {
 
 // This handler provides the initial list of the completion items.
 connection.onCompletion((params: TextDocumentPositionParams): CompletionItem[] => {
+	console.log('onCompletion');
 	if (!blocksHashMap) return [];
 	return handleOnCompletion(params, blocksHashMap, documents, connection);
 });
@@ -173,7 +175,8 @@ connection.onCompletion((params: TextDocumentPositionParams): CompletionItem[] =
 // This handler resolves additional information for the item selected in
 // the completion list.
 connection.onCompletionResolve((item: CompletionItem): CompletionItem => {
-	return item;
+	if (!blocksHashMap) return item;
+	return handleCompletionResolve(item, blocksHashMap);
 });
 
 // Make the text document manager listen on the connection
