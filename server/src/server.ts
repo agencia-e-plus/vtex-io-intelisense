@@ -16,6 +16,8 @@ import { handleDefinitionRequest } from './handleDefinitionRequest';
 import { BlocksHashMap } from './BlocksHashMap';
 import { URI } from 'vscode-uri';
 import { getFileDiagnostics } from './fileDiagnostics';
+import { handleOnCompletion } from './handleOnCompletion';
+import { handleCompletionResolve } from './handleCompletionResolve';
 
 // Create a connection for the server, using Node's IPC as a transport.
 // Also include all preview / proposed LSP features.
@@ -148,9 +150,9 @@ documents.onDidChangeContent((change) => {
 
 	// Update the blocks hash map with the new content
 	blocksHashMap.mapBlocksOnFile(path, change.document.getText());
-	
+
 	// Validate all open documents since changes in one file might affect others
-	documents.all().forEach(document => {
+	documents.all().forEach((document) => {
 		const docPath = URI.parse(document.uri).fsPath;
 		if (docPath.includes('blocks')) {
 			validateTextDocument(document);
@@ -164,17 +166,17 @@ connection.onDidChangeWatchedFiles((_change) => {
 });
 
 // This handler provides the initial list of the completion items.
-connection.onCompletion((_textDocumentPosition: TextDocumentPositionParams): CompletionItem[] => {
-	// The pass parameter contains the position of the text document in
-	// which code complete got requested. For the example we ignore this
-	// info and always provide the same completion items.
-	return [];
+connection.onCompletion((params: TextDocumentPositionParams): CompletionItem[] => {
+	console.log('onCompletion');
+	if (!blocksHashMap) return [];
+	return handleOnCompletion(params, blocksHashMap, documents, connection);
 });
 
 // This handler resolves additional information for the item selected in
 // the completion list.
 connection.onCompletionResolve((item: CompletionItem): CompletionItem => {
-	return item;
+	if (!blocksHashMap) return item;
+	return handleCompletionResolve(item, blocksHashMap);
 });
 
 // Make the text document manager listen on the connection
