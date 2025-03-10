@@ -1,3 +1,11 @@
+# [1.7.0](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.6.1...v1.7.0) (2025-03-10)
+
+
+### Features
+
+* block completion inside `children`, `blocks` or capitalized prop ([659f9db](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/659f9db387ca030f6a105485070a40e8899691f7))
+* preview block content ([b74a727](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/b74a727080b8f50192654d3a0c27562d11b2e159))
+
 ## [1.6.1](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.6.0...v1.6.1) (2025-02-26)
 
 
