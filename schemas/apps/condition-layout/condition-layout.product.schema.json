@@ -11,41 +11,39 @@
 			"properties": {
 				"conditions": {
 					"type": "array",
-					"items": [
-						{
-							"type": "object",
-							"properties": {
-								"subject": {
-									"type": "string",
-									"oneOf": [
-										{ "const": "productId" },
-										{ "const": "categoryId" },
-										{ "const": "brandId" },
-										{ "const": "selectedItemId" },
-										{ "const": "productClusters" },
-										{ "const": "categoryTree" },
-										{ "const": "specificationProperties" },
-										{ "const": "areAllVariationsSelected" },
-										{ "const": "isProductAvailable" },
-										{ "const": "hasMoreSellersThan" }
-									]
-								},
-								"arguments": {
-									"type": "object",
-									"properties": {
-										"id": {
-											"type": "string"
-										}
+					"items": {
+						"type": "object",
+						"properties": {
+							"subject": {
+								"type": "string",
+								"oneOf": [
+									{ "const": "productId" },
+									{ "const": "categoryId" },
+									{ "const": "brandId" },
+									{ "const": "selectedItemId" },
+									{ "const": "productClusters" },
+									{ "const": "categoryTree" },
+									{ "const": "specificationProperties" },
+									{ "const": "areAllVariationsSelected" },
+									{ "const": "isProductAvailable" },
+									{ "const": "hasMoreSellersThan" }
+								]
+							},
+							"arguments": {
+								"type": "object",
+								"properties": {
+									"id": {
+										"type": "string"
 									}
-								},
-								"toBe": {
-									"type": "boolean",
-									"markdownDescription": "boolean\n\nWhether the data fetched in the subject prop must met the predefined conditions to render the new layout (true) or not (false).",
-									"default": false
 								}
+							},
+							"toBe": {
+								"type": "boolean",
+								"markdownDescription": "boolean\n\nWhether the data fetched in the subject prop must met the predefined conditions to render the new layout (true) or not (false).",
+								"default": false
 							}
 						}
-					]
+					}
 				},
 				"matchType": {
 					"type": "string",
