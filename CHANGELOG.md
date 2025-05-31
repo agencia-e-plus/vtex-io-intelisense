@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.7.0...v1.7.1) (2025-05-31)
+
+
+### Bug Fixes
+
+* **condition-layout:** show condition parameters for every item of the array ([#43](https://github.com/agencia-e-plus/vtex-io-intelisense/issues/43)) ([ab88755](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/ab88755830d3683af23d8085279b622fef31dec4))
+
 # [1.7.0](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.6.1...v1.7.0) (2025-03-10)
 
 
