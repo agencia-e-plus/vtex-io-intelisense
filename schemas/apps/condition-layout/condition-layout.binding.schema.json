@@ -13,32 +13,30 @@
 				"conditions": {
 					"type": "array",
 					"markdownDescription": "array\n\nList of desired conditions.",
-					"items": [
-						{
-							"type": "object",
-							"properties": {
-								"subject": {
-									"type": "string",
-									"properties": {
-										"id": {
-											"type": "string"
-										}
-									},
-									"markdownDescription": "string\n\nDefines, according to the product context where the block in declared in, which data is needed from the UI to validate the value chosen in the object prop. Check below the possible values for this prop.\n\n**Subject** | **Arguments**\n\nbindingId | `{ id: string }`",
-									"oneOf": [{ "const": "bindingId" }]
+					"items": {
+						"type": "object",
+						"properties": {
+							"subject": {
+								"type": "string",
+								"properties": {
+									"id": {
+										"type": "string"
+									}
 								},
-								"arguments": {
-									"type": "object",
-									"markdownDescription": "object\n\nDefines, according to the product context where the block in declared in, which data is needed from the UI to validate the value chosen in the object prop. Check below the possible values for this prop.\n\n**Subject** | **Arguments**\n\nbindingId | `{ id: string }`"
-								},
-								"toBe": {
-									"type": "boolean",
-									"markdownDescription": "boolean\n\nWhether the data fetched in the subject prop must met the predefined conditions to render the new layout (true) or not (false).",
-									"default": false
-								}
+								"markdownDescription": "string\n\nDefines, according to the product context where the block in declared in, which data is needed from the UI to validate the value chosen in the object prop. Check below the possible values for this prop.\n\n**Subject** | **Arguments**\n\nbindingId | `{ id: string }`",
+								"oneOf": [{ "const": "bindingId" }]
+							},
+							"arguments": {
+								"type": "object",
+								"markdownDescription": "object\n\nDefines, according to the product context where the block in declared in, which data is needed from the UI to validate the value chosen in the object prop. Check below the possible values for this prop.\n\n**Subject** | **Arguments**\n\nbindingId | `{ id: string }`"
+							},
+							"toBe": {
+								"type": "boolean",
+								"markdownDescription": "boolean\n\nWhether the data fetched in the subject prop must met the predefined conditions to render the new layout (true) or not (false).",
+								"default": false
 							}
 						}
-					]
+					}
 				},
 				"matchType": {
 					"type": "string",

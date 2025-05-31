@@ -14,24 +14,22 @@
 			"properties": {
 				"conditions": {
 					"type": "array",
-					"items": [
-						{
-							"type": "object",
-							"properties": {
-								"subject": {
-									"type": "string"
-								},
-								"arguments": {
-									"type": "object",
-									"properties": {
-										"id": {
-											"type": "string"
-										}
+					"items": {
+						"type": "object",
+						"properties": {
+							"subject": {
+								"type": "string"
+							},
+							"arguments": {
+								"type": "object",
+								"properties": {
+									"id": {
+										"type": "string"
 									}
 								}
 							}
 						}
-					]
+					}
 				},
 				"Then": { "$ref": "./../shared/block.schema.json" },
 				"Else": { "$ref": "./../shared/block.schema.json" }
