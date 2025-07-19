@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.7.1...v1.8.0) (2025-07-19)
+
+
+### Features
+
+* publish in OpenVSX ([a8e3db0](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/a8e3db0c34ec3fb734c0296de1a8eafa09b7a934))
+
 ## [1.7.1](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.7.0...v1.7.1) (2025-05-31)
 
 
