@@ -48,4 +48,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          OVSX_PAT: ${{ secrets.OVSX_PAT }}
         run: npx semantic-release
