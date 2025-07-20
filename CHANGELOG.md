@@ -1,3 +1,10 @@
+## [1.8.1](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.8.0...v1.8.1) (2025-07-20)
+
+
+### Bug Fixes
+
+* trigger rebuild ([d697684](https://github.com/agencia-e-plus/vtex-io-intelisense/commit/d697684f46877e5cf526a3dfad97985c225f6b5d))
+
 # [1.8.0](https://github.com/agencia-e-plus/vtex-io-intelisense/compare/v1.7.1...v1.8.0) (2025-07-19)
 
 
